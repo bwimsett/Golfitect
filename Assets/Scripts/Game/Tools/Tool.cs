@@ -44,10 +44,13 @@ namespace Game.Tools {
 			}
 			
 			this.active = active;
+			Tool currentActiveTool = LevelManager.levelInputManager.currentActiveTool;
 			
 			if (active) {
-				if (LevelManager.levelInputManager.currentActiveTool != this) {
-					LevelManager.levelInputManager.currentActiveTool.SetActive(false);
+				if (currentActiveTool != this) {
+					if (currentActiveTool) {
+						currentActiveTool.SetActive(false);
+					}
 					LevelManager.levelInputManager.currentActiveTool = this;
 				}
 				
@@ -55,7 +58,7 @@ namespace Game.Tools {
 				return;
 			}
 			
-			if (LevelManager.levelInputManager.currentActiveTool == this) {
+			if (currentActiveTool == this) {
 				LevelManager.levelInputManager.currentActiveTool = null;
 			}
 			

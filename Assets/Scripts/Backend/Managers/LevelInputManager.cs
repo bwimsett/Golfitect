@@ -26,7 +26,7 @@ namespace Backend.Managers {
 			if (hit.collider) {
 				return LevelManager.levelGrid.WorldPositionToGridCoordinate(hit.point);
 			}
-        
+
 			return new Vector3Int(-1, -1, -1);
 		}
 

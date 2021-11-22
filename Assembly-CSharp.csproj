@@ -54,13 +54,15 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\Game\Tools\LevelBuilderTool.cs" />
      <Compile Include="Assets\Scripts\Backend\Managers\GameManager.cs" />
-     <Compile Include="Assets\Scripts\Game\CameraController.cs" />
-     <Compile Include="Assets\Scripts\Backend\Level\Level.cs" />
-     <Compile Include="Assets\Scripts\Game\LevelBuilder\LevelGrid.cs" />
-     <Compile Include="Assets\Scripts\Backend\Managers\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Game\Tools\Tool.cs" />
      <Compile Include="Assets\Scripts\Backend\Managers\LevelInputManager.cs" />
-     <Compile Include="Assets\Scripts\Backend\Level\LevelObject.cs" />
+     <Compile Include="Assets\Scripts\Backend\Level\LevelTile.cs" />
+     <Compile Include="Assets\Scripts\Game\LevelObject\LevelObject.cs" />
+     <Compile Include="Assets\Scripts\Game\CameraController.cs" />
+     <Compile Include="Assets\Scripts\Backend\Level\Level.cs" />
+     <Compile Include="Assets\Scripts\Game\LevelObject\LevelObjectLayout.cs" />
+     <Compile Include="Assets\Scripts\Game\LevelBuilder\LevelGrid.cs" />
+     <Compile Include="Assets\Scripts\Backend\Managers\LevelManager.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

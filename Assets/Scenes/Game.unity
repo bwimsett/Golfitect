@@ -432,7 +432,7 @@ MonoBehaviour:
   levelGridCollider: {fileID: 407748024}
   levelGridColliderLayerID: 8
   levelBuilderTool: {fileID: 679619935}
-  testLevelObject: {fileID: 811546453615179122, guid: 6670a974517052b48b2743aa8b4a9b8e, type: 3}
+  testLevelObject: {fileID: 7261838903308996900, guid: 6670a974517052b48b2743aa8b4a9b8e, type: 3}
   currentActiveTool: {fileID: 0}
 --- !u!114 &1587768436
 MonoBehaviour:

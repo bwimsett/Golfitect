@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1056492965871303407}
   - component: {fileID: 4109166684432643402}
   - component: {fileID: 2225418260242416000}
-  - component: {fileID: 811546453615179122}
+  - component: {fileID: 7261838903308996900}
   m_Layer: 0
   m_Name: Basic Ground
   m_TagString: Untagged
@@ -83,7 +83,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &811546453615179122
+--- !u!114 &7261838903308996900
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,3 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d13651310db434b98660f70d5e43634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  objectTypeID: 
+  layout:
+  - {fileID: 2800000, guid: a19bbaac5c130f8458bcefa9ff5687ab, type: 3}
+  coordinates: []

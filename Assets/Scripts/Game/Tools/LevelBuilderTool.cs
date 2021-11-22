@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Backend.Level;
@@ -9,6 +10,7 @@ public class LevelBuilderTool : Tool {
 
 	private LevelObject currentLevelObject;
 	private List<GameObject> objectCache;
+	private List<Tuple<Vector3Int, GameObject>> placing;
 	private Vector3Int startCoordinate, endCoordinate;
 	private bool mouseDown;
 
@@ -32,8 +34,19 @@ public class LevelBuilderTool : Tool {
 	}
 
 	protected override void OnMouseUp() {
+		Place();
 		startCoordinate = endCoordinate = mousePosition;
 		RefreshPlacing();
+	}
+
+	private void Place() {
+		foreach (Tuple<Vector3Int, GameObject> placingObject in placing) {
+			LevelObject levelObject = placingObject.Item2.GetComponent<LevelObject>();
+			Vector3Int[] placingCoordinates = levelObject.GetPlacingCoordinates(placingObject.Item1);
+			LevelManager.currentLevel.SetTiles(placingCoordinates, levelObject);
+			levelObject.gameObject.SetActive(true);
+			objectCache.Remove(placingObject.Item2);
+		}
 	}
 
 	private void RefreshPlacing() {
@@ -60,6 +73,8 @@ public class LevelBuilderTool : Tool {
 		int minZ = Mathf.Min(startCoordinate.z, endCoordinate.z);
 		int maxX = Mathf.Max(startCoordinate.x, endCoordinate.x);
 		int maxZ = Mathf.Max(startCoordinate.z, endCoordinate.z);
+
+		placing = new List<Tuple<Vector3Int, GameObject>>();
 		
 		// Set positions
 		for (int x = minX; x <= maxX; x++) {
@@ -67,9 +82,12 @@ public class LevelBuilderTool : Tool {
 				Vector3Int buildPos = new Vector3Int(x, startCoordinate.y, z);
 				
 				// Put object at position and show it
-				objectCache[objectIndex].transform.position = LevelManager.levelGrid.GridCoordinateToWorldPosition(buildPos);
-				objectCache[objectIndex].SetActive(true);
+				GameObject placingObject = objectCache[objectIndex];
+				placingObject.transform.position = LevelManager.levelGrid.GridCoordinateToWorldPosition(buildPos);
+				placingObject.SetActive(true);
 				objectIndex++;
+				
+				placing.Add(new Tuple<Vector3Int, GameObject>(buildPos, placingObject));
 			}
 		}
 
