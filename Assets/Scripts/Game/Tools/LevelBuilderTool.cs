@@ -15,7 +15,6 @@ public class LevelBuilderTool : Tool {
 	private bool mouseDown;
 
 	[SerializeField] private Transform levelContainer;
-	
 
 	protected override void OnMouseHover() {
 		startCoordinate = endCoordinate = mousePosition;

@@ -9,6 +9,10 @@ namespace Backend.Level {
 		public LevelTile(Vector3Int coordinate) {
 			this.coordinate = coordinate;
 		}
+
+		public LevelObject GetTileObject() {
+			return tileObject;
+		}
 		
 		public void SetTile(LevelObject tileObject) {
 			this.tileObject = tileObject;

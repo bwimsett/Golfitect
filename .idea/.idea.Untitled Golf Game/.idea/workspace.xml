@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObjectLayout.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObjectLayout.cs.meta" afterDir="false" />
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Click and drag building now works">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsoleConfig.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsoleConfig.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole_OutputLine.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole_OutputLine.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Grass 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/Materials/Grass 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Basic Ground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Basic Ground.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProBuilder Data.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Material Palette.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Material Palette.asset.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelInputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelInputManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Tools/LevelBuilderTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Tools/LevelBuilderTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Tools/Tool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Tools/Tool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +39,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Scripts/Backend/Level/Level.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -58,12 +59,18 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelTile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelTileObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/TestLevelObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObjectLayout.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/Level.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tools/Tool.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tools/LevelBuilderTool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/Level.cs" />
+      <option value="$PROJECT_DIR$/Packages/BWConsole/Runtime/Scripts/BWConsoleConfig.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BWConsoleConfig.cs" />
+      <option value="$PROJECT_DIR$/Packages/BWConsole/package.json" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole_OutputLine.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsoleConfig.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="21EZ8z1trcaWidBOTqaxu4DgFQk" />
@@ -121,7 +128,7 @@
       <workItem from="1637508060930" duration="5674000" />
       <workItem from="1637536101607" duration="9083000" />
       <workItem from="1637591515840" duration="9988000" />
-      <workItem from="1637606569843" duration="1106000" />
+      <workItem from="1637606569843" duration="14422000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -137,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637545822900</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Click and drag building now works">
+      <created>1637607987297</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1637607987297</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -161,6 +175,26 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Made test changes" />
     <MESSAGE value="Began work on level builder tools" />
-    <option name="LAST_COMMIT_MESSAGE" value="Began work on level builder tools" />
+    <MESSAGE value="Click and drag building now works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Click and drag building now works" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs</url>
+          <line>101</line>
+          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Scripts\Game\LevelObject\LevelObject.cs" initialLine="100" containingFunctionPresentation="constructor 'LevelObjectSave'">
+            <startOffsets>
+              <option value="2718" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2756" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

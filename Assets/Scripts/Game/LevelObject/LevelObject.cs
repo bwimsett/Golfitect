@@ -9,20 +9,32 @@ namespace Backend.Level {
 	public class LevelObject : MonoBehaviour {
 
 		public string objectTypeID;
+		[HideInInspector] public int objectTypeIndex;
+		public int objectID;
 		public Texture2D[] layout;
 		[HideInInspector] public List<Vector3Int> coordinates;
 
-		public virtual LevelObjectData Save() {
-			return new LevelObjectData(this);
+		public void Construct() {
+			objectID = gameObject.GetInstanceID();
+			ConstructLevelObject();
 		}
 
-		public void Load(LevelObjectData data) {
-			this.objectTypeID = data.objectTypeID;
-			this.coordinates = data.coordinates;
-			LoadLevelObject(data);
+		public virtual void ConstructLevelObject() {
+			
+		}
+		
+		public virtual LevelObjectSave Save() {
+			return new LevelObjectSave(this);
 		}
 
-		protected void LoadLevelObject(LevelObjectData data) {
+		public void Load(LevelObjectSave save) {
+			this.objectTypeID = save.objectTypeID;
+			this.objectID = save.objectID;
+			this.coordinates = save.coordinates;
+			LoadLevelObject(save);
+		}
+
+		protected void LoadLevelObject(LevelObjectSave save) {
 			
 		}
 
@@ -78,14 +90,16 @@ namespace Backend.Level {
 	}
 	
 	[Serializable]
-	public class LevelObjectData {
+	public class LevelObjectSave {
 		[JsonProperty] private int objectTypeIndex; // Index of objecttypeid stored in the level class
 		[JsonIgnore] public string objectTypeID { get => LevelManager.currentLevel.GetObjectTypeIDFromIndex(objectTypeIndex); }
+		public int objectID;
 		public List<Vector3Int> coordinates;
 
-		public LevelObjectData(LevelObject levelObject) {
+		public LevelObjectSave(LevelObject levelObject) {
+			objectTypeIndex = levelObject.objectTypeIndex;
+			objectID = levelObject.objectID;
 			coordinates = levelObject.coordinates;
-			objectTypeIndex = LevelManager.currentLevel.GetObjectIndexFromID(objectTypeID);
 		}
 	}
 }
