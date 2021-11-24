@@ -1,26 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Click and drag building now works">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsoleConfig.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsoleConfig.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole_OutputLine.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole_OutputLine.cs.meta" afterDir="false" />
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseUploader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseUploader.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProBuilder Data.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Material Palette.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/ProBuilder Data/Default Material Palette.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Tools/LevelBuilderTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game/Tools/LevelBuilderTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Layouts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Layouts/1x1 Occupied.aseprite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Layouts/1x1 Occupied.aseprite.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Layouts/1x1 Occupied.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Layouts/1x1 Occupied.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Grass 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Grass 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Stone 1.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Stone 1.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Tiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Tiles/Basic Ground.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Tiles/Basic Ground.blend.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Basic Ground.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Basic Ground.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Ground Tiles.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BWConsole.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/BWConsole.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BWConsole.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsoleConfig.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsoleConfig.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole_OutputLine.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole_OutputLine.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Level.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/Level.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Managers.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelInputManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelInputManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CameraController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/CameraController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelBuilder.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelBuilder/LevelGrid.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelBuilder/LevelGrid.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObjectLayout.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObjectLayout.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Tools.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Tools/LevelBuilderTool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Tools/LevelBuilderTool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Tools/Tool.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game/Tools/Tool.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/Lekton-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/Lekton-Regular.ttf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/Runtime.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/Runtime/Fonts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/Runtime/Fonts/Lekton-Regular SDF.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/Runtime/Fonts/Lekton-Regular SDF.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/Runtime/Prefabs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/Runtime/Prefabs/Text Line.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/Runtime/Prefabs/Text Line.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/Runtime/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/BWConsole/package.json.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled Golf Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled Golf Game.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,8 +106,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Scripts/Backend/Level/Level.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/StripeButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.rlabrecque.steamworks.net@4dafa26fbd/Runtime/CallbackDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -50,7 +117,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/CameraController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelBuilderTool.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/GameManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelBuilder/LevelGrid.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelInputManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/ObjectDataPair.cs" />
@@ -61,16 +127,32 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/TestLevelObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObjectLayout.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tools/Tool.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tools/LevelBuilderTool.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/Level.cs" />
       <option value="$PROJECT_DIR$/Packages/BWConsole/Runtime/Scripts/BWConsoleConfig.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BWConsoleConfig.cs" />
       <option value="$PROJECT_DIR$/Packages/BWConsole/package.json" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole_OutputLine.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsoleConfig.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole_BasicCommands.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelSerializer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/SteamManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/GolfGameConsoleCommands.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/SceneManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/GameSceneManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelSerializer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Enums/LevelObjectType.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tools/LevelBuilderTool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Enums/LevelObjectClass.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/Level.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelUploader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelUploader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseUploader.cs" />
+      <option value="$PROJECT_DIR$/Assets/GridBackgroundGenerator.cs" />
+      <option value="$PROJECT_DIR$/Assets/StripeButton.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="21EZ8z1trcaWidBOTqaxu4DgFQk" />
@@ -106,10 +188,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="54256">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="54256" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -128,7 +210,11 @@
       <workItem from="1637508060930" duration="5674000" />
       <workItem from="1637536101607" duration="9083000" />
       <workItem from="1637591515840" duration="9988000" />
-      <workItem from="1637606569843" duration="14422000" />
+      <workItem from="1637606569843" duration="19172000" />
+      <workItem from="1637672194340" duration="395000" />
+      <workItem from="1637672994941" duration="14729000" />
+      <workItem from="1637762668113" duration="4418000" />
+      <workItem from="1637779926354" duration="3883000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -151,7 +237,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637607987297</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Got console working">
+      <created>1637629563946</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1637629563946</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -176,25 +269,7 @@
     <MESSAGE value="Made test changes" />
     <MESSAGE value="Began work on level builder tools" />
     <MESSAGE value="Click and drag building now works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Click and drag building now works" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs</url>
-          <line>101</line>
-          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Scripts\Game\LevelObject\LevelObject.cs" initialLine="100" containingFunctionPresentation="constructor 'LevelObjectSave'">
-            <startOffsets>
-              <option value="2718" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2756" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Got console working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Got console working" />
   </component>
 </project>
