@@ -9,7 +9,7 @@ namespace Backend.Level {
 	[Serializable]
 	public class Level {
 
-		public string levelName;
+		public string levelName = "Test";
 		
 		public Vector3Int levelDimensions { get; private set; }
 		[JsonProperty] private List<string> objectTypesUsed; // Lists the IDs of all the tile types used. Indexed by LevelTile for the tileType field to keep save files small.

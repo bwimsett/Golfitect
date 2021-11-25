@@ -1,8 +1,11 @@
+using System;
 using System.IO;
 using Backend.Managers;
 using Newtonsoft.Json;
 using Steamworks;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.Networking.Types;
 using UnityEngine.SceneManagement;
 
 namespace Backend.Level {
@@ -12,6 +15,9 @@ namespace Backend.Level {
 		private const string levelFileName = "level";
 		private const string levelFileFolderName = "level";
 		private const string levelFileExtension = "golflvl";
+
+		// Callbacks
+		private Action<PublishedFileId_t[]> onUserQueryCompleteCallback;
 
 		private void SaveLevelLocal(Level level) {
 			level.Save();
@@ -51,17 +57,57 @@ namespace Backend.Level {
 			PublishedFileId_t id = item.m_nPublishedFileId;
 
 			UGCUpdateHandle_t updateHandle = SteamUGC.StartItemUpdate(SteamUtils.GetAppID(), id);
+
+			if (level.levelName == null) {
+				GameSceneManager.console.Print("Cant save level to steam with Null name.");
+				return;
+			}
 			SteamUGC.SetItemTitle(updateHandle, level.levelName);
 			SteamUGC.SetItemContent(updateHandle, GetLocalLevelSaveFolder());
 			
 			SteamAPICall_t call = SteamUGC.SubmitItemUpdate(updateHandle, "");
-			CallResult<SubmitItemUpdateResult_t> updateResult = CallResult<SubmitItemUpdateResult_t>.Create(OnUploadUpdate);
+			CallResult<SubmitItemUpdateResult_t> updateResult = CallResult<SubmitItemUpdateResult_t>.Create(OnLevelUploadUpdate);
 			updateResult.Set(call);
 		}
 
-		private void OnUploadUpdate(SubmitItemUpdateResult_t item, bool bIOFailure) {
+		private void OnLevelUploadUpdate(SubmitItemUpdateResult_t item, bool bIOFailure) {
 			GameSceneManager.console.Print("Upload status: " + item.m_eResult);
 		}
-		
+
+		public void GetUserLevels(AccountID_t user, uint page, Action<PublishedFileId_t[]> onComplete) {
+			AppId_t appId = SteamUtils.GetAppID();
+
+			onUserQueryCompleteCallback = onComplete;
+
+			CallResult<SteamUGCQueryCompleted_t> queryCompleted = CallResult<SteamUGCQueryCompleted_t>.Create(OnUserLevelsQueryComplete);
+			
+			UGCQueryHandle_t queryHandle = SteamUGC.CreateQueryUserUGCRequest(user,
+				EUserUGCList.k_EUserUGCList_Published,
+				EUGCMatchingUGCType.k_EUGCMatchingUGCType_All,
+				EUserUGCListSortOrder.k_EUserUGCListSortOrder_LastUpdatedDesc, appId,
+				appId, page);
+			
+			SteamAPICall_t call = SteamUGC.SendQueryUGCRequest(queryHandle);
+			queryCompleted.Set(call);
+		}
+
+		private void OnUserLevelsQueryComplete(SteamUGCQueryCompleted_t item, bool bIOFailure) {
+			if (item.m_eResult != EResult.k_EResultOK) {
+				Debug.LogError("Query to steam failed.");
+				return;
+			}
+
+			uint numResults = item.m_unNumResultsReturned;
+			PublishedFileId_t[] results = new PublishedFileId_t[numResults];
+
+			for (uint i = 0; i < results.Length; i++) {
+				SteamUGCDetails_t details;
+				SteamUGC.GetQueryUGCResult(item.m_handle, i, out details);
+				Debug.Log("Found file: "+details.m_nPublishedFileId);
+				results[i] = details.m_nPublishedFileId;
+			}
+
+			onUserQueryCompleteCallback.Invoke(results);
+		}
 	}
 }

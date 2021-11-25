@@ -24,8 +24,6 @@ public class SteamManager : MonoBehaviour {
 #if !DISABLESTEAMWORKS
 	protected static bool s_EverInitialized = false;
 
-	public static int APP_ID = 1828350;
-
 	protected static SteamManager s_instance;
 	protected static SteamManager Instance {
 		get {
