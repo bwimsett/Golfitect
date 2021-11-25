@@ -54,7 +54,6 @@ public class StripeButton : MonoBehaviour {
 		ShowBackground();
 		currentShrinkAnimation?.Kill();
 		Vector2 newSize = enlargeScale * normalSize;
-		Debug.Log(newSize.x);
 		currentEnlargeAnimation = _rectTransform.DOSizeDelta(newSize, scaleSpeed).SetEase(enlargeEase);
 	}
 
