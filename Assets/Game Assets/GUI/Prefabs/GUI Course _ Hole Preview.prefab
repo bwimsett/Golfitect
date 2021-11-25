@@ -146,6 +146,7 @@ GameObject:
   - component: {fileID: 8419895389691070482}
   - component: {fileID: 8419895389691070481}
   - component: {fileID: 8419895389691070480}
+  - component: {fileID: 4306055613153726324}
   - component: {fileID: 1488403476030259815}
   m_Layer: 0
   m_Name: GUI Course _ Hole Preview
@@ -247,6 +248,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ShowMaskGraphic: 0
+--- !u!225 &4306055613153726324
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8419895389691070702}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!114 &1488403476030259815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +273,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 8419895389691070703}
+  nameText: {fileID: 8419895390233483059}
+  canvasGroup: {fileID: 4306055613153726324}
 --- !u!1 &8419895390167077807
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,19 +17,10 @@ namespace Backend.Level {
 		private const string levelFileExtension = "golflvl";
 
 		// Callbacks
-		private Action<PublishedFileId_t[]> onUserQueryCompleteCallback;
+		private Action<LevelInfo[]> onUserQueryCompleteCallback;
 
-		private void SaveLevelLocal(Level level) {
-			level.Save();
-			string levelJson = JsonConvert.SerializeObject(level, Formatting.Indented);
-			Directory.CreateDirectory(GetLocalLevelSaveFolder());
-			File.WriteAllText(GetLocalLevelSaveFolder()+"/"+levelFileName+"."+levelFileExtension, levelJson);
-		}
-
-		private string GetLocalLevelSaveFolder() {
-			return Application.persistentDataPath + "/" + levelFileFolderName;
-		}
 		
+		// ---------- LEVEL UPLOADING ----------
 		public void UploadLevelToSteam(Level level) {
 			this.level = level;
 			
@@ -44,6 +35,17 @@ namespace Backend.Level {
 			CallResult<CreateItemResult_t> levelCreationCall = CallResult<CreateItemResult_t>.Create(OnLevelCreation);
 			levelCreationCall.Set(call);
 			
+		}
+		
+		private void SaveLevelLocal(Level level) {
+			level.Save();
+			string levelJson = JsonConvert.SerializeObject(level, Formatting.Indented);
+			Directory.CreateDirectory(GetLocalLevelSaveFolder());
+			File.WriteAllText(GetLocalLevelSaveFolder()+"/"+levelFileName+"."+levelFileExtension, levelJson);
+		}
+
+		private string GetLocalLevelSaveFolder() {
+			return Application.persistentDataPath + "/" + levelFileFolderName;
 		}
 
 		private void OnLevelCreation(CreateItemResult_t item, bool bIOFailure) {
@@ -74,12 +76,14 @@ namespace Backend.Level {
 			GameSceneManager.console.Print("Upload status: " + item.m_eResult);
 		}
 
-		public void GetUserLevels(AccountID_t user, uint page, Action<PublishedFileId_t[]> onComplete) {
+		
+		// ---------- LEVEL QUERYING ----------
+		public void GetUserLevelInfos(AccountID_t user, uint page, Action<LevelInfo[]> onComplete) {
 			AppId_t appId = SteamUtils.GetAppID();
 
 			onUserQueryCompleteCallback = onComplete;
 
-			CallResult<SteamUGCQueryCompleted_t> queryCompleted = CallResult<SteamUGCQueryCompleted_t>.Create(OnUserLevelsQueryComplete);
+			CallResult<SteamUGCQueryCompleted_t> queryCompleted = CallResult<SteamUGCQueryCompleted_t>.Create(OnGetUserLevelInfosQueryComplete);
 			
 			UGCQueryHandle_t queryHandle = SteamUGC.CreateQueryUserUGCRequest(user,
 				EUserUGCList.k_EUserUGCList_Published,
@@ -91,23 +95,52 @@ namespace Backend.Level {
 			queryCompleted.Set(call);
 		}
 
-		private void OnUserLevelsQueryComplete(SteamUGCQueryCompleted_t item, bool bIOFailure) {
+		private void OnGetUserLevelInfosQueryComplete(SteamUGCQueryCompleted_t item, bool bIOFailure) {
 			if (item.m_eResult != EResult.k_EResultOK) {
 				Debug.LogError("Query to steam failed.");
 				return;
 			}
 
 			uint numResults = item.m_unNumResultsReturned;
-			PublishedFileId_t[] results = new PublishedFileId_t[numResults];
+			LevelInfo[] results = new LevelInfo[numResults];
 
 			for (uint i = 0; i < results.Length; i++) {
 				SteamUGCDetails_t details;
 				SteamUGC.GetQueryUGCResult(item.m_handle, i, out details);
-				Debug.Log("Found file: "+details.m_nPublishedFileId);
-				results[i] = details.m_nPublishedFileId;
+				//Debug.Log("Found file: "+details.m_nPublishedFileId);
+				results[i] = new LevelInfo(details);
 			}
 
 			onUserQueryCompleteCallback.Invoke(results);
+		}
+		
+		// ---------- LEVEL DOWNLOADING ----------
+		public void GetLevelFromID(PublishedFileId_t fileId) {
+			Debug.Log("Attempting to download: "+fileId);
+			
+			if (SteamUGC.DownloadItem(fileId, true)) {
+				Callback<DownloadItemResult_t> downloadResult = new Callback<DownloadItemResult_t>(OnDownloadComplete);
+			};
+		}
+
+		private void OnDownloadComplete(DownloadItemResult_t item) {
+			if (item.m_unAppID != SteamUtils.GetAppID()) {
+				return;
+			}
+			
+			if (item.m_eResult != EResult.k_EResultOK) {
+				Debug.Log("Failed to download level: "+item.m_nPublishedFileId);
+				return;
+			}
+			
+			ulong punSizeOnDisk = 0;
+			string pchFolder = "";
+			uint cchFolderSize = 500000000;
+			uint punTimeStamp = 0;
+
+			SteamUGC.GetItemInstallInfo(item.m_nPublishedFileId, out punSizeOnDisk, out pchFolder, cchFolderSize, out punTimeStamp);
+			
+			Debug.Log($"Item installed: {item.m_nPublishedFileId} at {pchFolder}");
 		}
 	}
 }

@@ -6,13 +6,20 @@ using UnityEngine;
 
 public class CourseCreator : MonoBehaviour {
 
+	private LevelInfo[] levelInfo;
+	[SerializeField] private LevelOptionGrid levelOptionGrid;
+
 	void Start() {
-		LevelUploader levelUploader = new LevelUploader();
-		levelUploader.GetUserLevels(SteamUser.GetSteamID().GetAccountID(), 1, Test);
+		RequestLevelInfoFromSteam();
 	}
 
-	private void Test(PublishedFileId_t[] fileId) {
-		
+	private void RequestLevelInfoFromSteam() {
+		LevelUploader levelUploader = new LevelUploader();
+		levelUploader.GetUserLevelInfos(SteamUser.GetSteamID().GetAccountID(), 1, SetLevelInfo);
+	}
+
+	private void SetLevelInfo(LevelInfo[] info) {
+		levelOptionGrid.SetOptions(info);
 	}
 
 }

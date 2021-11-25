@@ -86,6 +86,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsoleConfig.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Level\LevelInfo.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

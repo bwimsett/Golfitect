@@ -19,20 +19,20 @@ public class LevelOptionGrid : MonoBehaviour {
 		SetOptions(new object[5]);
 	}
 	
-	public void SetOptions(object[] levels) {
+	public void SetOptions(object[] optionObjects) {
 		// Populate pages array
 		int numPerPage = layout.x * layout.y;
-		int pageCount = Mathf.CeilToInt(((float) levels.Length / numPerPage));
+		int pageCount = Mathf.CeilToInt(((float) optionObjects.Length / numPerPage));
 		pages = new object[pageCount, numPerPage];
 		int levelIndex = 0;
 
 		for (int page = 0; page < pageCount; page++) {
 			for (int slot = 0; slot < numPerPage; slot++) {
-				if (levelIndex >= levels.Length) {
+				if (levelIndex >= optionObjects.Length) {
 					break;
 				}
 				
-				pages[page, slot] = levels[levelIndex];
+				pages[page, slot] = optionObjects[levelIndex];
 				levelIndex++;
 			}
 		}
@@ -44,7 +44,7 @@ public class LevelOptionGrid : MonoBehaviour {
 	}
 
 	public void Refresh() {
-		// Generate options if the array doesn't exist yet
+		// Generate optionObjects if the array doesn't exist yet
 		if (options == null) {
 			// First calculate dimensions per option
 			Vector2 gridArea = _rectTransform.rect.size;
@@ -65,7 +65,7 @@ public class LevelOptionGrid : MonoBehaviour {
 			}
 		}
 		
-		// Set values for the options
+		// Set values for the optionObjects
 		for (int i = 0; i < options.Length; i++) {
 			options[i].SetObject(pages[page, i]);
 		}
