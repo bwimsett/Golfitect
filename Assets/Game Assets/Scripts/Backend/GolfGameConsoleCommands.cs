@@ -1,4 +1,6 @@
 using Backend.Level;
+using Backend.Submittable;
+using Steamworks;
 using UnityEngine;
 
 namespace Backend {
@@ -8,9 +10,9 @@ namespace Backend {
 		
 		public void Initialise() {
 			console.config.AddAction("savelevel", new BWConsole_Action((string levelName) => {
-				LevelUploader levelUploader = new LevelUploader();
-				LevelManager.currentLevel.levelName = levelName;
-				levelUploader.UploadLevelToSteam(LevelManager.currentLevel);
+				SteamUploader steamUploader = new SteamUploader();
+				SteamSubmittable submittable = new SteamSubmittable(levelName, "", LevelManager.currentLevel);
+				steamUploader.UploadToSteam(submittable);
 			}));
 		}
 		

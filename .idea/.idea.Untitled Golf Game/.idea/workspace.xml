@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Steam Queries now work. Can pull basic level data, and download level files.">
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/AutoResizeSwitchButton.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/AutoResizeSwitchButton.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HolesList_Number.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HolesList_Number.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu_Subwindow.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu_Subwindow.cs.meta" afterDir="false" />
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/ISteamSerializable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/ISteamSerializable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/SteamSubmittable.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/SteamSubmittable.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/SteamUploader.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/SteamUploader.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/GUI/Prefabs/GUI Course _ Hole Preview.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/GUI/Prefabs/GUI Course _ Hole Preview.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/BWSteamUtility.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/BWSteamUtility.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/BWSteamUtility.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/BWSteamUtility.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameConsoleCommands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameConsoleCommands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelUploader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelUploader.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HolesList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HolesList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HolesList.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HolesList.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelOptionGrid/LevelOptionGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelOptionGrid/LevelOptionGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelOptionGrid/LevelOptionGrid_Option.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelOptionGrid/LevelOptionGrid_Option.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList_Hole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList_Hole.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,12 +47,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/BWConsole/BWConsole_BasicCommands.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelSerializer.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/LevelManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/SteamManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/GolfGameConsoleCommands.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/SceneManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Managers/GameSceneManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelSerializer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelTile.cs" />
@@ -61,7 +56,6 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/LevelObject/LevelObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/Level.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Backend/Level/LevelUploader.cs" />
-      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseUploader.cs" />
       <option value="$PROJECT_DIR$/Assets/GridBackgroundGenerator.cs" />
       <option value="$PROJECT_DIR$/Assets/StripeButton.cs" />
@@ -81,22 +75,29 @@
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/SteamManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/SteamUtility.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/BWSteamUtility.cs" />
-      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" />
-      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelUploader.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelInfo.cs" />
-      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameConsoleCommands.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HoleList.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/AutoResizeSwitchButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu_Subwindow.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelOptionGrid/LevelOptionGrid.cs" />
-      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HoleList_Option.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HoleList_Item.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList_Hole.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelOptionGrid/LevelOptionGrid_Option.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HolesList_Number.cs" />
-      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HolesList.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HolesList.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Submittable/SteamSubmittable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization/ISerializable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization/ISteamSerializable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/SteamUploader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/ISteamSerializable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameConsoleCommands.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelUploader.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/SteamSubmittable.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="21EZ8z1trcaWidBOTqaxu4DgFQk" />
@@ -132,10 +133,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14712">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="14712" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -160,7 +161,8 @@
       <workItem from="1637762668113" duration="4418000" />
       <workItem from="1637779926354" duration="14883000" />
       <workItem from="1637845862449" duration="12063000" />
-      <workItem from="1637864023487" duration="15396000" />
+      <workItem from="1637864023487" duration="15906000" />
+      <workItem from="1637952461651" duration="4615000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -218,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1637877897109</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Steam workshop levels can now be added to a course hole list">
+      <created>1637885565837</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1637885565837</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +257,7 @@
     <MESSAGE value="Began work on course creator UI" />
     <MESSAGE value="Continued work on course creator, and got level IDs being pulled from Steam" />
     <MESSAGE value="Steam Queries now work. Can pull basic level data, and download level files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Steam Queries now work. Can pull basic level data, and download level files." />
+    <MESSAGE value="Steam workshop levels can now be added to a course hole list" />
+    <option name="LAST_COMMIT_MESSAGE" value="Steam workshop levels can now be added to a course hole list" />
   </component>
 </project>

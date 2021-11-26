@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Backend.Level;
+using Steamworks;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -44,6 +45,17 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 			}
 			
 			LayoutRebuilder.ForceRebuildLayoutImmediate(numbersContainer);
+		}
+
+		public LevelInfo[] GetHoles() {
+			object[] levelInfos = holeList.GetItems();
+			LevelInfo[] output = new LevelInfo[levelInfos.Length];
+
+			for (int i = 0; i < output.Length; i++) {
+				output[i] = (LevelInfo) levelInfos[i];
+			}
+
+			return output;
 		}
 
 	}

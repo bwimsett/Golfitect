@@ -104,6 +104,16 @@ public class GUIReorderableList : MonoBehaviour {
 		item.index = newIndex;
 	}
 
+	public object[] GetItems() {
+		object[] itemObjects = new object[items.Count];
+
+		for (int i = 0; i < items.Count; i++) {
+			itemObjects[i] = items[i].obj;
+		}
+
+		return itemObjects;
+	}
+
 	public void SetBlankIndex(int index) {
 		blankIndex = index;
 		blankItem.SetSiblingIndex(index+startingItemsInList);

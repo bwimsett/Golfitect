@@ -2,14 +2,19 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Backend.Enums;
+using Backend.Serialization;
+using Backend.Submittable;
 using Newtonsoft.Json;
 using UnityEngine;
 
 namespace Backend.Level {
 	[Serializable]
-	public class Level {
+	public class Level : ISteamSerializable {
 
-		public string levelName = "Test";
+		public string title { get; set; }
+		public string description { get; set; }
+		public string fileExtension { get => "golflvl"; }
+		public string saveFolderName { get => "levels"; }
 		
 		public Vector3Int levelDimensions { get; private set; }
 		[JsonProperty] private List<string> objectTypesUsed; // Lists the IDs of all the tile types used. Indexed by LevelTile for the tileType field to keep save files small.
@@ -80,6 +85,9 @@ namespace Backend.Level {
 		public void Save() {
 			UpdateObjectSaves();
 		}
+
+		
+
 
 		[OnDeserialized]
 		private void OnDeserialized(StreamingContext context) {
