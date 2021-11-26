@@ -56,7 +56,6 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\Course.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\StripeButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\LevelBuilderTool.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\CourseCreator\CourseCreator_HolesList.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GUIHighlightOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\Tool.cs" />
@@ -87,6 +86,19 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsoleConfig.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\LevelInfo.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\CourseCreator\CourseCreator_HolesList.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\AutoResizeSwitchButton.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\IntegerRule.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\LocalisationInitializer.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\LocalizationRule.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\PluralRule.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\TextLocalizer.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\IndexRule.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\Locale.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocalisationManager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocString.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu_Subwindow.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\CourseCreator\CourseCreator_HolesList_Number.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

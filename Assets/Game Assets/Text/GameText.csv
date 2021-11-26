@@ -1,0 +1,10 @@
+ID,Context,English,German,French,Empty
+,,,,,
+generic_settings,Generic placeholder for settings,Settings,,,
+,,,,,
+mainmenu_title_course_creator,Title for the Course Creator section of the main menu,Course Creator,,,
+,,,,,
+coursecreator_course_name,Placeholder text for course name field,Course Name,,,
+coursecreator_course_description,Placeholder text for course description field,Course Description,,,
+coursecreator_add_hole_button,Text shown on the hole grid for holes that can be added,Add,,,
+coursecreator_remove_hole_button,Text shown on the hole grid for holes that can be removed,Added,,,

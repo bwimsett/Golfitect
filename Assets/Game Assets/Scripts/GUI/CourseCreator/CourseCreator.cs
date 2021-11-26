@@ -1,25 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using Backend.Level;
 using Steamworks;
 using UnityEngine;
 
-public class CourseCreator : MonoBehaviour {
+namespace Game_Assets.Scripts.GUI.CourseCreator {
+	public class CourseCreator : MainMenu_Subwindow {
 
-	private LevelInfo[] levelInfo;
-	[SerializeField] private LevelOptionGrid levelOptionGrid;
+		private LevelInfo[] levelInfo;
+		[SerializeField] private LevelOptionGrid.LevelOptionGrid levelOptionGrid;
+		public CourseCreator_HolesList holesList;
 
-	void Start() {
-		RequestLevelInfoFromSteam();
+		void Start() {
+			RequestLevelInfoFromSteam();
+		}
+
+		private void RequestLevelInfoFromSteam() {
+			LevelUploader levelUploader = new LevelUploader();
+			levelUploader.GetUserLevelInfos(SteamUser.GetSteamID().GetAccountID(), 1, OnLevelInfoLoaded);
+		}
+
+		private void OnLevelInfoLoaded(LevelInfo[] info) {
+			levelOptionGrid.SetOptions(info, this);
+		}
+
 	}
-
-	private void RequestLevelInfoFromSteam() {
-		LevelUploader levelUploader = new LevelUploader();
-		levelUploader.GetUserLevelInfos(SteamUser.GetSteamID().GetAccountID(), 1, SetLevelInfo);
-	}
-
-	private void SetLevelInfo(LevelInfo[] info) {
-		levelOptionGrid.SetOptions(info);
-	}
-
 }

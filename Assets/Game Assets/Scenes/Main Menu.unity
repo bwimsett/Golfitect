@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 43415166}
   - component: {fileID: 43415165}
   - component: {fileID: 43415164}
+  - component: {fileID: 43415167}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -180,6 +181,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &43415167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43415163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ef2dc99251349f1aa040ea92de683bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameText: {fileID: 4900000, guid: 02614dc2720d73b48b514804aa25644c, type: 3}
+  defaultLocale: 0
 --- !u!224 &126842090 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 734715302955463863, guid: 2c6f106f968376343bb2cd2d532db642, type: 3}
@@ -265,6 +280,7 @@ GameObject:
   - component: {fileID: 247795864}
   - component: {fileID: 247795866}
   - component: {fileID: 247795865}
+  - component: {fileID: 247795867}
   m_Layer: 5
   m_Name: Section Title
   m_TagString: Untagged
@@ -388,6 +404,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 247795863}
   m_CullTransparentMesh: 1
+--- !u!114 &247795867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 247795863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70618b71c97119c47b1ef145171a0355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  locString:
+    key: mainmenu_title_course_creator
 --- !u!1 &333454765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1136,6 +1167,7 @@ GameObject:
   - component: {fileID: 889806352}
   - component: {fileID: 889806354}
   - component: {fileID: 889806353}
+  - component: {fileID: 889806355}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -1259,6 +1291,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889806351}
   m_CullTransparentMesh: 1
+--- !u!114 &889806355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 889806351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70618b71c97119c47b1ef145171a0355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  locString:
+    key: generic_settings
 --- !u!1 &890219290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,9 +1480,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 908018427}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5c4aa77755a2384aa158b32d5c3bfac, type: 3}
+  m_Script: {fileID: 11500000, guid: d3ebe29b02334faaa10f032c1afb966c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  holeList: {fileID: 775304449}
+  numbersContainer: {fileID: 600366674}
+  listNumberPrefab: {fileID: 1937008787}
+--- !u!1 &912047502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 734715302627779542, guid: 2c6f106f968376343bb2cd2d532db642, type: 3}
+  m_PrefabInstance: {fileID: 734715302964314205}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &912047507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912047502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70618b71c97119c47b1ef145171a0355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  locString:
+    key: coursecreator_course_description
+--- !u!1 &953674848 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4274298864383890931, guid: c156c7a2b800e8249ae5b3ddf124319f, type: 3}
+  m_PrefabInstance: {fileID: 4274298863704681779}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &953674853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953674848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70618b71c97119c47b1ef145171a0355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  locString:
+    key: coursecreator_course_name
 --- !u!1 &980455822
 GameObject:
   m_ObjectHideFlags: 0
@@ -1792,6 +1882,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelOptionGrid: {fileID: 1738532122}
+  holesList: {fileID: 908018432}
 --- !u!1 &1217958289
 GameObject:
   m_ObjectHideFlags: 0
@@ -1905,7 +1996,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 408.07, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1244667521
@@ -3155,7 +3246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 42.78, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1903878124
@@ -3278,6 +3369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1937008788}
+  - component: {fileID: 1937008789}
   m_Layer: 5
   m_Name: Hole Number
   m_TagString: Untagged
@@ -3305,6 +3397,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1937008789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937008787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fe874e922f646298669520cabffbd5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberText: {fileID: 980455824}
 --- !u!1 &1960467577
 GameObject:
   m_ObjectHideFlags: 0
@@ -3451,7 +3556,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 465.28, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074698321

@@ -9,7 +9,7 @@ using UnityEngine.UI;
 public class GUIReorderableList : MonoBehaviour {
 
 	private List<GUIReorderableList_Item> items;
-	[SerializeField] private Transform listContainer;
+	[SerializeField] private RectTransform listContainer;
 	[SerializeField] private VerticalLayoutGroup verticalLayoutGroup;
 	[SerializeField] private GameObject listItemPrefab, listBlankPrefab;
 	
@@ -25,10 +25,6 @@ public class GUIReorderableList : MonoBehaviour {
 		
 		listItemPrefab.gameObject.SetActive(false);
 		listBlankPrefab.gameObject.SetActive(false);
-
-		for (int i = 0; i < 18; i++) {
-			AddItem(i);
-		}
 	}
 	
 	public void AddItem(object obj, bool allowDuplicates = false) {
@@ -47,6 +43,23 @@ public class GUIReorderableList : MonoBehaviour {
 		
 		newItem.SetList(this, items.Count-1);
 		newItem.SetItem(obj);
+		LayoutRebuilder.ForceRebuildLayoutImmediate(listContainer);
+	}
+
+	public void RemoveItem(object obj) {
+		for (int i = 0; i < items.Count; i++) {
+			if (items[i].obj.Equals(obj)) {
+				Destroy(items[i].gameObject);
+				items.RemoveAt(i);
+			}
+		}
+		
+		// Reset item indices
+		for (int i = 0; i < items.Count; i++) {
+			items[i].index = i;
+		}
+		
+		LayoutRebuilder.ForceRebuildLayoutImmediate(listContainer);
 	}
 
 	public bool ContainsItem(object obj) {
@@ -82,9 +95,9 @@ public class GUIReorderableList : MonoBehaviour {
 		
 		string indexString = "";
 		foreach (GUIReorderableList_Item itemx in items) {
-			indexString += itemx.obj + " ";
+			indexString += itemx.index+" ";
 		}
-		Debug.Log(indexString);
+		//Debug.Log(indexString);
 		
 		Destroy(blankItem.gameObject);
 		item.transform.SetSiblingIndex(blankIndex+startingItemsInList);
