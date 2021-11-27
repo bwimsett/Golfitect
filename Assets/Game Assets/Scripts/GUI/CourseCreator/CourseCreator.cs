@@ -25,12 +25,12 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 			levelOptionGrid.SetOptions(info, this);
 		}
 
-		private Course CreateCourse() {
+		public Course GetCourseFromInput() {
 			string title = nameInputField.text;
 			string description = descriptionInputField.text;
 			LevelInfo[] holes = holesList.GetHoles();
 			
-			Course course = new Course(holes);
+			Course course = new Course(title, description, holes);
 
 			return course;
 		}

@@ -55,6 +55,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseUploader.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\Course.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\StripeButton.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\ISteamSerializable.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\CourseCreator\CourseCreator_HolesList.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\LevelBuilderTool.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GUIHighlightOnMouseover.cs" />
@@ -74,7 +75,7 @@
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsole_OutputLine.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GridBackgroundGenerator.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\LevelInfo.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameConsoleCommands.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameLevelCommands.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\IntegerRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid_Option.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\TextLocalizer.cs" />
@@ -82,6 +83,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\CameraController.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\CourseCreator\CourseCreator.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\Level.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamSubmittable.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\LocalisationInitializer.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ButtonBackground.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocalisationManager.cs" />
@@ -92,16 +94,16 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelBuilder\LevelGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LevelManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\AutoResizeSwitchButton.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameMainMenuCommands.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\BWSteamUtility.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamUploader.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\PluralRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsole.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsoleConfig.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamSubmittable.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamUploader.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\ISteamSerializable.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\MainMenuManager.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
