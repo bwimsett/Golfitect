@@ -77,6 +77,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\LevelInfo.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameLevelCommands.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\IntegerRule.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\MainMenuManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid_Option.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\TextLocalizer.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObject.cs" />
@@ -96,14 +97,16 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\AutoResizeSwitchButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameMainMenuCommands.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\BWSteamUtility.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamUploader.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamLoader.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\PluralRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsole.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsoleConfig.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\MainMenuManager.cs" />
+     <Compile Include="Assets\GameLoader.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectBank.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectUtility.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

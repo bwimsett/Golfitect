@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using Backend.Serialization;
 using JetBrains.Annotations;
@@ -10,7 +11,7 @@ namespace Backend.Submittable {
 		public string title = "";
 		public string description = "";
 		public ISteamSerializable obj;
-		public string savePath = "";
+		public string savePath { get; private set; }
 
 		public SteamSubmittable([NotNull]string title, [NotNull]string description, ISteamSerializable obj) {
 			this.title = title;
@@ -21,13 +22,13 @@ namespace Backend.Submittable {
 		public void SaveLocal() {
 			obj.Save();
 			string json = JsonConvert.SerializeObject(obj, Formatting.Indented);
-			savePath = GetSaveFolderPath();
+			ResetSaveFolderPath();
 			Directory.CreateDirectory(savePath);
 			File.WriteAllText(savePath+"/"+title+"."+obj.fileExtension, json);	
 		}
 
-		public string GetSaveFolderPath() {
-			return Application.persistentDataPath + "/" + obj.saveFolderName;
+		private void ResetSaveFolderPath() {
+			savePath = Application.persistentDataPath + "/" + obj.saveFolderName + "/" + DateTime.Now.Ticks;
 		}
 
 	}  

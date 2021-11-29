@@ -5,6 +5,7 @@ using Backend.Enums;
 using Backend.Managers;
 using DG.Tweening;
 using Newtonsoft.Json;
+using Sirenix.OdinInspector;
 using UnityEngine;
 
 namespace Backend.Level {
@@ -12,6 +13,8 @@ namespace Backend.Level {
 
 		public string objectTypeID;
 		public LevelObjectClass LevelObjectClass;
+		public bool isGridTile;
+		[ShowIf("isGridTile")]
 		public Texture2D[] layout;
 		[HideInInspector] public int objectID;
 		[HideInInspector] public Vector3Int origin;
@@ -90,25 +93,27 @@ namespace Backend.Level {
 	
 	[Serializable]
 	public class LevelObjectSave {
-		[JsonProperty] private int objectTypeIndex; // Index of objecttypeid stored in the level class
-		[JsonIgnore] public string objectTypeID { get => LevelManager.currentLevel.GetObjectTypeIDFromIndex(objectTypeIndex); }
+		[JsonProperty] public int objectTypeIndex { get; private set; } // Index of objecttypeid stored in the level class
 		public int objectID;
 		public Vector3Int origin;
 
+		public LevelObjectSave() {
+			
+		}
+
 		public LevelObjectSave(LevelObject levelObject) {
-			objectTypeIndex = LevelManager.currentLevel.GetObjectIndexFromID(levelObject.objectTypeID);
+			objectTypeIndex = GameManager.currentLevel.GetObjectIndexFromID(levelObject.objectTypeID);
 			objectID = levelObject.objectID;
 			origin = levelObject.origin;
 		}
 
 		public void Load(LevelObject levelObject) {
-			levelObject.objectTypeID = objectTypeID;
 			levelObject.objectID = objectID;
 			levelObject.origin = origin;
 			LoadLevelObject();
 		}
 
-		public virtual void LoadLevelObject() {
+		protected virtual void LoadLevelObject() {
 			
 		}
 

@@ -10,9 +10,10 @@ namespace Backend {
 		
 		public void Initialise() {
 			console.config.AddAction("savecourse", new BWConsole_Action(() => {
-				SteamUploader steamUploader = new SteamUploader();
+				SteamLoader steamLoader = new SteamLoader();
 				Course.Course course = MainMenuManager.courseCreator.GetCourseFromInput();
-				steamUploader.UploadToSteam(new SteamSubmittable(course.title, course.description, course));
+				steamLoader.UploadToSteam(new SteamSubmittable(course.title, course.description, course));
+				GameLoader.LoadLevel(course.holes[0]);
 			}));
 		}
 		

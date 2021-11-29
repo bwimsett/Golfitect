@@ -1,18 +1,18 @@
 using Backend.Level;
+using Backend.Managers;
 using Backend.Submittable;
-using Steamworks;
 using UnityEngine;
 
 namespace Backend {
-	public class GolfGameConsoleCommands : MonoBehaviour {
+	public class GolfGameLevelCommands : MonoBehaviour {
 
 		public BWConsole console;
 		
 		public void Initialise() {
-			console.config.AddAction("savelevel", new BWConsole_Action((string levelName) => {
-				SteamUploader steamUploader = new SteamUploader();
-				SteamSubmittable submittable = new SteamSubmittable(levelName, "", LevelManager.currentLevel);
-				steamUploader.UploadToSteam(submittable);
+			console.config.AddAction("savelevel", new BWConsole_Action(levelName => {
+				SteamLoader steamLoader = new SteamLoader();
+				SteamSubmittable submittable = new SteamSubmittable(levelName, "", GameManager.currentLevel);
+				steamLoader.UploadToSteam(submittable);
 			}));
 		}
 		

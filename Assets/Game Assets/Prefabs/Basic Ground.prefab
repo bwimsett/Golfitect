@@ -96,8 +96,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectTypeID: basic_ground
-  objectTypeIndex: 0
-  objectID: 0
+  LevelObjectClass: 0
+  isGridTile: 1
   layout:
   - {fileID: 2800000, guid: a19bbaac5c130f8458bcefa9ff5687ab, type: 3}
-  coordinates: []
+  objectID: 0
+  origin: {x: 0, y: 0, z: 0}

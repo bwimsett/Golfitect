@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Backend.Managers;
 using UnityEngine;
 
 public class LevelGrid : MonoBehaviour {
@@ -11,7 +12,7 @@ public class LevelGrid : MonoBehaviour {
 		grid = GetComponent<Grid>();
 		collider = GetComponent<BoxCollider>();
 
-		Vector3Int levelDimensions = LevelManager.currentLevel.levelDimensions;
+		Vector3Int levelDimensions = GameManager.currentLevel.levelDimensions;
 		collider.size = new Vector3(levelDimensions.x, 0.1f, levelDimensions.z);
 	}
 

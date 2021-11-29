@@ -14,8 +14,6 @@ public class LevelBuilderTool : Tool {
 	private Vector3Int startCoordinate, endCoordinate;
 	private bool mouseDown;
 
-	[SerializeField] private Transform levelContainer;
-
 	protected override void OnMouseHover() {
 		startCoordinate = endCoordinate = mousePosition;
 		RefreshPlacing();
@@ -41,7 +39,7 @@ public class LevelBuilderTool : Tool {
 	private void Place() {
 		foreach (Tuple<Vector3Int, GameObject> placingObject in placing) {
 			LevelObject levelObject = placingObject.Item2.GetComponent<LevelObject>();
-			LevelManager.currentLevel.PlaceAtCoordinate(placingObject.Item1, levelObject);			
+			GameManager.currentLevel.PlaceAtCoordinate(placingObject.Item1, levelObject);			
 			objectCache.Remove(placingObject.Item2);
 		}
 	}
@@ -59,7 +57,7 @@ public class LevelBuilderTool : Tool {
 		// If object count < object cache, instantiate more
 		if (countDifference > 0) {
 			for (int i = 0; i < countDifference; i++) {
-				GameObject newObject = Instantiate(currentLevelObject.gameObject, levelContainer);
+				GameObject newObject = Instantiate(currentLevelObject.gameObject, LevelManager.levelObjectUtility.levelContainer);
 				objectCache.Add(newObject);
 			}
 		}

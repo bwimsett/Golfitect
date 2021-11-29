@@ -9,7 +9,7 @@ namespace Backend.Course {
 	public class Course : ISteamSerializable {
 		
 		[JsonProperty]
-		private LevelInfo[] holes;
+		public LevelInfo[] holes { get; private set; }
 		public string title;
 		public string description;
 
