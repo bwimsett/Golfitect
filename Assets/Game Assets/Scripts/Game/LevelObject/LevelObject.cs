@@ -13,10 +13,12 @@ namespace Backend.Level {
 	public class LevelObject : MonoBehaviour {
 
 		public string objectTypeID;
-		public LevelObjectClass LevelObjectClass;
+		public LevelObjectClass levelObjectClass;
 		public bool isGridTile;
 		[ShowIf("isGridTile")]
 		public Texture2D[] layout;
+		public Sprite buildMenuIcon;
+		public bool showInBuildMenuDock;
 		[HideInInspector] public int objectID;
 		[HideInInspector] public Vector3Int origin, scale;
 
@@ -74,6 +76,9 @@ namespace Backend.Level {
 		public void SetScaleAndPosition(Vector3Int scale, Vector3Int position) {
 			this.scale = scale;
 			this.origin = position;
+
+			transform.localScale = scale;
+			transform.localPosition = position;
 			
 			RefreshTextures();
 		}
@@ -165,8 +170,7 @@ namespace Backend.Level {
 
 		public void Load(LevelObject levelObject) {
 			levelObject.objectID = objectID;
-			levelObject.origin = origin;
-			levelObject.scale = scale;
+			levelObject.SetScaleAndPosition(scale, origin);
 			LoadLevelObject();
 		}
 

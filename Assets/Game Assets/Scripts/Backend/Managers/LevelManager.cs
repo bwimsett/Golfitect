@@ -1,6 +1,7 @@
 using Backend.Level;
 using Backend.Managers;
 using Game;
+using Game_Assets.Scripts.GUI.LevelBuilder;
 using Steamworks;
 using UnityEngine;
 
@@ -16,6 +17,7 @@ public class LevelManager : MonoBehaviour {
 	public static LevelInputManager levelInputManager;
 	[SerializeField] private LevelObjectUtility _levelObjectUtility;
 	public static LevelObjectUtility levelObjectUtility;
+	[SerializeField] private LevelBuilderHUDManager levelBuilderHUD;
 
 	void Awake() {
 		PopulateGlobalVariables();
@@ -37,7 +39,7 @@ public class LevelManager : MonoBehaviour {
 
 		cameraController.Initialise();
 		levelGrid.Initialise();
-		levelInputManager.Initialise();
+		levelBuilderHUD.Initialise();
 
 		GameManager.currentLevel.Load();
 	}

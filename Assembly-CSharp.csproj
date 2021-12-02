@@ -55,11 +55,11 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseUploader.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\Course.cs" />
      <Compile Include="Assets\FlatKit\[Render Pipeline] URP\RenderFeatures\Outline\FlatKitDepthNormals.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\StripeButton.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\StripeButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\ISteamSerializable.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\CourseCreator\CourseCreator_HolesList.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\LevelBuilderTool.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GUIHighlightOnMouseover.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIHighlightOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu_Subwindow.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\Tool.cs" />
@@ -94,7 +94,6 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\Level.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamSubmittable.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\LocalisationInitializer.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\ButtonBackground.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocalisationManager.cs" />
      <Compile Include="Assets\FlatKit\[Render Pipeline] URP\RenderFeatures\Fog\FlatKitFog.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\LevelUploader.cs" />
@@ -115,6 +114,9 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsoleConfig.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\LevelBuilder\LevelBuilder_BuildOptionButton.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\LevelBuilder\LevelBuilderHUDManager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\FlatKit\Shaders\StylizedSurface\LibraryUrp\LitForwardPass_DR.hlsl" />
@@ -867,6 +869,14 @@
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
       <Project>{62370954-6062-6c73-e698-8a7a60ebffa2}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.Editor.csproj">
+      <Project>{91356981-5371-b8ed-9061-7afa6754a920}</Project>
+      <Name>LeTai.TranslucentImage.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.csproj">
+      <Project>{41e027ee-dde4-a340-b95f-bc028c92715b}</Project>
+      <Name>LeTai.TranslucentImage</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -9,14 +9,7 @@ namespace Backend.Managers {
 
 		[SerializeField] public LevelBuilderTool levelBuilderTool;
 
-		public LevelObject testLevelObject;
-		
 		[HideInInspector] public Tool currentActiveTool;
-
-		public void Initialise() {
-			levelBuilderTool.SetLevelObject(testLevelObject);
-			levelBuilderTool.SetActive(true);
-		}
 
 		public Vector3Int GetMouseGridCoordinate() {
 			Ray ray = LevelManager.cameraController.camera.ScreenPointToRay(Input.mousePosition);

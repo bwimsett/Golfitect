@@ -42,7 +42,7 @@ namespace Backend.Level {
 			levelObject.origin = origin;
 			levelObject.Construct();
 			
-			switch (levelObject.LevelObjectClass) {
+			switch (levelObject.levelObjectClass) {
 				case LevelObjectClass.Tile: SetTiles(placingCoordinates, levelObject.objectID); break;
 			}
 			
