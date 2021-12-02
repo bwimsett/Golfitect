@@ -13,7 +13,7 @@ namespace Backend {
 				SteamLoader steamLoader = new SteamLoader();
 				Course.Course course = MainMenuManager.courseCreator.GetCourseFromInput();
 				steamLoader.UploadToSteam(new SteamSubmittable(course.title, course.description, course));
-				GameLoader.LoadLevel(course.holes[0]);
+				LoadingScreenManager.LoadLevel(course.holes[0]);
 			}));
 		}
 		

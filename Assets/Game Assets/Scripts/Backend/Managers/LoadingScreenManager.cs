@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameLoader : MonoBehaviour {
+public class LoadingScreenManager : MonoBehaviour {
 
 	private static LevelInfo loadTarget;
 

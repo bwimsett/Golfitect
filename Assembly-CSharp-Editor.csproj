@@ -52,9 +52,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Steamworks\Editor\RedistCopy.cs" />
-     <Compile Include="Assets\Steamworks\Editor\RedistInstall.cs" />
-     <None Include="Assets\Steamworks\Editor\com.rlabrecque.steamworks.net.editor.asmdef" />
+     <Compile Include="Assets\FlatKit\[Render Pipeline] URP\Water\Editor\WaterEditor.cs" />
+     <Compile Include="Assets\FlatKit\Shaders\Editor\StylizedSurfaceEditor.cs" />
+     <Compile Include="Assets\FlatKit\Utils\Readme\Editor\ReadmeEditor.cs" />
+     <Compile Include="Assets\FlatKit\Utils\Readme\Editor\FlatKitReadme.cs" />
+     <Compile Include="Assets\FlatKit\[Render Pipeline] URP\Water\Editor\Tooltips.cs" />
+     <Compile Include="Assets\FlatKit\Shaders\GradientSkybox\Editor\GradientSkyboxEditor.cs" />
+     <Compile Include="Assets\FlatKit\Shaders\Editor\Tooltips.cs" />
+     <Compile Include="Assets\FlatKit\Utils\Readme\Editor\NetworkManager.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -721,20 +726,23 @@
  <Reference Include="Unity.Searcher.Editor">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.rlabrecque.steamworks.net.editor">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.RenderPipelines.Core.Runtime">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.Editor">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
@@ -744,6 +752,12 @@
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.PlasticSCM.Editor">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="com.rlabrecque.steamworks.net">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
@@ -772,12 +786,6 @@
  <Reference Include="Unity.RenderPipelines.Core.Editor">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
- <Reference Include="com.rlabrecque.steamworks.net.editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.editor.dll</HintPath>
- </Reference>
- <Reference Include="com.rlabrecque.steamworks.net">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.dll</HintPath>
- </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
@@ -792,9 +800,17 @@
       <Project>{7648612d-4189-672f-f05b-efe913b5ba0d}</Project>
       <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
+    <ProjectReference Include="MPUIKit.csproj">
+      <Project>{6d6ebff6-93e9-c2cd-c060-bb871849b2be}</Project>
+      <Name>MPUIKit</Name>
+    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
       <Project>{ca060b67-3b07-c6b5-2cc5-dffd91503644}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="MPUIKit.Editor.csproj">
+      <Project>{079bdb49-b61d-0cc6-44f1-648e18e35587}</Project>
+      <Name>MPUIKit.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
       <Project>{0daee573-1afa-b1a7-4aa5-d8cae8a958f5}</Project>

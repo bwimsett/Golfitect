@@ -5,46 +5,52 @@ using Backend.Level;
 using Backend.Managers;
 using Game.Tools;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class LevelBuilderTool : Tool {
 
 	private LevelObject currentLevelObject;
 	private List<GameObject> objectCache;
-	private List<Tuple<Vector3Int, GameObject>> placing;
-	private Vector3Int startCoordinate, endCoordinate;
+
+	private LevelObject placing;
+	//private List<Tuple<Vector3Int, GameObject>> placing;
+	private Vector3Int startCoordinate, endCoordinate, origin, limit;
 	private bool mouseDown;
 
 	protected override void OnMouseHover() {
 		startCoordinate = endCoordinate = mousePosition;
-		RefreshPlacing();
+		RefreshScale();
 	}
 
 	protected override void OnMouseDown() {
 		startCoordinate = endCoordinate = mousePosition;
 		mouseDown = true;
-		RefreshPlacing();
+		RefreshScale();
 	}
 
 	protected override void MouseDown() {
 		endCoordinate = mousePosition;
-		RefreshPlacing();
+		RefreshScale();
 	}
 
 	protected override void OnMouseUp() {
 		Place();
 		startCoordinate = endCoordinate = mousePosition;
-		RefreshPlacing();
+		RefreshScale();
 	}
 
 	private void Place() {
-		foreach (Tuple<Vector3Int, GameObject> placingObject in placing) {
-			LevelObject levelObject = placingObject.Item2.GetComponent<LevelObject>();
-			GameManager.currentLevel.PlaceAtCoordinate(placingObject.Item1, levelObject);			
-			objectCache.Remove(placingObject.Item2);
-		}
+		//foreach (Tuple<Vector3Int, GameObject> placingObject in placing) {
+			//LevelObject levelObject = placingObject.Item2.GetComponent<LevelObject>();
+			//GameManager.currentLevel.PlaceAtCoordinate(placingObject.Item1, levelObject);			
+			//objectCache.Remove(placingObject.Item2);
+		//}
+		
+		GameManager.currentLevel.PlaceAtCoordinate(origin, placing);
+		placing = null;
 	}
 
-	private void RefreshPlacing() {
+	/*private void RefreshPlacing() {
 		if (!currentLevelObject) {
 			return;
 		}
@@ -95,8 +101,43 @@ public class LevelBuilderTool : Tool {
 		}
 		
 		//Debug.Log($"Start coordinate: {startCoordinate}, end coordinate: {endCoordinate}, object count: {objectCount}");
+	}*/
+
+	private void RefreshScale() {
+		if (!placing) {
+			placing = Instantiate(currentLevelObject.gameObject, LevelManager.levelObjectUtility.levelContainer).GetComponent<LevelObject>();
+		}
+		
+		origin = GetOrigin();
+		limit = GetLimit();
+
+		Vector3Int scale = limit - origin;
+		scale = new Vector3Int(Mathf.Max(1, scale.x), Mathf.Max(1, scale.y), Mathf.Max(scale.z));
+
+		Transform placingTransform = placing.transform;
+		
+		placingTransform.localScale = scale;
+		placingTransform.position = LevelManager.levelGrid.GridCoordinateToWorldPosition(origin);
+		
+		placing.SetScaleAndPosition(scale, origin);
 	}
 
+	private Vector3Int GetOrigin() {
+		int minX = Mathf.Min(startCoordinate.x, endCoordinate.x);
+		int minY = Mathf.Min(startCoordinate.y, endCoordinate.y);
+		int minZ = Mathf.Min(startCoordinate.z, endCoordinate.z);
+		
+		return new Vector3Int(minX, minY, minZ);
+	}
+
+	private Vector3Int GetLimit() {
+		int maxX = Mathf.Max(startCoordinate.x, endCoordinate.x);
+		int maxY = Mathf.Max(startCoordinate.y, endCoordinate.y);
+		int maxZ = Mathf.Max(startCoordinate.z, endCoordinate.z);
+		
+		return new Vector3Int(maxX, maxY, maxZ);
+	}
+	
 	public void SetLevelObject(LevelObject levelObject) {
 		this.currentLevelObject = levelObject;
 		ClearObjectCache();
