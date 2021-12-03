@@ -46,16 +46,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectTypeID: scenery_tee
   levelObjectClass: 1
-  isGridTile: 0
-  layout: []
   buildMenuIcon: {fileID: 21300000, guid: 52b26723b3ccc0e438377b8a2c7d9eb0, type: 3}
   showInBuildMenuDock: 1
+  ballCollisions: 0
   objectID: 0
   origin: {x: 0, y: 0, z: 0}
   scale: {x: 0, y: 0, z: 0}
   tileTextures: 0
   horizontalTextures: 
   verticalTextures: 
+  meshFilter: {fileID: 2489582975530456125}
 --- !u!1 &3934893948132345111
 GameObject:
   m_ObjectHideFlags: 0

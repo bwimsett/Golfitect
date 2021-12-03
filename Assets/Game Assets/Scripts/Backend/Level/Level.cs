@@ -16,8 +16,8 @@ namespace Backend.Level {
 
 		public string title { get; set; }
 		public string description { get; set; }
-		public string fileExtension { get => "golflvl"; }
-		public string saveFolderName { get => "levels"; }
+		[JsonIgnore] public string fileExtension { get => "golflvl"; }
+		[JsonIgnore] public string saveFolderName { get => "levels"; }
 		
 		public Vector3Int levelDimensions { get; private set; }
 		[JsonProperty] private List<string> objectTypesUsed; // Lists the IDs of all the tile types used. Indexed by LevelTile for the tileType field to keep save files small.
@@ -31,6 +31,14 @@ namespace Backend.Level {
 			objects = new Dictionary<int, LevelObject>();
 		}
 
+		public void Play() {
+			foreach (KeyValuePair<int, LevelObject> obj in objects) {
+				obj.Value.EnterPlayMode();
+			}
+			
+			RefreshLevelCollider();
+		}
+		
 		public void Place(Vector3 origin, LevelObject levelObject) {
 			levelObject.origin = origin;
 			levelObject.Construct();
@@ -48,6 +56,10 @@ namespace Backend.Level {
 
 			int index = 0;
 			foreach (KeyValuePair<int, LevelObject> obj in objects) {
+				if (!obj.Value.ballCollisions) {
+					continue;
+				}
+				
 				Mesh mesh = obj.Value.meshFilter.mesh;
 
 				for (int i = 0; i < mesh.subMeshCount; i++) {
@@ -117,7 +129,7 @@ namespace Backend.Level {
 				LevelObject prefab = prefabs[saveObj.objectTypeIndex];
 
 				// Instantiate
-				LevelObject levelObject = LevelManager.levelObjectUtility.InstantiatePrefab(prefab, saveObj.origin);
+				LevelObject levelObject = LevelManager.levelObjectUtility.InstantiatePrefab(prefab, saveObj.origin.Vector3());
 
 				// Provide object save to instantiated object and load
 				levelObject.Load(saveObj);

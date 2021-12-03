@@ -1,8 +1,10 @@
+using System;
 using Backend.Level;
 using Backend.Managers;
 using Game;
 using Game_Assets.Scripts.GUI.LevelBuilder;
 using Steamworks;
+using UnityEditor;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour {
@@ -21,11 +23,23 @@ public class LevelManager : MonoBehaviour {
 	[SerializeField] private MeshCollider _levelCollider;
 	public static MeshCollider levelCollider;
 
-	void Awake() {
-		PopulateGlobalVariables();
-		Initialise();
+	private static bool inGameScene;
+	private static LevelMode mode;
+	public enum LevelMode {
+		Build, Play
 	}
 	
+	void Awake() {
+		inGameScene = true;
+		PopulateGlobalVariables();
+		Initialise();
+		SetMode(mode);
+	}
+
+	void OnDestroy() {
+		inGameScene = false;
+	}
+
 	private void PopulateGlobalVariables() {
 		cameraController = _cameraController;
 		levelGrid = _levelGrid;
@@ -45,6 +59,23 @@ public class LevelManager : MonoBehaviour {
 		levelBuilderHUD.Initialise();
 
 		GameManager.currentLevel.Load();
+	}
+
+	public static void SetMode(LevelMode mode) {
+		LevelManager.mode = mode;
+
+		if (!inGameScene) {
+			return;
+		}
+
+		switch (mode) {
+			case LevelMode.Build: break;
+			case LevelMode.Play: EnterPlayMode(); break;
+		}
+	}
+
+	private static void EnterPlayMode() {
+		
 	}
 
 }

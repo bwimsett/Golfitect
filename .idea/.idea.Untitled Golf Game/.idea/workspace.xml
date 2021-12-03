@@ -4,30 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/Tee.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/Tee.cs.meta" afterDir="false" />
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Added level collider mesh generation and began work on level surface item placement">
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization/Vector3Save.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization/Vector3Save.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/BlackEdge01__StylSurf_None_Rim.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/BlackEdge01__StylSurf_None_Rim.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/GUI/Sprites/Flat Ground Tile Icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/GUI/Sprites/Flat Ground Tile Icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/GUI/Sprites/Ground Slope Tile Icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/GUI/Sprites/Ground Slope Tile Icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Models/Tiles/Basic Ground.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Models/Tiles/Basic Ground.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Basic Ground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Basic Ground.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Object Bank.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Object Bank.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Tee.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Tee.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelInputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelInputManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelBuilder/LevelBuilderHUDManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelBuilder/LevelBuilderHUDManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelBuilder/LevelGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelBuilder/LevelGrid.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/LevelBuilderTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/LevelBuilderTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/Tool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/Tool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeTai.TranslucentImage.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LeTai.TranslucentImage.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeTai.TranslucentImage.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LeTai.TranslucentImage.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untitled Golf Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled Golf Game.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +42,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/SteamUtility.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/BWSteamUtility.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelInfo.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/CourseCreator/CourseCreator_HoleList.cs" />
@@ -99,13 +85,14 @@
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelBuilder/LevelBuilder_BuildOptionButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/Tee.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelBuilder/LevelBuilderHUDManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelInputManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObject.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelBuilder/LevelGrid.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/Tool.cs" />
-      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization/Vector3Save.cs" />
       <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/LevelBuilderTool.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObject.cs" />
+      <option value="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="21EZ8z1trcaWidBOTqaxu4DgFQk" />
@@ -176,7 +163,7 @@
       <workItem from="1638362992913" duration="14359000" />
       <workItem from="1638404407594" duration="1463000" />
       <workItem from="1638445842352" duration="22332000" />
-      <workItem from="1638531561375" duration="11220000" />
+      <workItem from="1638531561375" duration="14795000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -276,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638470202633</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Added level collider mesh generation and began work on level surface item placement">
+      <created>1638555330721</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1638555330721</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,7 +306,8 @@
     <MESSAGE value="Implemented level loading" />
     <MESSAGE value="FINALLY GOT TEXTURE TILING WORKING" />
     <MESSAGE value="Added buttons for choosing different build tiles" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added buttons for choosing different build tiles" />
+    <MESSAGE value="Added level collider mesh generation and began work on level surface item placement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added level collider mesh generation and began work on level surface item placement" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

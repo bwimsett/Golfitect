@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Backend.Enums;
 using Backend.Managers;
+using Backend.Serialization;
 using DG.Tweening;
 using Newtonsoft.Json;
 using Sirenix.OdinInspector;
@@ -14,10 +15,8 @@ namespace Backend.Level {
 
 		public string objectTypeID;
 		public LevelObjectClass levelObjectClass;
-		[ShowIf("levelObjectClass", LevelObjectClass.Tile)]
-
 		public Sprite buildMenuIcon;
-		public bool showInBuildMenuDock;
+		public bool showInBuildMenuDock, ballCollisions = true;
 		[HideInInspector] public int objectID;
 		[HideInInspector] public Vector3 origin, scale;
 
@@ -32,6 +31,10 @@ namespace Backend.Level {
 		}
 
 		public virtual void ConstructLevelObject() {
+			
+		}
+
+		public virtual void EnterPlayMode() {
 			
 		}
 		
@@ -107,7 +110,7 @@ namespace Backend.Level {
 	public class LevelObjectSave {
 		[JsonProperty] public int objectTypeIndex { get; private set; } // Index of objecttypeid stored in the level class
 		public int objectID;
-		public Vector3 origin, scale;
+		public Vector3Save origin, scale;
 
 		public LevelObjectSave() {
 			
@@ -116,13 +119,13 @@ namespace Backend.Level {
 		public LevelObjectSave(LevelObject levelObject) {
 			objectTypeIndex = GameManager.currentLevel.GetObjectIndexFromID(levelObject.objectTypeID);
 			objectID = levelObject.objectID;
-			origin = levelObject.origin;
-			scale = levelObject.scale;
+			origin = new Vector3Save(levelObject.origin);
+			scale = new Vector3Save(levelObject.scale);
 		}
 
 		public void Load(LevelObject levelObject) {
 			levelObject.objectID = objectID;
-			levelObject.SetScaleAndPosition(scale, origin);
+			levelObject.SetScaleAndPosition(scale.Vector3(), origin.Vector3());
 			LoadLevelObject();
 		}
 

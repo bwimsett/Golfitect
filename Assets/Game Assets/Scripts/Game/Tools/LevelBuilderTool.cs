@@ -134,6 +134,7 @@ public class LevelBuilderTool : Tool {
 				bool foundGrid = LevelManager.levelInputManager.GetMouseWorldPosition(out mousePos);
 			}
 
+			origin = mousePos;
 			placing.transform.position = mousePos;
 		}
 	}
