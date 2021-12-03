@@ -5,7 +5,8 @@ namespace Game.Tools {
 	public class Tool : MonoBehaviour {
 
 		private bool active;
-		protected Vector3Int mousePosition;
+		protected bool mouseInGrid;
+		protected Vector3 mousePosition;
 
 		void Update() {
 			if (!active) {
@@ -16,7 +17,7 @@ namespace Game.Tools {
 		}
 
 		private void HandleInput() {
-			mousePosition = LevelManager.levelInputManager.GetMouseGridCoordinate();
+			mouseInGrid = LevelManager.levelInputManager.GetMouseWorldPosition(out mousePosition);
 			
 			if (Input.GetMouseButtonDown(0)) {
 				OnMouseDown();

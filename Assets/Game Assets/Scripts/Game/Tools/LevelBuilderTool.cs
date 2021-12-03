@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Backend.Enums;
 using Backend.Level;
 using Backend.Managers;
 using Game.Tools;
@@ -13,40 +14,39 @@ public class LevelBuilderTool : Tool {
 	private List<GameObject> objectCache;
 
 	private LevelObject placing;
-	//private List<Tuple<Vector3Int, GameObject>> placing;
-	private Vector3Int startCoordinate, endCoordinate, origin, limit;
+	private Vector3 startPosition, endPosition, origin, limit;
 	private bool mouseDown;
 
 	protected override void OnMouseHover() {
-		startCoordinate = endCoordinate = mousePosition;
-		RefreshScale();
+		startPosition = endPosition = mousePosition;
+		RefreshScaleAndPosition();
 	}
 
 	protected override void OnMouseDown() {
-		startCoordinate = endCoordinate = mousePosition;
+		startPosition = endPosition = mousePosition;
 		mouseDown = true;
-		RefreshScale();
+		RefreshScaleAndPosition();
 	}
 
 	protected override void MouseDown() {
-		endCoordinate = mousePosition;
-		RefreshScale();
+		endPosition = mousePosition;
+		RefreshScaleAndPosition();
 	}
 
 	protected override void OnMouseUp() {
 		Place();
-		startCoordinate = endCoordinate = mousePosition;
-		RefreshScale();
+		startPosition = endPosition = mousePosition;
+		RefreshScaleAndPosition();
 	}
 
 	private void Place() {
 		//foreach (Tuple<Vector3Int, GameObject> placingObject in placing) {
 			//LevelObject levelObject = placingObject.Item2.GetComponent<LevelObject>();
-			//GameManager.currentLevel.PlaceAtCoordinate(placingObject.Item1, levelObject);			
+			//GameManager.currentLevel.Place(placingObject.Item1, levelObject);			
 			//objectCache.Remove(placingObject.Item2);
 		//}
 		
-		GameManager.currentLevel.PlaceAtCoordinate(origin, placing);
+		GameManager.currentLevel.Place(origin, placing);
 		placing = null;
 	}
 
@@ -55,7 +55,7 @@ public class LevelBuilderTool : Tool {
 			return;
 		}
 		
-		Vector3Int coordinateDiff = endCoordinate - startCoordinate;
+		Vector3Int coordinateDiff = endCoordinate - startPosition;
 		int objectCount = (Mathf.Abs(coordinateDiff.x) + 1) * (Mathf.Abs(coordinateDiff.z) + 1);
 
 		int countDifference = objectCount - objectCache.Count;
@@ -70,17 +70,17 @@ public class LevelBuilderTool : Tool {
 
 		int objectIndex = 0;
 
-		int minX = Mathf.Min(startCoordinate.x, endCoordinate.x);
-		int minZ = Mathf.Min(startCoordinate.z, endCoordinate.z);
-		int maxX = Mathf.Max(startCoordinate.x, endCoordinate.x);
-		int maxZ = Mathf.Max(startCoordinate.z, endCoordinate.z);
+		int minX = Mathf.Min(startPosition.x, endCoordinate.x);
+		int minZ = Mathf.Min(startPosition.z, endCoordinate.z);
+		int maxX = Mathf.Max(startPosition.x, endCoordinate.x);
+		int maxZ = Mathf.Max(startPosition.z, endCoordinate.z);
 
 		placing = new List<Tuple<Vector3Int, GameObject>>();
 		
 		// Set positions
 		for (int x = minX; x <= maxX; x++) {
 			for (int z = minZ; z <= maxZ; z++) {
-				Vector3Int buildPos = new Vector3Int(x, startCoordinate.y, z);
+				Vector3Int buildPos = new Vector3Int(x, startPosition.y, z);
 				
 				// Put object at position and show it
 				GameObject placingObject = objectCache[objectIndex];
@@ -100,42 +100,58 @@ public class LevelBuilderTool : Tool {
 			}
 		}
 		
-		//Debug.Log($"Start coordinate: {startCoordinate}, end coordinate: {endCoordinate}, object count: {objectCount}");
+		//Debug.Log($"Start coordinate: {startPosition}, end coordinate: {endCoordinate}, object count: {objectCount}");
 	}*/
 
-	private void RefreshScale() {
+	private void RefreshScaleAndPosition() {
 		if (!placing) {
 			placing = Instantiate(currentLevelObject.gameObject, LevelManager.levelObjectUtility.levelContainer).GetComponent<LevelObject>();
 		}
 		
-		origin = GetOrigin();
-		limit = GetLimit();
+		Vector3 gridStartPos = LevelManager.levelGrid.WorldPositionToGridPosition(startPosition);
+		Vector3 gridEndPos = LevelManager.levelGrid.WorldPositionToGridPosition(endPosition);
 
-		Vector3Int scale = limit - origin;
-		scale = new Vector3Int(Mathf.Max(1, scale.x), Mathf.Max(1, scale.y), Mathf.Max(scale.z));
+		// Only scale tile object types
+		if (placing.levelObjectClass == LevelObjectClass.Tile) {
+			origin = GetOrigin(gridStartPos, gridEndPos);
+			limit = GetLimit(gridStartPos, gridEndPos);
 
-		Transform placingTransform = placing.transform;
+			Vector3 scale = limit - origin;
+			scale = new Vector3(Mathf.Max(1, scale.x), Mathf.Max(1, scale.y), Mathf.Max(scale.z));
+
+			Transform placingTransform = placing.transform;
 		
-		placingTransform.localScale = scale;
-		placingTransform.position = LevelManager.levelGrid.GridCoordinateToWorldPosition(origin);
+			placingTransform.localScale = scale;
+			placingTransform.position = origin;
 		
-		placing.SetScaleAndPosition(scale, origin);
+			placing.SetScaleAndPosition(scale, origin);
+		} else {
+			Vector3 mousePos = Vector3.zero;
+			bool isLevelSurface = LevelManager.levelInputManager.GetMouseLevelSurfacePosition(out mousePos);
+
+			// If couldn't find a point on the level surface at the given coordinate
+			if (!isLevelSurface) {
+				bool foundGrid = LevelManager.levelInputManager.GetMouseWorldPosition(out mousePos);
+			}
+
+			placing.transform.position = mousePos;
+		}
 	}
 
-	private Vector3Int GetOrigin() {
-		int minX = Mathf.Min(startCoordinate.x, endCoordinate.x);
-		int minY = Mathf.Min(startCoordinate.y, endCoordinate.y);
-		int minZ = Mathf.Min(startCoordinate.z, endCoordinate.z);
+	private Vector3 GetOrigin(Vector3 startPosition, Vector3 endPosition) {
+		float minX = Mathf.Min(startPosition.x, endPosition.x);
+		float minY = Mathf.Min(startPosition.y, endPosition.y);
+		float minZ = Mathf.Min(startPosition.z, endPosition.z);
 		
-		return new Vector3Int(minX, minY, minZ);
+		return new Vector3(minX, minY, minZ);
 	}
 
-	private Vector3Int GetLimit() {
-		int maxX = Mathf.Max(startCoordinate.x, endCoordinate.x);
-		int maxY = Mathf.Max(startCoordinate.y, endCoordinate.y);
-		int maxZ = Mathf.Max(startCoordinate.z, endCoordinate.z);
+	private Vector3 GetLimit(Vector3 startPosition, Vector3 endPosition) {
+		float maxX = Mathf.Max(startPosition.x, endPosition.x);
+		float maxY = Mathf.Max(startPosition.y, endPosition.y);
+		float maxZ = Mathf.Max(startPosition.z, endPosition.z);
 		
-		return new Vector3Int(maxX, maxY, maxZ);
+		return new Vector3(maxX, maxY, maxZ);
 	}
 	
 	public void SetLevelObject(LevelObject levelObject) {

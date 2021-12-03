@@ -20,6 +20,10 @@ public class LevelGrid : MonoBehaviour {
 		return grid.WorldToCell(position);
 	}
 
+	public Vector3 WorldPositionToGridPosition(Vector3 position) {
+		return GridCoordinateToWorldPosition(WorldPositionToGridCoordinate(position));
+	}
+
 	public Vector3 GridCoordinateToWorldPosition(Vector3Int gridCoordinate) {
 		Vector3 pos = grid.GetCellCenterWorld(gridCoordinate);
 		pos = pos - grid.cellSize / 2f;

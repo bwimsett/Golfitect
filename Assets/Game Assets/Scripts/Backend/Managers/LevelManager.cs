@@ -18,6 +18,8 @@ public class LevelManager : MonoBehaviour {
 	[SerializeField] private LevelObjectUtility _levelObjectUtility;
 	public static LevelObjectUtility levelObjectUtility;
 	[SerializeField] private LevelBuilderHUDManager levelBuilderHUD;
+	[SerializeField] private MeshCollider _levelCollider;
+	public static MeshCollider levelCollider;
 
 	void Awake() {
 		PopulateGlobalVariables();
@@ -29,6 +31,7 @@ public class LevelManager : MonoBehaviour {
 		levelGrid = _levelGrid;
 		levelInputManager = _levelInputManager;
 		levelObjectUtility = _levelObjectUtility;
+		levelCollider = _levelCollider;
 	}
 
 	private void Initialise() {

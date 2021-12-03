@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
 using Backend.Enums;
 using Backend.Managers;
@@ -23,41 +24,48 @@ namespace Backend.Level {
 		[JsonProperty] private Dictionary<int, LevelObjectSave> objectSaves;
 		private Dictionary<int, LevelObject> objects;
 
-		private int[,,] tileGrid; // Grid of all TILE objects in the world. Does not include regular objects.
-		
 		public Level(Vector3Int levelDimensions) {
 			this.levelDimensions = levelDimensions;
-			tileGrid = new int[levelDimensions.x, levelDimensions.y, levelDimensions.z];
 			objectTypesUsed = new List<string>();
 			objectSaves = new Dictionary<int, LevelObjectSave>();
 			objects = new Dictionary<int, LevelObject>();
 		}
 
-		public void PlaceAtCoordinate(Vector3Int origin, LevelObject levelObject) {
-			if (!levelObject.isGridTile) {
-				return;
-			}
-			
-			Vector3Int[] placingCoordinates = levelObject.GetPlacingCoordinates(origin);
+		public void Place(Vector3 origin, LevelObject levelObject) {
 			levelObject.origin = origin;
 			levelObject.Construct();
-			
-			switch (levelObject.levelObjectClass) {
-				case LevelObjectClass.Tile: SetTiles(placingCoordinates, levelObject.objectID); break;
-			}
-			
+
 			// Add to list of objects in the level
 			objects.Add(levelObject.objectID, levelObject);
+			RefreshLevelCollider();
 			
 			levelObject.gameObject.SetActive(true);
 		}
+		
+		public void RefreshLevelCollider() {
+			Mesh colliderMesh = new Mesh();
+			List<CombineInstance> combineInstances = new List<CombineInstance>();
 
-		private void SetTiles(Vector3Int[] tiles, int objectID) {
-			foreach (Vector3Int tile in tiles) {
-				tileGrid[tile.x, tile.y, tile.z] = objectID;
+			int index = 0;
+			foreach (KeyValuePair<int, LevelObject> obj in objects) {
+				Mesh mesh = obj.Value.meshFilter.mesh;
+
+				for (int i = 0; i < mesh.subMeshCount; i++) {
+					CombineInstance combineInstance = new CombineInstance();
+					combineInstance.mesh = obj.Value.meshFilter.mesh;
+					combineInstance.transform = obj.Value.transform.localToWorldMatrix;
+					combineInstance.subMeshIndex = i;
+					combineInstances.Add(combineInstance);
+				}
+				
+				index++;
 			}
-		}
 
+			colliderMesh.CombineMeshes(combineInstances.ToArray(), true, true);
+
+			LevelManager.levelCollider.sharedMesh = colliderMesh;
+		}
+		
 		public int GetObjectIndexFromID(string objectTypeID) {
 			for (int i = 0; i < objectTypesUsed.Count; i++) {
 				if (objectTypesUsed[i].Equals(objectTypeID)) {
@@ -118,18 +126,10 @@ namespace Backend.Level {
 				objects.Add(levelObject.objectID, levelObject);
 
 				// Add the object to the grid if necessary
-				if (levelObject.isGridTile) {
-					PlaceAtCoordinate(LevelManager.levelGrid.WorldPositionToGridCoordinate(levelObject.origin), levelObject);
+				if (levelObject.levelObjectClass != LevelObjectClass.Tile) {
+					Place(LevelManager.levelGrid.WorldPositionToGridCoordinate(levelObject.origin), levelObject);
 				}
 			}
 		}
-
-
-		[OnDeserialized]
-		private void OnDeserialized(StreamingContext context) {
-			tileGrid = new int[levelDimensions.x, levelDimensions.y, levelDimensions.z];
-		}
-
-
 	}
 }

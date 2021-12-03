@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseUploader.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\Course.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\LevelBuilder\LevelBuilder_BuildOptionButton.cs" />
      <Compile Include="Assets\FlatKit\[Render Pipeline] URP\RenderFeatures\Outline\FlatKitDepthNormals.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\StripeButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\ISteamSerializable.cs" />
@@ -108,15 +109,15 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LoadingScreenManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamLoader.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\PluralRule.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\LevelBuilder\LevelBuilderHUDManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectBank.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\Tee.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsole.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsoleConfig.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\LevelBuilder\LevelBuilder_BuildOptionButton.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\LevelBuilder\LevelBuilderHUDManager.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\FlatKit\Shaders\StylizedSurface\LibraryUrp\LitForwardPass_DR.hlsl" />

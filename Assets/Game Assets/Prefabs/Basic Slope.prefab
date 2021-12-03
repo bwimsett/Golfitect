@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &424106295877263445
+--- !u!1 &4971175209861469062
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,24 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1056492965871303407}
-  - component: {fileID: 4109166684432643402}
-  - component: {fileID: 2225418260242416000}
-  - component: {fileID: 7261838903308996900}
+  - component: {fileID: 5744052356336912700}
+  - component: {fileID: 8653986341374789273}
+  - component: {fileID: 6916919846167573075}
+  - component: {fileID: 2727123019617559287}
   m_Layer: 0
-  m_Name: Basic Ground
+  m_Name: Basic Slope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1056492965871303407
+--- !u!4 &5744052356336912700
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424106295877263445}
+  m_GameObject: {fileID: 4971175209861469062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -33,21 +33,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4109166684432643402
+--- !u!33 &8653986341374789273
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424106295877263445}
-  m_Mesh: {fileID: 6606493068507349533, guid: 20d2493c7f4ac8d4abd6687eb69b4aca, type: 3}
---- !u!23 &2225418260242416000
+  m_GameObject: {fileID: 4971175209861469062}
+  m_Mesh: {fileID: 1341469205891341268, guid: 7a53f25f28c8eb3478c679e29b3f99d9, type: 3}
+--- !u!23 &6916919846167573075
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424106295877263445}
+  m_GameObject: {fileID: 4971175209861469062}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -60,8 +60,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 18214625175358542831c2b5ea132ef4, type: 2}
   - {fileID: 2100000, guid: 47935bfdea1c4fa45b2bb608764f2a90, type: 2}
+  - {fileID: 2100000, guid: 18214625175358542831c2b5ea132ef4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,28 +83,28 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7261838903308996900
+--- !u!114 &2727123019617559287
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 424106295877263445}
+  m_GameObject: {fileID: 4971175209861469062}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9d13651310db434b98660f70d5e43634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectTypeID: basic_ground
+  objectTypeID: basic_slope
   levelObjectClass: 0
   layout:
   - {fileID: 2800000, guid: a19bbaac5c130f8458bcefa9ff5687ab, type: 3}
-  buildMenuIcon: {fileID: 21300000, guid: 7bb1bad3ba6f25c459b6689c310e9a20, type: 3}
+  buildMenuIcon: {fileID: 21300000, guid: ecff63024c63a064880ee341f638d1f5, type: 3}
   showInBuildMenuDock: 1
   objectID: 0
   origin: {x: 0, y: 0, z: 0}
   scale: {x: 0, y: 0, z: 0}
   tileTextures: 1
-  horizontalTextures: 00000000
-  verticalTextures: 01000000
-  meshFilter: {fileID: 4109166684432643402}
+  horizontalTextures: 01000000
+  verticalTextures: 00000000
+  meshFilter: {fileID: 8653986341374789273}

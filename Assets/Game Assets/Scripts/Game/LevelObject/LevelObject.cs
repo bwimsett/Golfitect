@@ -14,16 +14,17 @@ namespace Backend.Level {
 
 		public string objectTypeID;
 		public LevelObjectClass levelObjectClass;
-		public bool isGridTile;
-		[ShowIf("isGridTile")]
-		public Texture2D[] layout;
+		[ShowIf("levelObjectClass", LevelObjectClass.Tile)]
+
 		public Sprite buildMenuIcon;
 		public bool showInBuildMenuDock;
 		[HideInInspector] public int objectID;
-		[HideInInspector] public Vector3Int origin, scale;
+		[HideInInspector] public Vector3 origin, scale;
 
 		[SerializeField] private bool tileTextures;
 		[ShowIf("tileTextures"), SerializeField] private int[] horizontalTextures, verticalTextures;
+
+		public MeshFilter meshFilter;
 
 		public void Construct() {
 			objectID = gameObject.GetInstanceID();
@@ -46,34 +47,7 @@ namespace Backend.Level {
 			
 		}
 
-		public LevelObjectLayout[,,] GetLayout() {
-			if (layout == null || layout.Length == 0) {
-				throw new Exception($"Layout sprites not set for: {gameObject.name}");
-			}
-			
-			int width = layout[0].width;
-			int depth = layout[0].height;
-			int height = layout.Length;
-			
-			LevelObjectLayout[,,] levelLayout = new LevelObjectLayout[width, height, depth];
-
-			for (int z = 0; z < depth; z++) {
-				for (int x = 0; x < width; x++) {
-					for (int y = 0; y < height; y++) {
-						bool occupied = layout[y].GetPixel(x, z).r > 0;
-						if (occupied) {
-							levelLayout[x, y, z] = LevelObjectLayout.Occupied;
-						} else {
-							levelLayout[x, y, z] = LevelObjectLayout.Unoccupied;
-						}
-					}
-				}
-			}
-
-			return levelLayout;
-		}
-
-		public void SetScaleAndPosition(Vector3Int scale, Vector3Int position) {
+		public void SetScaleAndPosition(Vector3 scale, Vector3 position) {
 			this.scale = scale;
 			this.origin = position;
 
@@ -126,28 +100,6 @@ namespace Backend.Level {
 				meshRenderer.materials[i].mainTextureOffset = verticalOffset;
 			}
 		}
-		
-		public Vector3Int[] GetPlacingCoordinates(Vector3Int origin) {
-			LevelObjectLayout[,,] levelLayout = GetLayout();
-
-			int width = levelLayout.GetLength(0);
-			int height = levelLayout.GetLength(1);
-			int depth = levelLayout.GetLength(2);
-
-			List<Vector3Int> coordinates = new List<Vector3Int>();
-			
-			for (int x = 0; x < width; x++) {
-				for (int y = 0; y < depth; y++) {
-					for (int z = 0; z < height; z++) {
-						if (levelLayout[x, y, z] == LevelObjectLayout.Occupied) {
-							coordinates.Add(new Vector3Int(x+origin.x,y+origin.y,z+origin.z));
-						}	
-					}
-				}
-			}
-
-			return coordinates.ToArray();
-		}
 
 	}
 	
@@ -155,7 +107,7 @@ namespace Backend.Level {
 	public class LevelObjectSave {
 		[JsonProperty] public int objectTypeIndex { get; private set; } // Index of objecttypeid stored in the level class
 		public int objectID;
-		public Vector3Int origin, scale;
+		public Vector3 origin, scale;
 
 		public LevelObjectSave() {
 			
