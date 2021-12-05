@@ -14,6 +14,10 @@ namespace Backend {
 				SteamSubmittable submittable = new SteamSubmittable(levelName, "", GameManager.currentLevel);
 				steamLoader.UploadToSteam(submittable);
 			}));
+			
+			console.config.AddAction("play", new BWConsole_Action(() => {
+				GameManager.currentLevel.Play();
+			}));
 		}
 		
 		

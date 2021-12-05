@@ -66,6 +66,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\Tool.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LevelInputManager.cs" />
      <Compile Include="Assets\FlatKit\Scripts\UvScroller.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Game\Ball.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\IndexRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\SteamManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\CourseCreator\CourseCreator_HolesList_Number.cs" />
@@ -103,6 +104,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Hole.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelBuilder\LevelGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LevelManager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Vector3Save.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\AutoResizeSwitchButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameMainMenuCommands.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\BWSteamUtility.cs" />
@@ -118,7 +120,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsoleConfig.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Vector3Save.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Game\Tools\BallControllerTool.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\FlatKit\Shaders\StylizedSurface\LibraryUrp\LitForwardPass_DR.hlsl" />

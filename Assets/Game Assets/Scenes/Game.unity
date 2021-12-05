@@ -210,7 +210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671935670365182639, guid: c505a35f423b33247859cda254e50d7a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -364114.38
+      value: -487051.2
       objectReference: {fileID: 0}
     - target: {fileID: 7671935670555417699, guid: c505a35f423b33247859cda254e50d7a, type: 3}
       propertyPath: m_Name
@@ -542,6 +542,7 @@ GameObject:
   m_Component:
   - component: {fileID: 679619936}
   - component: {fileID: 679619935}
+  - component: {fileID: 679619937}
   m_Layer: 0
   m_Name: Mouse Tools
   m_TagString: Untagged
@@ -575,6 +576,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &679619937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679619934}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 666a57b831674abfa8584e4b93fb8b4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ballPrefab: {fileID: 1483940375763189055, guid: 03c46157202ba2245af24bd702c0f555, type: 3}
 --- !u!1 &1295633919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,7 +1051,9 @@ MonoBehaviour:
   levelGridCollider: {fileID: 407748024}
   levelGridColliderLayerID: 8
   levelSurfaceColliderLayerID: 7
+  ballColliderLayerID: 6
   levelBuilderTool: {fileID: 679619935}
+  ballControllerTool: {fileID: 679619937}
   currentActiveTool: {fileID: 0}
 --- !u!114 &1587768436
 MonoBehaviour:
@@ -1055,7 +1071,7 @@ MonoBehaviour:
   _levelGrid: {fileID: 407748023}
   _levelInputManager: {fileID: 1587768435}
   _levelObjectUtility: {fileID: 1587768440}
-  levelBuilderHUD: {fileID: 2021072419}
+  _levelBuilderHUD: {fileID: 2021072419}
   _levelCollider: {fileID: 1744484215}
 --- !u!4 &1587768437
 Transform:

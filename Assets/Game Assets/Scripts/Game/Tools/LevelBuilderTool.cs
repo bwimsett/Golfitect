@@ -39,6 +39,16 @@ public class LevelBuilderTool : Tool {
 		RefreshScaleAndPosition();
 	}
 
+	protected override void OnRightMouseDown() {
+		SetActive(false);
+	}
+
+	protected override void Deactivate() {
+		LevelManager.levelBuilderHUD.DeselectBuildOptionFromDock(currentLevelObject);
+		currentLevelObject = null;
+		Destroy(placing.gameObject);
+	}
+
 	private void Place() {
 		//foreach (Tuple<Vector3Int, GameObject> placingObject in placing) {
 			//LevelObject levelObject = placingObject.Item2.GetComponent<LevelObject>();
@@ -131,7 +141,7 @@ public class LevelBuilderTool : Tool {
 
 			// If couldn't find a point on the level surface at the given coordinate
 			if (!isLevelSurface) {
-				bool foundGrid = LevelManager.levelInputManager.GetMouseWorldPosition(out mousePos);
+				bool foundGrid = LevelManager.levelInputManager.GetMouseLevelGridPosition(out mousePos);
 			}
 
 			origin = mousePos;

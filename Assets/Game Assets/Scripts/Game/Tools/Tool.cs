@@ -13,11 +13,19 @@ namespace Game.Tools {
 				return;
 			}
 
+			ToolUpdate();
 			HandleInput();
 		}
 
+		protected virtual void ToolUpdate() {
+			mouseInGrid = LevelManager.levelInputManager.GetMouseLevelGridPosition(out mousePosition);
+		}
+
 		private void HandleInput() {
-			mouseInGrid = LevelManager.levelInputManager.GetMouseWorldPosition(out mousePosition);
+			if (Input.GetMouseButtonDown(1)) {
+				OnRightMouseDown();
+				return;
+			}
 			
 			if (Input.GetMouseButtonDown(0)) {
 				OnMouseDown();
@@ -79,6 +87,10 @@ namespace Game.Tools {
 		}
 		
 		protected virtual void OnMouseDown() {
+			
+		}
+
+		protected virtual void OnRightMouseDown() {
 			
 		}
 

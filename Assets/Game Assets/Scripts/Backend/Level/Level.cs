@@ -6,6 +6,7 @@ using Backend.Enums;
 using Backend.Managers;
 using Backend.Serialization;
 using Backend.Submittable;
+using Game;
 using Newtonsoft.Json;
 using UnityEditor.SceneTemplate;
 using UnityEngine;
@@ -18,7 +19,9 @@ namespace Backend.Level {
 		public string description { get; set; }
 		[JsonIgnore] public string fileExtension { get => "golflvl"; }
 		[JsonIgnore] public string saveFolderName { get => "levels"; }
-		
+
+		[HideInInspector, JsonIgnore] public Ball ball;
+
 		public Vector3Int levelDimensions { get; private set; }
 		[JsonProperty] private List<string> objectTypesUsed; // Lists the IDs of all the tile types used. Indexed by LevelTile for the tileType field to keep save files small.
 		[JsonProperty] private Dictionary<int, LevelObjectSave> objectSaves;
@@ -37,6 +40,7 @@ namespace Backend.Level {
 			}
 			
 			RefreshLevelCollider();
+			LevelManager.levelInputManager.ballControllerTool.SetActive(true);
 		}
 		
 		public void Place(Vector3 origin, LevelObject levelObject) {
@@ -54,8 +58,9 @@ namespace Backend.Level {
 			Mesh colliderMesh = new Mesh();
 			List<CombineInstance> combineInstances = new List<CombineInstance>();
 
-			int index = 0;
+			int index = -1;
 			foreach (KeyValuePair<int, LevelObject> obj in objects) {
+				index++;
 				if (!obj.Value.ballCollisions) {
 					continue;
 				}
@@ -69,8 +74,6 @@ namespace Backend.Level {
 					combineInstance.subMeshIndex = i;
 					combineInstances.Add(combineInstance);
 				}
-				
-				index++;
 			}
 
 			colliderMesh.CombineMeshes(combineInstances.ToArray(), true, true);

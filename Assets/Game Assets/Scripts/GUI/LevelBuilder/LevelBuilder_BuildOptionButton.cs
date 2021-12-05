@@ -8,7 +8,7 @@ using UnityEngine.UI;
 namespace Game_Assets.Scripts.GUI.LevelBuilder {
 	public class LevelBuilder_BuildOptionButton : GUIScaleOnMouseover {
 
-		private LevelObject levelObject;
+		public LevelObject levelObject { get; private set; }
 		public Image icon;
 		private LevelBuilderHUDManager hud;
 
