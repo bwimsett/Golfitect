@@ -4,26 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/Flag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/Flag.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/FlatGround.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/FlatGround.cs.meta" afterDir="false" />
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Hole punch method for building flags works">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Basic Ground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Basic Ground.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Flag.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Flag.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Object Bank.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Object Bank.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelInputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelInputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelBuilder/LevelBuilderHUDManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelBuilder/LevelBuilderHUDManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelBuilder/LevelGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelBuilder/LevelGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/Flag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/Flag.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/Tee.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/Tee.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/LevelBuilderTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/LevelBuilderTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/Tool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/Tool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Translucent Image Blur Config.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Translucent Image Blur Config.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Material/Default-Translucent.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Material/Default-Translucent.mat" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +164,7 @@
       <workItem from="1638531561375" duration="14795000" />
       <workItem from="1638620798463" duration="1637000" />
       <workItem from="1638710694048" duration="13563000" />
-      <workItem from="1638789750690" duration="15059000" />
+      <workItem from="1638789750690" duration="19463000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -289,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638726380463</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Hole punch method for building flags works">
+      <created>1638815010583</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1638815010583</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +324,8 @@
     <MESSAGE value="Added buttons for choosing different build tiles" />
     <MESSAGE value="Added level collider mesh generation and began work on level surface item placement" />
     <MESSAGE value="Got mouse control working for the ball" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got mouse control working for the ball" />
+    <MESSAGE value="Hole punch method for building flags works" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hole punch method for building flags works" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -83,20 +83,25 @@ public class LevelBuilderTool : Tool {
 		
 			placing.SetScaleAndPosition(scale, origin);
 		} else {
-			Vector3 mousePos = Vector3.zero;
+			Vector3 pos = Vector3.zero;
 			bool isLevelSurface = LevelManager.levelInputManager.GetMouseLevelSurfacePosition(out RaycastHit hit);
 
 			// If couldn't find a point on the level surface at the given coordinate
 			if (!isLevelSurface) {
-				bool foundGrid = LevelManager.levelInputManager.GetMouseLevelGridPosition(out mousePos);
+				bool foundGrid = LevelManager.levelInputManager.GetMouseLevelGridPosition(out pos);
 			} else {
-				mousePos = hit.point;
+				pos = hit.point;
 			}
 			
 			placing.LevelBuilderHover(hit);
 
-			origin = mousePos;
-			placing.transform.position = mousePos;
+			if (placing.snapToGrid) {
+				pos = LevelManager.levelGrid.WorldPositionToGridPosition(pos);
+			}
+
+			placing.SetScaleAndPosition(Vector3.one, pos);
+			origin = pos;
+			placing.transform.position = pos;
 		}
 	}
 

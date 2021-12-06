@@ -12,6 +12,8 @@ namespace Backend.Level {
 
 		public string objectTypeID;
 		public LevelObjectClass levelObjectClass;
+		[ShowIf("levelObjectClass", LevelObjectClass.Scenery)]
+		public bool snapToGrid;
 		public Sprite buildMenuIcon;
 		public bool showInBuildMenuDock, ballCollisions = true;
 		[HideInInspector] public int objectID;
@@ -29,6 +31,7 @@ namespace Backend.Level {
 
 		public void Construct() {
 			objectID = gameObject.GetInstanceID();
+			buildModeCollider.enabled = true;
 			ConstructLevelObject();
 		}
 
@@ -79,8 +82,9 @@ namespace Backend.Level {
 
 			// Generate build mode collider
 			if (!buildModeCollider) {
-				gameObject.layer = LevelManager.levelInputManager.levelSurfaceColliderLayerID;
+				meshFilter.gameObject.layer = LevelManager.levelInputManager.levelSurfaceColliderLayerID;
 				buildModeCollider = meshFilter.gameObject.AddComponent<MeshCollider>();
+				buildModeCollider.enabled = false;
 			}
 			
 			buildModeCollider.sharedMesh = meshFilter.mesh;
@@ -91,6 +95,10 @@ namespace Backend.Level {
 		public CombineInstance[] CombineMeshes () {
 			List<CombineInstance> combineInstances = new List<CombineInstance>();
 
+			if (!meshFilter.mesh.isReadable) {
+				throw new Exception($"Cannot combine meshes for: {gameObject.name}. Read / write must be enabled on the mesh import settings.");
+			}
+			
 			for (int i = 0; i < meshFilter.mesh.subMeshCount; i++) {
 				CombineInstance combineInstance = new CombineInstance();
 				combineInstance.mesh = meshFilter.mesh;
@@ -107,7 +115,7 @@ namespace Backend.Level {
 				return;
 			}
 
-			MeshRenderer meshRenderer = GetComponent<MeshRenderer>();
+			MeshRenderer meshRenderer = meshFilter.GetComponent<MeshRenderer>();
 			Vector2 horizontalScale = new Vector2(scale.x, scale.z)*2;
 			Vector2 verticalScale = new Vector2(scale.x, scale.y)*2;
 			Vector2 horizontalOffset = new Vector2(0, 0)/2f;

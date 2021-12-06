@@ -66,17 +66,13 @@ namespace Backend.Level {
 		public void RefreshLevelCollider() {
 			Mesh colliderMesh = new Mesh();
 			List<CombineInstance> combineInstances = new List<CombineInstance>();
-
-			int index = -1;
+			
 			foreach (KeyValuePair<int, LevelObject> obj in objects) {
-				index++;
 				if (!obj.Value.ballCollisions) {
 					continue;
 				}
 				
 				combineInstances.AddRange(obj.Value.CombineMeshes());
-				
-				Mesh mesh = obj.Value.meshFilter.mesh;
 			}
 
 			colliderMesh.CombineMeshes(combineInstances.ToArray(), true, true);

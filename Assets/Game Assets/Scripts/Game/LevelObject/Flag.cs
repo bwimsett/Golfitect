@@ -12,6 +12,10 @@ namespace Backend.Level {
 			
 			LevelObject hitObject = hit.collider.GetComponent<LevelObject>();
 
+			if (hitObject is Flag) {
+				return;
+			}
+			
 			// Holepunch if the object is flat ground
 			if (!hitObject || !(hitObject is FlatGround)) {
 				ResetSplitGround();
