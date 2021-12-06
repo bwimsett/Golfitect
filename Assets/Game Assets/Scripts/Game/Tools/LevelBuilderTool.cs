@@ -60,59 +60,6 @@ public class LevelBuilderTool : Tool {
 		placing = null;
 	}
 
-	/*private void RefreshPlacing() {
-		if (!currentLevelObject) {
-			return;
-		}
-		
-		Vector3Int coordinateDiff = endCoordinate - startPosition;
-		int objectCount = (Mathf.Abs(coordinateDiff.x) + 1) * (Mathf.Abs(coordinateDiff.z) + 1);
-
-		int countDifference = objectCount - objectCache.Count;
-		
-		// If object count < object cache, instantiate more
-		if (countDifference > 0) {
-			for (int i = 0; i < countDifference; i++) {
-				GameObject newObject = Instantiate(currentLevelObject.gameObject, LevelManager.levelObjectUtility.levelContainer);
-				objectCache.Add(newObject);
-			}
-		}
-
-		int objectIndex = 0;
-
-		int minX = Mathf.Min(startPosition.x, endCoordinate.x);
-		int minZ = Mathf.Min(startPosition.z, endCoordinate.z);
-		int maxX = Mathf.Max(startPosition.x, endCoordinate.x);
-		int maxZ = Mathf.Max(startPosition.z, endCoordinate.z);
-
-		placing = new List<Tuple<Vector3Int, GameObject>>();
-		
-		// Set positions
-		for (int x = minX; x <= maxX; x++) {
-			for (int z = minZ; z <= maxZ; z++) {
-				Vector3Int buildPos = new Vector3Int(x, startPosition.y, z);
-				
-				// Put object at position and show it
-				GameObject placingObject = objectCache[objectIndex];
-				placingObject.transform.position = LevelManager.levelGrid.GridCoordinateToWorldPosition(buildPos);
-				placingObject.SetActive(true);
-				objectIndex++;
-				
-				placing.Add(new Tuple<Vector3Int, GameObject>(buildPos, placingObject));
-			}
-		}
-
-		for (int i = objectIndex; i < objectCache.Count; i++) {
-			// Hide any objects in cache that aren't needed
-			if (i >= objectCount) {
-				objectCache[i].SetActive(false);
-				continue;
-			}
-		}
-		
-		//Debug.Log($"Start coordinate: {startPosition}, end coordinate: {endCoordinate}, object count: {objectCount}");
-	}*/
-
 	private void RefreshScaleAndPosition() {
 		if (!placing) {
 			placing = Instantiate(currentLevelObject.gameObject, LevelManager.levelObjectUtility.levelContainer).GetComponent<LevelObject>();
@@ -137,12 +84,16 @@ public class LevelBuilderTool : Tool {
 			placing.SetScaleAndPosition(scale, origin);
 		} else {
 			Vector3 mousePos = Vector3.zero;
-			bool isLevelSurface = LevelManager.levelInputManager.GetMouseLevelSurfacePosition(out mousePos);
+			bool isLevelSurface = LevelManager.levelInputManager.GetMouseLevelSurfacePosition(out RaycastHit hit);
 
 			// If couldn't find a point on the level surface at the given coordinate
 			if (!isLevelSurface) {
 				bool foundGrid = LevelManager.levelInputManager.GetMouseLevelGridPosition(out mousePos);
+			} else {
+				mousePos = hit.point;
 			}
+			
+			placing.LevelBuilderHover(hit);
 
 			origin = mousePos;
 			placing.transform.position = mousePos;

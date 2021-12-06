@@ -55,6 +55,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseUploader.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\Course.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelBuilder\LevelBuilder_BuildOptionButton.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Game\Tools\BallControllerTool.cs" />
      <Compile Include="Assets\FlatKit\[Render Pipeline] URP\RenderFeatures\Outline\FlatKitDepthNormals.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\StripeButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\ISteamSerializable.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocString.cs" />
      <Compile Include="Assets\FlatKit\[Render Pipeline] URP\RenderFeatures\Outline\FlatKitOutline.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsole_OutputLine.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\Flag.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GridBackgroundGenerator.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\LevelInfo.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameLevelCommands.cs" />
@@ -120,7 +122,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
      <Compile Include="Assets\BWConsole\Runtime\Scripts\BWConsoleConfig.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\Tools\BallControllerTool.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\FlatGround.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\FlatKit\Shaders\StylizedSurface\LibraryUrp\LitForwardPass_DR.hlsl" />

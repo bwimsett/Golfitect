@@ -1,13 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Runtime.Serialization;
 using Backend.Enums;
 using Backend.Managers;
 using Backend.Serialization;
-using DG.Tweening;
 using Newtonsoft.Json;
 using Sirenix.OdinInspector;
-using Steamworks;
 using UnityEngine;
 
 namespace Backend.Level {
@@ -24,6 +21,11 @@ namespace Backend.Level {
 		[ShowIf("tileTextures"), SerializeField] private int[] horizontalTextures, verticalTextures;
 
 		public MeshFilter meshFilter;
+		[HideInInspector] public MeshCollider buildModeCollider;
+
+		public virtual void LevelBuilderHover(RaycastHit hit) {
+			
+		}
 
 		public void Construct() {
 			objectID = gameObject.GetInstanceID();
@@ -34,7 +36,25 @@ namespace Backend.Level {
 			
 		}
 
-		public virtual void EnterPlayMode() {
+		public void EnterBuildMode() {
+			if (buildModeCollider) {
+				buildModeCollider.enabled = true;
+			}
+		}
+
+		protected virtual void LevelObjectEnterBuildMode() {
+			
+		}
+		
+		public void EnterPlayMode() {
+			if (buildModeCollider) {
+				buildModeCollider.enabled = false;
+			}
+			
+			LevelObjectEnterPlayMode();
+		}
+
+		protected virtual void LevelObjectEnterPlayMode() {
 			
 		}
 		
@@ -56,10 +76,32 @@ namespace Backend.Level {
 
 			transform.localScale = scale;
 			transform.localPosition = position;
+
+			// Generate build mode collider
+			if (!buildModeCollider) {
+				gameObject.layer = LevelManager.levelInputManager.levelSurfaceColliderLayerID;
+				buildModeCollider = meshFilter.gameObject.AddComponent<MeshCollider>();
+			}
+			
+			buildModeCollider.sharedMesh = meshFilter.mesh;
 			
 			RefreshTextures();
 		}
 
+		public CombineInstance[] CombineMeshes () {
+			List<CombineInstance> combineInstances = new List<CombineInstance>();
+
+			for (int i = 0; i < meshFilter.mesh.subMeshCount; i++) {
+				CombineInstance combineInstance = new CombineInstance();
+				combineInstance.mesh = meshFilter.mesh;
+				combineInstance.transform = meshFilter.transform.localToWorldMatrix;
+				combineInstance.subMeshIndex = i;
+				combineInstances.Add(combineInstance);
+			}
+
+			return combineInstances.ToArray();
+		}
+		
 		protected virtual void RefreshTextures() {
 			if (!tileTextures) {
 				return;

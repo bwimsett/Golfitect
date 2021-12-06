@@ -41,10 +41,9 @@ namespace Backend.Managers {
 			return false;
 		}
 
-		public bool GetMouseLevelSurfacePosition(out Vector3 vector3) {
+		public bool GetMouseLevelSurfacePosition(out RaycastHit hit) {
 			int targetLayer = 1 << levelSurfaceColliderLayerID;
-			bool success = CastRayFromMouse(targetLayer, out RaycastHit hit);
-			vector3 = hit.point;
+			bool success = CastRayFromMouse(targetLayer, out hit);
 			return success;
 		}
 

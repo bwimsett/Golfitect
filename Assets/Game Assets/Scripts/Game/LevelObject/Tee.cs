@@ -8,8 +8,8 @@ namespace Backend.Level {
 
 		public GameObject ballPrefab;
 		public GameObject placeholder;
-		
-		public override void EnterPlayMode() {
+
+		protected override void LevelObjectEnterPlayMode() {
 			placeholder.gameObject.SetActive(false);
 			
 			// Instantiate a ball if one does not already exist

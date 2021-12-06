@@ -10,6 +10,7 @@ using Game;
 using Newtonsoft.Json;
 using UnityEditor.SceneTemplate;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Backend.Level {
 	[Serializable]
@@ -49,9 +50,17 @@ namespace Backend.Level {
 
 			// Add to list of objects in the level
 			objects.Add(levelObject.objectID, levelObject);
-			RefreshLevelCollider();
-			
+
 			levelObject.gameObject.SetActive(true);
+		}
+
+		public void DestroyLevelObject(LevelObject levelObject) {
+			if (!objects.ContainsValue(levelObject)) {
+				return;
+			}
+
+			objects.Remove(levelObject.objectID);
+			Object.Destroy(levelObject.gameObject);
 		}
 		
 		public void RefreshLevelCollider() {
@@ -65,15 +74,9 @@ namespace Backend.Level {
 					continue;
 				}
 				
+				combineInstances.AddRange(obj.Value.CombineMeshes());
+				
 				Mesh mesh = obj.Value.meshFilter.mesh;
-
-				for (int i = 0; i < mesh.subMeshCount; i++) {
-					CombineInstance combineInstance = new CombineInstance();
-					combineInstance.mesh = obj.Value.meshFilter.mesh;
-					combineInstance.transform = obj.Value.transform.localToWorldMatrix;
-					combineInstance.subMeshIndex = i;
-					combineInstances.Add(combineInstance);
-				}
 			}
 
 			colliderMesh.CombineMeshes(combineInstances.ToArray(), true, true);

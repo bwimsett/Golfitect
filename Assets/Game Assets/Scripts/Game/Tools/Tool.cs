@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 
 namespace Game.Tools {
@@ -9,7 +10,7 @@ namespace Game.Tools {
 		protected Vector3 mousePosition;
 
 		void Update() {
-			if (!active) {
+			if (!active || EventSystem.current.IsPointerOverGameObject()) {
 				return;
 			}
 

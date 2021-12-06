@@ -48,6 +48,8 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 			if (levelObject.levelObjectClass == LevelObjectClass.Scenery && !sceneryDock) {
 				dock = sceneryDock = Instantiate(dockPrefab.gameObject, dockPrefab.parent).transform;
 				dock.gameObject.SetActive(true);
+			} else if (levelObject.levelObjectClass == LevelObjectClass.Scenery) {
+				dock = sceneryDock;
 			}
 			
 			LevelBuilder_BuildOptionButton button = Instantiate(buildOptionButtonPrefab.gameObject, dock).GetComponent<LevelBuilder_BuildOptionButton>();

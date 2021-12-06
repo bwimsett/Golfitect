@@ -29,5 +29,9 @@ public class LevelGrid : MonoBehaviour {
 		pos = pos - grid.cellSize / 2f;
 		return pos;
 	}
+
+	public Vector3 WorldScaleToGridScale(Vector3 scale) {
+		return new Vector3(scale.x * grid.cellSize.x, scale.y*grid.cellSize.y, scale.z*grid.cellSize.z);
+	}
 	
 }

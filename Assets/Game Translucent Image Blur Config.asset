@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   radius: 4
   iteration: 4
-  maxDepth: 6
+  maxDepth: 8
   strength: 64
