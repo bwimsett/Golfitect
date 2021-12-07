@@ -52,13 +52,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\TranslucentImageSourceEditor.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\TranslucentImageEditor.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\UnityShaderBugHack.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\ScenceGizmoAutoDisable.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\MenuIntegration.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\ScalableBlurConfigEditor.cs" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\LeTai.TranslucentImage.Editor.asmdef" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\TranslucentImageSourceEditor.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\TranslucentImageEditor.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\UnityShaderBugHack.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\ScenceGizmoAutoDisable.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\MenuIntegration.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\ScalableBlurConfigEditor.cs" />
+     <None Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\Editor\LeTai.TranslucentImage.Editor.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

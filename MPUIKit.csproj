@@ -52,25 +52,25 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Utility\MPImageUtility.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Utility\MPMaterials.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\MPImage.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\MPImageBasic.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\IMPUIComponent.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Shapes\Triangle.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Shapes\NStarPolygon.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Enums.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Utility\MPImageHelper.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Shapes\Circle.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Shapes\Rectangle.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Shapes\Pentagon.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Shapes\Hexagon.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Utility\MPVertexStream.cs" />
-     <Compile Include="Assets\MPUIKit\Runtime\Scripts\Effects\GradientEffect.cs" />
-     <None Include="Assets\MPUIKit\Runtime\Resources\Shaders\MPImage.shader" />
-     <None Include="Assets\MPUIKit\Runtime\Resources\Shaders\MPImageBasic.shader" />
-     <None Include="Assets\MPUIKit\Runtime\MPUIKit.asmdef" />
-     <None Include="Assets\MPUIKit\Runtime\Resources\Shaders\2D_SDF.cginc" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Utility\MPImageUtility.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Utility\MPMaterials.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\MPImage.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\MPImageBasic.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\IMPUIComponent.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Shapes\Triangle.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Shapes\NStarPolygon.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Enums.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Utility\MPImageHelper.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Shapes\Circle.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Shapes\Rectangle.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Shapes\Pentagon.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Shapes\Hexagon.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Utility\MPVertexStream.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Runtime\Scripts\Effects\GradientEffect.cs" />
+     <None Include="Assets\Plugins\MPUIKit\Runtime\Resources\Shaders\MPImage.shader" />
+     <None Include="Assets\Plugins\MPUIKit\Runtime\Resources\Shaders\MPImageBasic.shader" />
+     <None Include="Assets\Plugins\MPUIKit\Runtime\MPUIKit.asmdef" />
+     <None Include="Assets\Plugins\MPUIKit\Runtime\Resources\Shaders\2D_SDF.cginc" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

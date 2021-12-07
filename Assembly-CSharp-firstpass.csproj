@@ -54,30 +54,82 @@
   <ItemGroup>
      <Compile Include="Assets\Plugins\Demigiant\DOTweenPro\DOTweenProShortcuts.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
+     <Compile Include="Assets\Plugins\FlatKit\[Render Pipeline] URP\RenderFeatures\Outline\FlatKitDepthNormals.cs" />
+     <Compile Include="Assets\Plugins\FlatKit\Scripts\UvScroller.cs" />
+     <Compile Include="Assets\Plugins\BWConsole\Runtime\Scripts\BWConsole_BasicCommands.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
+     <Compile Include="Assets\Plugins\FlatKit\[Render Pipeline] URP\RenderFeatures\Outline\FlatKitOutline.cs" />
+     <Compile Include="Assets\Plugins\BWConsole\Runtime\Scripts\BWConsole_OutputLine.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Plugins\FlatKit\[Render Pipeline] URP\Water\Scripts\Buoyancy.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTweenPro\DOTweenDeAudio.cs" />
+     <Compile Include="Assets\Plugins\FlatKit\[Render Pipeline] URP\RenderFeatures\Outline\OutlineSettings.cs" />
+     <Compile Include="Assets\Plugins\FlatKit\[Render Pipeline] URP\RenderFeatures\Common\ShaderIncludeUtilities.cs" />
+     <Compile Include="Assets\Plugins\FlatKit\[Render Pipeline] URP\RenderFeatures\Fog\FogSettings.cs" />
+     <Compile Include="Assets\Plugins\FlatKit\[Render Pipeline] URP\RenderFeatures\Fog\FlatKitFog.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\Plugins\BWConsole\Runtime\Scripts\BWConsole.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTweenPro\DOTweenDeUnityExtended.cs" />
+     <Compile Include="Assets\Plugins\BWConsole\Runtime\Scripts\BWConsoleConfig.cs" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\Plugins\FlatKit\Shaders\StylizedSurface\LibraryUrp\LitForwardPass_DR.hlsl" />
+     <None Include="Assets\Plugins\Simple Toon\Shaders\STOutline.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\Plugins\FlatKit\Shaders\StylizedSurface\LibraryUrp\TerrainLitPasses_DR.hlsl" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\link.xml" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\Plugins\FlatKit\Shaders\StylizedSurface\LibraryUrp\StylizedInput.hlsl" />
+     <None Include="Assets\Plugins\FlatKit\Shaders\GradientSkybox\GradientSkybox.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
      <None Include="Assets\Plugins\Demigiant\readme_DOTweenPro.txt" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\Plugins\MPUIKit\readme.txt" />
+     <None Include="Assets\Plugins\FlatKit\Shaders\StylizedSurface\LibraryUrp\Lighting_DR.hlsl" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml" />
+     <None Include="Assets\Plugins\FlatKit\Shaders\StylizedSurface\StylizedSurfaceOutline.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\Plugins\Simple Toon\Shaders\STTransparent.shader" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Plugins\Simple Toon\Shaders\STCore.cginc" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Plugins\Sirenix\Readme.txt" />
      <None Include="Assets\Plugins\Demigiant\DOTweenPro\readme.txt" />
+     <None Include="Assets\Plugins\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Plugins\Demigiant\DemiLib\Core\DemiLib.xml" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.xml" />
+     <None Include="Assets\Plugins\Simple Toon\Shaders\STDefault.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
+     <None Include="Assets\Plugins\FlatKit\Shaders\StylizedSurface\TerrainLitAdd_DR.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\Plugins\Simple Toon\Shaders\STFunctions.cginc" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\Plugins\FlatKit\[Render Pipeline] URP\RenderFeatures\Outline\Resources\FlatKitOutline.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\Plugins\FlatKit\[Render Pipeline] URP\RenderFeatures\Fog\Resources\FlatKitFog.shader" />
+     <None Include="Assets\Plugins\FlatKit\Shaders\StylizedSurface\StylizedSurface.shader" />
+     <None Include="Assets\Plugins\FlatKit\Shaders\LightPlane.shader" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\Plugins\FlatKit\Shaders\StylizedSurface\Terrain.shader" />
      <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.xml" />
+     <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMP_Sprite.shader" />
+     <None Include="Assets\Plugins\FlatKit\[Render Pipeline] URP\Water\Shaders\Water.shader" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -767,17 +819,9 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="MPUIKit.csproj">
-      <Project>{6d6ebff6-93e9-c2cd-c060-bb871849b2be}</Project>
-      <Name>MPUIKit</Name>
-    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
       <Project>{ca060b67-3b07-c6b5-2cc5-dffd91503644}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="MPUIKit.Editor.csproj">
-      <Project>{079bdb49-b61d-0cc6-44f1-648e18e35587}</Project>
-      <Name>MPUIKit.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
       <Project>{0daee573-1afa-b1a7-4aa5-d8cae8a958f5}</Project>
@@ -787,13 +831,21 @@
       <Project>{62370954-6062-6c73-e698-8a7a60ebffa2}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
     </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.csproj">
+      <Project>{41e027ee-dde4-a340-b95f-bc028c92715b}</Project>
+      <Name>LeTai.TranslucentImage</Name>
+    </ProjectReference>
     <ProjectReference Include="LeTai.TranslucentImage.Editor.csproj">
       <Project>{91356981-5371-b8ed-9061-7afa6754a920}</Project>
       <Name>LeTai.TranslucentImage.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.csproj">
-      <Project>{41e027ee-dde4-a340-b95f-bc028c92715b}</Project>
-      <Name>LeTai.TranslucentImage</Name>
+    <ProjectReference Include="MPUIKit.Editor.csproj">
+      <Project>{079bdb49-b61d-0cc6-44f1-648e18e35587}</Project>
+      <Name>MPUIKit.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MPUIKit.csproj">
+      <Project>{6d6ebff6-93e9-c2cd-c060-bb871849b2be}</Project>
+      <Name>MPUIKit</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

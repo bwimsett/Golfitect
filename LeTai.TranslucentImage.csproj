@@ -52,25 +52,25 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\BlurAlgorithm\BlurConfig.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\Utilities\Extensions.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\TranslucentImage.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\BlurAlgorithm\ScalableBlurConfig.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\TranslucentImageSource.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\BlurAlgorithm\IBlurAlgorithm.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\Utilities\ResizableScreenRect.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\TranslucentImageEditorEnhancement.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\BlurAlgorithm\ScalableBlur.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\Utilities\ShaderId.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\TranslucentImageMeshEffect.cs" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\TranslucentImage.shader" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\UniversalRP README.txt" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\EfficientBlur.shader" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Online Documentation (recommended).txt" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\CHANGELOG.txt" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\lib.cginc" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\FillCrop.shader" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\LeTai.TranslucentImage.asmdef" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\BlurAlgorithm\BlurConfig.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\Utilities\Extensions.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\TranslucentImage.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\BlurAlgorithm\ScalableBlurConfig.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\TranslucentImageSource.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\BlurAlgorithm\IBlurAlgorithm.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\Utilities\ResizableScreenRect.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\TranslucentImageEditorEnhancement.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\BlurAlgorithm\ScalableBlur.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\Utilities\ShaderId.cs" />
+     <Compile Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Script\TranslucentImageMeshEffect.cs" />
+     <None Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Resources\TranslucentImage.shader" />
+     <None Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\UniversalRP README.txt" />
+     <None Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Resources\EfficientBlur.shader" />
+     <None Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Online Documentation (recommended).txt" />
+     <None Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\CHANGELOG.txt" />
+     <None Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Resources\lib.cginc" />
+     <None Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\Resources\FillCrop.shader" />
+     <None Include="Assets\Plugins\Le Tai&apos;s Asset\TranslucentImage\LeTai.TranslucentImage.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

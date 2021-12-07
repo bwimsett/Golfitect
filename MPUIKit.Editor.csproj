@@ -52,24 +52,24 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\EditorGUILayoutExtended.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\MPImageEditor.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\MPEditorUtility.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\ShapeDrawers\HexagonPropertyDrawer.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\ShapeDrawers\TrianglePropertyDrawer.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\Integrations\SoftMaskIntegration.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\EffectDrawers\GradeintEffectPropertyDrawer.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\Settings\MPUIKitSettingsEditor.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\MPUIKitShaderGUI.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\ShapeDrawers\PentagonPropertyDrawer.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\MPEditorContents.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\ShapeDrawers\NStarPolygonPropertyDrawer.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\MPUIKitUtilityWindow.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\MPImageBasicEditor.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\ShapeDrawers\CirclePropertyDrawer.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\Settings\MPUIKitSettings.cs" />
-     <Compile Include="Assets\MPUIKit\Editor\Scripts\ShapeDrawers\RectanglePropertyDrawer.cs" />
-     <None Include="Assets\MPUIKit\Editor\MPUIKit.Editor.asmdef" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\EditorGUILayoutExtended.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\MPImageEditor.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\MPEditorUtility.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\ShapeDrawers\HexagonPropertyDrawer.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\ShapeDrawers\TrianglePropertyDrawer.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\Integrations\SoftMaskIntegration.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\EffectDrawers\GradeintEffectPropertyDrawer.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\Settings\MPUIKitSettingsEditor.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\MPUIKitShaderGUI.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\ShapeDrawers\PentagonPropertyDrawer.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\MPEditorContents.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\ShapeDrawers\NStarPolygonPropertyDrawer.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\MPUIKitUtilityWindow.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\MPImageBasicEditor.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\ShapeDrawers\CirclePropertyDrawer.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\Settings\MPUIKitSettings.cs" />
+     <Compile Include="Assets\Plugins\MPUIKit\Editor\Scripts\ShapeDrawers\RectanglePropertyDrawer.cs" />
+     <None Include="Assets\Plugins\MPUIKit\Editor\MPUIKit.Editor.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

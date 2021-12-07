@@ -1,7 +1,9 @@
+using System.Collections.Generic;
 using DefaultNamespace;
 using Game_Assets.Scripts.GUI;
 using Game_Assets.Scripts.GUI.CourseCreator;
 using Game_Assets.Scripts.GUI.GenericComponent;
+using Game_Assets.Scripts.GUI.MainMenu;
 using Game_Assets.Scripts.GUI.OptionList;
 using UnityEngine;
 
@@ -17,8 +19,7 @@ namespace Backend.Managers {
 		[SerializeField] private MainMenuPersistantUI _persistantUI;
 		public static MainMenuPersistantUI persistantUI;
 
-		private static MainMenu_Subwindow previousSubwindow;
-		private static MainMenu_Subwindow currentSubwindow;
+		public static MainMenuLeaf currentLeaf;
 		
 		void Awake() {
 			Initialise();
@@ -30,9 +31,29 @@ namespace Backend.Managers {
 			optionList = _optionList;
 			courseSelector = _courseSelector;
 			
-			GenerateMainMenuOptions();
+			GenerateMainMenuTree();
 		}
 
+		/// <summary>
+		/// Leaves govern the overall navigation structure of the menu. Allows forward and back movement between screens, even when screens are procedural.
+		/// </summary>
+		private void GenerateMainMenuTree() {
+			MainMenuLeaf root = new MainMenuLeaf(optionList, GenerateMainMenuOptions);
+			MainMenuLeaf buildMenu = new MainMenuLeaf(optionList, GenerateBuildMenuOptions);
+			MainMenuLeaf playMenu = new MainMenuLeaf(optionList, GeneratePlayMenuOptions);
+
+			MainMenuLeaf courseBuilderLeaf = new MainMenuLeaf(courseCreator, ()=>courseCreator.Open());
+			MainMenuLeaf courseSelectorLeaf = new MainMenuLeaf(courseSelector, () => courseSelector.Open());
+			
+			root.AddChild(buildMenu);
+				buildMenu.AddChild(courseBuilderLeaf);
+				buildMenu.AddChild(courseSelectorLeaf);
+			root.AddChild(playMenu);
+			
+			
+			root.GoTo();
+		}
+		
 		private void GenerateMainMenuOptions() {
 			TextButtonCallback[] mainMenuOptions = {
 				new TextButtonCallback("main_menu_option_build", () => { GenerateBuildMenuOptions(); }),
@@ -64,24 +85,8 @@ namespace Backend.Managers {
 
 		}
 
-		public static void SetCurrentSubwindow(MainMenu_Subwindow subwindow) {
-			if (currentSubwindow != subwindow) {
-				previousSubwindow = currentSubwindow;
-			}
-
-			currentSubwindow = subwindow;
-		}
-
-		public static MainMenu_Subwindow GetCurrentSubwindow() {
-			return currentSubwindow;
-		}
-
 		public void Back() {
-			if (previousSubwindow == null) {
-				return;
-			}
-			
-			previousSubwindow.Open();
+			currentLeaf.Back();
 		}
 		
 	}

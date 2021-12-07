@@ -1,10 +1,14 @@
+using System;
 using System.Diagnostics.Contracts;
 using Backend.Managers;
 using BWLocaliser;
 using DG.Tweening;
+using Game_Assets.Scripts.GUI.MainMenu;
 using Sirenix.OdinInspector;
+using Steamworks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Game_Assets.Scripts.GUI {
 	[RequireComponent(typeof(CanvasGroup))]
@@ -16,6 +20,8 @@ namespace Game_Assets.Scripts.GUI {
 		private TextLocalizer heading;
 		[ShowIf("heading"), SerializeField] private string titleID;
 
+		public MainMenuLeaf leaf { private get; set; }
+
 		void Awake() {
 			_canvasGroup = GetComponent<CanvasGroup>();
 			if (heading) {
@@ -24,21 +30,32 @@ namespace Game_Assets.Scripts.GUI {
 		}
 		
 		public void Open() {
-			if (MainMenu.GetCurrentSubwindow()) {
-				MainMenu.GetCurrentSubwindow().Close();
+			if (leaf == null) {
+				throw new Exception("No leaf set for subwindow. Cannot navigate without one: " + gameObject.name);
 			}
+			
+			Backend.Managers.MainMenu.currentLeaf?.Close();
+			Backend.Managers.MainMenu.currentLeaf = leaf;
+			_canvasGroup.DOFade(1, 0.25f).SetDelay(0.25f).OnPlay(Refresh).OnComplete(() => {
+				_canvasGroup.interactable = _canvasGroup.blocksRaycasts = true;
+			});
+		}
 
-			MainMenu.SetCurrentSubwindow(this);
-			_canvasGroup.DOFade(1, 0.25f).SetDelay(0.25f);
+		protected virtual void Refresh() {
+			heading.SetString(new LocString(titleID));
 		}
 
 		public void SetHeading(string id) {
 			this.titleID = id;
-			heading.SetString(new LocString(id));
 		}
 
 		public void Close() {
-			_canvasGroup.DOFade(0, 0.25f);
+			_canvasGroup.interactable = _canvasGroup.blocksRaycasts = false;
+			Tween tween = _canvasGroup.DOFade(0, 0.25f);
+		}
+
+		public virtual void Back() {
+			
 		}
 		
 	}
