@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.IO;
 using Backend.Managers;
 using Steamworks;
@@ -8,9 +9,8 @@ namespace Backend.Submittable {
 	public class SteamLoader {
 
 		private SteamSubmittable submittable;
-
 		private Action<string> onDownloadComplete;
-		
+
 		// ---------- UPLOADS ----------
 		public void UploadToSteam(SteamSubmittable submittable) {
 			this.submittable = submittable;
@@ -47,6 +47,7 @@ namespace Backend.Submittable {
 			SteamUGC.SetItemTitle(updateHandle, submittable.title);
 			SteamUGC.SetItemDescription(updateHandle, submittable.description);
 			SteamUGC.SetItemContent(updateHandle, submittable.savePath);
+			SteamUGC.SetItemTags(updateHandle, new List<string>() { submittable.obj.itemTypeTag });
 			
 			SteamAPICall_t call = SteamUGC.SubmitItemUpdate(updateHandle, "");
 			CallResult<SubmitItemUpdateResult_t> updateResult = CallResult<SubmitItemUpdateResult_t>.Create(OnItemUploadUpdate);

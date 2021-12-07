@@ -1,4 +1,5 @@
 using Backend.Course;
+using Backend.Enums;
 using Backend.Level;
 using Steamworks;
 using TMPro;
@@ -17,8 +18,8 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 		}
 
 		private void RequestLevelInfoFromSteam() {
-			LevelUploader levelUploader = new LevelUploader();
-			levelUploader.GetUserLevelInfos(SteamUser.GetSteamID().GetAccountID(), 1, OnLevelInfoLoaded);
+			LevelLoader levelLoader = new LevelLoader();
+			levelLoader.GetUserLevelInfos(SteamUser.GetSteamID().GetAccountID(), 1, OnLevelInfoLoaded, LevelType.Hole);
 		}
 
 		private void OnLevelInfoLoaded(LevelInfo[] info) {
@@ -34,8 +35,5 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 
 			return course;
 		}
-		
-		
-
 	}
 }

@@ -80,4 +80,8 @@ public class LevelManager : MonoBehaviour {
 		
 	}
 
+	public static void FinishLevel() {
+		Debug.Log("Level finished");
+	}
+
 }

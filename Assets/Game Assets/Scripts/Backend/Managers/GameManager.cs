@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace Backend.Managers {
 	public class GameManager {
 
@@ -9,5 +11,11 @@ namespace Backend.Managers {
 			currentLevel = level;
 		}
 
+		public static void StartCourse(Course.Course course) {
+			currentCourse = course;
+			currentCourseHoleIndex = 0;
+			
+		}
+		
 	}
 }

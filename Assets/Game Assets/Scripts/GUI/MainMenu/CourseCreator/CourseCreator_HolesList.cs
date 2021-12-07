@@ -32,7 +32,7 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 		public void RemoveHoleFromList(LevelInfo levelInfo) {
 			holeList.RemoveItem(levelInfo);
 
-			// Update numbers alongside holes
+			// Update numbers alongside holesInfo
 			if (numbers.Count == 0) {
 				return;
 			}

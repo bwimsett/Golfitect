@@ -6,6 +6,7 @@ namespace Backend.Serialization {
 
 		public string fileExtension { get; }
 		public string saveFolderName { get; }
+		public string itemTypeTag { get;  }
 		
 	}
 }

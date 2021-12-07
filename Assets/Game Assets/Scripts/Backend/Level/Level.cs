@@ -20,6 +20,7 @@ namespace Backend.Level {
 		public string description { get; set; }
 		[JsonIgnore] public string fileExtension { get => "golflvl"; }
 		[JsonIgnore] public string saveFolderName { get => "levels"; }
+		public string itemTypeTag { get => "Level"; }
 
 		[HideInInspector, JsonIgnore] public Ball ball;
 

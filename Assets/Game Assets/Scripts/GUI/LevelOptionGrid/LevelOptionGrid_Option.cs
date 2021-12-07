@@ -1,5 +1,7 @@
 using System;
+using Backend.Course;
 using Backend.Level;
+using Backend.Submittable;
 using TMPro;
 using UnityEngine;
 
@@ -10,33 +12,39 @@ namespace Game_Assets.Scripts.GUI.LevelOptionGrid {
 		public RectTransform rectTransform;
 		public TextMeshProUGUI nameText;
 		public CanvasGroup canvasGroup;
-		private object obj;
+		private LevelInfo levelInfo;
 		private MainMenu_Subwindow subwindow;
 
-		[Header("Options for displaying holes")] [SerializeField]
+		[Header("Options for displaying holesInfo")] [SerializeField]
 		private AutoResizeSwitchButton addHoleButton;
 		
 		public void SetNormalPosition(Vector2 position) {
 			normalPosition = position;
 		}
 
-		public void SetObject(object obj, MainMenu_Subwindow subwindow) {
-			this.obj = obj;
+		public void SetObject(LevelInfo levelInfo, MainMenu_Subwindow subwindow) {
+			this.levelInfo = levelInfo;
 			this.subwindow = subwindow;
 			Refresh();
 		}
 
 		private void Refresh() {
-			if (obj == null) {
+			if (this.levelInfo == null) {
 				canvasGroup.alpha = 0;
 				return;
 			}
 
 			canvasGroup.alpha = 1;
+
+			if (this.levelInfo is CourseInfo courseInfo) {
+				RefreshCourse(courseInfo);
+				return;
+			}
 			
-			if (obj is LevelInfo levelInfo) {
+			if (this.levelInfo is LevelInfo levelInfo) {
 				RefreshLevel(levelInfo);
-			}	
+			}
+			
 		}
 
 		private void RefreshLevel(LevelInfo levelInfo) {
@@ -53,8 +61,12 @@ namespace Game_Assets.Scripts.GUI.LevelOptionGrid {
 			};
 		}
 
-		private void RefreshCourse() {
-			
+		private void RefreshCourse(CourseInfo courseInfo) {
+			addHoleButton.gameObject.SetActive(false);
+		}
+
+		public void OnClick() {
+			LoadingScreenManager.Load(levelInfo);
 		}
 
 	}
