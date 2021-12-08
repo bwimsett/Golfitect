@@ -20,7 +20,7 @@ namespace Game_Assets.Scripts.GUI.GenericComponent {
 			
 				scoreItems[i].gameObject.SetActive(true);
 				
-				if (i >= GameManager.courseTracker.currentHoleIndex) {
+				if (i > GameManager.courseTracker.currentHoleIndex) {
 					scoreItems[i].Clear();
 					continue;
 				}

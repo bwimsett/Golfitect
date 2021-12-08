@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Game_Assets.Scripts.GUI.PlayMode {
 	public class ScoreCard_Score: MonoBehaviour {
-		[SerializeField] private MPImageBasic containerBox;
+		[SerializeField] private MPImage containerBox;
 		[SerializeField] private TextMeshProUGUI score;
 		[SerializeField] private string overParColorID, parColorID, belowParColorID, holeInOneColorID;
 

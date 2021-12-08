@@ -20,6 +20,11 @@ namespace Backend {
 			}));
 			
 			console.config.AddAction("setpar", new BWConsole_Action(par => { GameManager.currentLevel.par = par; }));
+			
+			console.config.AddAction("closelevsum", new BWConsole_Action(()=> {
+				LevelManager.playModeHUD.levelSummary.Close();
+			}));
+			console.config.AddAction("openlevsum", new BWConsole_Action(LevelManager.playModeHUD.levelSummary.Open));
 		}
 		
 		

@@ -17,10 +17,13 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 
 		[Header("Timer")] 
 		public TextMeshProUGUI timer;
+
+		[Header("Level Summary")] public PlayMode_LevelSummary levelSummary;
 		
 		protected override void OpenGameHUD() {
 			GameManager.courseTracker.OnShotTaken += RefreshStrokes;
 			GameManager.courseTracker.OnHoleFinished += ShowHoleSummary;
+			levelSummary.Close(false);
 			Refresh();
 		}
 
@@ -41,7 +44,7 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 		}
 
 		private void ShowHoleSummary() {
-			
+			levelSummary.Open();
 		}
 	}
 }
