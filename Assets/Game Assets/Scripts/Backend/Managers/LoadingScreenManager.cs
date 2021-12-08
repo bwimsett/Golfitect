@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using Backend.Course;
+using Backend.Enums;
 using Backend.Level;
 using Backend.Managers;
 using Backend.Submittable;
@@ -12,13 +13,14 @@ using UnityEngine.SceneManagement;
 
 public class LoadingScreenManager : MonoBehaviour {
 
-	private static LevelInfo loadTarget;
+	private static SteamItemData loadTarget;
 
 	/// <summary>
 	/// Sets the load target, and opens the loading screen
 	/// </summary>
-	public static void Load(LevelInfo levelInfo) {
-		loadTarget = levelInfo;
+	public static void Load(SteamItemData steamItemData, GameMode gameMode) {
+		GameManager.gameMode = gameMode;
+		loadTarget = steamItemData;
 		SceneManager.LoadScene("Loading");
 	}
 	
@@ -27,20 +29,20 @@ public class LoadingScreenManager : MonoBehaviour {
 	}
 	
 	private void InitiateLoad() {
-		if (loadTarget is CourseInfo courseInfo) {
+		if (loadTarget is SteamCourseData courseInfo) {
 			LoadCourse(courseInfo);
 		} else {
 			LoadHole();
 		}
 	}
 
-	private void LoadCourse(CourseInfo courseInfo) {
+	private void LoadCourse(SteamCourseData steamCourseData) {
 		// First download the course
 		SteamLoader steamLoader = new SteamLoader();
-		steamLoader.GetFileFromID(courseInfo.id, levelString => {
+		steamLoader.GetFileFromID(steamCourseData.id, levelString => {
 			// Back out of loading screen if no valid file returned
 			if (levelString.Equals(string.Empty)) {
-				Debug.LogError("Couldn't download course: "+courseInfo.id);
+				Debug.LogError("Couldn't download course: "+steamCourseData.id);
 				SceneManager.LoadScene("Main Menu");
 				return;
 			}
@@ -49,25 +51,21 @@ public class LoadingScreenManager : MonoBehaviour {
 			Course course = (Course)JsonConvert.DeserializeObject(levelString, typeof(Course));
 
 			if (course == null) {
-				Debug.LogError("Deserialized course is null: "+courseInfo.id);
+				Debug.LogError("Deserialized course is null: "+steamCourseData.id);
 				SceneManager.LoadScene("Main Menu");
 				return;
 			}
 
-			// Set as the current course
-			GameManager.currentCourse = course;
-			GameManager.currentCourseHoleIndex = 0;
-			
 			// Download the levels and set the first hole as the current hole
 			course.DownloadLevels(() => {
 				if (course.holes.Length == 0) {
-					Debug.LogError("Downloaded course has no holes: "+courseInfo.id);
+					Debug.LogError("Downloaded course has no holes: "+steamCourseData.id);
 					SceneManager.LoadScene("Main Menu");
 					return;
 				}
 				
 				// Load the first hole
-				GameManager.SetCurrentLevel(course.holes[GameManager.currentCourseHoleIndex]);
+				GameManager.StartCourse(course);
 				IEnumerator load = LoadScene("Game");
 				StartCoroutine(load);
 			});

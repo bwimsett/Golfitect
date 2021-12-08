@@ -6,21 +6,21 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Game_Assets.Scripts.GUI.LevelBuilder {
-	public class LevelBuilderHUDManager : MonoBehaviour {
+	public class BuildModeHUD : GameHUD {
 		
 		[SerializeField] private Transform dockPrefab;
 		[SerializeField] private RectTransform dockContainer;
 		private Transform tileDock, sceneryDock;
-		[SerializeField] private LevelBuilder_BuildOptionButton buildOptionButtonPrefab;
-		private LevelBuilder_BuildOptionButton currentSelectedBuildOption;
+		[SerializeField] private BuildMode_BuildOptionButton buildModeBuildOptionButtonPrefab;
+		private BuildMode_BuildOptionButton _currentSelectedBuildModeBuildOption;
 		
 		
-		public void Initialise() {
+		protected override void OpenGameHUD() {
 			GenerateBuildOptions();
 		}
 		
 		private void GenerateBuildOptions() {
-			buildOptionButtonPrefab.gameObject.SetActive(false);
+			buildModeBuildOptionButtonPrefab.gameObject.SetActive(false);
 			dockPrefab.gameObject.SetActive(false);
 			
 			foreach (LevelObject levelObject in LevelManager.levelObjectUtility.objectBank.levelObjects) {
@@ -52,31 +52,31 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 				dock = sceneryDock;
 			}
 			
-			LevelBuilder_BuildOptionButton button = Instantiate(buildOptionButtonPrefab.gameObject, dock).GetComponent<LevelBuilder_BuildOptionButton>();
+			BuildMode_BuildOptionButton button = Instantiate(buildModeBuildOptionButtonPrefab.gameObject, dock).GetComponent<BuildMode_BuildOptionButton>();
 			button.gameObject.SetActive(true);
 			
 			button.SetLevelObject(levelObject, this);
 		}
 
-		public void SelectBuildOptionFromDock (LevelBuilder_BuildOptionButton option) {
-			if (currentSelectedBuildOption) {
-				currentSelectedBuildOption.Deselect();
+		public void SelectBuildOptionFromDock (BuildMode_BuildOptionButton modeBuildOption) {
+			if (_currentSelectedBuildModeBuildOption) {
+				_currentSelectedBuildModeBuildOption.Deselect();
 			}
 
-			currentSelectedBuildOption = option;
+			_currentSelectedBuildModeBuildOption = modeBuildOption;
 
 		}
 
-		public void DeselectBuildOptionFromDock(LevelBuilder_BuildOptionButton option) {
-			if (currentSelectedBuildOption == option) {
-				currentSelectedBuildOption.Deselect();
-				currentSelectedBuildOption = null;
+		public void DeselectBuildOptionFromDock(BuildMode_BuildOptionButton modeBuildOption) {
+			if (_currentSelectedBuildModeBuildOption == modeBuildOption) {
+				_currentSelectedBuildModeBuildOption.Deselect();
+				_currentSelectedBuildModeBuildOption = null;
 			}
 		}
 
 		public void DeselectBuildOptionFromDock(LevelObject prefab) {
-			if (currentSelectedBuildOption.levelObject.objectTypeID.Equals(prefab.objectTypeID)) {
-				DeselectBuildOptionFromDock(currentSelectedBuildOption);
+			if (_currentSelectedBuildModeBuildOption.levelObject.objectTypeID.Equals(prefab.objectTypeID)) {
+				DeselectBuildOptionFromDock(_currentSelectedBuildModeBuildOption);
 			}
 		}
 

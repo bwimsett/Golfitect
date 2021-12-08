@@ -53,7 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\Course.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\LevelBuilder\LevelBuilder_BuildOptionButton.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildMode_BuildOptionButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\BallControllerTool.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\StripeButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\ISteamSerializable.cs" />
@@ -62,12 +62,15 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIHighlightOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenu_Subwindow.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\OptionList\MainMenu_OptionList.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenuPersistantUI.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\Tool.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LevelInputManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Ball.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\IndexRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\SteamManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator_HolesList_Number.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\PersistantUI\PersistantUI_BackButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\TextTabs.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\Locale.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameSceneManager.cs" />
@@ -75,9 +78,11 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocString.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\Flag.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GridBackgroundGenerator.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Level\LevelInfo.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamItemData.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\FlagTrigger.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameLevelCommands.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\ShiftXOnMouseover.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\LevelType.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\IntegerRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenu.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid_Option.cs" />
@@ -86,15 +91,20 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectUtility.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\CameraController.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseSelector\MainMenu_Subwindow_CourseSelector.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\Level.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamSubmittable.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\LocalisationInitializer.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocalisationManager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\TextButtonCallback.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\LevelLoader.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectLayout.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\LocalizationRule.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenuLeaf.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Hole.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelBuilder\LevelGrid.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\OptionList\MainMenu_OptionList_Option.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Course\SteamCourseData.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LevelManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Vector3Save.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\FlatGround.cs" />
@@ -104,23 +114,20 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LoadingScreenManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamLoader.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\PluralRule.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\LevelBuilder\LevelBuilderHUDManager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildModeHUD.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectBank.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\Tee.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenuPersistantUI.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\OptionList\MainMenu_OptionList.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\OptionList\MainMenu_OptionList_Option.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\TextButtonCallback.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\PersistantUI\PersistantUI_BackButton.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\ShiftXOnMouseover.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseSelector\MainMenu_Subwindow_CourseSelector.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\LevelType.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseInfo.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenuLeaf.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseTracker.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\GameMode.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\ScoreCard.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GameHUD.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayModeHUD.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\ScoreCard_Score.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GUIColorBank.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -814,9 +821,17 @@
       <Project>{d1f9e1f7-095d-3289-d8fa-220a00617c24}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
+    <ProjectReference Include="MPUIKit.csproj">
+      <Project>{6d6ebff6-93e9-c2cd-c060-bb871849b2be}</Project>
+      <Name>MPUIKit</Name>
+    </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
       <Project>{ca060b67-3b07-c6b5-2cc5-dffd91503644}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="MPUIKit.Editor.csproj">
+      <Project>{079bdb49-b61d-0cc6-44f1-648e18e35587}</Project>
+      <Name>MPUIKit.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
       <Project>{0daee573-1afa-b1a7-4aa5-d8cae8a958f5}</Project>
@@ -826,21 +841,13 @@
       <Project>{62370954-6062-6c73-e698-8a7a60ebffa2}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.csproj">
-      <Project>{41e027ee-dde4-a340-b95f-bc028c92715b}</Project>
-      <Name>LeTai.TranslucentImage</Name>
-    </ProjectReference>
     <ProjectReference Include="LeTai.TranslucentImage.Editor.csproj">
       <Project>{91356981-5371-b8ed-9061-7afa6754a920}</Project>
       <Name>LeTai.TranslucentImage.Editor</Name>
     </ProjectReference>
-    <ProjectReference Include="MPUIKit.Editor.csproj">
-      <Project>{079bdb49-b61d-0cc6-44f1-648e18e35587}</Project>
-      <Name>MPUIKit.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="MPUIKit.csproj">
-      <Project>{6d6ebff6-93e9-c2cd-c060-bb871849b2be}</Project>
-      <Name>MPUIKit</Name>
+    <ProjectReference Include="LeTai.TranslucentImage.csproj">
+      <Project>{41e027ee-dde4-a340-b95f-bc028c92715b}</Project>
+      <Name>LeTai.TranslucentImage</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

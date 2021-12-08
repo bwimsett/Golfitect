@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class StripeButton : MonoBehaviour {
 
 	public Image background;
-	private RectTransform _rectTransform;
+	[SerializeField] private RectTransform resizeTarget;
 	[SerializeField] private Vector2 backgroundStartX, backgroundEndX;
 	[SerializeField] private float backgroundAnimationSpeed, scaleSpeed, shrinkSpeed;
 	[SerializeField] private Ease enlargeEase;
@@ -17,8 +17,7 @@ public class StripeButton : MonoBehaviour {
 	private Tween currentBackgroundAnimation, currentBackgroundFade, currentEnlargeAnimation, currentShrinkAnimation;
 
 	void Awake() {
-		_rectTransform = GetComponent<RectTransform>();
-		normalSize = _rectTransform.rect.size;
+		normalSize = resizeTarget.rect.size;
 	}
 
 	private void ShowBackground() {
@@ -54,7 +53,7 @@ public class StripeButton : MonoBehaviour {
 		ShowBackground();
 		currentShrinkAnimation?.Kill();
 		Vector2 newSize = enlargeScale * normalSize;
-		currentEnlargeAnimation = _rectTransform.DOSizeDelta(newSize, scaleSpeed).SetEase(enlargeEase);
+		currentEnlargeAnimation = resizeTarget.DOSizeDelta(newSize, scaleSpeed).SetEase(enlargeEase);
 	}
 
 	public void OnMouseDown() {
@@ -64,7 +63,7 @@ public class StripeButton : MonoBehaviour {
 	public void OnMouseExit() {
 		HideBackground();
 		currentEnlargeAnimation?.Kill();
-		currentShrinkAnimation = _rectTransform.DOSizeDelta(normalSize, shrinkSpeed);
+		currentShrinkAnimation = resizeTarget.DOSizeDelta(normalSize, shrinkSpeed);
 	}
 
 }

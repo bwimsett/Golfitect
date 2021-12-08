@@ -12,17 +12,17 @@ namespace Game_Assets.Scripts.GUI.LevelOptionGrid {
 		[SerializeField] private RectTransform _rectTransform;
 
 		private int page;
-		private LevelInfo[,] pages; // x = page, y = option
+		private SteamItemData[,] pages; // x = page, y = option
 		private LevelOptionGrid_Option[] options;
 		private MainMenu_Subwindow subwindow;
 
-		public void SetOptions(LevelInfo[] optionObjects, MainMenu_Subwindow subwindow) {
+		public void SetOptions(SteamItemData[] optionObjects, MainMenu_Subwindow subwindow) {
 			this.subwindow = subwindow;
 			
 			// Populate pages array
 			int numPerPage = layout.x * layout.y;
 			int pageCount = Mathf.CeilToInt(((float) optionObjects.Length / numPerPage));
-			pages = new LevelInfo[pageCount, numPerPage];
+			pages = new SteamItemData[pageCount, numPerPage];
 			int levelIndex = 0;
 
 			for (int page = 0; page < pageCount; page++) {

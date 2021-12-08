@@ -18,14 +18,14 @@ namespace Backend.Level {
 		private Dictionary<UGCQueryHandle_t, LevelType> queryLevelTypes;
 		
 		// Callbacks
-		private Action<LevelInfo[]> onUserQueryCompleteCallback;
+		private Action<SteamItemData[]> onUserQueryCompleteCallback;
 
 		public LevelLoader() {
 			queryLevelTypes = new Dictionary<UGCQueryHandle_t, LevelType>();
 		}
 		
 		// ---------- LEVEL QUERYING ----------
-		public void GetUserLevelInfos(AccountID_t user, uint page, Action<LevelInfo[]> onComplete, LevelType levelType) {
+		public void GetUserLevelInfos(AccountID_t user, uint page, Action<SteamItemData[]> onComplete, LevelType levelType) {
 			AppId_t appId = SteamUtils.GetAppID();
 
 			onUserQueryCompleteCallback = onComplete;
@@ -57,7 +57,7 @@ namespace Backend.Level {
 			}
 
 			uint numResults = item.m_unNumResultsReturned;
-			LevelInfo[] results = new LevelInfo[numResults];
+			SteamItemData[] results = new SteamItemData[numResults];
 
 			// Get the type of level for the query (hole or course)
 			queryLevelTypes.TryGetValue(item.m_handle, out LevelType levelType);
@@ -68,9 +68,9 @@ namespace Backend.Level {
 				SteamUGC.GetQueryUGCResult(item.m_handle, i, out details);
 				//Debug.Log("Found file: "+details.m_nPublishedFileId);
 				if (levelType == LevelType.Hole) {
-					results[i] = new LevelInfo(details);
+					results[i] = new SteamItemData(details);
 				} else if (levelType == LevelType.Course) {
-					results[i] = new CourseInfo(details);
+					results[i] = new SteamCourseData(details);
 				}
 			}
 

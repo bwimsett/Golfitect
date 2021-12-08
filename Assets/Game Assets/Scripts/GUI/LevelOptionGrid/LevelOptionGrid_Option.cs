@@ -1,5 +1,6 @@
 using System;
 using Backend.Course;
+using Backend.Enums;
 using Backend.Level;
 using Backend.Submittable;
 using TMPro;
@@ -12,7 +13,7 @@ namespace Game_Assets.Scripts.GUI.LevelOptionGrid {
 		public RectTransform rectTransform;
 		public TextMeshProUGUI nameText;
 		public CanvasGroup canvasGroup;
-		private LevelInfo levelInfo;
+		private SteamItemData _steamItemData;
 		private MainMenu_Subwindow subwindow;
 
 		[Header("Options for displaying holesInfo")] [SerializeField]
@@ -22,51 +23,51 @@ namespace Game_Assets.Scripts.GUI.LevelOptionGrid {
 			normalPosition = position;
 		}
 
-		public void SetObject(LevelInfo levelInfo, MainMenu_Subwindow subwindow) {
-			this.levelInfo = levelInfo;
+		public void SetObject(SteamItemData steamItemData, MainMenu_Subwindow subwindow) {
+			this._steamItemData = steamItemData;
 			this.subwindow = subwindow;
 			Refresh();
 		}
 
 		private void Refresh() {
-			if (this.levelInfo == null) {
+			if (this._steamItemData == null) {
 				canvasGroup.alpha = 0;
 				return;
 			}
 
 			canvasGroup.alpha = 1;
 
-			if (this.levelInfo is CourseInfo courseInfo) {
+			if (this._steamItemData is SteamCourseData courseInfo) {
 				RefreshCourse(courseInfo);
 				return;
 			}
 			
-			if (this.levelInfo is LevelInfo levelInfo) {
+			if (this._steamItemData is SteamItemData levelInfo) {
 				RefreshLevel(levelInfo);
 			}
 			
 		}
 
-		private void RefreshLevel(LevelInfo levelInfo) {
-			nameText.text = levelInfo.title;
+		private void RefreshLevel(SteamItemData steamItemData) {
+			nameText.text = steamItemData.title;
 			addHoleButton.gameObject.SetActive(true);
 			addHoleButton.OnClickAction = b => {
 				if (subwindow is CourseCreator.CourseCreator courseCreator) {
 					if (b) {
-						courseCreator.holesList.RemoveHoleFromList(levelInfo);
+						courseCreator.holesList.RemoveHoleFromList(steamItemData);
 					} else {
-						courseCreator.holesList.AddHoleToList(levelInfo);
+						courseCreator.holesList.AddHoleToList(steamItemData);
 					}
 				}
 			};
 		}
 
-		private void RefreshCourse(CourseInfo courseInfo) {
+		private void RefreshCourse(SteamCourseData steamCourseData) {
 			addHoleButton.gameObject.SetActive(false);
 		}
 
 		public void OnClick() {
-			LoadingScreenManager.Load(levelInfo);
+			LoadingScreenManager.Load(_steamItemData, GameMode.Play);
 		}
 
 	}

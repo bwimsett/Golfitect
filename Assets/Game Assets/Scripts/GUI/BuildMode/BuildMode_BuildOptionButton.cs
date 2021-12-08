@@ -6,13 +6,13 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Game_Assets.Scripts.GUI.LevelBuilder {
-	public class LevelBuilder_BuildOptionButton : GUIScaleOnMouseover {
+	public class BuildMode_BuildOptionButton : GUIScaleOnMouseover {
 
 		public LevelObject levelObject { get; private set; }
 		public Image icon;
-		private LevelBuilderHUDManager hud;
+		private BuildModeHUD hud;
 
-		public void SetLevelObject(LevelObject levelObject, LevelBuilderHUDManager hud) {
+		public void SetLevelObject(LevelObject levelObject, BuildModeHUD hud) {
 			this.hud = hud;
 			this.levelObject = levelObject;
 			Refresh();

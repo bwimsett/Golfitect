@@ -1,3 +1,4 @@
+using Backend.Enums;
 using Backend.Level;
 using Backend.Managers;
 using Backend.Submittable;
@@ -13,7 +14,7 @@ namespace Backend {
 				SteamLoader steamLoader = new SteamLoader();
 				Course.Course course = MainMenu.courseCreator.GetCourseFromInput();
 				steamLoader.UploadToSteam(new SteamSubmittable(course.title, course.description, course));
-				LoadingScreenManager.Load(course.holesInfo[0]);
+				LoadingScreenManager.Load(course.holesInfo[0], GameMode.Play);
 			}));
 		}
 		

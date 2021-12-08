@@ -1,3 +1,4 @@
+using Backend.Managers;
 using UnityEngine;
 
 namespace Game {
@@ -8,6 +9,7 @@ namespace Game {
 
 		public void Swing(Vector3 swingVector) {
 			rigidbody.AddForce(swingVector*10);
+			GameManager.courseTracker.AddShot();
 		}
 
 	}

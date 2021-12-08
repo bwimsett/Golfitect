@@ -44,7 +44,7 @@ public class LevelBuilderTool : Tool {
 	}
 
 	protected override void Deactivate() {
-		LevelManager.levelBuilderHUD.DeselectBuildOptionFromDock(currentLevelObject);
+		LevelManager.buildModeHUD.DeselectBuildOptionFromDock(currentLevelObject);
 		currentLevelObject = null;
 		Destroy(placing.gameObject);
 	}

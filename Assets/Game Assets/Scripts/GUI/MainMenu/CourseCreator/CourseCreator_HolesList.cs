@@ -18,8 +18,8 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 			numbers = new List<CourseCreator_HolesList_Number>();
 		}
 		
-		public void AddHoleToList(LevelInfo levelInfo) {
-			holeList.AddItem(levelInfo);
+		public void AddHoleToList(SteamItemData steamItemData) {
+			holeList.AddItem(steamItemData);
 
 			// Create a new number to go alongside the hole
 			CourseCreator_HolesList_Number newNumber = Instantiate(listNumberPrefab, numbersContainer).GetComponent<CourseCreator_HolesList_Number>();
@@ -29,8 +29,8 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 			LayoutRebuilder.ForceRebuildLayoutImmediate(numbersContainer);
 		}
 		
-		public void RemoveHoleFromList(LevelInfo levelInfo) {
-			holeList.RemoveItem(levelInfo);
+		public void RemoveHoleFromList(SteamItemData steamItemData) {
+			holeList.RemoveItem(steamItemData);
 
 			// Update numbers alongside holesInfo
 			if (numbers.Count == 0) {
@@ -47,12 +47,12 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 			LayoutRebuilder.ForceRebuildLayoutImmediate(numbersContainer);
 		}
 
-		public LevelInfo[] GetHoles() {
+		public SteamItemData[] GetHoles() {
 			object[] levelInfos = holeList.GetItems();
-			LevelInfo[] output = new LevelInfo[levelInfos.Length];
+			SteamItemData[] output = new SteamItemData[levelInfos.Length];
 
 			for (int i = 0; i < output.Length; i++) {
-				output[i] = (LevelInfo) levelInfos[i];
+				output[i] = (SteamItemData) levelInfos[i];
 			}
 
 			return output;

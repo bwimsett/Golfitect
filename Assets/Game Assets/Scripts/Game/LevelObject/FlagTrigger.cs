@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Backend.Managers;
 using Game;
 using UnityEngine;
 
@@ -12,6 +13,6 @@ public class FlagTrigger : MonoBehaviour {
 			return;
 		}
 		
-		LevelManager.FinishLevel();
+		GameManager.courseTracker.FinishHole();
 	}
 }

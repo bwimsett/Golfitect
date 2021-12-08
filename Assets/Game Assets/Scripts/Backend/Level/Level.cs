@@ -8,7 +8,6 @@ using Backend.Serialization;
 using Backend.Submittable;
 using Game;
 using Newtonsoft.Json;
-using UnityEditor.SceneTemplate;
 using UnityEngine;
 using Object = UnityEngine.Object;
 
@@ -16,8 +15,9 @@ namespace Backend.Level {
 	[Serializable]
 	public class Level : ISteamSerializable {
 
-		public string title { get; set; }
-		public string description { get; set; }
+		public string title, description;
+		public int par = 3;
+		
 		[JsonIgnore] public string fileExtension { get => "golflvl"; }
 		[JsonIgnore] public string saveFolderName { get => "levels"; }
 		public string itemTypeTag { get => "Level"; }

@@ -15,7 +15,7 @@ namespace DefaultNamespace {
 			levelLoader.GetUserLevelInfos(SteamUser.GetSteamID().GetAccountID(), 1, OnCoursesLoaded, LevelType.Course);
 		}
 		
-		private void OnCoursesLoaded(LevelInfo[] levelInfos) {
+		private void OnCoursesLoaded(SteamItemData[] levelInfos) {
 			levelOptionGrid.SetOptions(levelInfos, this);
 		}
 

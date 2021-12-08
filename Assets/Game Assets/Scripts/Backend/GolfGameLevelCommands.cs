@@ -18,6 +18,8 @@ namespace Backend {
 			console.config.AddAction("play", new BWConsole_Action(() => {
 				GameManager.currentLevel.Play();
 			}));
+			
+			console.config.AddAction("setpar", new BWConsole_Action(par => { GameManager.currentLevel.par = par; }));
 		}
 		
 		

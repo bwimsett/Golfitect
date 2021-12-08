@@ -4,639 +4,61 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Implemented course downloading">
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenuLeaf.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenuLeaf.cs.meta" afterDir="false" />
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseTracker.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseTracker.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Enums/GameMode.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Enums/GameMode.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GUIColorBank.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GUIColorBank.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GameHUD.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GameHUD.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/PlayModeHUD.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/PlayModeHUD.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/ScoreCard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/ScoreCard.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/ScoreCard_Score.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/ScoreCard_Score.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/BWConsole.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/BWConsole.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Fonts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Fonts/Lekton-Regular SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Fonts/Lekton-Regular SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Prefabs/Text Line.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Prefabs/Text Line.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Scripts/BWConsole.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Scripts/BWConsole.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Scripts/BWConsoleConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Scripts/BWConsoleConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Scripts/BWConsole_BasicCommands.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Scripts/BWConsole_BasicCommands.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Scripts/BWConsole_OutputLine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/Runtime/Scripts/BWConsole_OutputLine.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/BWConsole/package.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/FlatKit Manual.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/FlatKit Manual.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/BlackEdge01__StylSurf_None_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/BlackEdge01__StylSurf_None_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/CelWithRim01__StylSurf_Single_ExCel_Spec_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/CelWithRim01__StylSurf_Single_ExCel_Spec_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/CelWithRim02__StylSurf_Single_ExCel_Spec_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/CelWithRim02__StylSurf_Single_ExCel_Spec_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/DarkPaleWhiteRim__StylSurf_Single_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/DarkPaleWhiteRim__StylSurf_Single_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/GlassLook01__StylSurf_Single_Spec.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/GlassLook01__StylSurf_Single_Spec.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/LacquerBlack__StylSurf_Single_ExCel_Spec_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/LacquerBlack__StylSurf_Single_ExCel_Spec_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/LacquerGray__StylSurf_Single_ExCel_Spec_Rim 1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/LacquerGray__StylSurf_Single_ExCel_Spec_Rim 1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/MatteBronze__StylSurf_Single_Spec_Rim_HGrad.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/MatteBronze__StylSurf_Single_Spec_Rim_HGrad.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/MatteGradient_StylSurf_None_HGrad.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/MatteGradient_StylSurf_None_HGrad.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Metallic01__StylSurf_Single_ExtraC_Spec.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Metallic01__StylSurf_Single_ExtraC_Spec.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Metallic02__StylSurf_Single_ExtraC_Spec_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Metallic02__StylSurf_Single_ExtraC_Spec_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Metallic03__StylSurf_Single_ExCel_Spec_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Metallic03__StylSurf_Single_ExCel_Spec_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/MetallicRim01__StylSurf_None_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/MetallicRim01__StylSurf_None_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/ShinyPlastic01__StylSurf_Spec_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/ShinyPlastic01__StylSurf_Spec_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SimpleCel01_StylSurf_Single.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SimpleCel01_StylSurf_Single.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothExtraCel__StylSurf_ExtraC_Spec.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothExtraCel__StylSurf_ExtraC_Spec.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothPcycho01__StylSurf_Single_ExCel_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothPcycho01__StylSurf_Single_ExCel_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothPcycho02__StylSurf_Single_ExCel_Spec_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothPcycho02__StylSurf_Single_ExCel_Spec_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothPcycho03__StylSurf_Single_ExCel_Spec_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothPcycho03__StylSurf_Single_ExCel_Spec_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothRim01__StylSurf_None_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothRim01__StylSurf_None_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothRim02__StylSurf_None_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/SmoothRim02__StylSurf_None_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Toon01__StylSurf_Single.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Toon01__StylSurf_Single.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Toon02__StylSurf_Single_ExtraC_Spec.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/Toon02__StylSurf_Single_ExtraC_Spec.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/ToonBlurry__StylSurf_Single_HGrad.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/ToonBlurry__StylSurf_Single_HGrad.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/ToonSubtle__StylSurf_Single.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/ToonSubtle__StylSurf_Single.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/TwoColorVasePreset01.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/TwoColorVasePreset01.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/TwoColorVasePreset02.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/TwoColorVasePreset02.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/TwoColorVasePreset03.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/TwoColorVasePreset03.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/WhiteWithBlackRim__StylSurf_Single_Spec_Rim.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Materials/WhiteWithBlackRim__StylSurf_Single_Spec_Rim.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/BlackEdge01__StylSurf_None_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/BlackEdge01__StylSurf_None_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/CelWithRim01__StylSurf_Single_ExCel_Spec_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/CelWithRim01__StylSurf_Single_ExCel_Spec_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/CelWithRim02__StylSurf_Single_ExCel_Spec_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/CelWithRim02__StylSurf_Single_ExCel_Spec_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/DarkPaleWhiteRim__StylSurf_Single_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/DarkPaleWhiteRim__StylSurf_Single_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/GlassLook01__StylSurf_Single_Spec.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/GlassLook01__StylSurf_Single_Spec.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/LacquerBlack__StylSurf_Single_ExCel_Spec_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/LacquerBlack__StylSurf_Single_ExCel_Spec_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/LacquerGray__StylSurf_Single_ExCel_Spec_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/LacquerGray__StylSurf_Single_ExCel_Spec_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/MatteBronze__StylSurf_Single_Spec_Rim_HGrad.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/MatteBronze__StylSurf_Single_Spec_Rim_HGrad.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/MatteGradient_StylSurf_None_HGrad.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/MatteGradient_StylSurf_None_HGrad.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/Metallic01__StylSurf_Single_ExtraC_Spec.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/Metallic01__StylSurf_Single_ExtraC_Spec.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/Metallic02__StylSurf_Single_ExtraC_Spec_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/Metallic02__StylSurf_Single_ExtraC_Spec_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/Metallic03__StylSurf_Single_ExCel_Spec_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/Metallic03__StylSurf_Single_ExCel_Spec_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/MetallicRim01__StylSurf_None_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/MetallicRim01__StylSurf_None_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/ShinyPlastic01__StylSurf_Spec_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/ShinyPlastic01__StylSurf_Spec_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SimpleCel01_StylSurf_Single.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SimpleCel01_StylSurf_Single.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothExtraCel__StylSurf_ExtraC_Spec.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothExtraCel__StylSurf_ExtraC_Spec.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothPcycho01__StylSurf_Single_ExCel_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothPcycho01__StylSurf_Single_ExCel_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothPcycho02__StylSurf_Single_ExCel_Spec_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothPcycho02__StylSurf_Single_ExCel_Spec_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothPcycho03__StylSurf_Single_ExCel_Spec_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothPcycho03__StylSurf_Single_ExCel_Spec_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothRim01__StylSurf_None_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothRim01__StylSurf_None_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothRim02__StylSurf_None_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/SmoothRim02__StylSurf_None_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/Toon01__StylSurf_Single.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/Toon01__StylSurf_Single.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/Toon02__StylSurf_Single_ExtraC_Spec.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/Toon02__StylSurf_Single_ExtraC_Spec.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/ToonBlurry__StylSurf_Single_HGrad.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/ToonBlurry__StylSurf_Single_HGrad.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/ToonSubtle__StylSurf_Single.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/ToonSubtle__StylSurf_Single.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/TwoColorVasePreset01.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/TwoColorVasePreset01.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/TwoColorVasePreset02.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/TwoColorVasePreset02.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/TwoColorVasePreset03.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/TwoColorVasePreset03.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/WhiteWithBlackRim__StylSurf_Single_Spec_Rim.preset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/PresetsShared/Presets/WhiteWithBlackRim__StylSurf_Single_Spec_Rim.preset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Scripts/UvScroller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Scripts/UvScroller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/Editor/StylizedSurfaceEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/Editor/StylizedSurfaceEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/Editor/Tooltips.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/Editor/Tooltips.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/GradientSkybox.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/GradientSkybox/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/GradientSkybox/Editor/GradientSkyboxEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/GradientSkybox/Editor/GradientSkyboxEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/GradientSkybox/GradientSkybox.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/GradientSkybox/GradientSkybox.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/LightPlane.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/LightPlane.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/LibraryUrp.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/LibraryUrp/Lighting_DR.hlsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/LibraryUrp/Lighting_DR.hlsl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/LibraryUrp/LitForwardPass_DR.hlsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/LibraryUrp/LitForwardPass_DR.hlsl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/LibraryUrp/StylizedInput.hlsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/LibraryUrp/StylizedInput.hlsl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/LibraryUrp/TerrainLitPasses_DR.hlsl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/LibraryUrp/TerrainLitPasses_DR.hlsl.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/StylizedSurface.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/StylizedSurface.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/StylizedSurfaceOutline.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/StylizedSurfaceOutline.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/Terrain.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/Terrain.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/TerrainLitAdd_DR.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Shaders/StylizedSurface/TerrainLitAdd_DR.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Utils.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Utils/Readme.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Utils/Readme/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Utils/Readme/Editor/FlatKitReadme.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Utils/Readme/Editor/FlatKitReadme.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Utils/Readme/Editor/NetworkManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Utils/Readme/Editor/NetworkManager.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Utils/Readme/Editor/ReadmeEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/Utils/Readme/Editor/ReadmeEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Readme].asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Readme].asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] Built-In.unitypackage" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] Built-In.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/ExampleSettings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/ExampleSettings/FogSettingsExample.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/ExampleSettings/FogSettingsExample.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/ExampleSettings/OutlineSettingsExample.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/ExampleSettings/OutlineSettingsExample.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/ExampleSettings/[FlatKit] Example Forward Renderer.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/ExampleSettings/[FlatKit] Example Forward Renderer.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/ExampleSettings/[FlatKit] Example Settings URP.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/ExampleSettings/[FlatKit] Example Settings URP.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Common.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Common/ShaderIncludeUtilities.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Common/ShaderIncludeUtilities.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog/FlatKitFog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog/FlatKitFog.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog/FogSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog/FogSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog/Resources/FlatKitFog.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Fog/Resources/FlatKitFog.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline/FlatKitDepthNormals.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline/FlatKitDepthNormals.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline/FlatKitOutline.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline/FlatKitOutline.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline/OutlineSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline/OutlineSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline/Resources/FlatKitOutline.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/RenderFeatures/Outline/Resources/FlatKitOutline.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Editor/Tooltips.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Editor/Tooltips.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Editor/WaterEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Editor/WaterEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Scripts/Buoyancy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Scripts/Buoyancy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Shaders/Water.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Shaders/Water.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_01.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_02.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_03.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_04.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_05.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_05.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_06.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_07.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_08.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_09.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_09.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_10.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_10.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_11.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_12.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_12.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_13.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_13.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_14.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_14.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_15.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_15.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16_3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16_4.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16_5.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_16_6.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_17.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_17.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_18.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] URP/Water/Textures/water_texture_18.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] Universal (URP).unitypackage" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FlatKit/[Render Pipeline] Universal (URP).unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/GUI/Prefabs/Lines Button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/GUI/Prefabs/Lines Button.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu_Subwindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu_Subwindow.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/OptionList/MainMenu_OptionList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/OptionList/MainMenu_OptionList.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/CHANGELOG.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/CHANGELOG.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/LeTai.TranslucentImage.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/LeTai.TranslucentImage.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Material.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Material/Default-Translucent.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Material/Default-Translucent.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Offline Documentation.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Offline Documentation.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Online Documentation (recommended).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Online Documentation (recommended).txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Resources/EfficientBlur.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Resources/EfficientBlur.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Resources/FillCrop.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Resources/FillCrop.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Resources/TranslucentImage.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Resources/TranslucentImage.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Resources/lib.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Resources/lib.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/BlurAlgorithm.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/BlurAlgorithm/BlurConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/BlurAlgorithm/BlurConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/BlurAlgorithm/IBlurAlgorithm.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/BlurAlgorithm/IBlurAlgorithm.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/BlurAlgorithm/ScalableBlur.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/BlurAlgorithm/ScalableBlur.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/BlurAlgorithm/ScalableBlurConfig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/BlurAlgorithm/ScalableBlurConfig.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/LeTai.TranslucentImage.Editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/LeTai.TranslucentImage.Editor.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/MenuIntegration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/MenuIntegration.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/Resources/BlurConfig Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/Resources/BlurConfig Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/Resources/BlurSource Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/Resources/BlurSource Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/Resources/TranslucentImage Icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/Resources/TranslucentImage Icon.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/ScalableBlurConfigEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/ScalableBlurConfigEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/ScenceGizmoAutoDisable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/ScenceGizmoAutoDisable.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/TranslucentImageEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/TranslucentImageEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/TranslucentImageSourceEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/TranslucentImageSourceEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/UnityShaderBugHack.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Editor/UnityShaderBugHack.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/TranslucentImage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/TranslucentImage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/TranslucentImageEditorEnhancement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/TranslucentImageEditorEnhancement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/TranslucentImageMeshEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/TranslucentImageMeshEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/TranslucentImageSource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/TranslucentImageSource.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Utilities.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Utilities/Extensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Utilities/Extensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Utilities/ResizableScreenRect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Utilities/ResizableScreenRect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Utilities/ShaderId.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/Script/Utilities/ShaderId.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/UniversalRP README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/UniversalRP README.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/UniversalRP support.unitypackage" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Le Tai's Asset/TranslucentImage/UniversalRP support.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Demos.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Demos/Background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Demos/Background.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Demos/MPUIKit_Shape_Demo.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Demos/MPUIKit_Shape_Demo.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/background.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_h_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_h_0.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_h_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_h_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_h_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_h_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_h_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_h_3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_v_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_v_0.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_v_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_v_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_v_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_v_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_v_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/flip_v_3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/logo.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_left_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_left_0.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_left_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_left_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_left_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_left_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_left_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_left_3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_right_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_right_0.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_right_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_right_1.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_right_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_right_2.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_right_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/rotate_right_3.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/title.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Images/title.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/MPUIKit.Editor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/MPUIKit.Editor.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/MPUIKitSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/MPUIKitSettings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/EditorGUILayoutExtended.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/EditorGUILayoutExtended.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/EffectDrawers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/EffectDrawers/GradeintEffectPropertyDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/EffectDrawers/GradeintEffectPropertyDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/Integrations.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/Integrations/SoftMaskIntegration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/Integrations/SoftMaskIntegration.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPEditorContents.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPEditorContents.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPEditorUtility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPEditorUtility.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPImageBasicEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPImageBasicEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPImageEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPImageEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPUIKitShaderGUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPUIKitShaderGUI.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPUIKitUtilityWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/MPUIKitUtilityWindow.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/Settings.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/Settings/MPUIKitSettings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/Settings/MPUIKitSettings.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/Settings/MPUIKitSettingsEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/Settings/MPUIKitSettingsEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/CirclePropertyDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/CirclePropertyDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/HexagonPropertyDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/HexagonPropertyDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/NStarPolygonPropertyDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/NStarPolygonPropertyDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/PentagonPropertyDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/PentagonPropertyDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/RectanglePropertyDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/RectanglePropertyDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/TrianglePropertyDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Editor/Scripts/ShapeDrawers/TrianglePropertyDrawer.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/MPUIKit.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/MPUIKit.asmdef.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Resources/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Resources/Shaders/2D_SDF.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Resources/Shaders/2D_SDF.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Resources/Shaders/MPImage.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Resources/Shaders/MPImage.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Resources/Shaders/MPImageBasic.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Resources/Shaders/MPImageBasic.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Resources/mpui_default_empty_sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Resources/mpui_default_empty_sprite.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Effects.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Effects/GradientEffect.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Effects/GradientEffect.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Enums.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Enums.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/IMPUIComponent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/IMPUIComponent.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/MPImage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/MPImage.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/MPImageBasic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/MPImageBasic.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/Circle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/Circle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/Hexagon.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/Hexagon.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/NStarPolygon.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/NStarPolygon.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/Pentagon.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/Pentagon.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/Rectangle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/Rectangle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/Triangle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Shapes/Triangle.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Utility.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Utility/MPImageHelper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Utility/MPImageHelper.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Utility/MPImageUtility.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Utility/MPImageUtility.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Utility/MPMaterials.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Utility/MPMaterials.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Utility/MPVertexStream.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/Runtime/Scripts/Utility/MPVertexStream.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MPUIKit/readme.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat0.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat0.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat1.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat1.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat2.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat2.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat3.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat3.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat4.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat4.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat5.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat5.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat6.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat6.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat7.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/DemoMat7.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/TeddyDark.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Materials/TeddyDark.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Models.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Models/Bear.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Models/Bear.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Models/Chamber.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Models/Chamber.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Models/Cone.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Models/Cone.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Scenes.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Scenes/DemoScene1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Scenes/DemoScene1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Scenes/DemoScene2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Scenes/DemoScene2.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Scenes/DemoScene3.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Demo/Scenes/DemoScene3.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Documentation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Documentation/SToon Manual.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Documentation/SToon Manual.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Shaders/STCore.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Shaders/STCore.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Shaders/STDefault.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Shaders/STDefault.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Shaders/STFunctions.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Shaders/STFunctions.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Shaders/STOutline.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Shaders/STOutline.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Shaders/STTransparent.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Simple Toon/Shaders/STTransparent.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Documentation/TextMesh Pro User Guide 2016.pdf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Fonts/LiberationSans.ttf.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Drop Shadow.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Following Characters.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/LineBreaking Leading Characters.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Sprite Assets/EmojiOne.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Style Sheets/Default Style Sheet.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/TMP Settings.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Bitmap.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile SSD.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF-Surface.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_SDF.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMP_Sprite.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Mobile.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.json.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Sprites/EmojiOne.png.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeTai.TranslucentImage.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LeTai.TranslucentImage.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeTai.TranslucentImage.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LeTai.TranslucentImage.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MPUIKit.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MPUIKit.Editor.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MPUIKit.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MPUIKit.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untitled Golf Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled Golf Game.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/SteamCourseData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/SteamCourseData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameLevelCommands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameLevelCommands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameMainMenuCommands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameMainMenuCommands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/SteamItemData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelInfo.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/SteamItemData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LoadingScreenManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LoadingScreenManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/LevelLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Steam/LevelLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/StripeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/StripeButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelBuilder.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelBuilder/LevelBuilderHUDManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildModeHUD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelBuilder/LevelBuilderHUDManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildModeHUD.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelBuilder/LevelBuilder_BuildOptionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_BuildOptionButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelBuilder/LevelBuilder_BuildOptionButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_BuildOptionButton.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelOptionGrid/LevelOptionGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelOptionGrid/LevelOptionGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelOptionGrid/LevelOptionGrid_Option.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/LevelOptionGrid/LevelOptionGrid_Option.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator_HolesList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator_HolesList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList_Hole.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList_Hole.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Ball.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/FlagTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/FlagTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/LevelBuilderTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/LevelBuilderTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Serialization.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Serialization.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEditor/Sirenix.Utilities.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Serialization.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Serialization.dll.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Utilities.dll.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Sirenix/Assemblies/NoEmitAndNoEditor/Sirenix.Utilities.dll.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -660,21 +82,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/GUIHighlightOnMouseover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.rlabrecque.steamworks.net@4dafa26fbd/Runtime/CallbackDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.rlabrecque.steamworks.net@4dafa26fbd/Runtime/InteropHelp.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Game Assets/Scripts/Backend/Managers/GameManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Game Assets/Scripts/Backend/Steam/ISteamSerializable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Game Assets/Prefabs/Flag.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Game Assets/GUI/Prefabs/GUI Course _ Hole Preview.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/GUIHighlightOnMouseover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ben/Documents/Games/Untitled Golf Game/ProjectSettings/GraphicsSettings.asset" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Game Assets/Scripts/Backend/Level/Level.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/StripeButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Game Assets/Scripts/Backend/Course/Course.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Game Assets/Scenes/Game.unity" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -743,6 +157,7 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -755,6 +170,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/Golfitect Builds/21-12-8\Untitled Golf Game.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Ben\Desktop\Golfitect Builds\21-12-8" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -765,10 +188,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="34096">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="44728">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="34096" />
+      <option name="pid" value="44728" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -804,7 +227,8 @@
       <workItem from="1638710694048" duration="13563000" />
       <workItem from="1638789750690" duration="19463000" />
       <workItem from="1638824839072" duration="591000" />
-      <workItem from="1638877012978" duration="23099000" />
+      <workItem from="1638877012978" duration="23780000" />
+      <workItem from="1638962537056" duration="11421000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -932,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638897826241</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Main menu nice n smooth">
+      <created>1638909142209</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1638909142209</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -973,7 +404,8 @@
     <MESSAGE value="Got mouse control working for the ball" />
     <MESSAGE value="Hole punch method for building flags works" />
     <MESSAGE value="Implemented course downloading" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implemented course downloading" />
+    <MESSAGE value="Main menu nice n smooth" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main menu nice n smooth" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

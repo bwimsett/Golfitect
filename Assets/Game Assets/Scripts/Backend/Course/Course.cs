@@ -12,7 +12,7 @@ namespace Backend.Course {
 	[Serializable]
 	public class Course : ISteamSerializable {
 
-		public LevelInfo[] holesInfo;
+		public SteamItemData[] holesInfo;
 
 		[JsonIgnore] public Level.Level[] holes;
 		public string title;
@@ -22,7 +22,7 @@ namespace Backend.Course {
 		public string saveFolderName { get => "courses"; }
 		public string itemTypeTag { get => "Course"; }
 
-		public Course(string title, string description, LevelInfo[] holesInfo) {
+		public Course(string title, string description, SteamItemData[] holesInfo) {
 			this.title = title;
 			this.description = description;
 			this.holesInfo = holesInfo;

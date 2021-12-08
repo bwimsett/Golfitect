@@ -9,8 +9,8 @@ namespace Game_Assets.Scripts.GUI.ReorderableList {
 		public override void SetItem(object obj) {
 			base.SetItem(obj);
 
-			LevelInfo levelInfo = (LevelInfo) obj; ;
-			text.text = levelInfo.title;
+			SteamItemData steamItemData = (SteamItemData) obj; ;
+			text.text = steamItemData.title;
 		}
 	}
 }

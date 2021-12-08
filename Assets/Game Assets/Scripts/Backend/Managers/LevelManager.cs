@@ -1,8 +1,11 @@
 using System;
+using Backend.Enums;
 using Backend.Level;
 using Backend.Managers;
 using Game;
+using Game_Assets.Scripts.GUI;
 using Game_Assets.Scripts.GUI.LevelBuilder;
+using Game_Assets.Scripts.GUI.PlayMode;
 using Steamworks;
 using UnityEditor;
 using UnityEngine;
@@ -19,22 +22,23 @@ public class LevelManager : MonoBehaviour {
 	public static LevelInputManager levelInputManager;
 	[SerializeField] private LevelObjectUtility _levelObjectUtility;
 	public static LevelObjectUtility levelObjectUtility;
-	[SerializeField] private LevelBuilderHUDManager _levelBuilderHUD;
-	public static LevelBuilderHUDManager levelBuilderHUD;
+	[SerializeField] private BuildModeHUD _buildModeHUD;
+	public static BuildModeHUD buildModeHUD;
+	[SerializeField] private PlayModeHUD _playModeHUD;
+	public static PlayModeHUD playModeHUD; 
 	[SerializeField] private MeshCollider _levelCollider;
 	public static MeshCollider levelCollider;
 
+	public static GameHUD currentGameHUD;
+	
 	private static bool inGameScene;
-	private static LevelMode mode;
-	public enum LevelMode {
-		Build, Play
-	}
+
 	
 	void Awake() {
 		inGameScene = true;
 		PopulateGlobalVariables();
 		Initialise();
-		SetMode(mode);
+		InitialiseGameMode();
 	}
 
 	void OnDestroy() {
@@ -47,7 +51,8 @@ public class LevelManager : MonoBehaviour {
 		levelInputManager = _levelInputManager;
 		levelObjectUtility = _levelObjectUtility;
 		levelCollider = _levelCollider;
-		levelBuilderHUD = _levelBuilderHUD;
+		buildModeHUD = _buildModeHUD;
+		playModeHUD = _playModeHUD;
 	}
 
 	private void Initialise() {
@@ -58,30 +63,30 @@ public class LevelManager : MonoBehaviour {
 
 		cameraController.Initialise();
 		levelGrid.Initialise();
-		levelBuilderHUD.Initialise();
 
 		GameManager.currentLevel.Load();
 	}
 
-	public static void SetMode(LevelMode mode) {
-		LevelManager.mode = mode;
-
+	public static void InitialiseGameMode() {
 		if (!inGameScene) {
 			return;
 		}
-
-		switch (mode) {
-			case LevelMode.Build: break;
-			case LevelMode.Play: EnterPlayMode(); break;
-		}
-	}
-
-	private static void EnterPlayMode() {
 		
-	}
+		buildModeHUD.gameObject.SetActive(true);
+		playModeHUD.gameObject.SetActive(true);
+		
+		buildModeHUD.Close(false);
+		playModeHUD.Close(false);
 
-	public static void FinishLevel() {
-		Debug.Log("Level finished");
+		switch (GameManager.gameMode) {
+			case GameMode.Build: currentGameHUD = buildModeHUD; break;
+			case GameMode.Play: 
+				
+				currentGameHUD = playModeHUD; break;
+		}
+		GameManager.currentLevel.Play();
+		currentGameHUD.gameObject.SetActive(true);
+		currentGameHUD.Open();
 	}
 
 }

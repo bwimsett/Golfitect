@@ -8,7 +8,7 @@ using UnityEngine;
 namespace Game_Assets.Scripts.GUI.CourseCreator {
 	public class CourseCreator : MainMenu_Subwindow {
 
-		private LevelInfo[] levelInfo;
+		private SteamItemData[] levelInfo;
 		[SerializeField] private TMP_InputField nameInputField, descriptionInputField;
 		[SerializeField] private LevelOptionGrid.LevelOptionGrid levelOptionGrid;
 		public CourseCreator_HolesList holesList;
@@ -22,14 +22,14 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 			levelLoader.GetUserLevelInfos(SteamUser.GetSteamID().GetAccountID(), 1, OnLevelInfoLoaded, LevelType.Hole);
 		}
 
-		private void OnLevelInfoLoaded(LevelInfo[] info) {
+		private void OnLevelInfoLoaded(SteamItemData[] info) {
 			levelOptionGrid.SetOptions(info, this);
 		}
 
 		public Course GetCourseFromInput() {
 			string title = nameInputField.text;
 			string description = descriptionInputField.text;
-			LevelInfo[] holes = holesList.GetHoles();
+			SteamItemData[] holes = holesList.GetHoles();
 			
 			Course course = new Course(title, description, holes);
 
