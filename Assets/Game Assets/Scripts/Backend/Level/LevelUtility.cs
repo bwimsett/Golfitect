@@ -2,9 +2,9 @@ using BWLocaliser;
 using UnityEngine;
 
 namespace Backend.Level {
-	public class LevelUtitlity {
+	public class LevelUtility {
 
-		public static string GetScoreStringID(int score, int par) {
+		public static string GetScoreNameID(int score, int par) {
 			if (score == 1) {
 				return "score_ace";
 			}
@@ -17,6 +17,14 @@ namespace Backend.Level {
 			
 			return "score_plus_" + Mathf.Abs(golfScore);
 		}
-		
+
+		public static string GetScoreAsString(int score) {
+			if (score <= 0) {
+				return "" + score;
+			}
+
+			return "+" + score;
+		}
+
 	}
 }

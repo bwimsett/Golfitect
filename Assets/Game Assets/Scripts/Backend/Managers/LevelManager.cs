@@ -11,9 +11,7 @@ using UnityEditor;
 using UnityEngine;
 
 public class LevelManager : MonoBehaviour {
-
 	
-
 	[SerializeField] private CameraController _cameraController;
 	public static CameraController cameraController;
 	[SerializeField] private LevelGrid _levelGrid;
@@ -38,7 +36,6 @@ public class LevelManager : MonoBehaviour {
 		inGameScene = true;
 		PopulateGlobalVariables();
 		Initialise();
-		InitialiseGameMode();
 	}
 
 	void OnDestroy() {

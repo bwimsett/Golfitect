@@ -6,12 +6,13 @@ using UnityEngine.UI;
 
 public class StripeButton : MonoBehaviour {
 
-	public Image background;
+	public Image background, stripes;
 	[SerializeField] private RectTransform resizeTarget;
 	[SerializeField] private Vector2 backgroundStartX, backgroundEndX;
 	[SerializeField] private float backgroundAnimationSpeed, scaleSpeed, shrinkSpeed;
 	[SerializeField] private Ease enlargeEase;
 	[SerializeField] private Vector2 enlargeScale;
+	public TextLocalizer buttonText;
 	private Vector2 normalSize;
 	private bool animateBackground;
 	private Tween currentBackgroundAnimation, currentBackgroundFade, currentEnlargeAnimation, currentShrinkAnimation;
@@ -20,37 +21,37 @@ public class StripeButton : MonoBehaviour {
 		normalSize = resizeTarget.rect.size;
 	}
 
-	private void ShowBackground() {
+	private void ShowStripes() {
 		animateBackground = true;
-		currentBackgroundFade = background.DOFade(1, scaleSpeed);
-		AnimateBackground();
+		currentBackgroundFade = stripes.DOFade(1, scaleSpeed);
+		AnimateStripes();
 	}
 	
-	private void AnimateBackground() {
+	private void AnimateStripes() {
 		currentBackgroundAnimation?.Kill();
 		
 		if (!animateBackground) {
 			return;
 		}
 
-		currentBackgroundAnimation = background.transform.DOLocalMove(backgroundEndX, backgroundAnimationSpeed).OnComplete(
+		currentBackgroundAnimation = stripes.transform.DOLocalMove(backgroundEndX, backgroundAnimationSpeed).OnComplete(
 			() => {
-				background.transform.localPosition = backgroundStartX;
-				AnimateBackground();
+				stripes.transform.localPosition = backgroundStartX;
+				AnimateStripes();
 			}).SetEase(Ease.Linear);
 	}
 
-	private void HideBackground() {
+	private void HideStripes() {
 		currentBackgroundFade?.Kill();
-		currentBackgroundFade = background.DOFade(0, shrinkSpeed).OnComplete(() => {
+		currentBackgroundFade = stripes.DOFade(0, shrinkSpeed).OnComplete(() => {
 			animateBackground = false;
 			currentBackgroundAnimation?.Kill();
-			background.transform.localPosition = backgroundStartX;
+			stripes.transform.localPosition = backgroundStartX;
 		});
 	}
 
 	public void OnMouseEnter() {
-		ShowBackground();
+		ShowStripes();
 		currentShrinkAnimation?.Kill();
 		Vector2 newSize = enlargeScale * normalSize;
 		currentEnlargeAnimation = resizeTarget.DOSizeDelta(newSize, scaleSpeed).SetEase(enlargeEase);
@@ -61,7 +62,7 @@ public class StripeButton : MonoBehaviour {
 	}
 	
 	public void OnMouseExit() {
-		HideBackground();
+		HideStripes();
 		currentEnlargeAnimation?.Kill();
 		currentShrinkAnimation = resizeTarget.DOSizeDelta(normalSize, shrinkSpeed);
 	}

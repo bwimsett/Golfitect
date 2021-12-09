@@ -9,7 +9,7 @@ namespace Backend.Submittable {
 	public class SteamLoader {
 
 		private SteamSubmittable submittable;
-		private Action<string> onDownloadComplete;
+		private Dictionary<PublishedFileId_t, Action<string>> onDownloadCompleteCallbacks;
 
 		// ---------- UPLOADS ----------
 		public void UploadToSteam(SteamSubmittable submittable) {
@@ -60,9 +60,13 @@ namespace Backend.Submittable {
 		
 		// ---------- DOWNLOADS ----------
 		public void GetFileFromID(PublishedFileId_t fileId, Action<string> onComplete) {
-			Debug.Log("Attempting to download: "+fileId);
-			onDownloadComplete = onComplete;
+			if (onDownloadCompleteCallbacks == null) {
+				onDownloadCompleteCallbacks = new Dictionary<PublishedFileId_t, Action<string>>();
+			}
 			
+			Debug.Log("Attempting to download: "+fileId);
+			onDownloadCompleteCallbacks.Add(fileId, onComplete);
+
 			if (SteamUGC.DownloadItem(fileId, true)) {
 				Callback<DownloadItemResult_t> downloadResult = new Callback<DownloadItemResult_t>(OnDownloadComplete);
 			};
@@ -95,8 +99,13 @@ namespace Backend.Submittable {
 			} else {
 				fileContents = File.ReadAllText(files[0]);
 			}
-			
-			onDownloadComplete.Invoke(fileContents);
+
+			bool callbackExists = onDownloadCompleteCallbacks.TryGetValue(item.m_nPublishedFileId, out Action<string> onDownloadComplete);
+
+			if (callbackExists) {
+				onDownloadCompleteCallbacks.Remove(item.m_nPublishedFileId);
+				onDownloadComplete.Invoke(fileContents);
+			}
 		}
 	}
 }

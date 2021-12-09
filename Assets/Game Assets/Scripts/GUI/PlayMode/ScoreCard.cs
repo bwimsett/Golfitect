@@ -6,7 +6,7 @@ namespace Game_Assets.Scripts.GUI.GenericComponent {
 	public class ScoreCard : MonoBehaviour {
 
 		[SerializeField] private GameObject scoreCardScorePrefab;
-		private ScoreCard_Score[] scoreItems;
+		public ScoreCard_Score[] scoreItems;
 		[SerializeField] private Transform scoreItemsContainer;
 
 		public void Refresh() {
@@ -20,7 +20,7 @@ namespace Game_Assets.Scripts.GUI.GenericComponent {
 			
 				scoreItems[i].gameObject.SetActive(true);
 				
-				if (i > GameManager.courseTracker.currentHoleIndex) {
+				if (i >= GameManager.courseTracker.currentHoleIndex) {
 					scoreItems[i].Clear();
 					continue;
 				}

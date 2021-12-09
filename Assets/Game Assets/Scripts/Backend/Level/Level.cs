@@ -118,6 +118,8 @@ namespace Backend.Level {
 				return;
 			}
 			
+			LevelManager.levelObjectUtility.ClearLevel();
+			
 			// First, get a prefab for each of the object types used
 			LevelObject[] prefabs = new LevelObject[objectTypesUsed.Count];
 			for (int i = 0; i < prefabs.Length; i++) {
@@ -145,6 +147,8 @@ namespace Backend.Level {
 					Place(LevelManager.levelGrid.WorldPositionToGridCoordinate(levelObject.origin), levelObject);
 				}
 			}
+			
+			LevelManager.InitialiseGameMode();
 		}
 	}
 }

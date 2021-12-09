@@ -52,13 +52,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayModeHUD.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\Course.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\ScoreCard.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildMode_BuildOptionButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\BallControllerTool.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GUIColorBank.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseTracker.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\StripeButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\ISteamSerializable.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator_HolesList.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\LevelBuilderTool.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\ScoreCard_Score.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIHighlightOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenu_Subwindow.cs" />
@@ -79,6 +84,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\Flag.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GridBackgroundGenerator.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamItemData.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\GameMode.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\FlagTrigger.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameLevelCommands.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\ShiftXOnMouseover.cs" />
@@ -86,6 +92,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\IntegerRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenu.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid_Option.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Level\LevelUtility.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\TextLocalizer.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObject.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectUtility.cs" />
@@ -110,8 +117,10 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\FlatGround.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\AutoResizeSwitchButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameMainMenuCommands.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GameHUD.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\BWSteamUtility.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LoadingScreenManager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_LevelSummary.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamLoader.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\PluralRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildModeHUD.cs" />
@@ -121,15 +130,6 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseTracker.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\GameMode.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\ScoreCard.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GameHUD.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayModeHUD.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\ScoreCard_Score.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GUIColorBank.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_LevelSummary.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Level\LevelUtitlity.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

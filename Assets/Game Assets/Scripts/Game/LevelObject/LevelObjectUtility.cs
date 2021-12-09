@@ -18,6 +18,15 @@ namespace Backend.Level {
 			Vector3 newPos = LevelManager.levelGrid.GridCoordinateToWorldPosition(position);
 			return InstantiatePrefab(prefab, newPos);
 		}
+
+		public void ClearLevel() {
+			int childCount = levelContainer.childCount;
+
+			for (int i = 0; i < childCount; i++) {
+				Destroy(levelContainer.GetChild(i).gameObject);
+			}
+			
+		}
 		
 	}
 }

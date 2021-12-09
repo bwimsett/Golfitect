@@ -61,10 +61,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   containerBox: {fileID: 6013754996874936124}
   score: {fileID: 4345363206525395692}
+  defaultColorID: generic_light_grey
   overParColorID: generic_red
-  parColorID: generic_white
+  parColorID: generic_orange
   belowParColorID: generic_green
-  holeInOneColorID: generic_gold
+  holeInOneColorID: generic_purple
+  color: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &6013754996874936124
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -260,6 +262,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreCardScorePrefab: {fileID: 4345363205645324433}
+  scoreItems: []
   scoreItemsContainer: {fileID: 4345363206403448723}
 --- !u!1 &4345363206525395690
 GameObject:

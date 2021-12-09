@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4415839290121884726}
   - component: {fileID: 4415839290121884720}
   m_Layer: 5
-  m_Name: Lines Button
+  m_Name: Stripe Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d1d349dd9437254cb38fc7c11fcb04d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  background: {fileID: 4415839291059067991}
+  background: {fileID: 7948019399920379882}
+  stripes: {fileID: 4415839291059067991}
   resizeTarget: {fileID: 4733564165647895273}
   backgroundStartX: {x: 0, y: 0}
   backgroundEndX: {x: 50, y: 0}
@@ -69,6 +70,7 @@ MonoBehaviour:
   shrinkSpeed: 0.15
   enlargeEase: 30
   enlargeScale: {x: 1.05, y: 1.05}
+  buttonText: {fileID: 69459841963917059}
 --- !u!114 &4415839290121884726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,7 +172,7 @@ GameObject:
   - component: {fileID: 4415839291059067988}
   - component: {fileID: 4415839291059067991}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Stripes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -244,6 +246,7 @@ GameObject:
   - component: {fileID: 4415839291253015290}
   - component: {fileID: 4415839291253015288}
   - component: {fileID: 4415839291253015291}
+  - component: {fileID: 69459841963917059}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -367,6 +370,21 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!114 &69459841963917059
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4415839291253015285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70618b71c97119c47b1ef145171a0355, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 0}
+  locString:
+    key: 
 --- !u!1 &7353087294977016844
 GameObject:
   m_ObjectHideFlags: 0

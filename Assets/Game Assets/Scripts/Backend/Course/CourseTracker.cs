@@ -1,3 +1,4 @@
+using Backend.Managers;
 using UnityEngine.Events;
 
 namespace Backend.Course {
@@ -30,13 +31,47 @@ namespace Backend.Course {
 			return holeScores[holeIndex];
 		}
 
+		public int GetTotalShotsForCourse() {
+			int total = 0;
+
+			foreach (int score in holeScores) {
+				total += score;
+			}
+
+			return total;
+		}
+
+		public int GetCurrentScoreForCourse(int holeIndex) {
+			int score = 0;
+			int par = 0;
+			
+			for (int i = 0; i <= holeIndex; i++) {
+				par += course.holes[i].par;
+				score += holeScores[i];
+			}
+
+			return score - par;
+		}
+
 		public int GetScoreForCurrentHole() {
 			return GetScoreForHole(currentHoleIndex);
 		}
 
 		public void FinishHole() {
-			OnHoleFinished.Invoke();
 			currentHoleIndex++;
+
+			if (currentHoleIndex >= course.holes.Length) {
+				FinishCourse();
+				return;
+			}
+			
+			GameManager.SetCurrentLevel(course.holes[currentHoleIndex]);
+			
+			OnHoleFinished.Invoke();
+		}
+
+		public void FinishCourse() {
+			
 		}
 
 	}
