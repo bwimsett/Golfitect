@@ -1,12 +1,13 @@
-using System;
 using Backend.Course;
 using Backend.Enums;
 using Backend.Level;
-using Backend.Submittable;
+using Game_Assets.Scripts.GUI;
+using GUI.MainMenu;
+using GUI.MainMenu.CourseCreator;
 using TMPro;
 using UnityEngine;
 
-namespace Game_Assets.Scripts.GUI.LevelOptionGrid {
+namespace GUI.LevelOptionGrid {
 	public class LevelOptionGrid_Option : MonoBehaviour {
 
 		private Vector2 normalPosition;
@@ -52,7 +53,7 @@ namespace Game_Assets.Scripts.GUI.LevelOptionGrid {
 			nameText.text = steamItemData.title;
 			addHoleButton.gameObject.SetActive(true);
 			addHoleButton.OnClickAction = b => {
-				if (subwindow is CourseCreator.CourseCreator courseCreator) {
+				if (subwindow is CourseCreator courseCreator) {
 					if (b) {
 						courseCreator.holesList.RemoveHoleFromList(steamItemData);
 					} else {

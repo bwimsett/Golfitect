@@ -2,6 +2,7 @@ using Backend.Enums;
 using Backend.Level;
 using Backend.Managers;
 using Backend.Submittable;
+using GUI.MainMenu;
 using UnityEngine;
 
 namespace Backend {
@@ -11,10 +12,10 @@ namespace Backend {
 		
 		public void Initialise() {
 			console.config.AddAction("savecourse", new BWConsole_Action(() => {
-				SteamLoader steamLoader = new SteamLoader();
+				/*ServerLoader serverLoader = new ServerLoader();
 				Course.Course course = MainMenu.courseCreator.GetCourseFromInput();
-				steamLoader.UploadToSteam(new SteamSubmittable(course.title, course.description, course));
-				LoadingScreenManager.Load(course.holesInfo[0], GameMode.Play);
+				serverLoader.UploadToSteam(new ServerSubmittable(course.title, course.description, course));
+				LoadingScreenManager.Load(course.steamHoleData[0], GameMode.Play);*/
 			}));
 		}
 		

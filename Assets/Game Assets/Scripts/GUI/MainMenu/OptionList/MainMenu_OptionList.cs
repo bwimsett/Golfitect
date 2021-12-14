@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using Game_Assets.Scripts.GUI.GenericComponent;
+using Game_Assets.Scripts.GUI.OptionList;
+using GUI.MainMenu;
 using UnityEngine;
 
-namespace Game_Assets.Scripts.GUI.OptionList {
+namespace GUI.OptionList {
 	public class MainMenu_OptionList : MainMenu_Subwindow {
 
 		public MainMenu_OptionList_Option optionTemplate;

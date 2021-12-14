@@ -1,14 +1,11 @@
-using Backend.Course;
 using Backend.Enums;
 using Backend.Level;
-using Game_Assets.Scripts.GUI;
-using Game_Assets.Scripts.GUI.LevelOptionGrid;
 using Steamworks;
 using UnityEngine;
 
-namespace DefaultNamespace {
+namespace GUI.MainMenu.CourseSelector {
 	public class MainMenu_Subwindow_CourseSelector : MainMenu_Subwindow {
-		[SerializeField] private LevelOptionGrid levelOptionGrid;
+		[SerializeField] private LevelOptionGrid.LevelOptionGrid levelOptionGrid;
 
 		private void PopulateCourseOptions() {
 			LevelLoader levelLoader = new LevelLoader();

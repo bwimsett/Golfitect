@@ -105,7 +105,7 @@ MonoBehaviour:
   objectTypeID: scenery_flag
   levelObjectClass: 1
   snapToGrid: 1
-  buildMenuIcon: {fileID: 0}
+  buildMenuIcon: {fileID: 21300000, guid: 6904f0ef8a31d3b47b819b766e4fc416, type: 3}
   showInBuildMenuDock: 1
   ballCollisions: 1
   objectID: 0

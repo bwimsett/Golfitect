@@ -26,11 +26,13 @@ public class LevelManager : MonoBehaviour {
 	public static PlayModeHUD playModeHUD; 
 	[SerializeField] private MeshCollider _levelCollider;
 	public static MeshCollider levelCollider;
+	[SerializeField] private LevelTimer _levelTimer;
+	public static LevelTimer levelTimer;
+	[SerializeField] private ServerManager _serverManager;
+	public static ServerManager serverManager;
 
 	public static GameHUD currentGameHUD;
-	
 	private static bool inGameScene;
-
 	
 	void Awake() {
 		inGameScene = true;
@@ -50,6 +52,8 @@ public class LevelManager : MonoBehaviour {
 		levelCollider = _levelCollider;
 		buildModeHUD = _buildModeHUD;
 		playModeHUD = _playModeHUD;
+		levelTimer = _levelTimer;
+		serverManager = _serverManager;
 	}
 
 	private void Initialise() {
@@ -77,8 +81,8 @@ public class LevelManager : MonoBehaviour {
 
 		switch (GameManager.gameMode) {
 			case GameMode.Build: currentGameHUD = buildModeHUD; break;
-			case GameMode.Play: 
-				
+			case GameMode.Play:
+				levelTimer.StartTimer();
 				currentGameHUD = playModeHUD; break;
 		}
 		GameManager.currentLevel.Play();

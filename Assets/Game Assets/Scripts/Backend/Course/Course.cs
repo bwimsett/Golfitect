@@ -10,12 +10,13 @@ using UnityEngine.Events;
 
 namespace Backend.Course {
 	[Serializable]
-	public class Course : ISteamSerializable {
+	public class Course : IServerSerializable {
 
-		public SteamItemData[] holesInfo;
+		public SteamCourseData steamCourseData;
+		public SteamItemData[] steamHoleData;
 
 		[JsonIgnore] public Level.Level[] holes;
-		public string title;
+		public string title { get; set; }
 		public string description;
 
 		public string fileExtension { get => "golfcourse"; }
@@ -25,17 +26,17 @@ namespace Backend.Course {
 		public Course(string title, string description, SteamItemData[] holesInfo) {
 			this.title = title;
 			this.description = description;
-			this.holesInfo = holesInfo;
+			this.steamHoleData = holesInfo;
 		}
 
 		public void DownloadLevels(UnityAction onComplete) {
-			holes = new Level.Level[holesInfo.Length];
+			/*holes = new Level.Level[steamHoleData.Length];
 			int levelDownloadsRemaining = holes.Length;
 			
 			for (int i = 0; i < holes.Length; i++) {
-				SteamLoader steamLoader = new SteamLoader();
+				ServerLoader serverLoader = new ServerLoader();
 				int holeIndex = i;
-				steamLoader.GetFileFromID(holesInfo[i].id, levelData => {
+				serverLoader.GetFileFromID(steamHoleData[i].id, levelData => {
 					levelDownloadsRemaining--;
 					if (levelData.Equals(String.Empty)) {
 						throw new Exception("Missing level data for course");
@@ -48,7 +49,7 @@ namespace Backend.Course {
 						onComplete?.Invoke();
 					}
 				});
-			}
+			}*/
 		}
 
 		private void OnLevelDownloaded(string levelData) {
@@ -59,7 +60,5 @@ namespace Backend.Course {
 		public void Save() {
 			
 		}
-
-		
 	}
 }

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine.Events;
 
-namespace Game_Assets.Scripts.GUI.MainMenu {
+namespace GUI.MainMenu {
 	public class MainMenuLeaf {
 
 		private List<MainMenuLeaf> children;

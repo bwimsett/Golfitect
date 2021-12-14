@@ -31,15 +31,20 @@ public class LoadingScreenManager : MonoBehaviour {
 	private void InitiateLoad() {
 		if (loadTarget is SteamCourseData courseInfo) {
 			LoadCourse(courseInfo);
-		} else {
+			return;
+		} else if (loadTarget != null) {
 			LoadHole();
+			return;
 		}
+		
+		IEnumerator load = LoadScene("Game");
+		StartCoroutine(load);
 	}
 
 	private void LoadCourse(SteamCourseData steamCourseData) {
-		// First download the course
-		SteamLoader steamLoader = new SteamLoader();
-		steamLoader.GetFileFromID(steamCourseData.id, levelString => {
+		/*// First download the course
+		ServerLoader serverLoader = new ServerLoader();
+		serverLoader.GetFileFromID(steamCourseData.id, levelString => {
 			// Back out of loading screen if no valid file returned
 			if (levelString.Equals(string.Empty)) {
 				Debug.LogError("Couldn't download course: "+steamCourseData.id);
@@ -69,15 +74,15 @@ public class LoadingScreenManager : MonoBehaviour {
 				IEnumerator load = LoadScene("Game");
 				StartCoroutine(load);
 			});
-		});
+		});*/
 	}
 
 	private void LoadHole() {
-		// First download the level data
+		/*// First download the level data
 		// Then pass the data to the game scene
 		// Then load the scene async
-		SteamLoader steamLoader = new SteamLoader();
-		steamLoader.GetFileFromID(loadTarget.id, levelString => {
+		ServerLoader serverLoader = new ServerLoader();
+		serverLoader.GetFileFromID(loadTarget.id, levelString => {
 			// Back out of loading screen if no valid file returned
 			if (levelString.Equals(string.Empty)) {
 				SceneManager.LoadScene("Main Menu");
@@ -87,7 +92,7 @@ public class LoadingScreenManager : MonoBehaviour {
 			GameManager.SetCurrentLevel(level);
 			IEnumerator load = LoadScene("Game");
 			StartCoroutine(load);
-		});
+		});*/
 	}
 
 	private IEnumerator LoadScene(string sceneName)

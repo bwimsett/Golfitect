@@ -4,6 +4,7 @@ using Backend.Level;
 using Backend.Managers;
 using BWLocaliser;
 using DG.Tweening;
+using Game;
 using Game_Assets.Scripts.GUI.GenericComponent;
 using Steamworks;
 using TMPro;
@@ -16,6 +17,8 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 		public CanvasGroup canvasGroup;
 		public TextLocalizer scoreTitle, courseAndHole, courseScore;
 		public ScoreCard scoreCard;
+		public TextMeshProUGUI time, highScore, worldRecord;
+		
 		public Image headerBackground;
 		public StripeButton nextButton;
 
@@ -54,6 +57,17 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 			nextButton.buttonText.SetFields(new Dictionary<string, object>(){{"holenumber", courseTracker.currentHoleIndex+1}});
 			
 			scoreCard.Refresh();
+			
+			// Set time scores
+			string defaultTimeText = "--:--";
+			time.text = highScore.text = worldRecord.text = defaultTimeText;
+			
+			bool highScoreFound = GameManager.GetUserScores().GetTimeHighScore(courseTracker.course.steamHoleData[courseTracker.currentHoleIndex - 1], out float timeHighScore);
+			if (highScoreFound) {
+				highScore.text = "" + LevelTimer.GetTimeString(timeHighScore);
+			}
+
+			time.text = LevelTimer.GetTimeString(courseTracker.GetTimeForHole(courseTracker.currentHoleIndex - 1));
 
 			Color backgroundColor = scoreCard.scoreItems[courseTracker.currentHoleIndex-1].color;
 

@@ -1,3 +1,4 @@
+using System;
 using Backend.Managers;
 using UnityEngine.Events;
 
@@ -8,6 +9,7 @@ namespace Backend.Course {
 		public int currentHoleIndex { get; private set; }
 
 		private int[] holeScores;
+		private float[] holeTimes;
 
 		public UnityAction OnShotTaken;
 		public UnityAction OnHoleFinished;
@@ -15,6 +17,7 @@ namespace Backend.Course {
 		public CourseTracker(Course course) {
 			this.course = course;
 			holeScores = new int[course.holes.Length];
+			holeTimes = new float[course.holes.Length];
 			currentHoleIndex = 0;
 		}
 
@@ -29,6 +32,10 @@ namespace Backend.Course {
 
 		public int GetScoreForHole(int holeIndex) {
 			return holeScores[holeIndex];
+		}
+
+		public float GetTimeForHole(int holeIndex) {
+			return holeTimes[holeIndex];
 		}
 
 		public int GetTotalShotsForCourse() {
@@ -57,9 +64,14 @@ namespace Backend.Course {
 			return GetScoreForHole(currentHoleIndex);
 		}
 
-		public void FinishHole() {
-			currentHoleIndex++;
+		public void FinishHole() { 
+			holeTimes[currentHoleIndex] = LevelManager.levelTimer.StopTimer();
+			
+			// Save the time
+			GameManager.GetUserScores().SetTimeScore(course.steamHoleData[currentHoleIndex], LevelManager.levelTimer.time);
 
+			currentHoleIndex++;
+			
 			if (currentHoleIndex >= course.holes.Length) {
 				FinishCourse();
 				return;

@@ -1,11 +1,13 @@
 using Backend.Course;
 using Backend.Enums;
 using Backend.Level;
+using Game_Assets.Scripts.GUI.CourseCreator;
+using GUI.MainMenu;
 using Steamworks;
 using TMPro;
 using UnityEngine;
 
-namespace Game_Assets.Scripts.GUI.CourseCreator {
+namespace GUI.MainMenu.CourseCreator {
 	public class CourseCreator : MainMenu_Subwindow {
 
 		private SteamItemData[] levelInfo;

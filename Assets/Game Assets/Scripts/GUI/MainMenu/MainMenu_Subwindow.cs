@@ -3,14 +3,13 @@ using System.Diagnostics.Contracts;
 using Backend.Managers;
 using BWLocaliser;
 using DG.Tweening;
-using Game_Assets.Scripts.GUI.MainMenu;
 using Sirenix.OdinInspector;
 using Steamworks;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Game_Assets.Scripts.GUI {
+namespace GUI.MainMenu {
 	[RequireComponent(typeof(CanvasGroup))]
 	public class MainMenu_Subwindow : MonoBehaviour {
 		
@@ -34,8 +33,8 @@ namespace Game_Assets.Scripts.GUI {
 				throw new Exception("No leaf set for subwindow. Cannot navigate without one: " + gameObject.name);
 			}
 			
-			Backend.Managers.MainMenu.currentLeaf?.Close();
-			Backend.Managers.MainMenu.currentLeaf = leaf;
+			MainMenu.currentLeaf?.Close();
+			MainMenu.currentLeaf = leaf;
 			_canvasGroup.DOFade(1, 0.25f).SetDelay(0.25f).OnPlay(Refresh).OnComplete(() => {
 				_canvasGroup.interactable = _canvasGroup.blocksRaycasts = true;
 			});

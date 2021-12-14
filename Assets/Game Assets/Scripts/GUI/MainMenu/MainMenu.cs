@@ -1,16 +1,16 @@
-using System.Collections.Generic;
-using DefaultNamespace;
+using Backend.Enums;
 using Game_Assets.Scripts.GUI;
 using Game_Assets.Scripts.GUI.CourseCreator;
 using Game_Assets.Scripts.GUI.GenericComponent;
-using Game_Assets.Scripts.GUI.MainMenu;
 using Game_Assets.Scripts.GUI.OptionList;
+using GUI.MainMenu.CourseSelector;
+using GUI.OptionList;
 using UnityEngine;
 
-namespace Backend.Managers {
+namespace GUI.MainMenu {
 	public class MainMenu : MonoBehaviour {
-		[SerializeField] private CourseCreator _courseCreator;
-		public static CourseCreator courseCreator;
+		[SerializeField] private CourseCreator.CourseCreator _courseCreator;
+		public static CourseCreator.CourseCreator courseCreator;
 		[SerializeField] private MainMenu_OptionList _optionList;
 		public static MainMenu_OptionList optionList;
 		[SerializeField] private MainMenu_Subwindow_CourseSelector _courseSelector;
@@ -20,7 +20,7 @@ namespace Backend.Managers {
 		public static MainMenuPersistantUI persistantUI;
 
 		public static MainMenuLeaf currentLeaf;
-		
+
 		void Awake() {
 			Initialise();
 		}
@@ -72,6 +72,9 @@ namespace Backend.Managers {
 					courseSelector.SetHeading("your_courses_heading");
 					courseSelector.Refresh();
 					courseSelector.Open();
+				}),
+				new TextButtonCallback("build_menu_option_hole_builder", () => {
+					LoadingScreenManager.Load(null, GameMode.Build);
 				}),
 				new TextButtonCallback("mainmenu_title_course_creator", () => {courseCreator.Open();})
 			};

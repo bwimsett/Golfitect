@@ -53,6 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayModeHUD.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\UserScores.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\Course.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\ScoreCard.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildMode_BuildOptionButton.cs" />
@@ -60,7 +61,8 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\GUIColorBank.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseTracker.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\StripeButton.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\ISteamSerializable.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Game\LevelTimer.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\IServerSerializable.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator_HolesList.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\LevelBuilderTool.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\ScoreCard_Score.cs" />
@@ -76,6 +78,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\SteamManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator_HolesList_Number.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\PersistantUI\PersistantUI_BackButton.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\LevelTimerDisplay.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\TextTabs.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\Locale.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameSceneManager.cs" />
@@ -100,7 +103,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseSelector\MainMenu_Subwindow_CourseSelector.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\Level.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamSubmittable.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\ServerSubmittable.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\LocalisationInitializer.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocalisationManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\TextButtonCallback.cs" />
@@ -117,11 +120,11 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\FlatGround.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\AutoResizeSwitchButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameMainMenuCommands.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\ServerManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GameHUD.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\BWSteamUtility.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LoadingScreenManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_LevelSummary.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamLoader.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\PluralRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildModeHUD.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectBank.cs" />
@@ -130,6 +133,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
+     <None Include="Assets\csc.rsp" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -729,6 +733,9 @@
  </Reference>
  <Reference Include="System.Xml.XPath.XDocument">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/Facades/System.Xml.XPath.XDocument.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Web">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Web.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>

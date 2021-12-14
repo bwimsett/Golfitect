@@ -1,9 +1,8 @@
 using Backend.Level;
-using Game_Assets.Scripts.GUI.LevelOptionGrid;
+using GUI.MainMenu;
 using UnityEngine;
 
-
-namespace Game_Assets.Scripts.GUI.LevelOptionGrid {
+namespace GUI.LevelOptionGrid {
 	public class LevelOptionGrid : MonoBehaviour {
 
 		[SerializeField] private GameObject optionPrefab;

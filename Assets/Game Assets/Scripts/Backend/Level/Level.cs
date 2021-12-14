@@ -13,11 +13,12 @@ using Object = UnityEngine.Object;
 
 namespace Backend.Level {
 	[Serializable]
-	public class Level : ISteamSerializable {
+	public class Level : IServerSerializable {
 
-		public string title, description;
+		public string description;
 		public int par = 3;
 		
+		public string title { get => "Level"; }
 		[JsonIgnore] public string fileExtension { get => "golflvl"; }
 		[JsonIgnore] public string saveFolderName { get => "levels"; }
 		public string itemTypeTag { get => "Level"; }
@@ -112,7 +113,7 @@ namespace Backend.Level {
 		public void Save() {
 			UpdateObjectSaves();
 		}
-		
+
 		public void Load() {
 			if (objectSaves == null) {
 				return;

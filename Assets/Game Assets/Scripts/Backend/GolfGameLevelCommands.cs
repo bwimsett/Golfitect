@@ -9,10 +9,9 @@ namespace Backend {
 		public BWConsole console;
 		
 		public void Initialise() {
-			console.config.AddAction("savelevel", new BWConsole_Action(levelName => {
-				SteamLoader steamLoader = new SteamLoader();
-				SteamSubmittable submittable = new SteamSubmittable(levelName, "", GameManager.currentLevel);
-				steamLoader.UploadToSteam(submittable);
+			console.config.AddAction("savelevel", new BWConsole_Action(() => {
+				ServerSubmittable submittable = new ServerSubmittable(GameManager.currentLevel);
+				LevelManager.serverManager.SubmitLevel(submittable, result=>{console.Print(result);});
 			}));
 			
 			console.config.AddAction("play", new BWConsole_Action(() => {
