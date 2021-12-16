@@ -1,11 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
 using Backend.Enums;
-using Backend.Managers;
 using Backend.Serialization;
-using Backend.Submittable;
 using Game;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -13,14 +9,14 @@ using Object = UnityEngine.Object;
 
 namespace Backend.Level {
 	[Serializable]
-	public class Level : IServerSerializable {
-
-		public string description;
+	public class Level : ServerSerializable {
+		
 		public int par = 3;
 		
-		public string title { get => "Level"; }
-		[JsonIgnore] public string fileExtension { get => "golflvl"; }
-		[JsonIgnore] public string saveFolderName { get => "levels"; }
+		public override string name { get => "Level"; }
+		public override string description { get; }
+		[JsonIgnore] public override string fileExtension { get => "golflvl"; }
+		[JsonIgnore] public override string saveFolderName { get => "levels"; }
 		public string itemTypeTag { get => "Level"; }
 
 		[HideInInspector, JsonIgnore] public Ball ball;
@@ -110,7 +106,7 @@ namespace Backend.Level {
 			}
 		}
 		
-		public void Save() {
+		public override void Save() {
 			UpdateObjectSaves();
 		}
 

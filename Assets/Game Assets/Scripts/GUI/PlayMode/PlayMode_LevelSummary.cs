@@ -44,7 +44,7 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 				GameManager.currentLevel.par)));
 
 			courseAndHole.SetFields(new Dictionary<string, object>() {
-				{ "coursename", courseTracker.course.title },
+				{ "coursename", courseTracker.course.name },
 				{ "holenumber", courseTracker.currentHoleIndex },
 				{ "holecount", courseTracker.course.holes.Length }
 			});
@@ -62,10 +62,10 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 			string defaultTimeText = "--:--";
 			time.text = highScore.text = worldRecord.text = defaultTimeText;
 			
-			bool highScoreFound = GameManager.GetUserScores().GetTimeHighScore(courseTracker.course.steamHoleData[courseTracker.currentHoleIndex - 1], out float timeHighScore);
+			/*bool highScoreFound = GameManager.GetUserScores().GetTimeHighScore(courseTracker.course.holeData[courseTracker.currentHoleIndex - 1], out float timeHighScore);
 			if (highScoreFound) {
 				highScore.text = "" + LevelTimer.GetTimeString(timeHighScore);
-			}
+			}*/
 
 			time.text = LevelTimer.GetTimeString(courseTracker.GetTimeForHole(courseTracker.currentHoleIndex - 1));
 

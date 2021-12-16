@@ -67,9 +67,6 @@ namespace Backend.Course {
 		public void FinishHole() { 
 			holeTimes[currentHoleIndex] = LevelManager.levelTimer.StopTimer();
 			
-			// Save the time
-			GameManager.GetUserScores().SetTimeScore(course.steamHoleData[currentHoleIndex], LevelManager.levelTimer.time);
-
 			currentHoleIndex++;
 			
 			if (currentHoleIndex >= course.holes.Length) {

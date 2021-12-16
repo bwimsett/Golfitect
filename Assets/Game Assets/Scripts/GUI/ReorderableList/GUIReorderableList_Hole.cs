@@ -1,4 +1,5 @@
 using Backend.Level;
+using Game_Assets.Scripts.Backend.Server;
 using TMPro;
 
 namespace Game_Assets.Scripts.GUI.ReorderableList {
@@ -9,8 +10,8 @@ namespace Game_Assets.Scripts.GUI.ReorderableList {
 		public override void SetItem(object obj) {
 			base.SetItem(obj);
 
-			SteamItemData steamItemData = (SteamItemData) obj; ;
-			text.text = steamItemData.title;
+			DBHoleInfo dbHoleInfo = (DBHoleInfo) obj;
+			text.text = dbHoleInfo.name;
 		}
 	}
 }

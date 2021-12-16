@@ -1,4 +1,5 @@
 using Backend.Level;
+using Game_Assets.Scripts.Backend.Server;
 using GUI.MainMenu;
 using UnityEngine;
 
@@ -11,17 +12,17 @@ namespace GUI.LevelOptionGrid {
 		[SerializeField] private RectTransform _rectTransform;
 
 		private int page;
-		private SteamItemData[,] pages; // x = page, y = option
+		private DBObject[,] pages; // x = page, y = option
 		private LevelOptionGrid_Option[] options;
 		private MainMenu_Subwindow subwindow;
 
-		public void SetOptions(SteamItemData[] optionObjects, MainMenu_Subwindow subwindow) {
+		public void SetOptions(DBObject[] optionObjects, MainMenu_Subwindow subwindow) {
 			this.subwindow = subwindow;
 			
 			// Populate pages array
 			int numPerPage = layout.x * layout.y;
 			int pageCount = Mathf.CeilToInt(((float) optionObjects.Length / numPerPage));
-			pages = new SteamItemData[pageCount, numPerPage];
+			pages = new DBObject[pageCount, numPerPage];
 			int levelIndex = 0;
 
 			for (int page = 0; page < pageCount; page++) {

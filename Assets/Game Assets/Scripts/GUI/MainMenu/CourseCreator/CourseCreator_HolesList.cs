@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Backend.Level;
+using Game_Assets.Scripts.Backend.Server;
 using Steamworks;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,8 +19,8 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 			numbers = new List<CourseCreator_HolesList_Number>();
 		}
 		
-		public void AddHoleToList(SteamItemData steamItemData) {
-			holeList.AddItem(steamItemData);
+		public void AddHoleToList(DBHoleInfo dbHoleInfo) {
+			holeList.AddItem(dbHoleInfo);
 
 			// Create a new number to go alongside the hole
 			CourseCreator_HolesList_Number newNumber = Instantiate(listNumberPrefab, numbersContainer).GetComponent<CourseCreator_HolesList_Number>();
@@ -29,7 +30,7 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 			LayoutRebuilder.ForceRebuildLayoutImmediate(numbersContainer);
 		}
 		
-		public void RemoveHoleFromList(SteamItemData steamItemData) {
+		public void RemoveHoleFromList(DBHoleInfo steamItemData) {
 			holeList.RemoveItem(steamItemData);
 
 			// Update numbers alongside holesInfo
@@ -47,12 +48,12 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 			LayoutRebuilder.ForceRebuildLayoutImmediate(numbersContainer);
 		}
 
-		public SteamItemData[] GetHoles() {
+		public DBHoleInfo[] GetHoles() {
 			object[] levelInfos = holeList.GetItems();
-			SteamItemData[] output = new SteamItemData[levelInfos.Length];
+			DBHoleInfo[] output = new DBHoleInfo[levelInfos.Length];
 
 			for (int i = 0; i < output.Length; i++) {
-				output[i] = (SteamItemData) levelInfos[i];
+				output[i] = (DBHoleInfo) levelInfos[i];
 			}
 
 			return output;

@@ -1,6 +1,8 @@
 using Backend.Course;
 using Backend.Enums;
 using Backend.Level;
+using Backend.Managers;
+using Game_Assets.Scripts.Backend.Server;
 using Game_Assets.Scripts.GUI.CourseCreator;
 using GUI.MainMenu;
 using Steamworks;
@@ -16,22 +18,21 @@ namespace GUI.MainMenu.CourseCreator {
 		public CourseCreator_HolesList holesList;
 
 		void Start() {
-			RequestLevelInfoFromSteam();
+			RequestLevelsFromServer();
 		}
 
-		private void RequestLevelInfoFromSteam() {
-			LevelLoader levelLoader = new LevelLoader();
-			levelLoader.GetUserLevelInfos(SteamUser.GetSteamID().GetAccountID(), 1, OnLevelInfoLoaded, LevelType.Hole);
+		private void RequestLevelsFromServer() {
+			GameSceneManager.serverManager.GetUserLevelInfo(OnLevelInfoLoaded);
 		}
 
-		private void OnLevelInfoLoaded(SteamItemData[] info) {
+		private void OnLevelInfoLoaded(DBHoleInfo[] info) {
 			levelOptionGrid.SetOptions(info, this);
 		}
 
 		public Course GetCourseFromInput() {
 			string title = nameInputField.text;
 			string description = descriptionInputField.text;
-			SteamItemData[] holes = holesList.GetHoles();
+			DBHoleInfo[] holes = holesList.GetHoles();
 			
 			Course course = new Course(title, description, holes);
 

@@ -1,6 +1,5 @@
 using Backend.Level;
 using Backend.Managers;
-using Backend.Submittable;
 using UnityEngine;
 
 namespace Backend {
@@ -10,8 +9,7 @@ namespace Backend {
 		
 		public void Initialise() {
 			console.config.AddAction("savelevel", new BWConsole_Action(() => {
-				ServerSubmittable submittable = new ServerSubmittable(GameManager.currentLevel);
-				LevelManager.serverManager.SubmitLevel(submittable, result=>{console.Print(result);});
+				LevelManager.serverManager.SubmitLevel(GameManager.currentLevel, result=>{console.Print(result);});
 			}));
 			
 			console.config.AddAction("play", new BWConsole_Action(() => {

@@ -6,21 +6,21 @@ using Backend.Course;
 using Backend.Enums;
 using Backend.Level;
 using Backend.Managers;
-using Backend.Submittable;
+using Game_Assets.Scripts.Backend.Server;
 using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadingScreenManager : MonoBehaviour {
 
-	private static SteamItemData loadTarget;
+	private static DBObject loadTarget;
 
 	/// <summary>
 	/// Sets the load target, and opens the loading screen
 	/// </summary>
-	public static void Load(SteamItemData steamItemData, GameMode gameMode) {
+	public static void Load(DBObject loadTarget, GameMode gameMode) {
 		GameManager.gameMode = gameMode;
-		loadTarget = steamItemData;
+		LoadingScreenManager.loadTarget = loadTarget;
 		SceneManager.LoadScene("Loading");
 	}
 	
@@ -29,7 +29,7 @@ public class LoadingScreenManager : MonoBehaviour {
 	}
 	
 	private void InitiateLoad() {
-		if (loadTarget is SteamCourseData courseInfo) {
+		if (loadTarget is DBCourseInfo courseInfo) {
 			LoadCourse(courseInfo);
 			return;
 		} else if (loadTarget != null) {
@@ -41,13 +41,13 @@ public class LoadingScreenManager : MonoBehaviour {
 		StartCoroutine(load);
 	}
 
-	private void LoadCourse(SteamCourseData steamCourseData) {
+	private void LoadCourse(DBCourseInfo steamCourseInfoData) {
 		/*// First download the course
 		ServerLoader serverLoader = new ServerLoader();
-		serverLoader.GetFileFromID(steamCourseData.id, levelString => {
+		serverLoader.GetFileFromID(steamCourseInfoData.id, levelString => {
 			// Back out of loading screen if no valid file returned
 			if (levelString.Equals(string.Empty)) {
-				Debug.LogError("Couldn't download course: "+steamCourseData.id);
+				Debug.LogError("Couldn't download course: "+steamCourseInfoData.id);
 				SceneManager.LoadScene("Main Menu");
 				return;
 			}
@@ -56,7 +56,7 @@ public class LoadingScreenManager : MonoBehaviour {
 			Course course = (Course)JsonConvert.DeserializeObject(levelString, typeof(Course));
 
 			if (course == null) {
-				Debug.LogError("Deserialized course is null: "+steamCourseData.id);
+				Debug.LogError("Deserialized course is null: "+steamCourseInfoData.id);
 				SceneManager.LoadScene("Main Menu");
 				return;
 			}
@@ -64,7 +64,7 @@ public class LoadingScreenManager : MonoBehaviour {
 			// Download the levels and set the first hole as the current hole
 			course.DownloadLevels(() => {
 				if (course.holes.Length == 0) {
-					Debug.LogError("Downloaded course has no holes: "+steamCourseData.id);
+					Debug.LogError("Downloaded course has no holes: "+steamCourseInfoData.id);
 					SceneManager.LoadScene("Main Menu");
 					return;
 				}
@@ -78,7 +78,7 @@ public class LoadingScreenManager : MonoBehaviour {
 	}
 
 	private void LoadHole() {
-		/*// First download the level data
+		/* First download the level data
 		// Then pass the data to the game scene
 		// Then load the scene async
 		ServerLoader serverLoader = new ServerLoader();

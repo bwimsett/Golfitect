@@ -1,5 +1,8 @@
+using Backend.Course;
 using Backend.Enums;
 using Backend.Level;
+using Backend.Managers;
+using Game_Assets.Scripts.Backend.Server;
 using Steamworks;
 using UnityEngine;
 
@@ -8,12 +11,11 @@ namespace GUI.MainMenu.CourseSelector {
 		[SerializeField] private LevelOptionGrid.LevelOptionGrid levelOptionGrid;
 
 		private void PopulateCourseOptions() {
-			LevelLoader levelLoader = new LevelLoader();
-			levelLoader.GetUserLevelInfos(SteamUser.GetSteamID().GetAccountID(), 1, OnCoursesLoaded, LevelType.Course);
+			GameSceneManager.serverManager.GetUserCourseInfo(OnCoursesLoaded);
 		}
 		
-		private void OnCoursesLoaded(SteamItemData[] levelInfos) {
-			levelOptionGrid.SetOptions(levelInfos, this);
+		private void OnCoursesLoaded(DBCourseInfo[] courses) {
+			levelOptionGrid.SetOptions(courses, this);
 		}
 
 		public void Refresh() {

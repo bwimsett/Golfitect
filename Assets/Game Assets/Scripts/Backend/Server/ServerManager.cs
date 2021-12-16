@@ -1,7 +1,11 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Backend.Submittable;
+using System.Diagnostics.PerformanceData;
+using Backend.Course;
+using Backend.Level;
+using Backend.Serialization;
+using Game_Assets.Scripts.Backend.Server;
 using Newtonsoft.Json;
 using Steamworks;
 using UnityEngine;
@@ -67,13 +71,55 @@ public class ServerManager : MonoBehaviour {
 		onTicketGeneratedCallbacks.Clear();
 	}
 
-	public void SubmitLevel(ServerSubmittable level, UnityAction<string> onComplete) {
+	public void GetUserLevelInfo(UnityAction<DBHoleInfo[]> onComplete) {
+		GetAuthTicket(ticket => {
+			string uri = ugcUrl + "/holes/getinfo?ticket="+ticket;
+			StartCoroutine(GetRequest(uri, value => {
+				DBHoleInfo[] levels = JsonConvert.DeserializeObject <DBHoleInfo[]>(value);
+				onComplete.Invoke(levels);
+			}));
+		});
+	}
+	
+	public void GetUserCourseInfo(UnityAction<DBCourseInfo[]> onComplete) {
+		GetAuthTicket(ticket => {
+			string uri = ugcUrl + "/courses/getinfo?ticket="+ticket;
+			StartCoroutine(GetRequest(uri, value => {
+				DBCourseInfo[] levels = JsonConvert.DeserializeObject <DBCourseInfo[]>(value);
+				onComplete.Invoke(levels);
+			}));
+		});
+	}
+
+	public void GetUserCourses(UnityAction<DBCourseInfo[]> onComplete) {
+		GetAuthTicket(ticket => {
+			string uri = ugcUrl + "/courses/getall?ticket=" + ticket;
+			StartCoroutine(GetRequest(uri, value => {
+				DBCourseInfo[] dataItems = JsonConvert.DeserializeObject<DBCourseInfo[]>(value);
+				onComplete.Invoke(dataItems);
+			}));
+		});
+	}
+
+	public void SubmitLevel(ServerSerializable level, UnityAction<string> onComplete) {
 		GetAuthTicket(ticket => {
 			WWWForm form = new WWWForm();
 			form.AddField("ticket", ticket);
-			form.AddField("levelData", level.GetJson());
+			form.AddField("level", level.GetJson());
 
-			string uri = ugcUrl + "/hole/submit";
+			string uri = ugcUrl + "/holes/submit";
+
+			StartCoroutine(PostRequest(uri, form, onComplete));
+		});
+	}
+
+	public void SubmitCourse(Course course, UnityAction<string> onComplete) {
+		GetAuthTicket(ticket => {
+			WWWForm form = new WWWForm();
+			form.AddField("ticket", ticket);
+			form.AddField("level", course.GetJson());
+
+			string uri = ugcUrl + "/courses/submit";
 
 			StartCoroutine(PostRequest(uri, form, onComplete));
 		});
@@ -133,7 +179,7 @@ public class ServerManager : MonoBehaviour {
 					result = pages[page] + ": HTTP Error: " + webRequest.error;
 					break;
 				case UnityWebRequest.Result.Success:
-					result = "Received: " + webRequest.downloadHandler.text;
+					result = webRequest.downloadHandler.text;
 					break;
 			}
 			

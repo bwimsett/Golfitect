@@ -115,7 +115,7 @@ public class LocalisationManager {
 			
 		string[,] table = new string[width, height - 1];
 
-		// Start at the second row (ignore title row)
+		// Start at the second row (ignore name row)
 		for (int y = 1; y < height; y++) {
 			// Ignore any commas surrounded by speech marks
 			string[] line = Regex.Split(lines[y], "(?<!\"\"\"),|,(?!\"\"\")");
