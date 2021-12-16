@@ -73,7 +73,7 @@ public class ServerManager : MonoBehaviour {
 
 	public void GetUserLevelInfo(UnityAction<DBHoleInfo[]> onComplete) {
 		GetAuthTicket(ticket => {
-			string uri = ugcUrl + "/holes/getinfo?ticket="+ticket;
+			string uri = ugcUrl + "/holes/getall?ticket="+ticket;
 			StartCoroutine(GetRequest(uri, value => {
 				DBHoleInfo[] levels = JsonConvert.DeserializeObject <DBHoleInfo[]>(value);
 				onComplete.Invoke(levels);
@@ -83,7 +83,7 @@ public class ServerManager : MonoBehaviour {
 	
 	public void GetUserCourseInfo(UnityAction<DBCourseInfo[]> onComplete) {
 		GetAuthTicket(ticket => {
-			string uri = ugcUrl + "/courses/getinfo?ticket="+ticket;
+			string uri = ugcUrl + "/courses/getall?ticket="+ticket;
 			StartCoroutine(GetRequest(uri, value => {
 				DBCourseInfo[] levels = JsonConvert.DeserializeObject <DBCourseInfo[]>(value);
 				onComplete.Invoke(levels);
@@ -91,6 +91,22 @@ public class ServerManager : MonoBehaviour {
 		});
 	}
 
+	public void GetHole(string holeID, UnityAction<Level> onComplete) {
+		string uri = ugcUrl + "/holes/get?holeID=" + holeID;
+		StartCoroutine(GetRequest(uri, result => {
+			Level level = JsonConvert.DeserializeObject<Level>(result);
+			onComplete.Invoke(level);
+		}));
+	}
+
+	public void GetCourse(string courseID, UnityAction<Course> onComplete) {
+		string uri = ugcUrl + "/courses/get?courseID=" + courseID;
+		StartCoroutine(GetRequest(uri, result => {
+			Course course = JsonConvert.DeserializeObject<Course>(result);
+			onComplete.Invoke(course);
+		}));
+	}
+	
 	public void GetUserCourses(UnityAction<DBCourseInfo[]> onComplete) {
 		GetAuthTicket(ticket => {
 			string uri = ugcUrl + "/courses/getall?ticket=" + ticket;

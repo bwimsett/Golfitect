@@ -12,12 +12,8 @@ namespace Backend.Level {
 	public class Level : ServerSerializable {
 		
 		public int par = 3;
-		
-		public override string name { get => "Level"; }
-		public override string description { get; }
-		[JsonIgnore] public override string fileExtension { get => "golflvl"; }
-		[JsonIgnore] public override string saveFolderName { get => "levels"; }
-		public string itemTypeTag { get => "Level"; }
+
+		public string name ="Level", description = "Description";
 
 		[HideInInspector, JsonIgnore] public Ball ball;
 

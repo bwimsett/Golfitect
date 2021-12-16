@@ -8,6 +8,7 @@ using Backend.Level;
 using Backend.Managers;
 using Game_Assets.Scripts.Backend.Server;
 using Newtonsoft.Json;
+using Sirenix.OdinInspector.Editor.Drawers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -41,40 +42,13 @@ public class LoadingScreenManager : MonoBehaviour {
 		StartCoroutine(load);
 	}
 
-	private void LoadCourse(DBCourseInfo steamCourseInfoData) {
-		/*// First download the course
-		ServerLoader serverLoader = new ServerLoader();
-		serverLoader.GetFileFromID(steamCourseInfoData.id, levelString => {
-			// Back out of loading screen if no valid file returned
-			if (levelString.Equals(string.Empty)) {
-				Debug.LogError("Couldn't download course: "+steamCourseInfoData.id);
-				SceneManager.LoadScene("Main Menu");
-				return;
-			}
-
-			// Deserialize the course
-			Course course = (Course)JsonConvert.DeserializeObject(levelString, typeof(Course));
-
-			if (course == null) {
-				Debug.LogError("Deserialized course is null: "+steamCourseInfoData.id);
-				SceneManager.LoadScene("Main Menu");
-				return;
-			}
-
-			// Download the levels and set the first hole as the current hole
+	private void LoadCourse(DBCourseInfo courseInfo) {
+		GameSceneManager.serverManager.GetCourse(courseInfo._id, course => {
 			course.DownloadLevels(() => {
-				if (course.holes.Length == 0) {
-					Debug.LogError("Downloaded course has no holes: "+steamCourseInfoData.id);
-					SceneManager.LoadScene("Main Menu");
-					return;
-				}
-				
-				// Load the first hole
 				GameManager.StartCourse(course);
-				IEnumerator load = LoadScene("Game");
-				StartCoroutine(load);
+				StartCoroutine(LoadScene("Game"));
 			});
-		});*/
+		});
 	}
 
 	private void LoadHole() {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Backend.Level;
+using Backend.Managers;
 using Backend.Serialization;
 using Game_Assets.Scripts.Backend.Server;
 using Newtonsoft.Json;
@@ -11,20 +12,21 @@ using UnityEngine.Events;
 namespace Backend.Course {
 	[Serializable]
 	public class Course : ServerSerializable {
-
-		public SteamCourseData steamCourseData;
+		
 		public string[] holeIDs;
 
 		[JsonIgnore] public Level.Level[] holes;
-		public override string name { get; }
-		public override string description { get; }
+		public string name, description;
 
-		public override string fileExtension { get => "golfcourse"; }
-		public override string saveFolderName { get => "courses"; }
-		public string itemTypeTag { get => "Course"; }
-
-		public Course(string title, string description, DBHoleInfo[] holeData) {
-			this.name = title;
+		[JsonConstructor]
+		public Course(string name, string description, string[] holeIDs) {
+			this.name = name;
+			this.description = description;
+			this.holeIDs = holeIDs;
+		}
+		
+		public Course(string name, string description, DBHoleInfo[] holeData) {
+			this.name = name;
 			this.description = description;
 			holeIDs = new string[holeData.Length];
 			for (int i = 0; i < holeIDs.Length; i++) {
@@ -33,26 +35,20 @@ namespace Backend.Course {
 		}
 
 		public void DownloadLevels(UnityAction onComplete) {
-			/*holes = new Level.Level[holeData.Length];
+			holes = new Level.Level[holeIDs.Length];
 			int levelDownloadsRemaining = holes.Length;
 			
 			for (int i = 0; i < holes.Length; i++) {
-				ServerLoader serverLoader = new ServerLoader();
-				int holeIndex = i;
-				serverLoader.GetFileFromID(holeData[i].id, levelData => {
+				int index = i;
+				GameSceneManager.serverManager.GetHole(holeIDs[i], level => {
+					holes[index] = level;
 					levelDownloadsRemaining--;
-					if (levelData.Equals(String.Empty)) {
-						throw new Exception("Missing level data for course");
-					};
-					Level.Level level = (Level.Level)JsonConvert.DeserializeObject(levelData, typeof(Level.Level));
-					holes[holeIndex] = level;
-
+					Debug.Log("Levels Downloaded: "+(holes.Length-levelDownloadsRemaining));
 					if (levelDownloadsRemaining == 0) {
-						Debug.Log("Course level downloads complete");
-						onComplete?.Invoke();
+						onComplete.Invoke();
 					}
 				});
-			}*/
+			}
 		}
 
 		private void OnLevelDownloaded(string levelData) {

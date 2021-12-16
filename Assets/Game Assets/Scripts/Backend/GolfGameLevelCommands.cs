@@ -8,7 +8,8 @@ namespace Backend {
 		public BWConsole console;
 		
 		public void Initialise() {
-			console.config.AddAction("savelevel", new BWConsole_Action(() => {
+			console.config.AddAction("savelevel", new BWConsole_Action(name => {
+				GameManager.currentLevel.name = name;
 				LevelManager.serverManager.SubmitLevel(GameManager.currentLevel, result=>{console.Print(result);});
 			}));
 			
