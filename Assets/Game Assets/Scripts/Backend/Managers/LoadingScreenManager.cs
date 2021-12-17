@@ -45,8 +45,9 @@ public class LoadingScreenManager : MonoBehaviour {
 	private void LoadCourse(DBCourseInfo courseInfo) {
 		GameSceneManager.serverManager.GetCourse(courseInfo._id, course => {
 			course.DownloadLevels(() => {
-				GameManager.StartCourse(course);
-				StartCoroutine(LoadScene("Game"));
+				GameManager.StartCourse(course, () => {
+					StartCoroutine(LoadScene("Game"));
+				});
 			});
 		});
 	}

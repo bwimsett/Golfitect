@@ -4,15 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Uploading and downloading level / course info now works">
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization/CourseScore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization/CourseScore.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization/HoleScore.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization/HoleScore.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization/Score.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Serialization/Score.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Loading.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Loading.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameLevelCommands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameLevelCommands.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseTracker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LoadingScreenManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LoadingScreenManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerSerializable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerSerializable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/PlayMode_LevelSummary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/PlayMode_LevelSummary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +50,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.rlabrecque.steamworks.net@4dafa26fbd/Runtime/CallbackDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.rlabrecque.steamworks.net@4dafa26fbd/Runtime/InteropHelp.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/StripeButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -142,10 +150,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="36244">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="32744">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="36244" />
+      <option name="pid" value="32744" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -194,7 +202,8 @@
       <workItem from="1639395009140" duration="1450000" />
       <workItem from="1639486627489" duration="8679000" />
       <workItem from="1639564878215" duration="6045000" />
-      <workItem from="1639649016875" duration="16098000" />
+      <workItem from="1639649016875" duration="17685000" />
+      <workItem from="1639735150686" duration="15485000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -357,7 +366,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639674026326</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="EVERYTHING WORKS AGAIN! BUT NOW ON MY OWN SERVER!!!!!!!!!!!!!!!!">
+      <created>1639679851749</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1639679851749</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -403,28 +419,30 @@
     <MESSAGE value="Started work on level summary screen" />
     <MESSAGE value="Level complete screen working" />
     <MESSAGE value="Uploading and downloading level / course info now works" />
-    <option name="LAST_COMMIT_MESSAGE" value="Uploading and downloading level / course info now works" />
+    <MESSAGE value="EVERYTHING WORKS AGAIN! BUT NOW ON MY OWN SERVER!!!!!!!!!!!!!!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="EVERYTHING WORKS AGAIN! BUT NOW ON MY OWN SERVER!!!!!!!!!!!!!!!!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator_HolesList.cs</url>
-          <line>58</line>
-          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator_HolesList.cs" initialLine="58" containingFunctionPresentation="method 'GetHoles'">
+          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseTracker.cs</url>
+          <line>86</line>
+          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\Backend\Course\CourseTracker.cs" initialLine="83" containingFunctionPresentation="lambda expression inside method 'LoadHighScores'">
             <startOffsets>
-              <option value="1731" />
+              <option value="2023" />
             </startOffsets>
             <endOffsets>
-              <option value="1745" />
+              <option value="2043" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="8" />
+          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="Type#Backend.Course.CourseTracker" memberName="holeScores" />
         <PinnedItemInfo parentTag="Type#Backend.Course.Course" memberName="holes" />
       </pinned-members>
     </pin-to-top-manager>

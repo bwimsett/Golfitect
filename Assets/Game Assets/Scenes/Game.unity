@@ -441,7 +441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671935670365182639, guid: c505a35f423b33247859cda254e50d7a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -1396290.4
+      value: -1398501
       objectReference: {fileID: 0}
     - target: {fileID: 7671935670555417699, guid: c505a35f423b33247859cda254e50d7a, type: 3}
       propertyPath: m_Name
@@ -3015,6 +3015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _console: {fileID: 1386247392}
+  _serverManager: {fileID: 1587768441}
 --- !u!114 &1587768440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4392,7 +4393,7 @@ MonoBehaviour:
   courseScore: {fileID: 1888573680}
   scoreCard: {fileID: 1877936805}
   time: {fileID: 2012789886}
-  highScore: {fileID: 1197582979}
+  highScoreText: {fileID: 1197582979}
   worldRecord: {fileID: 399442408}
   headerBackground: {fileID: 1017941207}
   nextButton: {fileID: 1024028442}

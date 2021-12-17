@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using Backend.Course;
 using Backend.Level;
 using Backend.Managers;
+using Backend.Serialization;
 using BWLocaliser;
 using DG.Tweening;
 using Game;
@@ -17,7 +18,7 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 		public CanvasGroup canvasGroup;
 		public TextLocalizer scoreTitle, courseAndHole, courseScore;
 		public ScoreCard scoreCard;
-		public TextMeshProUGUI time, highScore, worldRecord;
+		public TextMeshProUGUI time, highScoreText, worldRecord;
 		
 		public Image headerBackground;
 		public StripeButton nextButton;
@@ -44,7 +45,6 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 				GameManager.currentLevel.par)));
 
 			courseAndHole.SetFields(new Dictionary<string, object>() {
-				{ "coursename", courseTracker.course.name },
 				{ "holenumber", courseTracker.currentHoleIndex },
 				{ "holecount", courseTracker.course.holes.Length }
 			});
@@ -59,14 +59,14 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 			scoreCard.Refresh();
 			
 			// Set time scores
-			string defaultTimeText = "--:--";
-			time.text = highScore.text = worldRecord.text = defaultTimeText;
-			
-			/*bool highScoreFound = GameManager.GetUserScores().GetTimeHighScore(courseTracker.course.holeData[courseTracker.currentHoleIndex - 1], out float timeHighScore);
-			if (highScoreFound) {
-				highScore.text = "" + LevelTimer.GetTimeString(timeHighScore);
-			}*/
+			string defaultTimeText = "-:-";
+			time.text = highScoreText.text = worldRecord.text = defaultTimeText;
 
+			HoleScore highScore = courseTracker.highScores[courseTracker.currentHoleIndex - 1];
+			if (highScore != null) {
+				highScoreText.text = "" + LevelTimer.GetTimeString(highScore.time);
+			}
+			
 			time.text = LevelTimer.GetTimeString(courseTracker.GetTimeForHole(courseTracker.currentHoleIndex - 1));
 
 			Color backgroundColor = scoreCard.scoreItems[courseTracker.currentHoleIndex-1].color;

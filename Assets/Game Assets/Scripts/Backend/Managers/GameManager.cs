@@ -2,6 +2,7 @@ using System.Runtime.CompilerServices;
 using Backend.Course;
 using Backend.Enums;
 using Backend.Serialization;
+using UnityEngine.Events;
 
 namespace Backend.Managers {
 	public class GameManager {
@@ -15,9 +16,10 @@ namespace Backend.Managers {
 			currentLevel = level;
 		}
 
-		public static void StartCourse(Course.Course course) {
+		public static void StartCourse(Course.Course course, UnityAction onComplete) {
 			courseTracker = new CourseTracker(course);
 			SetCurrentLevel(courseTracker.GetCurrentLevel());
+			courseTracker.LoadHighScores(onComplete);
 		}
 		
 	}

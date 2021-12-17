@@ -1,5 +1,7 @@
 using System;
 using Backend.Managers;
+using Backend.Serialization;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace Backend.Course {
@@ -8,16 +10,18 @@ namespace Backend.Course {
 		public Course course { get; }
 		public int currentHoleIndex { get; private set; }
 
-		private int[] holeScores;
-		private float[] holeTimes;
+		private HoleScore[] holeScores;
+		public HoleScore[] highScores;
 
 		public UnityAction OnShotTaken;
 		public UnityAction OnHoleFinished;
 
 		public CourseTracker(Course course) {
 			this.course = course;
-			holeScores = new int[course.holes.Length];
-			holeTimes = new float[course.holes.Length];
+			holeScores = new HoleScore[course.holes.Length];
+			for (int i = 0; i < holeScores.Length; i++) {
+				holeScores[i] = new HoleScore(course.holeIDs[i]);
+			}
 			currentHoleIndex = 0;
 		}
 
@@ -26,23 +30,23 @@ namespace Backend.Course {
 		}
 
 		public void AddShot() {
-			holeScores[currentHoleIndex]++;
+			holeScores[currentHoleIndex].score++;
 			OnShotTaken.Invoke();
 		}
 
 		public int GetScoreForHole(int holeIndex) {
-			return holeScores[holeIndex];
+			return holeScores[holeIndex].score;
 		}
 
 		public float GetTimeForHole(int holeIndex) {
-			return holeTimes[holeIndex];
+			return holeScores[holeIndex].time;
 		}
 
 		public int GetTotalShotsForCourse() {
 			int total = 0;
 
-			foreach (int score in holeScores) {
-				total += score;
+			foreach (HoleScore score in holeScores) {
+				total += score.score;
 			}
 
 			return total;
@@ -54,7 +58,7 @@ namespace Backend.Course {
 			
 			for (int i = 0; i <= holeIndex; i++) {
 				par += course.holes[i].par;
-				score += holeScores[i];
+				score += holeScores[i].score;
 			}
 
 			return score - par;
@@ -64,8 +68,31 @@ namespace Backend.Course {
 			return GetScoreForHole(currentHoleIndex);
 		}
 
+		public void LoadHighScores(UnityAction onComplete) {
+			GameSceneManager.serverManager.GetUserCourseScores(course, scores => {
+
+				highScores = new HoleScore[course.holeIDs.Length];
+				Debug.Log("High scores found: "+scores.Length);
+				
+				// Sort the high scores so they match the hole indices
+				foreach (HoleScore score in scores) {
+					for (int i = 0; i < course.holeIDs.Length; i++) {
+						if (score.holeid.Equals(course.holeIDs[i])) {
+							highScores[i] = score;
+							break;
+						}
+					}
+				}
+				
+				onComplete.Invoke();
+			});
+		}
+
 		public void FinishHole() { 
-			holeTimes[currentHoleIndex] = LevelManager.levelTimer.StopTimer();
+			holeScores[currentHoleIndex].time = LevelManager.levelTimer.StopTimer();
+			
+			// Submit score to server
+			GameSceneManager.serverManager.SubmitScore(holeScores[currentHoleIndex], result =>{Debug.Log(result);});
 			
 			currentHoleIndex++;
 			
