@@ -14,6 +14,7 @@ namespace Backend.Course {
 	public class Course : ServerSerializable {
 		
 		public string[] holeIDs;
+		[JsonIgnore] public DBCourseInfo courseInfo;
 
 		[JsonIgnore] public Level.Level[] holes;
 		public string name, description;
@@ -58,6 +59,14 @@ namespace Backend.Course {
 
 		public override void Save() {
 			
+		}
+
+		public static string GetScoreString(int score) {
+			if (score > 0) {
+				return "+" + score;
+			}
+
+			return "" + score;
 		}
 	}
 }

@@ -13,32 +13,16 @@ using UnityEngine;
 using UnityEngine.UI;
 
 namespace Game_Assets.Scripts.GUI.PlayMode {
-	public class PlayMode_LevelSummary : MonoBehaviour {
-
-		public CanvasGroup canvasGroup;
+	public class PlayMode_LevelSummary : Popup {
+		
 		public TextLocalizer scoreTitle, courseAndHole, courseScore;
 		public ScoreCard scoreCard;
 		public TextMeshProUGUI time, highScoreText, worldRecord;
 		
 		public Image headerBackground;
 		public StripeButton nextButton;
-
-		[Header("Animation Settings")] 
-		public float openDuration, closeDuration;
-		public Ease openEase;
-		public Vector3 startScale;
 		
-		public void Open() {
-			Refresh();
-			transform.localScale = startScale;
-			canvasGroup.alpha = 0;
-			transform.DOScale(Vector3.one, openDuration).SetEase(openEase);
-			canvasGroup.DOFade(1, openDuration).OnComplete(() => {
-				canvasGroup.interactable = canvasGroup.blocksRaycasts = true;
-			});
-		}
-
-		public void Refresh() {
+		public override void Refresh() {
 			CourseTracker courseTracker = GameManager.courseTracker;
 
 			scoreTitle.SetString(new LocString(LevelUtility.GetScoreNameID(courseTracker.GetScoreForHole(courseTracker.currentHoleIndex-1),
@@ -73,16 +57,6 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 
 			headerBackground.color = nextButton.background.color = backgroundColor;
 			nextButton.stripes.color = new Color(backgroundColor.r, backgroundColor.g, backgroundColor.b, 0);
-		}
-
-		public void Close(bool animate = true) {
-			canvasGroup.interactable = canvasGroup.blocksRaycasts = false;
-			
-			if (animate) {
-				canvasGroup.DOFade(0, closeDuration);
-			} else {
-				canvasGroup.alpha = 0;
-			}
 		}
 
 		public void NextHole() {

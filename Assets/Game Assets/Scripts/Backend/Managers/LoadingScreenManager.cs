@@ -1,14 +1,7 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
-using Backend.Course;
 using Backend.Enums;
-using Backend.Level;
 using Backend.Managers;
 using Game_Assets.Scripts.Backend.Server;
-using Newtonsoft.Json;
-using Sirenix.OdinInspector.Editor.Drawers;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -43,7 +36,7 @@ public class LoadingScreenManager : MonoBehaviour {
 	}
 
 	private void LoadCourse(DBCourseInfo courseInfo) {
-		GameSceneManager.serverManager.GetCourse(courseInfo._id, course => {
+		GameSceneManager.serverManager.GetCourse(courseInfo, course => {
 			course.DownloadLevels(() => {
 				GameManager.StartCourse(course, () => {
 					StartCoroutine(LoadScene("Game"));

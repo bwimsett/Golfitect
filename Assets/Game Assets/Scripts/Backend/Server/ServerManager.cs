@@ -1,16 +1,12 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics.PerformanceData;
-using System.Resources;
-using System.Web.Security;
 using Backend.Course;
 using Backend.Level;
 using Backend.Serialization;
 using Game_Assets.Scripts.Backend.Server;
 using Newtonsoft.Json;
 using Steamworks;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Networking;
@@ -29,7 +25,7 @@ public class ServerManager : MonoBehaviour {
 	// URL
 	private static string serverUrl = "https://golfitect.co.uk", scoreUrl = "/scores", ugcUrl = "/ugc", usersUrl = "/users";
 	public static string userid { get; private set; }
-	private static bool useridInitialised;
+	public static bool useridInitialised { get; private set; }
 	
 	void Awake() {
 		RefreshUserID();
@@ -126,10 +122,11 @@ public class ServerManager : MonoBehaviour {
 		}));
 	}
 
-	public void GetCourse(string courseID, UnityAction<Course> onComplete) {
-		string uri = ugcUrl + "/courses/get?courseID=" + courseID;
+	public void GetCourse(DBCourseInfo courseInfo, UnityAction<Course> onComplete) {
+		string uri = ugcUrl + "/courses/get?courseID=" + courseInfo._id;
 		StartCoroutine(GetRequest(uri, result => {
 			Course course = JsonConvert.DeserializeObject<Course>(result);
+			course.courseInfo = courseInfo;
 			onComplete.Invoke(course);
 		}));
 	}
@@ -155,6 +152,20 @@ public class ServerManager : MonoBehaviour {
 			StartCoroutine(PostRequest(uri, form, result => {
 				HoleScore[] scores = JsonConvert.DeserializeObject<HoleScore[]>(result);
 				onComplete.Invoke(scores);
+			}));
+		});
+	}
+
+	public void GetUserCourseScore(DBCourseInfo course, UnityAction<CourseScore> onComplete) {
+		GetAuthTicket(ticket => {
+			string url = scoreUrl + "/courses/getuserhighscore?userid="+userid+"&courseid="+course._id;
+			StartCoroutine(GetRequest(url, result => {
+				CourseScore courseScore = null;
+				if (result != null) {
+					courseScore = JsonConvert.DeserializeObject<CourseScore>(result);
+				}
+				
+				onComplete.Invoke(courseScore);
 			}));
 		});
 	}
@@ -208,7 +219,7 @@ public class ServerManager : MonoBehaviour {
 		});
 	}
 
-	public void SubmitScore(Score score, UnityAction<string> onComplete) {
+	public void SubmitAndGetHighScore(Score score, UnityAction<Score> onComplete) {
 		GetAuthTicket(ticket => {
 			WWWForm form = new WWWForm();
 			form.AddField("ticket", ticket);
@@ -221,7 +232,15 @@ public class ServerManager : MonoBehaviour {
 				url += "/courses/submit";
 			}
 
-			StartCoroutine(PostRequest(url, form, onComplete));
+			StartCoroutine(PostRequest(url, form, result => {
+				if (score is HoleScore) {
+					score = JsonConvert.DeserializeObject<HoleScore>(result);
+				}
+				else {
+					score = JsonConvert.DeserializeObject<CourseScore>(result);
+				}
+				onComplete.Invoke(score);
+			}));
 		});
 	}
 

@@ -19,11 +19,16 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 		public TextMeshProUGUI timer;
 
 		[Header("Level Summary")] public PlayMode_LevelSummary levelSummary;
+
+		[Header("Course Summary")] public PlayMode_CourseSummary courseSummary;
 		
 		protected override void OpenGameHUD() {
 			GameManager.courseTracker.OnShotTaken += RefreshStrokes;
 			GameManager.courseTracker.OnHoleFinished += ShowHoleSummary;
+			GameManager.courseTracker.OnCourseFinished += ShowCourseSummary;
+			GameManager.courseTracker.OnCourseScoreSubmitted += courseSummary.Refresh;
 			levelSummary.Close(false);
+			courseSummary.Close(false);
 			Refresh();
 		}
 
@@ -45,6 +50,10 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 
 		private void ShowHoleSummary() {
 			levelSummary.Open();
+		}
+
+		private void ShowCourseSummary() {
+			courseSummary.Open();
 		}
 	}
 }

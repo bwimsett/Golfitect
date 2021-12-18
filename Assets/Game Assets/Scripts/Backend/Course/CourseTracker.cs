@@ -13,8 +13,13 @@ namespace Backend.Course {
 		private HoleScore[] holeScores;
 		public HoleScore[] highScores;
 
+		public CourseScore courseScore { get; private set; }
+		public CourseScore courseHighScore;
+		
 		public UnityAction OnShotTaken;
 		public UnityAction OnHoleFinished;
+		public UnityAction OnCourseFinished;
+		public UnityAction OnCourseScoreSubmitted;
 
 		public CourseTracker(Course course) {
 			this.course = course;
@@ -52,6 +57,23 @@ namespace Backend.Course {
 			return total;
 		}
 
+		public void RefreshCourseScore() {
+			float totalTime = 0;
+			int coursePar = 0;
+			int courseShots = 0;
+			
+			for (int i = 0; i < holeScores.Length; i++) {
+				HoleScore score = holeScores[i];
+				totalTime += score.time;
+				coursePar += course.holes[i].par;
+				courseShots += score.score;
+			}
+
+			int courseScore = courseShots - coursePar;
+
+			this.courseScore = new CourseScore(course.courseInfo._id, totalTime, courseScore);
+		}
+
 		public int GetCurrentScoreForCourse(int holeIndex) {
 			int score = 0;
 			int par = 0;
@@ -69,6 +91,9 @@ namespace Backend.Course {
 		}
 
 		public void LoadHighScores(UnityAction onComplete) {
+			bool foundHoleScores = false;
+			bool foundCourseScore = false;
+			
 			GameSceneManager.serverManager.GetUserCourseScores(course, scores => {
 
 				highScores = new HoleScore[course.holeIDs.Length];
@@ -83,8 +108,20 @@ namespace Backend.Course {
 						}
 					}
 				}
-				
-				onComplete.Invoke();
+
+				foundHoleScores = true;
+
+				if (foundCourseScore) {
+					onComplete.Invoke();
+				}
+			});
+			
+			GameSceneManager.serverManager.GetUserCourseScore(course.courseInfo, result => {
+				courseHighScore = result;
+				foundCourseScore = true;
+				if (foundHoleScores) {
+					onComplete.Invoke();
+				}
 			});
 		}
 
@@ -92,7 +129,7 @@ namespace Backend.Course {
 			holeScores[currentHoleIndex].time = LevelManager.levelTimer.StopTimer();
 			
 			// Submit score to server
-			GameSceneManager.serverManager.SubmitScore(holeScores[currentHoleIndex], result =>{Debug.Log(result);});
+			GameSceneManager.serverManager.SubmitAndGetHighScore(holeScores[currentHoleIndex], result =>{Debug.Log(result);});
 			
 			currentHoleIndex++;
 			
@@ -107,7 +144,15 @@ namespace Backend.Course {
 		}
 
 		public void FinishCourse() {
+			RefreshCourseScore();
 			
+			// Submit the score
+			GameSceneManager.serverManager.SubmitAndGetHighScore(courseScore, result => {
+				courseHighScore = (CourseScore)result;
+				OnCourseScoreSubmitted.Invoke();
+			});
+			
+			OnCourseFinished.Invoke();
 		}
 
 	}

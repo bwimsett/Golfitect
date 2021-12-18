@@ -68,6 +68,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIHighlightOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenu_Subwindow.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\HoleScore.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\OptionList\MainMenu_OptionList.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenuPersistantUI.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\Tool.cs" />
@@ -76,6 +77,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\IndexRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\SteamManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator_HolesList_Number.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\PersistantUI\PersistantUI_BackButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\LevelTimerDisplay.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\TextTabs.cs" />
@@ -92,6 +94,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameLevelCommands.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\ShiftXOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\LevelType.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\Popup.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\IntegerRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenu.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid_Option.cs" />
@@ -114,6 +117,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelBuilder\LevelGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\OptionList\MainMenu_OptionList_Option.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\SteamCourseData.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\CourseScore.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LevelManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Vector3Save.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\FlatGround.cs" />
@@ -122,6 +126,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\ServerManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GameHUD.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\BWSteamUtility.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_CourseSummary.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LoadingScreenManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_LevelSummary.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBObject.cs" />
@@ -131,11 +136,9 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\Tee.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Score.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Score.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\HoleScore.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\CourseScore.cs" />
      <None Include="Assets\csc.rsp" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

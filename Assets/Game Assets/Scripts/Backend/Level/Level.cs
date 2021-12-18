@@ -12,7 +12,7 @@ namespace Backend.Level {
 	public class Level : ServerSerializable {
 		
 		public int par = 3;
-
+		
 		public string name ="Level", description = "Description";
 
 		[HideInInspector, JsonIgnore] public Ball ball;

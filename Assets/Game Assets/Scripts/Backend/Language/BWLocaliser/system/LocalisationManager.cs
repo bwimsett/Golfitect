@@ -121,8 +121,13 @@ public class LocalisationManager {
 			string[] line = Regex.Split(lines[y], "(?<!\"\"\"),|,(?!\"\"\")");
 			for (int x = 0; x < width; x++) {
 				// Remove any speech marks surrounding commas
-				line[x] = line[x].Replace("\"\"\",\"\"\"", ",");
-				table[x, y-1] = line[x];
+				try {
+					line[x] = line[x].Replace("\"\"\",\"\"\"", ",");
+					table[x, y - 1] = line[x];
+				}
+				catch {
+					Debug.Log("Error in game text file after line: "+line[x-1]);
+				}
 			}
 		}
 
