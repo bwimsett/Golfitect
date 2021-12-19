@@ -19,7 +19,9 @@ namespace Backend.Managers {
 		public static void StartCourse(Course.Course course, UnityAction onComplete) {
 			courseTracker = new CourseTracker(course);
 			SetCurrentLevel(courseTracker.GetCurrentLevel());
-			courseTracker.LoadHighScores(onComplete);
+			courseTracker.LoadHighScores(()=> {
+				courseTracker.LoadLeaderboards(onComplete);
+			});
 		}
 		
 	}

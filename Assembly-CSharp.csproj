@@ -117,7 +117,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelBuilder\LevelGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\OptionList\MainMenu_OptionList_Option.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\SteamCourseData.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\CourseScore.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\DBCourseScore.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LevelManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Vector3Save.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\FlatGround.cs" />
@@ -139,6 +139,10 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Score.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBUser.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBUserScore.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary_Leaderboard.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary_LeaderboardItem.cs" />
      <None Include="Assets\csc.rsp" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

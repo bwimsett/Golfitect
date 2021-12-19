@@ -171,6 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 80688503}
   - component: {fileID: 80688504}
+  - component: {fileID: 80688505}
   m_Layer: 0
   m_Name: Silver
   m_TagString: Untagged
@@ -226,6 +227,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &80688505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 80688502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbddc019de13477abc12eaf786265b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 1623271964}
+  username: {fileID: 807509430}
 --- !u!1 &92066875
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,7 +1306,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345363206403448723, guid: f0958540a625047449082496f06c1215, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 4345363206403448723, guid: f0958540a625047449082496f06c1215, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1591,7 +1606,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671935670365182639, guid: c505a35f423b33247859cda254e50d7a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2065962.4
+      value: -2102221
       objectReference: {fileID: 0}
     - target: {fileID: 7671935670555417699, guid: c505a35f423b33247859cda254e50d7a, type: 3}
       propertyPath: m_Name
@@ -1821,7 +1836,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 61.63, y: 0}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &383571811
@@ -2849,6 +2864,7 @@ GameObject:
   - component: {fileID: 603200383}
   - component: {fileID: 603200385}
   - component: {fileID: 603200384}
+  - component: {fileID: 603200386}
   m_Layer: 0
   m_Name: Scores
   m_TagString: Untagged
@@ -2912,6 +2928,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603200382}
   m_CullTransparentMesh: 1
+--- !u!114 &603200386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603200382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c0824dea9d7468daf748e3d67d803ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 800241620}
+  - {fileID: 1456679500}
+  - {fileID: 1229661368}
 --- !u!1 &616789491
 GameObject:
   m_ObjectHideFlags: 0
@@ -3072,6 +3104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 640535556}
   - component: {fileID: 640535557}
+  - component: {fileID: 640535558}
   m_Layer: 0
   m_Name: Gold
   m_TagString: Untagged
@@ -3127,6 +3160,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &640535558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 640535555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbddc019de13477abc12eaf786265b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 926966315}
+  username: {fileID: 776322793}
 --- !u!1 &649808614
 GameObject:
   m_ObjectHideFlags: 0
@@ -4324,8 +4371,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4402,6 +4449,7 @@ GameObject:
   m_Component:
   - component: {fileID: 800241618}
   - component: {fileID: 800241619}
+  - component: {fileID: 800241620}
   m_Layer: 0
   m_Name: Gold
   m_TagString: Untagged
@@ -4457,6 +4505,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &800241620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 800241617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbddc019de13477abc12eaf786265b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 1565898075}
+  username: {fileID: 990616857}
 --- !u!1 &807033020
 GameObject:
   m_ObjectHideFlags: 0
@@ -5557,6 +5619,7 @@ GameObject:
   - component: {fileID: 968101014}
   - component: {fileID: 968101016}
   - component: {fileID: 968101015}
+  - component: {fileID: 968101017}
   m_Layer: 0
   m_Name: Times
   m_TagString: Untagged
@@ -5620,6 +5683,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 968101013}
   m_CullTransparentMesh: 1
+--- !u!114 &968101017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 968101013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c0824dea9d7468daf748e3d67d803ee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items:
+  - {fileID: 640535558}
+  - {fileID: 80688505}
+  - {fileID: 1556552490}
 --- !u!1 &990616855
 GameObject:
   m_ObjectHideFlags: 0
@@ -5686,8 +5765,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -7080,6 +7159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1229661366}
   - component: {fileID: 1229661367}
+  - component: {fileID: 1229661368}
   m_Layer: 0
   m_Name: Bronze
   m_TagString: Untagged
@@ -7135,6 +7215,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1229661368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229661365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbddc019de13477abc12eaf786265b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 747560236}
+  username: {fileID: 746291126}
 --- !u!1 &1253467500
 GameObject:
   m_ObjectHideFlags: 0
@@ -7612,7 +7706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4345363206403448723, guid: f0958540a625047449082496f06c1215, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 248.6965
       objectReference: {fileID: 0}
     - target: {fileID: 4345363206403448723, guid: f0958540a625047449082496f06c1215, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -8465,6 +8559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1456679498}
   - component: {fileID: 1456679499}
+  - component: {fileID: 1456679500}
   m_Layer: 0
   m_Name: Silver
   m_TagString: Untagged
@@ -8520,6 +8615,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1456679500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456679497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbddc019de13477abc12eaf786265b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 213793322}
+  username: {fileID: 2093418766}
 --- !u!1 &1465311385
 GameObject:
   m_ObjectHideFlags: 0
@@ -9089,6 +9198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1556552488}
   - component: {fileID: 1556552489}
+  - component: {fileID: 1556552490}
   m_Layer: 0
   m_Name: Bronze
   m_TagString: Untagged
@@ -9144,6 +9254,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1556552490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1556552487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbddc019de13477abc12eaf786265b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: {fileID: 1428816453}
+  username: {fileID: 2100018092}
 --- !u!1 &1565898073
 GameObject:
   m_ObjectHideFlags: 0
@@ -9797,6 +9921,8 @@ MonoBehaviour:
   scoreRecordTitle: {fileID: 1673101830}
   scoreRank: {fileID: 597807237}
   scoreBackground: {fileID: 904940357}
+  timeLeaderboardDisplay: {fileID: 968101017}
+  scoreLeaderboardDisplay: {fileID: 603200386}
 --- !u!1 &1593243901
 GameObject:
   m_ObjectHideFlags: 0
@@ -11113,7 +11239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38431376, g: 0.8352942, b: 0.45882356, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -11389,8 +11515,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 248.6965, y: 0}
+  m_SizeDelta: {x: 497.393, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1732341053
 MonoBehaviour:
@@ -13263,7 +13389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.38431376, g: 0.8352942, b: 0.45882356, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

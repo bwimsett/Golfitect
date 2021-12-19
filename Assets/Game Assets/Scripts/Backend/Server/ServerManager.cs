@@ -130,6 +130,14 @@ public class ServerManager : MonoBehaviour {
 			onComplete.Invoke(course);
 		}));
 	}
+
+	public void GetCourseLeaderboards(DBCourseInfo courseInfo, UnityAction<DBUserScore[]> onComplete) {
+		string uri = scoreUrl + "/courses/leaderboard?courseid=" + courseInfo._id;
+		StartCoroutine(GetRequest(uri, result => {
+			DBUserScore[] leaderboard = JsonConvert.DeserializeObject<DBUserScore[]>(result);
+			onComplete.Invoke(leaderboard);
+		}));
+	}
 	
 	public void GetUserCourses(UnityAction<DBCourseInfo[]> onComplete) {
 		GetAuthTicket(ticket => {
@@ -156,18 +164,16 @@ public class ServerManager : MonoBehaviour {
 		});
 	}
 
-	public void GetUserCourseScore(DBCourseInfo course, UnityAction<CourseScore> onComplete) {
-		GetAuthTicket(ticket => {
-			string url = scoreUrl + "/courses/getuserhighscore?userid="+userid+"&courseid="+course._id;
-			StartCoroutine(GetRequest(url, result => {
-				CourseScore courseScore = null;
-				if (result != null) {
-					courseScore = JsonConvert.DeserializeObject<CourseScore>(result);
-				}
-				
-				onComplete.Invoke(courseScore);
-			}));
-		});
+	public void GetUserCourseScore(DBCourseInfo course, UnityAction<DBCourseScore> onComplete) {
+		string url = scoreUrl + "/courses/getuserhighscore?userid=" + userid + "&courseid=" + course._id;
+		StartCoroutine(GetRequest(url, result => {
+			DBCourseScore dbCourseScore = null;
+			if (result != null) {
+				dbCourseScore = JsonConvert.DeserializeObject<DBCourseScore>(result);
+			}
+
+			onComplete.Invoke(dbCourseScore);
+		}));
 	}
 	
 	private static IEnumerator GetRequest(string uri, UnityAction<string> onComplete) {
@@ -228,7 +234,7 @@ public class ServerManager : MonoBehaviour {
 
 			if (score is HoleScore) {
 				url += "/holes/submit";
-			} else if (score is CourseScore) {
+			} else if (score is DBCourseScore) {
 				url += "/courses/submit";
 			}
 
@@ -237,7 +243,7 @@ public class ServerManager : MonoBehaviour {
 					score = JsonConvert.DeserializeObject<HoleScore>(result);
 				}
 				else {
-					score = JsonConvert.DeserializeObject<CourseScore>(result);
+					score = JsonConvert.DeserializeObject<DBCourseScore>(result);
 				}
 				onComplete.Invoke(score);
 			}));

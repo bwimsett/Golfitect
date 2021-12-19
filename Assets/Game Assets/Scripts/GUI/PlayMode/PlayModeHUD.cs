@@ -26,7 +26,7 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 			GameManager.courseTracker.OnShotTaken += RefreshStrokes;
 			GameManager.courseTracker.OnHoleFinished += ShowHoleSummary;
 			GameManager.courseTracker.OnCourseFinished += ShowCourseSummary;
-			GameManager.courseTracker.OnCourseScoreSubmitted += courseSummary.Refresh;
+			GameManager.courseTracker.OnCourseScoresUpdated += courseSummary.Refresh;
 			levelSummary.Close(false);
 			courseSummary.Close(false);
 			Refresh();

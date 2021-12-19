@@ -1,6 +1,7 @@
 using System;
 using Backend.Managers;
 using Backend.Serialization;
+using Game_Assets.Scripts.Backend.Server;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -12,14 +13,15 @@ namespace Backend.Course {
 
 		private HoleScore[] holeScores;
 		public HoleScore[] highScores;
+		public DBUserScore[] timeLeaderboard, scoreLeaderboard;
 
-		public CourseScore courseScore { get; private set; }
-		public CourseScore courseHighScore;
+		public DBCourseScore DBCourseScore { get; private set; }
+		public DBCourseScore DBCourseHighScore;
 		
 		public UnityAction OnShotTaken;
 		public UnityAction OnHoleFinished;
 		public UnityAction OnCourseFinished;
-		public UnityAction OnCourseScoreSubmitted;
+		public UnityAction OnCourseScoresUpdated;
 
 		public CourseTracker(Course course) {
 			this.course = course;
@@ -71,7 +73,7 @@ namespace Backend.Course {
 
 			int courseScore = courseShots - coursePar;
 
-			this.courseScore = new CourseScore(course.courseInfo._id, totalTime, courseScore);
+			this.DBCourseScore = new DBCourseScore(course.courseInfo._id, totalTime, courseScore);
 		}
 
 		public int GetCurrentScoreForCourse(int holeIndex) {
@@ -117,7 +119,7 @@ namespace Backend.Course {
 			});
 			
 			GameSceneManager.serverManager.GetUserCourseScore(course.courseInfo, result => {
-				courseHighScore = result;
+				DBCourseHighScore = result;
 				foundCourseScore = true;
 				if (foundHoleScores) {
 					onComplete.Invoke();
@@ -125,6 +127,14 @@ namespace Backend.Course {
 			});
 		}
 
+		public void LoadLeaderboards(UnityAction onComplete) {
+			GameSceneManager.serverManager.GetCourseLeaderboards(course.courseInfo, leaderboard => {
+				timeLeaderboard = new[] { leaderboard[0], leaderboard[1], leaderboard[2] };
+				scoreLeaderboard = new[] { leaderboard[3], leaderboard[4], leaderboard[5] };
+				onComplete.Invoke();
+			});
+	}
+		
 		public void FinishHole() { 
 			holeScores[currentHoleIndex].time = LevelManager.levelTimer.StopTimer();
 			
@@ -147,9 +157,9 @@ namespace Backend.Course {
 			RefreshCourseScore();
 			
 			// Submit the score
-			GameSceneManager.serverManager.SubmitAndGetHighScore(courseScore, result => {
-				courseHighScore = (CourseScore)result;
-				OnCourseScoreSubmitted.Invoke();
+			GameSceneManager.serverManager.SubmitAndGetHighScore(DBCourseScore, highScore => {
+				DBCourseHighScore = (DBCourseScore)highScore;
+				LoadLeaderboards(GameManager.courseTracker.OnCourseScoresUpdated.Invoke);
 			});
 			
 			OnCourseFinished.Invoke();

@@ -11,7 +11,8 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 	public class CourseScoreSummary : MonoBehaviour {
 
 		private DBCourseInfo courseInfo;
-		private CourseScore lastScore, highScore;
+		private DBCourseScore lastScore, highScore;
+		private DBUserScore[] timeLeaderboard, scoreLeaderboard;
 
 		[Header("Times")] public TextMeshProUGUI time;
 		public TextMeshProUGUI timeRecord;
@@ -25,6 +26,10 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 		public TextMeshProUGUI scoreRecordTitle; 
 		public TextMeshProUGUI scoreRank;
 		public MPImage scoreBackground;
+
+		[Header("Leaderboards")] 
+		public CourseScoreSummary_Leaderboard timeLeaderboardDisplay;
+		public CourseScoreSummary_Leaderboard scoreLeaderboardDisplay;
 
 		public void SetCourse(DBCourseInfo courseInfo, bool requestScores = false) {
 			this.courseInfo = courseInfo;
@@ -72,13 +77,21 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 			}
 		}
 
-		public void SetScores(CourseScore lastScore, CourseScore highScore) {
+		public void SetScores(DBCourseScore lastScore, DBCourseScore highScore) {
 			this.lastScore = lastScore;
 			this.highScore = highScore;
 
 			if (highScore == null) {
 				this.highScore = lastScore;
 			}
+		}
+
+		public void SetLeaderboards(DBUserScore[] timeLeaderboard, DBUserScore[] scoreLeaderboard) {
+			this.timeLeaderboard = timeLeaderboard;
+			this.scoreLeaderboard = scoreLeaderboard;
+			
+			timeLeaderboardDisplay.SetLeaderboard(timeLeaderboard, CourseScoreSummary_Leaderboard_Type.Time);
+			scoreLeaderboardDisplay.SetLeaderboard(scoreLeaderboard, CourseScoreSummary_Leaderboard_Type.Score);
 		}
 	}
 }

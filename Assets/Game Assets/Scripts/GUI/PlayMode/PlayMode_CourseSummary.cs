@@ -25,9 +25,11 @@ public class PlayMode_CourseSummary : Popup {
 
 		ScoreCard.Refresh();
 		
-		scoreSummary.SetScores(courseTracker.courseScore, courseTracker.courseHighScore);
+		scoreSummary.SetScores(courseTracker.DBCourseScore, courseTracker.DBCourseHighScore);
 		scoreSummary.SetCourse(courseTracker.course.courseInfo);
 		scoreSummary.Refresh();
+		
+		scoreSummary.SetLeaderboards(courseTracker.timeLeaderboard, courseTracker.scoreLeaderboard);
 	}
 
 }
