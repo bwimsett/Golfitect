@@ -826,6 +826,10 @@
       <Project>{41e027ee-dde4-a340-b95f-bc028c92715b}</Project>
       <Name>LeTai.TranslucentImage</Name>
     </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.csproj">
+      <Project>{ddd25b2a-defb-43e8-33a2-aa15f73106cd}</Project>
+      <Name>LeTai.TranslucentImage.UniversalRP</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

@@ -1,7 +1,8 @@
 namespace Game_Assets.Scripts.Backend.Server {
 	public class DBObject {
 		public string _id;
-		public string userid;
+		public DBUser user;
 		public string name;
+		public int par;
 	}
 }

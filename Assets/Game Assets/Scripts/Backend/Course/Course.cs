@@ -18,6 +18,7 @@ namespace Backend.Course {
 
 		[JsonIgnore] public Level.Level[] holes;
 		public string name, description;
+		public int par { get; private set; }
 
 		[JsonConstructor]
 		public Course(string name, string description, string[] holeIDs) {
@@ -31,6 +32,7 @@ namespace Backend.Course {
 			this.description = description;
 			holeIDs = new string[holeData.Length];
 			for (int i = 0; i < holeIDs.Length; i++) {
+				par += holeData[i].par;
 				holeIDs[i] = holeData[i]._id;
 			}
 		}

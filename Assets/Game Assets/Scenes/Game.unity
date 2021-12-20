@@ -694,7 +694,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671935670365182639, guid: c505a35f423b33247859cda254e50d7a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2189393.5
+      value: -2190426
       objectReference: {fileID: 0}
     - target: {fileID: 7671935670555417699, guid: c505a35f423b33247859cda254e50d7a, type: 3}
       propertyPath: m_Name
@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 0}
   locString:
-    key: coursesummary_creatorname
+    key: course_creatorname
 --- !u!1 &679619934
 GameObject:
   m_ObjectHideFlags: 0

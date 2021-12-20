@@ -1,12 +1,14 @@
 
 
 using DG.Tweening;
+using GUI.MainMenu;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class StripeButton : MonoBehaviour {
 
 	public Image background, stripes;
+	public string backgroundColorID;
 	[SerializeField] private RectTransform resizeTarget;
 	[SerializeField] private Vector2 backgroundStartX, backgroundEndX;
 	[SerializeField] private float backgroundAnimationSpeed, scaleSpeed, shrinkSpeed;
@@ -17,8 +19,13 @@ public class StripeButton : MonoBehaviour {
 	private bool animateBackground;
 	private Tween currentBackgroundAnimation, currentBackgroundFade, currentEnlargeAnimation, currentShrinkAnimation;
 
-	void Awake() {
+	void Start() {
 		normalSize = resizeTarget.rect.size;
+		if (!string.IsNullOrEmpty(backgroundColorID)) {
+			Color targetColor = MainMenu.colorBank.GetColor(backgroundColorID);
+			targetColor = new Color(targetColor.r, targetColor.g, targetColor.b, 0);
+			stripes.color = targetColor;
+		}
 	}
 
 	private void ShowStripes() {

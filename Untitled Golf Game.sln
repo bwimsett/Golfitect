@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MPUIKit", "MPUIKit.csproj",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirenix.OdinInspector.CompatibilityLayer", "Sirenix.OdinInspector.CompatibilityLayer.csproj", "{ca060b67-3b07-c6b5-2cc5-dffd91503644}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeTai.TranslucentImage.UniversalRP", "LeTai.TranslucentImage.UniversalRP.csproj", "{ddd25b2a-defb-43e8-33a2-aa15f73106cd}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirenix.OdinInspector.CompatibilityLayer.Editor", "Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj", "{62370954-6062-6c73-e698-8a7a60ebffa2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{7648612d-4189-672f-f05b-efe913b5ba0d}"
@@ -47,6 +49,10 @@ Global
 		{ca060b67-3b07-c6b5-2cc5-dffd91503644}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ca060b67-3b07-c6b5-2cc5-dffd91503644}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ca060b67-3b07-c6b5-2cc5-dffd91503644}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ddd25b2a-defb-43e8-33a2-aa15f73106cd}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ddd25b2a-defb-43e8-33a2-aa15f73106cd}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ddd25b2a-defb-43e8-33a2-aa15f73106cd}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ddd25b2a-defb-43e8-33a2-aa15f73106cd}.Release|Any CPU.Build.0 = Release|Any CPU
 		{62370954-6062-6c73-e698-8a7a60ebffa2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{62370954-6062-6c73-e698-8a7a60ebffa2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62370954-6062-6c73-e698-8a7a60ebffa2}.Release|Any CPU.ActiveCfg = Release|Any CPU

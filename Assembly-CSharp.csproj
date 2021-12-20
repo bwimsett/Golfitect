@@ -99,7 +99,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\Popup.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\IntegerRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenu.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid_Option.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\LevelOptionGrid\LevelOptionGrid_Option.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\LevelUtility.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\TextLocalizer.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObject.cs" />
@@ -139,11 +139,15 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectBank.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\Tee.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\LevelOptionGrid\LevelOptionGrid.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\LevelOptionGrid\LevelOptionGrid.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Score.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseOverview\MainMenu_CourseOverview.cs" />
+     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\lib.hlsl" />
+     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\EfficientBlur_UniversalRP.shader" />
      <None Include="Assets\csc.rsp" />
+     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\FillCrop_UniversalRP.shader" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -867,6 +871,10 @@
     <ProjectReference Include="LeTai.TranslucentImage.csproj">
       <Project>{41e027ee-dde4-a340-b95f-bc028c92715b}</Project>
       <Name>LeTai.TranslucentImage</Name>
+    </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.csproj">
+      <Project>{ddd25b2a-defb-43e8-33a2-aa15f73106cd}</Project>
+      <Name>LeTai.TranslucentImage.UniversalRP</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

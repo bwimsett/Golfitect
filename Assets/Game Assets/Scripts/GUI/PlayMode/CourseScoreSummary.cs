@@ -33,6 +33,18 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 
 		public void SetCourse(DBCourseInfo courseInfo, bool requestScores = false) {
 			this.courseInfo = courseInfo;
+
+			if (requestScores) {
+				GameSceneManager.serverManager.GetUserCourseScore(courseInfo, scores => {
+					SetScores(null, scores);
+					GameSceneManager.serverManager.GetCourseLeaderboards(courseInfo, leaderboards => {
+						DBUserScore[] timeLeaderboard = new [] { leaderboards[0], leaderboards[1], leaderboards[2] };
+						DBUserScore[] scoreLeaderboard = new[] { leaderboards[3], leaderboards[4], leaderboards[5] };
+						SetLeaderboards(timeLeaderboard, scoreLeaderboard);
+						Refresh();
+					});
+				});
+			}
 		}
 
 		public void Refresh() {

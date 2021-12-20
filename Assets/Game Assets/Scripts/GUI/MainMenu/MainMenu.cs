@@ -2,6 +2,7 @@ using Backend.Enums;
 using Game_Assets.Scripts.GUI;
 using Game_Assets.Scripts.GUI.CourseCreator;
 using Game_Assets.Scripts.GUI.GenericComponent;
+using Game_Assets.Scripts.GUI.MainMenu.CourseOverview;
 using Game_Assets.Scripts.GUI.OptionList;
 using GUI.MainMenu.CourseSelector;
 using GUI.OptionList;
@@ -15,9 +16,15 @@ namespace GUI.MainMenu {
 		public static MainMenu_OptionList optionList;
 		[SerializeField] private MainMenu_Subwindow_CourseSelector _courseSelector;
 		public static MainMenu_Subwindow_CourseSelector courseSelector;
+
+		[SerializeField] private MainMenu_CourseOverview _courseOverview;
+		public static MainMenu_CourseOverview courseOverview;
 		
 		[SerializeField] private MainMenuPersistantUI _persistantUI;
 		public static MainMenuPersistantUI persistantUI;
+
+		[SerializeField] private GUIColorBank _colorBank;
+		public static GUIColorBank colorBank;
 
 		public static MainMenuLeaf currentLeaf;
 
@@ -30,7 +37,9 @@ namespace GUI.MainMenu {
 			persistantUI = _persistantUI;
 			optionList = _optionList;
 			courseSelector = _courseSelector;
-			
+			courseOverview = _courseOverview;
+			colorBank = _colorBank;
+
 			GenerateMainMenuTree();
 		}
 
