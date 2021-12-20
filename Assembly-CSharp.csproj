@@ -58,6 +58,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildMode_BuildOptionButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\BallControllerTool.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GUIColorBank.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary_Leaderboard.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseTracker.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\StripeButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelTimer.cs" />
@@ -85,6 +86,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameSceneManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\LevelObjectClass.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocString.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBUserScore.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBHoleInfo.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\Flag.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GridBackgroundGenerator.cs" />
@@ -110,6 +112,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocalisationManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\TextButtonCallback.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBCourseInfo.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary_LeaderboardItem.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectLayout.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\LocalizationRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenuLeaf.cs" />
@@ -128,6 +131,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\BWSteamUtility.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_CourseSummary.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LoadingScreenManager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBUser.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_LevelSummary.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBObject.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\PluralRule.cs" />
@@ -139,10 +143,6 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Score.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBUser.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBUserScore.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary_Leaderboard.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary_LeaderboardItem.cs" />
      <None Include="Assets\csc.rsp" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
