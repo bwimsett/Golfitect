@@ -82,6 +82,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\PersistantUI\PersistantUI_BackButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\LevelTimerDisplay.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\TextTabs.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseOverview\MainMenu_CourseOverview.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\Locale.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameSceneManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\LevelObjectClass.cs" />
@@ -143,7 +144,6 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Score.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseOverview\MainMenu_CourseOverview.cs" />
      <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\lib.hlsl" />
      <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\EfficientBlur_UniversalRP.shader" />
      <None Include="Assets\csc.rsp" />
@@ -781,14 +781,14 @@
  <Reference Include="Unity.2D.Sprite.Editor">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
- <Reference Include="com.rlabrecque.steamworks.net.editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.ProBuilder">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="com.rlabrecque.steamworks.net.editor">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.Editor">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
@@ -852,6 +852,10 @@
       <Project>{ca060b67-3b07-c6b5-2cc5-dffd91503644}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.csproj">
+      <Project>{ddd25b2a-defb-43e8-33a2-aa15f73106cd}</Project>
+      <Name>LeTai.TranslucentImage.UniversalRP</Name>
+    </ProjectReference>
     <ProjectReference Include="MPUIKit.Editor.csproj">
       <Project>{079bdb49-b61d-0cc6-44f1-648e18e35587}</Project>
       <Name>MPUIKit.Editor</Name>
@@ -871,10 +875,6 @@
     <ProjectReference Include="LeTai.TranslucentImage.csproj">
       <Project>{41e027ee-dde4-a340-b95f-bc028c92715b}</Project>
       <Name>LeTai.TranslucentImage</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.csproj">
-      <Project>{ddd25b2a-defb-43e8-33a2-aa15f73106cd}</Project>
-      <Name>LeTai.TranslucentImage.UniversalRP</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

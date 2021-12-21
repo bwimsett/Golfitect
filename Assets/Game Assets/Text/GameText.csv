@@ -23,7 +23,7 @@ coursecreator_course_description,Placeholder text for course description field,C
 coursecreator_add_hole_button,Text shown on the hole grid for holes that can be added,Add,,
 coursecreator_remove_hole_button,Text shown on the hole grid for holes that can be removed,Added,,
 ,,,,
-courseoverview_playcount,The number of times the course has been played,{playcount} Plays,,
+courseoverview_playcount,The number of times the course has been played,{playcount} {{playcount}:plural:Play|Plays},,
 courseoverview_holecount_and_par,The number of holes and par for the course,{holecount} {{holecount}:plural: Hole|Holes} / {par} Par,,
 ,,,,
 hole_par,Par,Par {par},,

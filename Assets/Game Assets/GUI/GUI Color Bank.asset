@@ -21,6 +21,7 @@ MonoBehaviour:
     - generic_light_grey
     - generic_orange
     - generic_purple
+    - generic_black
     m_Values:
     - {r: 0.38431373, g: 0.8352941, b: 0.4627451, a: 1}
     - {r: 0.84705883, g: 0.24705882, b: 0.26666668, a: 1}
@@ -29,3 +30,4 @@ MonoBehaviour:
     - {r: 0.85882354, g: 0.85882354, b: 0.85882354, a: 1}
     - {r: 1, g: 0.6313726, b: 0.2470588, a: 1}
     - {r: 0.6334588, g: 0.38431373, b: 0.8352941, a: 1}
+    - {r: 0, g: 0, b: 0, a: 1}

@@ -21,8 +21,8 @@ namespace Game_Assets.Scripts.GUI.MainMenu.CourseOverview {
 		private Tween posTween, alphaTween;
 
 		public Image headerBackground;
-		public TextMeshProUGUI courseNameText, likesText;
-		public TextLocalizer creatorNameText, playCountText, holeCountText;
+		public TextMeshProUGUI courseNameText, likesText, playCountText;
+		public TextLocalizer creatorNameText, holeCountText;
 
 		public TextMeshProUGUI descriptionText;
 		public MPImage screenshotImage;
@@ -32,13 +32,16 @@ namespace Game_Assets.Scripts.GUI.MainMenu.CourseOverview {
 		private DBCourseInfo courseInfo;
 
 		public void Awake() {
-			headerBackground.color = global::GUI.MainMenu.MainMenu.colorBank.GetColor("generic_orange");
+			headerBackground.color = GameSceneManager.colorBank.GetColor("generic_orange");
 			canvasGroup.alpha = 0;
 			canvasGroup.interactable = canvasGroup.blocksRaycasts = false;
 		}
 		
 		public void SetCourse(DBCourseInfo courseInfo) {
 			this.courseInfo = courseInfo;
+
+			playCountText.text = "" + courseInfo.playcount;
+			likesText.text = "" + courseInfo.likes;
 			
 			courseNameText.text = courseInfo.name;
 			creatorNameText.SetFields(new Dictionary<string, object>(){{"username", courseInfo.user.username}});
@@ -58,7 +61,10 @@ namespace Game_Assets.Scripts.GUI.MainMenu.CourseOverview {
 			rectTransform.anchoredPosition = openStartPos;
 			rectTransform.DOAnchorPos(new Vector2(0, 0), openDuration).SetEase(openEase).OnComplete(() => {
 				canvasGroup.interactable = canvasGroup.blocksRaycasts = true;
+			}).OnPlay(()=> {
+				LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
 			});
+			
 			canvasGroup.DOFade(1, openDuration).SetEase(Ease.Linear);
 		}
 

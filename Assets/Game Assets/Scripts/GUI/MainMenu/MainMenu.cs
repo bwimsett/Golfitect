@@ -23,9 +23,6 @@ namespace GUI.MainMenu {
 		[SerializeField] private MainMenuPersistantUI _persistantUI;
 		public static MainMenuPersistantUI persistantUI;
 
-		[SerializeField] private GUIColorBank _colorBank;
-		public static GUIColorBank colorBank;
-
 		public static MainMenuLeaf currentLeaf;
 
 		void Awake() {
@@ -38,7 +35,6 @@ namespace GUI.MainMenu {
 			optionList = _optionList;
 			courseSelector = _courseSelector;
 			courseOverview = _courseOverview;
-			colorBank = _colorBank;
 
 			GenerateMainMenuTree();
 		}

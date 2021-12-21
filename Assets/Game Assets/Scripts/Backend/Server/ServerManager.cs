@@ -113,6 +113,10 @@ public class ServerManager : MonoBehaviour {
 			}));
 		});
 	}
+
+	public void GetUser(UnityAction<DBUser> onComplete) {
+		
+	}
 	
 	public void GetHole(string holeID, UnityAction<Level> onComplete) {
 		string uri = ugcUrl + "/holes/get?holeID=" + holeID;
@@ -246,6 +250,26 @@ public class ServerManager : MonoBehaviour {
 					score = JsonConvert.DeserializeObject<DBCourseScore>(result);
 				}
 				onComplete.Invoke(score);
+			}));
+		});
+	}
+
+	public void SubmitLike(DBCourseInfo course, bool like, UnityAction onComplete) {
+		GetAuthTicket(ticket => {
+			WWWForm form = new WWWForm();
+
+			var data = new {
+				like,
+				courseid = course._id
+			};
+			
+			form.AddField("ticket", ticket);
+			form.AddField("dat", JsonConvert.SerializeObject(data));
+
+			string uri = scoreUrl + "/courses/like";
+
+			StartCoroutine(PostRequest(uri, form, result => {
+				onComplete?.Invoke();
 			}));
 		});
 	}
