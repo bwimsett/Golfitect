@@ -144,6 +144,8 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Score.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayerProfile\PlayerProfileDisplay.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayerProfile\PlayerProfileTrigger.cs" />
      <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\lib.hlsl" />
      <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\EfficientBlur_UniversalRP.shader" />
      <None Include="Assets\csc.rsp" />

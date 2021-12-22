@@ -3,6 +3,7 @@ using Backend.Enums;
 using Backend.Managers;
 using DG.Tweening;
 using Game_Assets.Scripts.Backend.Server;
+using Game_Assets.Scripts.GUI.PlayerProfile;
 using Game_Assets.Scripts.GUI.PlayMode;
 using MPUIKIT;
 using TMPro;
@@ -23,6 +24,7 @@ namespace Game_Assets.Scripts.GUI.MainMenu.CourseOverview {
 		public Image headerBackground;
 		public TextMeshProUGUI courseNameText, likesText, playCountText;
 		public TextLocalizer creatorNameText, holeCountText;
+		public PlayerProfileTrigger courseCreatorProfileTrigger;
 
 		public TextMeshProUGUI descriptionText;
 		public MPImage screenshotImage;
@@ -45,6 +47,8 @@ namespace Game_Assets.Scripts.GUI.MainMenu.CourseOverview {
 			
 			courseNameText.text = courseInfo.name;
 			creatorNameText.SetFields(new Dictionary<string, object>(){{"username", courseInfo.user.username}});
+			
+			courseCreatorProfileTrigger.SetUser(courseInfo.user);
 
 			holeCountText.SetFields(new Dictionary<string, object>(){{"holecount", courseInfo.holeIDs.Length}, {"par", courseInfo.par}});
 			

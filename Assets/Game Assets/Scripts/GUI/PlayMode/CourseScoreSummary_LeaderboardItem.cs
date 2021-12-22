@@ -1,6 +1,7 @@
 using Backend.Course;
 using Game;
 using Game_Assets.Scripts.Backend.Server;
+using Game_Assets.Scripts.GUI.PlayerProfile;
 using TMPro;
 using UnityEngine;
 
@@ -10,6 +11,7 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 		public TextMeshProUGUI score;
 		public TextMeshProUGUI username;
 		private DBUserScore userScore;
+		public PlayerProfileTrigger profileTrigger;
 
 		public void SetScore(DBUserScore userScore, CourseScoreSummary_Leaderboard_Type type) {
 			this.userScore = userScore;
@@ -19,6 +21,8 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 				username.text = "";
 				return;
 			}
+			
+			profileTrigger.SetUser(userScore.user);
 			
 			if (type == CourseScoreSummary_Leaderboard_Type.Time) {
 				this.score.text = LevelTimer.GetTimeString(userScore.score.time);
