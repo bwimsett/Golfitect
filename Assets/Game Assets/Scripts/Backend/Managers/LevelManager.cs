@@ -83,9 +83,11 @@ public class LevelManager : MonoBehaviour {
 			case GameMode.Build: currentGameHUD = buildModeHUD; break;
 			case GameMode.Play:
 				levelTimer.StartTimer();
-				currentGameHUD = playModeHUD; break;
+				currentGameHUD = playModeHUD;
+				GameManager.currentLevel.Play();
+				break;
 		}
-		GameManager.currentLevel.Play();
+		
 		currentGameHUD.gameObject.SetActive(true);
 		currentGameHUD.Open();
 	}

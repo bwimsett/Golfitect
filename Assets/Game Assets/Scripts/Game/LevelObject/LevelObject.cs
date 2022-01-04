@@ -15,10 +15,10 @@ namespace Backend.Level {
 		[ShowIf("levelObjectClass", LevelObjectClass.Scenery)]
 		public bool snapToGrid;
 		public Sprite buildMenuIcon;
-		public bool showInBuildMenuDock, ballCollisions = true;
+		public bool showInBuildMenuDock, ballCollisions = true, rotatable;
 		[HideInInspector] public int objectID;
-		[HideInInspector] public Vector3 origin, scale;
-
+		[HideInInspector] public Vector3 origin, scale, rotation;
+		
 		[SerializeField] private bool tileTextures;
 		[ShowIf("tileTextures"), SerializeField] private int[] horizontalTextures, verticalTextures;
 
@@ -32,6 +32,9 @@ namespace Backend.Level {
 		public void Construct() {
 			objectID = gameObject.GetInstanceID();
 			buildModeCollider.enabled = true;
+			scale = transform.localScale;
+			origin = transform.localPosition;
+			rotation = transform.rotation.eulerAngles;
 			ConstructLevelObject();
 		}
 
@@ -62,6 +65,7 @@ namespace Backend.Level {
 		}
 		
 		public virtual LevelObjectSave Save() {
+			
 			return new LevelObjectSave(this);
 		}
 
@@ -73,13 +77,7 @@ namespace Backend.Level {
 			
 		}
 
-		public void SetScaleAndPosition(Vector3 scale, Vector3 position) {
-			this.scale = scale;
-			this.origin = position;
-
-			transform.localScale = scale;
-			transform.localPosition = position;
-
+		public void RefreshBuildModeCollider() {
 			// Generate build mode collider
 			if (!buildModeCollider) {
 				meshFilter.gameObject.layer = LevelManager.levelInputManager.levelSurfaceColliderLayerID;
@@ -88,6 +86,20 @@ namespace Backend.Level {
 			}
 			
 			buildModeCollider.sharedMesh = meshFilter.mesh;
+		}
+		
+		public void SetScaleAndPosition(Vector3 scale, Vector3 position, Vector3 rotation, bool setTransform) {
+			this.scale = scale;
+			this.origin = position;
+			this.rotation = rotation;
+
+			if (setTransform) {
+				transform.localScale = scale;
+				transform.localPosition = position;
+				transform.rotation = Quaternion.Euler(rotation);
+			}
+			
+			RefreshBuildModeCollider();
 			
 			RefreshTextures();
 		}
@@ -160,7 +172,7 @@ namespace Backend.Level {
 	public class LevelObjectSave {
 		[JsonProperty] public int objectTypeIndex { get; private set; } // Index of objecttypeid stored in the level class
 		public int objectID;
-		public Vector3Save origin, scale;
+		public Vector3Save origin, scale, rotation;
 
 		public LevelObjectSave() {
 			
@@ -171,11 +183,12 @@ namespace Backend.Level {
 			objectID = levelObject.objectID;
 			origin = new Vector3Save(levelObject.origin);
 			scale = new Vector3Save(levelObject.scale);
+			rotation = new Vector3Save(levelObject.rotation);
 		}
 
 		public void Load(LevelObject levelObject) {
 			levelObject.objectID = objectID;
-			levelObject.SetScaleAndPosition(scale.Vector3(), origin.Vector3());
+			levelObject.SetScaleAndPosition(scale.Vector3(), origin.Vector3(), rotation.Vector3(), true);
 			LoadLevelObject();
 		}
 

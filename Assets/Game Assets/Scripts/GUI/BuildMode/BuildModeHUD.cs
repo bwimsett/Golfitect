@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Backend.Enums;
@@ -13,10 +14,14 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 		private Transform tileDock, sceneryDock;
 		[SerializeField] private BuildMode_BuildOptionButton buildModeBuildOptionButtonPrefab;
 		private BuildMode_BuildOptionButton _currentSelectedBuildModeBuildOption;
-		
+		[SerializeField] private BuildMode_LevelSettings levelSettings;
+
+		[SerializeField] private RectTransform customisationOptionContainer;
+		[SerializeField] private BuildMode_CustomisationOption[] customisationOptions;
 		
 		protected override void OpenGameHUD() {
 			GenerateBuildOptions();
+			levelSettings.Refresh();
 		}
 		
 		private void GenerateBuildOptions() {
@@ -58,19 +63,21 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 			button.SetLevelObject(levelObject, this);
 		}
 
-		public void SelectBuildOptionFromDock (BuildMode_BuildOptionButton modeBuildOption) {
+		public void SelectBuildOptionFromDock(BuildMode_BuildOptionButton modeBuildOption) {
 			if (_currentSelectedBuildModeBuildOption) {
 				_currentSelectedBuildModeBuildOption.Deselect();
 			}
 
 			_currentSelectedBuildModeBuildOption = modeBuildOption;
-
+			
+			UpdateCustomisationOptionContainerPosition();
 		}
 
 		public void DeselectBuildOptionFromDock(BuildMode_BuildOptionButton modeBuildOption) {
 			if (_currentSelectedBuildModeBuildOption == modeBuildOption) {
 				_currentSelectedBuildModeBuildOption.Deselect();
 				_currentSelectedBuildModeBuildOption = null;
+				ClearCustomisationOptions();
 			}
 		}
 
@@ -78,6 +85,29 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 			if (_currentSelectedBuildModeBuildOption.levelObject.objectTypeID.Equals(prefab.objectTypeID)) {
 				DeselectBuildOptionFromDock(_currentSelectedBuildModeBuildOption);
 			}
+		}
+
+		public void ShowCustomisationOption(Type customisationOptionType) {
+			foreach (BuildMode_CustomisationOption customisationOption in customisationOptions) {
+				if (customisationOption.GetType() == customisationOptionType) {
+					customisationOption.gameObject.SetActive(true);
+					return;
+				}
+			}
+		}
+
+		public void ClearCustomisationOptions() {
+			foreach (BuildMode_CustomisationOption option in customisationOptions) {
+				option.gameObject.SetActive(false);
+			}
+		}
+
+		private void UpdateCustomisationOptionContainerPosition() {
+			if (!_currentSelectedBuildModeBuildOption) {
+				return;
+			}
+
+			customisationOptionContainer.transform.position = new Vector3(_currentSelectedBuildModeBuildOption.transform.position.x, customisationOptionContainer.transform.position.y);
 		}
 
 	}

@@ -53,7 +53,7 @@ namespace Backend.Level {
 				FlatGround splitObject = Instantiate(gameObject, LevelManager.levelObjectUtility.levelContainer).GetComponent<FlatGround>();
 				splitObjects.Add(splitObject);
 				splitObject.isTemporary = true;
-				splitObject.SetScaleAndPosition(LevelManager.levelGrid.WorldScaleToGridScale(dimensions), LevelManager.levelGrid.GridCoordinateToWorldPosition(origins[i]));
+				splitObject.SetScaleAndPosition(LevelManager.levelGrid.WorldScaleToGridScale(dimensions), LevelManager.levelGrid.GridCoordinateToWorldPosition(origins[i]), Vector3.zero, true);
 				splitObject.buildModeCollider.enabled = false;
 			}
 			meshRenderer.enabled = false;

@@ -10,9 +10,11 @@ using Object = UnityEngine.Object;
 namespace Backend.Level {
 	[Serializable]
 	public class Level : ServerSerializable {
+
+		public static int maxPar = 12;
 		
 		public int par = 3;
-		public string name ="Level", description = "Description";
+		public string name ="New Level", description = "Description";
 
 		[HideInInspector, JsonIgnore] public Ball ball;
 
@@ -33,6 +35,7 @@ namespace Backend.Level {
 				obj.Value.EnterPlayMode();
 			}
 			
+			LevelManager.levelGrid.drawGrid = false;
 			RefreshLevelCollider();
 			LevelManager.levelInputManager.ballControllerTool.SetActive(true);
 		}

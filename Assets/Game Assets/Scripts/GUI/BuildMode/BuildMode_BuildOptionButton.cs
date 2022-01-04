@@ -1,9 +1,11 @@
 using System;
+using Backend.Enums;
 using Backend.Level;
 using DG.Tweening;
 using Game_Assets.Scripts.GUI.GenericComponent;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.WSA;
 
 namespace Game_Assets.Scripts.GUI.LevelBuilder {
 	public class BuildMode_BuildOptionButton : GUIScaleOnMouseover {
@@ -26,12 +28,20 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 			hud.SelectBuildOptionFromDock(this);
 			LevelManager.levelInputManager.levelBuilderTool.SetActive(true);
 			LevelManager.levelInputManager.levelBuilderTool.SetLevelObject(levelObject);
-			
+			ShowCustomisationOptions();
 		}
 
 		public void OnDeselect() {
 			hud.DeselectBuildOptionFromDock(this);
 			LevelManager.levelInputManager.levelBuilderTool.SetActive(false);
+		}
+
+		private void ShowCustomisationOptions() {
+			if (levelObject.levelObjectClass != LevelObjectClass.Tile) {
+				return;
+			}
+			
+			hud.ShowCustomisationOption(typeof(CustomisationOption_Height));
 		}
 	}
 }
