@@ -22,7 +22,8 @@ namespace Backend.Level {
 			Vector3Int splitGridPos = LevelManager.levelGrid.WorldPositionToGridCoordinate(splitPoint);
 
 			// Ignore invalid coordinates
-			if (splitGridPos.x >= limitGridPos.x || splitGridPos.y >= limitGridPos.y || splitGridPos.z >= limitGridPos.z) {
+			if (splitGridPos.x >= limitGridPos.x || splitGridPos.z >= limitGridPos.z) {
+				Debug.Log("Invalid coordinates. Split: "+splitGridPos.ToString()+", limit: "+limitGridPos.ToString());
 				return;
 			}
 			
@@ -46,6 +47,9 @@ namespace Backend.Level {
 			for (int i = 0; i < origins.Length; i++) {
 				Vector3Int dimensions = limits[i] - origins[i];
 				int volume = Mathf.Abs(dimensions.x * dimensions.y * dimensions.z);
+				
+				Debug.Log("Volume: "+volume);
+				
 				if (volume == 0) {
 					continue;
 				}

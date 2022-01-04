@@ -78,15 +78,9 @@ public class LevelBuilderTool : Tool {
 
 	public void SetTileHeight(int tileHeight) {
 		this.tileHeight = tileHeight;
-		RefreshPlacingScale();
+		RefreshScaleAndPosition();
 	}
 
-	private void RefreshPlacingScale() {
-		Vector3 currentScale = placing.transform.localScale;
-		float newHeight = LevelManager.levelGrid.GridHeightToWorldHeight(tileHeight);
-		placing.transform.localScale = new Vector3(currentScale.x, newHeight, currentScale.z);
-	}
-	
 	private void Place() {
 		//foreach (Tuple<Vector3Int, GameObject> placingObject in placing) {
 			//LevelObject levelObject = placingObject.Item2.GetComponent<LevelObject>();
@@ -122,11 +116,9 @@ public class LevelBuilderTool : Tool {
 			limit = GetLimit(gridStartPos, gridEndPos);
 
 			Vector3 scale = limit - origin;
-			scale = new Vector3(Mathf.Max(1, scale.x), Mathf.Max(1, scale.y), Mathf.Max(1, scale.z));
+			scale = new Vector3(Mathf.Max(1, scale.x),  LevelManager.levelGrid.GridHeightToWorldHeight(tileHeight), Mathf.Max(1, scale.z));
 
 			placing.SetScalePositionAndRotation(scale, origin, new Vector3(0, rotation, 0));
-			
-			RefreshPlacingScale();
 		} else {
 			Vector3 pos = Vector3.zero;
 			bool isLevelSurface = LevelManager.levelInputManager.GetMouseLevelSurfacePosition(out RaycastHit hit);
