@@ -9,6 +9,7 @@ using UnityEngine;
 public class LevelGrid : MonoBehaviour {
 
 	private Grid grid;
+	public Vector3 cellDimensions => grid.cellSize;
 	private BoxCollider collider;
 	[SerializeField] private float gridThickness;
 	[SerializeField] private Color gridColor;
@@ -16,6 +17,7 @@ public class LevelGrid : MonoBehaviour {
 
 	private Vector3 gridOffset;
 	private int layer = 0;
+	private float layer_y;
 	[SerializeField] private KeyCode layerUpKey, layerDownKey;
 	
 	void Update() {
@@ -46,7 +48,7 @@ public class LevelGrid : MonoBehaviour {
 		Draw.LineGeometry = LineGeometry.Volumetric3D;
 		Draw.ThicknessSpace = ThicknessSpace.Meters;
 		Draw.Thickness = gridThickness;
-		Draw.Matrix = transform.localToWorldMatrix;
+		//Draw.Matrix = transform.localToWorldMatrix;
 
 		Vector3Int dimensions = GameManager.currentLevel.levelDimensions;
 
@@ -59,12 +61,15 @@ public class LevelGrid : MonoBehaviour {
 			Vector3Int endCoord = new Vector3Int(pos, layer, depth);
 			Vector3 worldStart = GridCoordinateToWorldPosition(startCoord)+gridOffset;
 			Vector3 worldEnd = GridCoordinateToWorldPosition(endCoord)+gridOffset;
+			worldStart.y = worldEnd.y = layer_y;
+
 			Draw.Line(worldStart, worldEnd, gridColor);
 
 			startCoord = new Vector3Int(0, layer, pos);
 			endCoord = new Vector3Int(width, layer, pos);
 			worldStart = GridCoordinateToWorldPosition(startCoord)+gridOffset;
 			worldEnd = GridCoordinateToWorldPosition(endCoord)+gridOffset;
+			worldStart.y = worldEnd.y = layer_y;
 			Draw.Line(worldStart, worldEnd, gridColor);
 		}
 		
@@ -79,9 +84,7 @@ public class LevelGrid : MonoBehaviour {
 	}
 
 	public Vector3 GridCoordinateToWorldPosition(Vector3Int gridCoordinate) {
-		Vector3 pos = grid.GetCellCenterWorld(gridCoordinate);
-		pos = pos - grid.cellSize / 2f;
-		return pos;
+		return grid.CellToWorld(gridCoordinate);
 	}
 
 	public Vector3 WorldScaleToGridScale(Vector3 scale) {
@@ -94,7 +97,8 @@ public class LevelGrid : MonoBehaviour {
 
 	public void IncrementGridLayer(int amount) {
 		layer = Mathf.Min(GameManager.currentLevel.levelDimensions.y / 2, Mathf.Max(-GameManager.currentLevel.levelDimensions.y / 2, layer + amount));
-		transform.position = new Vector3(transform.position.x, layer * grid.cellSize.y, transform.position.z);
+		layer_y = layer * grid.cellSize.y;
+		transform.position = new Vector3(transform.position.x, layer_y, transform.position.z);
 	}
 
 }

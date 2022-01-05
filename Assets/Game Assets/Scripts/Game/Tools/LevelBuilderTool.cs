@@ -12,7 +12,6 @@ using UnityEngine.Rendering;
 public class LevelBuilderTool : Tool {
 
 	private LevelObject currentLevelObject;
-	private List<GameObject> objectCache;
 
 	private LevelObjectScaleParent placing;
 	private Vector3 startPosition, endPosition, origin, limit;
@@ -160,22 +159,16 @@ public class LevelBuilderTool : Tool {
 	
 	public void SetLevelObject(LevelObject levelObject) {
 		this.currentLevelObject = levelObject;
-		ClearObjectCache();
-		objectCache = new List<GameObject>();
+		if (placing) {
+			Destroy(placing.gameObject);
+		}
+		placing = null;
 
 		if (!levelObject.rotatable) {
 			rotation = 0;
 		}
+		
+		RefreshScaleAndPosition();
 	}
 
-	private void ClearObjectCache() {
-		if (objectCache == null) {
-			return;
-		}
-		
-		foreach (GameObject g in objectCache) {
-			Destroy(g);
-		}
-	}
-	
 }

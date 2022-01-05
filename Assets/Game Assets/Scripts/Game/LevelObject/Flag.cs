@@ -8,6 +8,7 @@ namespace Backend.Level {
 		public override void LevelBuilderHover(RaycastHit hit) {
 			if (hit.collider == null) {
 				ResetSplitGround();
+				return;
 			}
 			
 			LevelObject hitObject = hit.collider.GetComponent<LevelObject>();

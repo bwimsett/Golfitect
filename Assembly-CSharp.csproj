@@ -114,6 +114,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseSelector\MainMenu_Subwindow_CourseSelector.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\Level.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\CustomisationOption\BuildMode_CustomisationOption.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\LocalisationInitializer.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocalisationManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\TextButtonCallback.cs" />
@@ -121,6 +122,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary_LeaderboardItem.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectLayout.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\LocalizationRule.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\CustomisationOption\CustomisationOption_Height.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Ball\BallHandle.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenuLeaf.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Hole.cs" />
@@ -152,8 +154,6 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\DrawingManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\CustomisationOption\BuildMode_CustomisationOption.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\CustomisationOption\CustomisationOption_Height.cs" />
      <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\lib.hlsl" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Darken.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Multiplicative.shader" />

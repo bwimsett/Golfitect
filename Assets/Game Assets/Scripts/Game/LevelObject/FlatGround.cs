@@ -16,14 +16,18 @@ namespace Backend.Level {
 			if (isTemporary) {
 				return;
 			}
-			
-			Vector3Int originGridPos = LevelManager.levelGrid.WorldPositionToGridCoordinate(origin);
-			Vector3Int limitGridPos = LevelManager.levelGrid.WorldPositionToGridCoordinate(origin + scale);
-			Vector3Int splitGridPos = LevelManager.levelGrid.WorldPositionToGridCoordinate(splitPoint);
 
+			LevelGrid levelGrid = LevelManager.levelGrid;
+			
+			Vector3Int originGridPos = levelGrid.WorldPositionToGridCoordinate(origin);
+			Vector3Int limitGridPos = levelGrid.WorldPositionToGridCoordinate(origin + scale);
+			Vector3Int splitGridPos = levelGrid.WorldPositionToGridCoordinate(splitPoint);
+
+			Debug.Log("Origin: "+originGridPos.ToString()+", Limit: "+limitGridPos.ToString()+", split: "+splitGridPos.ToString()+", scale: "+scale.ToString());
+			
 			// Ignore invalid coordinates
 			if (splitGridPos.x >= limitGridPos.x || splitGridPos.z >= limitGridPos.z) {
-				Debug.Log("Invalid coordinates. Split: "+splitGridPos.ToString()+", limit: "+limitGridPos.ToString());
+				//Debug.Log("Invalid coordinates. Split: "+splitGridPos.ToString()+", limit: "+limitGridPos.ToString());
 				return;
 			}
 			
@@ -48,7 +52,7 @@ namespace Backend.Level {
 				Vector3Int dimensions = limits[i] - origins[i];
 				int volume = Mathf.Abs(dimensions.x * dimensions.y * dimensions.z);
 				
-				Debug.Log("Volume: "+volume);
+				Debug.Log($"Dimensions: {dimensions.ToString()}, Volume: {volume}");
 				
 				if (volume == 0) {
 					continue;

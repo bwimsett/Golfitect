@@ -65,7 +65,7 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 
 		public void SelectBuildOptionFromDock(BuildMode_BuildOptionButton modeBuildOption) {
 			if (_currentSelectedBuildModeBuildOption) {
-				_currentSelectedBuildModeBuildOption.Deselect();
+				DeselectBuildOptionFromDock(_currentSelectedBuildModeBuildOption);
 			}
 
 			_currentSelectedBuildModeBuildOption = modeBuildOption;
