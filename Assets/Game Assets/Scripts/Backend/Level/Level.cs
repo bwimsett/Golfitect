@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Backend.Enums;
 using Backend.Serialization;
+using DigitalOpus.MB.Core;
 using Game;
 using Newtonsoft.Json;
 using UnityEngine;
@@ -76,7 +77,7 @@ namespace Backend.Level {
 		public void RefreshLevelCollider() {
 			Mesh colliderMesh = new Mesh();
 			List<CombineInstance> combineInstances = new List<CombineInstance>();
-			
+
 			foreach (KeyValuePair<int, LevelObject> obj in objects) {
 				if (!obj.Value.ballCollisions) {
 					continue;
@@ -87,7 +88,55 @@ namespace Backend.Level {
 
 			colliderMesh.CombineMeshes(combineInstances.ToArray(), true, true);
 
+			colliderMesh = WeldMeshVertices(colliderMesh, 0.01f);
+
 			LevelManager.levelCollider.sharedMesh = colliderMesh;
+		}
+
+		private Mesh WeldMeshVertices(Mesh mesh, float weldThreshold) {
+			// ---------- Weld vertices -----------
+			// First get vertices and triangles
+			List<Vector3> vertices = new List<Vector3>();
+			List<int> removedVertices = new List<int>();
+			vertices.AddRange(mesh.vertices);
+			int[] triangles = mesh.triangles;
+			int weldedCount = 0;
+			
+			// Loop through vertices and look for similar / identical positions
+			for (int v1 = 0; v1 < vertices.Count; v1++) {
+				if (removedVertices.Contains(v1)) {
+					continue;
+				}
+				
+				Vector3 vert1 = vertices[v1];
+				// Loop through all other verts for comparison
+				for (int v2 = v1+1; v2 < vertices.Count; v2++) {
+					Vector3 vert2 = vertices[v2];
+					float distance = (vert1 - vert2).magnitude;
+					
+					// If the vertices are extremely close, weld them
+					if (distance > weldThreshold) {
+						continue;
+					}
+
+					// Set all v2 vertices to v1
+					for (int triIndex = 0; triIndex < triangles.Length; triIndex++) {
+						if (triangles[triIndex] == v2) {
+							triangles[triIndex] = v1;
+						}
+					}
+					
+					removedVertices.Add(v2);
+					weldedCount++;
+				}
+			}
+
+			// Set vertices and triangles
+			mesh.SetVertices(vertices);
+			mesh.SetTriangles(triangles, 0);
+			Debug.Log("Verts welded: "+weldedCount);
+			
+			return mesh;
 		}
 		
 		public int GetObjectIndexFromID(string objectTypeID) {

@@ -14,7 +14,7 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 		private Transform tileDock, sceneryDock;
 		[SerializeField] private BuildMode_BuildOptionButton buildModeBuildOptionButtonPrefab;
 		private BuildMode_BuildOptionButton _currentSelectedBuildModeBuildOption;
-		[SerializeField] private BuildMode_LevelSettings levelSettings;
+		public BuildMode_LevelSettings levelSettings;
 
 		[SerializeField] private RectTransform customisationOptionContainer;
 		[SerializeField] private BuildMode_CustomisationOption[] customisationOptions;

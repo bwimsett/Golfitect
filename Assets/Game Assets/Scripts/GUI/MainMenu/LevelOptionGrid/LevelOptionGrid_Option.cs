@@ -70,12 +70,14 @@ namespace GUI.LevelOptionGrid {
 		}
 
 		public void OnClick() {
+			if (_dbObject == null) {
+				return;
+			}
+			
 			if (_dbObject is DBCourseInfo course) {
 				MainMenu.MainMenu.courseOverview.Open(course);
 				return;
 			}
-			
-			LoadingScreenManager.Load(_dbObject, GameMode.Play);
 		}
 
 	}

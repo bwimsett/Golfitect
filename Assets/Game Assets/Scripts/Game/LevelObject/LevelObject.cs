@@ -29,6 +29,10 @@ namespace Backend.Level {
 			
 		}
 
+		public virtual void OnLevelBuilderCancel() {
+			
+		}
+
 		public void Construct() {
 			objectID = gameObject.GetInstanceID();
 			buildModeCollider.enabled = true;

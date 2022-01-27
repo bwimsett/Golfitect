@@ -21,11 +21,13 @@ public class LevelGrid : MonoBehaviour {
 	[SerializeField] private KeyCode layerUpKey, layerDownKey;
 	
 	void Update() {
-		if (Input.GetKeyDown(layerUpKey)) {
+		bool nameFieldFocused = LevelManager.buildModeHUD.levelSettings.levelNameField.isFocused;
+		
+		if (Input.GetKeyDown(layerUpKey) && !nameFieldFocused) {
 			IncrementGridLayer(1);
 		}
 
-		if (Input.GetKeyDown(layerDownKey)) {
+		if (Input.GetKeyDown(layerDownKey) && !nameFieldFocused) {
 			IncrementGridLayer(-1);
 		}
 	}

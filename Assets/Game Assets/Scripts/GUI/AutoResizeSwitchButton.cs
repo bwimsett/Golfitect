@@ -17,8 +17,13 @@ namespace Game_Assets.Scripts.GUI {
 
 		public Action<bool> OnClickAction;
 
+		void Awake() {
+			onTextLocaliser.RefreshString();
+			offTextLocaliser.RefreshString();
+		}
+		
 		void Start() {
-			SetState(state, false);
+			SetState(state, true);
 		}
 		
 		public void OnClick() {

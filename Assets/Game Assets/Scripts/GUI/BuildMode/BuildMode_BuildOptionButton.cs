@@ -4,6 +4,7 @@ using Backend.Level;
 using DG.Tweening;
 using Game_Assets.Scripts.GUI.GenericComponent;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.WSA;
 
@@ -25,6 +26,11 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 		}
 
 		public void OnSelect() {
+			// Ignore right clicks
+			if (Input.GetMouseButtonDown(1)) {
+				return;
+			}
+			
 			hud.SelectBuildOptionFromDock(this);
 			LevelManager.levelInputManager.levelBuilderTool.SetActive(true);
 			LevelManager.levelInputManager.levelBuilderTool.SetLevelObject(levelObject);

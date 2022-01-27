@@ -86,6 +86,8 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 			} else {
 				timeRecord.text = "-:-";
 				scoreRecord.text = "-";
+				timeRank.text = "-";
+				scoreRank.text = "-";
 			}
 		}
 

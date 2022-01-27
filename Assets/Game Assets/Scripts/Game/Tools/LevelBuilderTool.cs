@@ -36,6 +36,11 @@ public class LevelBuilderTool : Tool {
 	}
 
 	protected override void OnMouseDown() {
+		if (pointerOverGUI) {
+			mouseDown = false;
+			return;
+		}
+		
 		startPosition = endPosition = mousePosition;
 		mouseDown = true;
 		LevelManager.cameraController.DisableDrag(this);
@@ -43,11 +48,20 @@ public class LevelBuilderTool : Tool {
 	}
 
 	protected override void MouseDown() {
+		if (!mouseDown) {
+			return;
+		}
+		
 		endPosition = mousePosition;
 		RefreshScaleAndPosition();
 	}
 
 	protected override void OnMouseUp() {
+		if (!mouseDown) {
+			return;
+		}
+
+		mouseDown = false;
 		LevelManager.cameraController.EnableDrag(this);
 		Place();
 		startPosition = endPosition = mousePosition;
@@ -59,8 +73,13 @@ public class LevelBuilderTool : Tool {
 	}
 
 	protected override void Deactivate() {
+		mouseDown = false;
+		LevelManager.cameraController.EnableDrag(this);
 		LevelManager.buildModeHUD.DeselectBuildOptionFromDock(currentLevelObject);
 		currentLevelObject = null;
+		if (placing.levelObject) {
+			placing.levelObject.OnLevelBuilderCancel();
+		}
 		Destroy(placing.gameObject);
 	}
 

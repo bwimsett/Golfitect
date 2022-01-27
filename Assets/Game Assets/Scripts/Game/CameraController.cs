@@ -21,7 +21,7 @@ namespace Game {
 
 		private void UpdateDrag() {
 			// Don't control camera if drag has been disabled
-			if (!enableDrag || EventSystem.current.IsPointerOverGameObject()) {
+			if (!enableDrag) {
 				return;
 			}
 			
@@ -59,6 +59,8 @@ namespace Game {
 			if (dragDisablers.Count == 0) {
 				enableDrag = true;
 			}
+
+			mouseStart = Input.mousePosition;
 		}
 		
 		public void Initialise() {

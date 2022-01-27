@@ -45,6 +45,8 @@ namespace Backend.Level {
 			}
 		}
 
-		
+		public override void OnLevelBuilderCancel() {
+			ResetSplitGround();
+		}
 	}
 }

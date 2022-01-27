@@ -8,12 +8,14 @@ namespace Game.Tools {
 		private bool active;
 		protected bool mouseInGrid;
 		protected Vector3 mousePosition;
+		protected bool pointerOverGUI;
 
 		void Update() {
-			if (!active || EventSystem.current.IsPointerOverGameObject()) {
+			if (!active) {
 				return;
 			}
 
+			pointerOverGUI = EventSystem.current.IsPointerOverGameObject();
 			ToolUpdate();
 			HandleInput();
 		}
