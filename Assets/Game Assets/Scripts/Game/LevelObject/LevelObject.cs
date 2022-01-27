@@ -46,6 +46,8 @@ namespace Backend.Level {
 			if (buildModeCollider) {
 				buildModeCollider.enabled = true;
 			}
+			
+			LevelObjectEnterBuildMode();
 		}
 
 		protected virtual void LevelObjectEnterBuildMode() {
@@ -59,11 +61,11 @@ namespace Backend.Level {
 			
 			LevelObjectEnterPlayMode();
 		}
-
+		
 		protected virtual void LevelObjectEnterPlayMode() {
 			
 		}
-		
+
 		public virtual LevelObjectSave Save() {
 			
 			return new LevelObjectSave(this);

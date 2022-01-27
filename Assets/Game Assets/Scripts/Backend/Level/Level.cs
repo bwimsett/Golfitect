@@ -34,10 +34,24 @@ namespace Backend.Level {
 			foreach (KeyValuePair<int, LevelObject> obj in objects) {
 				obj.Value.EnterPlayMode();
 			}
-			
+
+			LevelManager.levelGrid.collider.enabled = false;
 			LevelManager.levelGrid.drawGrid = false;
 			RefreshLevelCollider();
 			LevelManager.levelInputManager.ballControllerTool.SetActive(true);
+		}
+
+		public void BuildMode() {
+			foreach (KeyValuePair<int, LevelObject> obj in objects) {
+				obj.Value.EnterBuildMode();
+			}
+
+			LevelManager.levelGrid.collider.enabled = true;
+			LevelManager.levelGrid.drawGrid = true;
+			LevelManager.levelInputManager.ballControllerTool.SetActive(false);
+			if (ball) {
+				ball.Destroy();
+			}
 		}
 		
 		public void Place(Vector3 origin, LevelObject levelObject) {

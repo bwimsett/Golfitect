@@ -10,7 +10,7 @@ public class LevelGrid : MonoBehaviour {
 
 	private Grid grid;
 	public Vector3 cellDimensions => grid.cellSize;
-	private BoxCollider collider;
+	public BoxCollider collider { get; private set; }
 	[SerializeField] private float gridThickness;
 	[SerializeField] private Color gridColor;
 	public bool drawGrid;

@@ -13,11 +13,11 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{a058fdef-711c-78ca-3bae-22c7b007ea7b}</ProjectGuid>
+    <ProjectGuid>{167b1156-2e1c-7ee6-ca51-8c66fb8e7c08}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>MeshBakerEditor</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -52,286 +52,47 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\Spinner.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayModeHUD.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Course\Course.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\ScoreCard.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildMode_BuildOptionButton.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\Tools\BallControllerTool.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GUIColorBank.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary_Leaderboard.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseTracker.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\StripeButton.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildMode_PlayButton.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\LevelTimer.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\ServerSerializable.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator_HolesList.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\Tools\LevelBuilderTool.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\ScoreCard_Score.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIHighlightOnMouseover.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameManager.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenu_Subwindow.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\HoleScore.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayerProfile\PlayerProfileDisplay.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\OptionList\MainMenu_OptionList.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenuPersistantUI.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\Tools\Tool.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LevelInputManager.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\Ball\Ball.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\IndexRule.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\SteamManager.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator_HolesList_Number.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\PersistantUI\PersistantUI_BackButton.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\LevelTimerDisplay.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\TextTabs.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseOverview\MainMenu_CourseOverview.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\Locale.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameSceneManager.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\LevelObjectClass.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocString.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBUserScore.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBHoleInfo.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\Flag.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GridBackgroundGenerator.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\SteamItemData.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\GameMode.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\FlagTrigger.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameLevelCommands.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\LevelBuilder\LevelObjectScaleParent.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\ShiftXOnMouseover.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\LevelType.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\Popup.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\IntegerRule.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenu.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\Ball\LockRotation.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\LevelOptionGrid\LevelOptionGrid_Option.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Level\LevelUtility.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\TextLocalizer.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayerProfile\PlayerProfileTrigger.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObject.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectUtility.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\CameraController.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseSelector\MainMenu_Subwindow_CourseSelector.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Level\Level.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\CustomisationOption\BuildMode_CustomisationOption.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\LocalisationInitializer.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocalisationManager.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\TextButtonCallback.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBCourseInfo.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary_LeaderboardItem.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectLayout.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\LocalizationRule.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\CustomisationOption\CustomisationOption_Height.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\Ball\BallHandle.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenuLeaf.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Hole.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\LevelBuilder\LevelGrid.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\OptionList\MainMenu_OptionList_Option.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Course\SteamCourseData.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\DBCourseScore.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LevelManager.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Vector3Save.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\FlatGround.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\AutoResizeSwitchButton.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\GolfGameMainMenuCommands.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\ServerManager.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GameHUD.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildMode_LevelSettings.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\BWSteamUtility.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_CourseSummary.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LoadingScreenManager.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBUser.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_LevelSummary.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBObject.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\PluralRule.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildModeHUD.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectBank.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\Tee.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\LevelOptionGrid\LevelOptionGrid.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Score.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\DrawingManager.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\lib.hlsl" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Line 3D Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Regular Polygon Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Regular Polygon Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 2D Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Quad Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\DashUtils.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 2D ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\FillUtils.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Quad LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Shapes.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Quad Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Regular Polygon Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Disc Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Sphere Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Quad Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Regular Polygon Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Polyline 2D Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Quad Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Rect Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Core\Triangle Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 2D Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Shapes Math.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Regular Polygon ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 2D Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 2D Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Regular Polygon LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 2D ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Quad ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Cone Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 2D Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Quad Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Quad Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Regular Polygon Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Torus Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Regular Polygon ColorBurn.shader" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\EfficientBlur_UniversalRP.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 2D LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Line 2D Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Core\Quad Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc Additive.shader" />
-     <None Include="Assets\csc.rsp" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 2D Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Quad ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Texture Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon Multiplicative.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Regular Polygon Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Shapes Config.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 2D Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Regular Polygon Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Regular Polygon Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 2D Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Cuboid Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D Subtractive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Core\Polygon Core.cginc" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D ColorBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Quad Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Opaque.shader" />
-     <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\FillCrop_UniversalRP.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere Additive.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Regular Polygon Screen.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D LinearBurn.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture Darken.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Lighten.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere ColorDodge.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere Transparent.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere Opaque.shader" />
-     <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Quad Additive.shader" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_MultiMeshBakerEditor.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByEnabledDisabled.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\propertyDrawers\MB3_ShaderTexturePropertyDrawer.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByShader.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB_ReplacePrefabsInSceneEditorWindow.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB_TextureBakerEditorConfigureTextureArrays.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\core\MB3_BakeInPlace.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerSettingsEditor.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\core\MB_ReplacePrefabsInScene.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\propertyDrawers\MB_PrefabPairPropertyDrawer.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_BatchPrefabBakerEditor.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\core\MB3_MeshBakerEditorFunctions.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_MBVersionConcreteEditor.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\core\MB_BatchPrefabBakerEditorFunctions.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerEditorWindowAddObjectsTab.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByAlreadyAdded.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\core\MB3_MBVersionEditor.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB_BuildPreprocessChecker.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByLightmapIndex.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByOutOfBoundsUVs.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByRenderType.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB_TextureBakerEditorConfigureMultiMaterials.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_BoneWeightCopierEditor.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_TextureBakerEditor.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\core\MB_EditorUtil.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerEditorWindow.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_TextureBakerEditorInternal.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB_ReplacePrefabsSettings.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_SearchFilters.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerEditorWindowAnalyseSceneTab.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerEditorInternal.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerSettingsAssetEditor.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByMaterial.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\core\MB3_TextureCombinerEditorFunctions.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerEditor.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByStandardShaderType.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_DisableHiddenAnimationsEditor.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\searchFilters\MB3_GroupByStatic.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\propertyDrawers\MB_ConvertTextureArrayFormatWizard.cs" />
+     <Compile Include="Assets\MeshBaker\Editor\MB3_MeshBakerGrouperEditor.cs" />
+     <None Include="Assets\MeshBaker\Editor\MeshBakerEditor.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -554,17 +315,41 @@
  <Reference Include="UnityEditor.UnityConnectModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WebGL.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
  <Reference Include="Sirenix.Utilities.Editor">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
  </Reference>
  <Reference Include="DemiLib">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Plastic.Antlr3.Runtime">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="DOTweenProEditor">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
+ </Reference>
  <Reference Include="Sirenix.OdinInspector.Editor">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="DOTweenEditor">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="DemiEditor">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+ </Reference>
  <Reference Include="Sirenix.OdinInspector.Attributes">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+ </Reference>
+ <Reference Include="log4netPlastic">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Serialization.Config">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
@@ -575,6 +360,9 @@
  <Reference Include="DOTween">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
+ <Reference Include="ICSharpCode.NRefactory">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+ </Reference>
  <Reference Include="Newtonsoft.Json">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
@@ -583,6 +371,12 @@
  </Reference>
  <Reference Include="DOTweenPro">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ </Reference>
+ <Reference Include="unityplastic">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -935,142 +729,23 @@
  <Reference Include="System.Web">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Web.dll</HintPath>
  </Reference>
- <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Shaders">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Runtime">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
- </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Searcher.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
- </Reference>
- <Reference Include="com.rlabrecque.steamworks.net.editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
- <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
- <Reference Include="com.rlabrecque.steamworks.net">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Universal.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Mathematics.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ <Reference Include="UnityEditor.TestRunner">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{d1f9e1f7-095d-3289-d8fa-220a00617c24}</Project>
-      <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
-    <ProjectReference Include="MPUIKit.csproj">
-      <Project>{6d6ebff6-93e9-c2cd-c060-bb871849b2be}</Project>
-      <Name>MPUIKit</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
-      <Project>{ca060b67-3b07-c6b5-2cc5-dffd91503644}</Project>
-      <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.csproj">
-      <Project>{ddd25b2a-defb-43e8-33a2-aa15f73106cd}</Project>
-      <Name>LeTai.TranslucentImage.UniversalRP</Name>
-    </ProjectReference>
-    <ProjectReference Include="MPUIKit.Editor.csproj">
-      <Project>{079bdb49-b61d-0cc6-44f1-648e18e35587}</Project>
-      <Name>MPUIKit.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
-      <Project>{0daee573-1afa-b1a7-4aa5-d8cae8a958f5}</Project>
-      <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
-    </ProjectReference>
-    <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
-      <Project>{62370954-6062-6c73-e698-8a7a60ebffa2}</Project>
-      <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.Editor.csproj">
-      <Project>{91356981-5371-b8ed-9061-7afa6754a920}</Project>
-      <Name>LeTai.TranslucentImage.Editor</Name>
-    </ProjectReference>
-    <ProjectReference Include="ShapesSamples.csproj">
-      <Project>{cc66816d-878f-d314-60ee-ab22492b884d}</Project>
-      <Name>ShapesSamples</Name>
-    </ProjectReference>
-    <ProjectReference Include="LeTai.TranslucentImage.csproj">
-      <Project>{41e027ee-dde4-a340-b95f-bc028c92715b}</Project>
-      <Name>LeTai.TranslucentImage</Name>
-    </ProjectReference>
-    <ProjectReference Include="ShapesRuntime.csproj">
-      <Project>{b959476b-bd63-35e0-6875-d21e11dcf22b}</Project>
-      <Name>ShapesRuntime</Name>
-    </ProjectReference>
-    <ProjectReference Include="ShapesEditor.csproj">
-      <Project>{83b1b6d5-aa72-df51-6b8e-6b6be8ff3ea2}</Project>
-      <Name>ShapesEditor</Name>
+    <ProjectReference Include="MeshBakerCore.csproj">
+      <Project>{1ca6e2d7-df01-fde3-9642-5ff6f2d0d396}</Project>
+      <Name>MeshBakerCore</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

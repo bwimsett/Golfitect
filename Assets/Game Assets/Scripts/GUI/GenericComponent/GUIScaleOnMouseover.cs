@@ -23,7 +23,7 @@ namespace Game_Assets.Scripts.GUI.GenericComponent {
 		
 		[SerializeField] private bool isToggle;
 		[ShowIf("isToggle"), SerializeField] private bool lockScale, lockColor; 
-		private bool isSelected;
+		protected bool isSelected;
 
 		void Awake() {
 			defaultSize = scaleTarget.rect.size;

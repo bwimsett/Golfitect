@@ -1,3 +1,4 @@
+using System.Web.UI.WebControls;
 using Backend.Managers;
 using Game;
 using Sirenix.Serialization;
@@ -20,6 +21,10 @@ namespace Backend.Level {
 			Ball ball = Instantiate(ballPrefab, LevelManager.levelObjectUtility.levelContainer).GetComponent<Ball>();
 			GameManager.currentLevel.ball = ball;
 			ball.transform.position = transform.position + new Vector3(0,5,0);
+		}
+
+		protected override void LevelObjectEnterBuildMode() {
+			placeholder.gameObject.SetActive(true);
 		}
 	}
 }

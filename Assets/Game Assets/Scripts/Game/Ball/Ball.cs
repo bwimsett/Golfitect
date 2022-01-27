@@ -74,6 +74,10 @@ namespace Game {
 			swingStrength  = Mathf.Min(1,lineLength / maxMouseDistance);
 		}
 
+		public void Destroy() {
+			Destroy(gameObject);
+		}
+		
 		public void DrawHandle() {
 			Draw.Thickness = circleThickness;
 			Draw.LineEndCaps = LineEndCap.Round;
