@@ -155,6 +155,9 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\DrawingManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\navigation\PageNavigation.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\navigation\IPageNavigatable.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\navigation\PageNavigationDot.cs" />
      <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\lib.hlsl" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Darken.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Multiplicative.shader" />

@@ -1,18 +1,21 @@
 using Backend.Level;
 using Backend.Managers;
 using Game_Assets.Scripts.Backend.Server;
+using Game_Assets.Scripts.GUI.GenericComponent;
 using GUI.MainMenu;
 using UnityEngine;
 
 namespace GUI.LevelOptionGrid {
-	public class LevelOptionGrid : MonoBehaviour {
+	public class LevelOptionGrid : MonoBehaviour, IPageNavigatable {
 
 		[SerializeField] private GameObject optionPrefab;
 		[SerializeField] private Vector2Int layout;
 		[SerializeField] private float padding;
 		[SerializeField] private RectTransform _rectTransform;
+		[SerializeField] private PageNavigation _pageNavigation;
 
-		private int page;
+		public int page { get; private set; }
+		public int pages { get; private set;  }
 		private DBObject[] items; // x = page, y = option
 		private LevelOptionGrid_Option[] options;
 		private MainMenu_Subwindow subwindow;
@@ -25,11 +28,12 @@ namespace GUI.LevelOptionGrid {
 			
 			// Populate items array
 			int numPerPage = layout.x * layout.y;
-			int pageCount = Mathf.CeilToInt(((float) optionObjects.Length / numPerPage));
-			items = new DBObject[pageCount * numPerPage];
+			pages = Mathf.CeilToInt(((float) optionObjects.Length / numPerPage));
+			
+			items = new DBObject[pages * numPerPage];
 			int levelIndex = 0;
 
-			for (int page = 0; page < pageCount; page++) {
+			for (int page = 0; page < pages; page++) {
 				for (int slot = 0; slot < numPerPage; slot++) {
 					if (levelIndex >= optionObjects.Length) {
 						break;
@@ -42,6 +46,7 @@ namespace GUI.LevelOptionGrid {
 
 			// Set page to 0
 			page = 0;
+			_pageNavigation.SetNavigatable(this);
 
 			Refresh();
 		}
@@ -49,6 +54,9 @@ namespace GUI.LevelOptionGrid {
 		public void SetCourseIDs(string[] courseIDs) {
 			this.courseIDs = courseIDs;
 			items = new DBObject[courseIDs.Length];
+			pages = Mathf.CeilToInt((float)courseIDs.Length / (layout.x * layout.y));
+			page = 0;
+			_pageNavigation.SetNavigatable(this);
 			LoadCurrentPageFromCourseIDs();
 		}
 
@@ -78,7 +86,12 @@ namespace GUI.LevelOptionGrid {
 
 			// Set values for the optionObjects
 			for (int i = 0; i < options.Length; i++) {
-				options[i].SetObject(items[GetItemIndexFromPage(page, i)], subwindow);
+				int index = GetItemIndexFromPage(page, i);
+				if (index >= items.Length) {
+					options[i].SetObject(null, subwindow);
+					continue;
+				}
+				options[i].SetObject(items[index], subwindow);
 			}
 		}
 
@@ -115,5 +128,19 @@ namespace GUI.LevelOptionGrid {
 			return new Vector2(xPos, -yPos);
 		}
 
+		public void NextPage() {
+			page = Mathf.Min(pages, page+1);
+			LoadCurrentPageFromCourseIDs();
+		}
+
+		public void PrevPage() {
+			page = Mathf.Max(0, page-1);
+			LoadCurrentPageFromCourseIDs();
+		}
+
+		public void SetPage(int page) {
+			this.page = Mathf.Max(0, Mathf.Min(page, pages));
+			LoadCurrentPageFromCourseIDs();
+		}
 	}
 }
