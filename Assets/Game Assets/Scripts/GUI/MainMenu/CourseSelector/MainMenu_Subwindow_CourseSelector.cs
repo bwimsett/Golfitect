@@ -15,20 +15,17 @@ namespace GUI.MainMenu.CourseSelector {
 
 		private void PopulateCourseOptions() {
 			if (userOnly) {
-				GameSceneManager.serverManager.GetUserCourseInfo(OnCoursesLoaded);
+				GameSceneManager.serverManager.GetUserCourseInfo(OnCourseListRetrieved);
 				return;
 			}
 			
 			GameSceneManager.serverManager.GetNewestCourses(OnCourseListRetrieved);
 		}
 		
-		private void OnCoursesLoaded(DBCourseInfo[] courses) {
-			levelOptionGrid.SetOptions(courses, this);
-		}
 
 		private void OnCourseListRetrieved(string[] courseList) {
 			this.courseList = courseList;
-			levelOptionGrid.SetCourseIDs(courseList);
+			levelOptionGrid.SetIDs(courseList, true);
 		}
 
 		public void Refresh(bool userOnly) {

@@ -20,44 +20,17 @@ namespace GUI.LevelOptionGrid {
 		private LevelOptionGrid_Option[] options;
 		private MainMenu_Subwindow subwindow;
 
-		private string[] courseIDs;
+		private string[] itemIDs;
+		private bool isCourses;
 
-		public void SetOptions(DBObject[] optionObjects, MainMenu_Subwindow subwindow) {
-			this.subwindow = subwindow;
-			courseIDs = null;
-			
-			// Populate items array
-			int numPerPage = layout.x * layout.y;
-			pages = Mathf.CeilToInt(((float) optionObjects.Length / numPerPage));
-			
-			items = new DBObject[pages * numPerPage];
-			int levelIndex = 0;
-
-			for (int page = 0; page < pages; page++) {
-				for (int slot = 0; slot < numPerPage; slot++) {
-					if (levelIndex >= optionObjects.Length) {
-						break;
-					}
-
-					items[GetItemIndexFromPage(page, slot)] = optionObjects[levelIndex];
-					levelIndex++;
-				}
-			}
-
-			// Set page to 0
-			page = 0;
-			_pageNavigation.SetNavigatable(this);
-
-			Refresh();
-		}
-
-		public void SetCourseIDs(string[] courseIDs) {
-			this.courseIDs = courseIDs;
+		public void SetIDs(string[] courseIDs, bool isCourses) {
+			this.isCourses = isCourses;
+			this.itemIDs = courseIDs;
 			items = new DBObject[courseIDs.Length];
 			pages = Mathf.CeilToInt((float)courseIDs.Length / (layout.x * layout.y));
 			page = 0;
 			_pageNavigation.SetNavigatable(this);
-			LoadCurrentPageFromCourseIDs();
+			LoadCurrentPageFromItemIDs();
 		}
 
 		public void Refresh() {
@@ -102,24 +75,36 @@ namespace GUI.LevelOptionGrid {
 			return pageOrigin + index;
 		}
 		
-		private void LoadCurrentPageFromCourseIDs() {
+		private void LoadCurrentPageFromItemIDs() {
 			int itemsPerPage = layout.x * layout.y;
 			int startingIndex = itemsPerPage * page;
-			int endIndex = Mathf.Min(courseIDs.Length - 1, startingIndex + itemsPerPage);
+			int endIndex = Mathf.Min(this.itemIDs.Length, startingIndex + itemsPerPage);
 
-			string[] courseids = new string[endIndex - startingIndex];
+			string[] itemIDs = new string[endIndex - startingIndex];
 
-			for (int i = 0; i < courseids.Length; i++) {
-				courseids[i] = courseIDs[startingIndex+i];
+			for (int i = 0; i < itemIDs.Length; i++) {
+				itemIDs[i] = this.itemIDs[startingIndex+i];
+			}
+
+			if (isCourses) {
+				GameSceneManager.serverManager.GetCourses(itemIDs, result => {
+					for (int i = 0; i < itemIDs.Length; i++) {
+						items[startingIndex+i] = result[i];
+					}
+				
+					Refresh();
+				});
+			}
+			else {
+				GameSceneManager.serverManager.GetHoles(itemIDs, result => {
+					for (int i = 0; i < itemIDs.Length; i++) {
+						items[startingIndex + i] = result[i];
+					}
+					
+					Refresh();
+				});
 			}
 			
-			GameSceneManager.serverManager.GetCourses(courseids, result => {
-				for (int i = 0; i < courseids.Length; i++) {
-					items[startingIndex+i] = result[i];
-				}
-				
-				Refresh();
-			});
 		}
 
 		private Vector2 GetOptionPosition(Vector2Int index, Vector2 optionDimensions) {
@@ -130,17 +115,17 @@ namespace GUI.LevelOptionGrid {
 
 		public void NextPage() {
 			page = Mathf.Min(pages, page+1);
-			LoadCurrentPageFromCourseIDs();
+			LoadCurrentPageFromItemIDs();
 		}
 
 		public void PrevPage() {
 			page = Mathf.Max(0, page-1);
-			LoadCurrentPageFromCourseIDs();
+			LoadCurrentPageFromItemIDs();
 		}
 
 		public void SetPage(int page) {
 			this.page = Mathf.Max(0, Mathf.Min(page, pages));
-			LoadCurrentPageFromCourseIDs();
+			LoadCurrentPageFromItemIDs();
 		}
 	}
 }

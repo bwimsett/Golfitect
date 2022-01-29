@@ -94,22 +94,22 @@ public class ServerManager : MonoBehaviour {
 		});
 	}
 	
-	public void GetUserLevelInfo(UnityAction<DBHoleInfo[]> onComplete) {
+	public void GetUserLevelIDs(UnityAction<string[]> onComplete) {
 		GetAuthTicket(ticket => {
-			string uri = ugcUrl + "/holes/getall?ticket="+ticket;
+			string uri = ugcUrl + "/holes/getuserholes?ticket="+ticket;
 			StartCoroutine(GetRequest(uri, value => {
-				DBHoleInfo[] levels = JsonConvert.DeserializeObject <DBHoleInfo[]>(value);
+				string[] levels = JsonConvert.DeserializeObject <string[]>(value);
 				onComplete.Invoke(levels);
 			}));
 		});
 	}
 	
-	public void GetUserCourseInfo(UnityAction<DBCourseInfo[]> onComplete) {
+	public void GetUserCourseInfo(UnityAction<string[]> onComplete) {
 		GetAuthTicket(ticket => {
-			string uri = ugcUrl + "/courses/getall?ticket="+ticket;
+			string uri = ugcUrl + "/courses/getusercourses?ticket="+ticket;
 			StartCoroutine(GetRequest(uri, value => {
-				DBCourseInfo[] levels = JsonConvert.DeserializeObject <DBCourseInfo[]>(value);
-				onComplete.Invoke(levels);
+				string[] levelIDs = JsonConvert.DeserializeObject <string[]>(value);
+				onComplete.Invoke(levelIDs);
 			}));
 		});
 	}
@@ -123,6 +123,26 @@ public class ServerManager : MonoBehaviour {
 		StartCoroutine(GetRequest(uri, result => {
 			Level level = JsonConvert.DeserializeObject<Level>(result);
 			onComplete.Invoke(level);
+		}));
+	}
+
+	public void GetHoles(string[] holeIDs, UnityAction<DBHoleInfo[]> onComplete) {
+		string uri = ugcUrl + "/holes/getmany?ids=";
+		for (int i = 0; i < holeIDs.Length; i++) {
+			if (i > 0) {
+				uri += ",";
+			}
+
+			uri += holeIDs[i];
+		}
+
+		StartCoroutine(GetRequest(uri, result => {
+			if (result == null) {
+				return;
+			}
+			
+			DBHoleInfo[] holes = JsonConvert.DeserializeObject<DBHoleInfo[]>(result);
+			onComplete.Invoke(holes);
 		}));
 	}
 

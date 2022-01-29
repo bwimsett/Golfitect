@@ -22,11 +22,11 @@ namespace GUI.MainMenu.CourseCreator {
 		}
 
 		private void RequestLevelsFromServer() {
-			GameSceneManager.serverManager.GetUserLevelInfo(OnLevelInfoLoaded);
+			GameSceneManager.serverManager.GetUserLevelIDs(OnLevelIDsLoaded);
 		}
 
-		private void OnLevelInfoLoaded(DBHoleInfo[] info) {
-			levelOptionGrid.SetOptions(info, this);
+		private void OnLevelIDsLoaded(string[] ids) {
+			levelOptionGrid.SetIDs(ids, false);
 		}
 
 		public Course GetCourseFromInput() {
