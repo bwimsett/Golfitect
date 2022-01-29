@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Sort by new is working">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/DBObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/DBObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LeTai.TranslucentImage.UniversalRP.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LeTai.TranslucentImage.UniversalRP.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +214,7 @@
       <workItem from="1643049021685" duration="1558000" />
       <workItem from="1643280580358" duration="10858000" />
       <workItem from="1643367593985" duration="6525000" />
-      <workItem from="1643454438858" duration="5922000" />
+      <workItem from="1643454438858" duration="7386000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -481,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643311245546</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Sort by new is working">
+      <created>1643474640195</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1643474640195</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +505,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="FINALLY GOT TEXTURE TILING WORKING" />
     <MESSAGE value="Added buttons for choosing different build tiles" />
     <MESSAGE value="Added level collider mesh generation and began work on level surface item placement" />
     <MESSAGE value="Got mouse control working for the ball" />
@@ -529,7 +529,8 @@
     <MESSAGE value="Added unversioned" />
     <MESSAGE value="Pre-havok commit" />
     <MESSAGE value="Fixed a range of bugs and improved ball collisions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed a range of bugs and improved ball collisions" />
+    <MESSAGE value="Sort by new is working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Sort by new is working" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

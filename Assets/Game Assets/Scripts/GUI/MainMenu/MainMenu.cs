@@ -1,3 +1,4 @@
+using System.Data.SqlTypes;
 using Backend.Enums;
 using Game_Assets.Scripts.GUI;
 using Game_Assets.Scripts.GUI.CourseCreator;
@@ -25,6 +26,8 @@ namespace GUI.MainMenu {
 
 		public static MainMenuLeaf currentLeaf;
 
+		private MainMenuLeaf rootLeaf, buildMenuLeaf, playMenuLeaf, courseBuilderLeaf, courseSelectorLeaf;
+
 		void Awake() {
 			Initialise();
 		}
@@ -43,20 +46,19 @@ namespace GUI.MainMenu {
 		/// Leaves govern the overall navigation structure of the menu. Allows forward and back movement between screens, even when screens are procedural.
 		/// </summary>
 		private void GenerateMainMenuTree() {
-			MainMenuLeaf root = new MainMenuLeaf(optionList, GenerateMainMenuOptions);
-			MainMenuLeaf buildMenu = new MainMenuLeaf(optionList, GenerateBuildMenuOptions);
-			MainMenuLeaf playMenu = new MainMenuLeaf(optionList, GeneratePlayMenuOptions);
+			rootLeaf = new MainMenuLeaf(optionList, GenerateMainMenuOptions);
+			buildMenuLeaf = new MainMenuLeaf(optionList, GenerateBuildMenuOptions);
+			playMenuLeaf = new MainMenuLeaf(optionList, GeneratePlayMenuOptions);
 
-			MainMenuLeaf courseBuilderLeaf = new MainMenuLeaf(courseCreator, ()=>courseCreator.Open());
-			MainMenuLeaf courseSelectorLeaf = new MainMenuLeaf(courseSelector, () => courseSelector.Open());
+			courseBuilderLeaf = new MainMenuLeaf(courseCreator, ()=>courseCreator.Open());
+			courseSelectorLeaf = new MainMenuLeaf(courseSelector, () => courseSelector.Open());
 			
-			root.AddChild(buildMenu);
-				buildMenu.AddChild(courseBuilderLeaf);
-				buildMenu.AddChild(courseSelectorLeaf);
-			root.AddChild(playMenu);
+			rootLeaf.AddChild(buildMenuLeaf);
+				buildMenuLeaf.AddChild(courseBuilderLeaf);
+				buildMenuLeaf.AddChild(courseSelectorLeaf);
+			rootLeaf.AddChild(playMenuLeaf);
 			
-			
-			root.GoTo();
+			rootLeaf.GoTo();
 		}
 		
 		private void GenerateMainMenuOptions() {
@@ -76,6 +78,7 @@ namespace GUI.MainMenu {
 				new TextButtonCallback("build_menu_option_course", () => {
 					courseSelector.SetHeading("your_courses_heading");
 					courseSelector.Refresh(true);
+					courseSelectorLeaf.SetParent(buildMenuLeaf);
 					courseSelector.Open();
 				}),
 				new TextButtonCallback("build_menu_option_hole_builder", () => {
@@ -92,6 +95,7 @@ namespace GUI.MainMenu {
 		private void GeneratePlayMenuOptions() {
 			courseSelector.SetHeading("play_heading");
 			courseSelector.Refresh(false);
+			courseSelectorLeaf.SetParent(rootLeaf);
 			courseSelector.Open();
 		}
 
