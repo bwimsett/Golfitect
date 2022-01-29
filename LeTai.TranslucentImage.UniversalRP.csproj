@@ -55,8 +55,8 @@
      <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\UniversalRP\Render Pass\TranslucentImageBlurRenderPass.cs" />
      <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\UniversalRP\BlurAlgorithm\ScalableBlur.cs" />
      <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\UniversalRP\Utilities\ShaderId.cs" />
-     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\UniversalRP\Render Pass\TranslucentImageBlurSource.cs" />
      <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\UniversalRP\BlurAlgorithm\IBlurAlgorithm.cs" />
+     <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\UniversalRP\Render Pass\TranslucentImageBlurSource.cs" />
      <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\UniversalRP\Utilities\Extensions.cs" />
      <Compile Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\UniversalRP\Utilities\Utilities.cs" />
      <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Script\UniversalRP\LeTai.TranslucentImage.UniversalRP.asmdef" />

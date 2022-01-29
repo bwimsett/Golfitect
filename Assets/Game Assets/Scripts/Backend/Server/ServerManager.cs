@@ -23,7 +23,7 @@ public class ServerManager : MonoBehaviour {
 	private enum TicketGenerationStatus { Awaiting, Success, Failure, InProgress }
 	
 	// URL
-	private static string serverUrl = "https://golfitect.co.uk", scoreUrl = "/scores", ugcUrl = "/ugc", usersUrl = "/users";
+	private static string serverUrl = "https://golfitect.co.uk", scoreUrl = "/scores", ugcUrl = "/ugc", usersUrl = "/users", rankingsUrl = "/rankings";
 	public static string userid { get; private set; }
 	public static bool useridInitialised { get; private set; }
 	
@@ -151,6 +151,36 @@ public class ServerManager : MonoBehaviour {
 				onComplete.Invoke(dataItems);
 			}));
 		});
+	}
+
+	public void GetNewestCourses(UnityAction<string[]> onComplete) {
+		string uri = rankingsUrl + "/newest?startpage=0&pages=12";
+		StartCoroutine(GetRequest(uri, value => {
+			string[] courseList = JsonConvert.DeserializeObject<string[]>(value);
+			onComplete.Invoke(courseList);
+		}));
+	}
+
+	public void GetCourses(string[] courseids, UnityAction<DBCourseInfo[]> onComplete) {
+		string idstring = "";
+		for (int i = 0; i < courseids.Length; i++) {
+			if (i > 0) {
+				idstring += ",";
+			}
+
+			idstring += courseids[i];
+		}
+
+		string uri = ugcUrl + "/courses/getmany?ids=" + idstring;
+		StartCoroutine(GetRequest(uri, value => {
+			if (value == null) {
+				return;
+			}
+			
+			// Convert result to list of dbcourseinfo
+			DBCourseInfo[] result = JsonConvert.DeserializeObject<DBCourseInfo[]>(value);
+			onComplete.Invoke(result);
+		}));
 	}
 
 	public void GetUserCourseScores(Course course, UnityAction<HoleScore[]> onComplete) {

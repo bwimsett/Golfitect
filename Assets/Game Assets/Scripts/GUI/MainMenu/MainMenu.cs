@@ -62,7 +62,7 @@ namespace GUI.MainMenu {
 		private void GenerateMainMenuOptions() {
 			TextButtonCallback[] mainMenuOptions = {
 				new TextButtonCallback("main_menu_option_build", () => { GenerateBuildMenuOptions(); }),
-				new TextButtonCallback("main_menu_option_play", () => { })
+				new TextButtonCallback("main_menu_option_play", () => { GeneratePlayMenuOptions(); })
 			};
 			
 			optionList.SetHeading("mainmenu_title_main_menu");
@@ -75,7 +75,7 @@ namespace GUI.MainMenu {
 				new TextButtonCallback("build_menu_option_hole", () => { }),
 				new TextButtonCallback("build_menu_option_course", () => {
 					courseSelector.SetHeading("your_courses_heading");
-					courseSelector.Refresh();
+					courseSelector.Refresh(true);
 					courseSelector.Open();
 				}),
 				new TextButtonCallback("build_menu_option_hole_builder", () => {
@@ -90,7 +90,9 @@ namespace GUI.MainMenu {
 		}
 
 		private void GeneratePlayMenuOptions() {
-
+			courseSelector.SetHeading("play_heading");
+			courseSelector.Refresh(false);
+			courseSelector.Open();
 		}
 
 		public void Back() {

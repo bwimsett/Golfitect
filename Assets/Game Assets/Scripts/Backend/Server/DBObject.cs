@@ -4,5 +4,6 @@ namespace Game_Assets.Scripts.Backend.Server {
 		public DBUser user;
 		public string name;
 		public int par;
+		public int creationTime;
 	}
 }
