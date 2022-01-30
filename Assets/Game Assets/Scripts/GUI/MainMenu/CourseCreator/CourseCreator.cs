@@ -26,7 +26,7 @@ namespace GUI.MainMenu.CourseCreator {
 		}
 
 		private void OnLevelIDsLoaded(string[] ids) {
-			levelOptionGrid.SetIDs(ids, false);
+			levelOptionGrid.SetIDs(ids, false, this);
 		}
 
 		public Course GetCourseFromInput() {

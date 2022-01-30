@@ -32,19 +32,19 @@ namespace GUI.LevelOptionGrid {
 		}
 
 		private void Refresh() {
-			if (this._dbObject == null) {
+			if (_dbObject == null) {
 				canvasGroup.alpha = 0;
 				return;
 			}
 
 			canvasGroup.alpha = 1;
 
-			if (this._dbObject is DBCourseInfo courseInfo) {
+			if (_dbObject is DBCourseInfo courseInfo) {
 				RefreshCourse(courseInfo);
 				return;
 			}
 			
-			if (this._dbObject is DBHoleInfo levelInfo) {
+			if (_dbObject is DBHoleInfo levelInfo) {
 				RefreshLevel(levelInfo);
 			}
 			

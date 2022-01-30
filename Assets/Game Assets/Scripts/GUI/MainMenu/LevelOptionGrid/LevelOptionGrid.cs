@@ -23,9 +23,10 @@ namespace GUI.LevelOptionGrid {
 		private string[] itemIDs;
 		private bool isCourses;
 
-		public void SetIDs(string[] courseIDs, bool isCourses) {
+		public void SetIDs(string[] courseIDs, bool isCourses, MainMenu_Subwindow subwindow) {
 			this.isCourses = isCourses;
 			this.itemIDs = courseIDs;
+			this.subwindow = subwindow;
 			items = new DBObject[courseIDs.Length];
 			pages = Mathf.CeilToInt((float)courseIDs.Length / (layout.x * layout.y));
 			page = 0;

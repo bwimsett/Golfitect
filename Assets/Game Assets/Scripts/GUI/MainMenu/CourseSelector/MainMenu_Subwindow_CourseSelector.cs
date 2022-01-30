@@ -52,7 +52,7 @@ namespace GUI.MainMenu.CourseSelector {
 
 		private void OnCourseListRetrieved(string[] courseList) {
 			this.courseList = courseList;
-			levelOptionGrid.SetIDs(courseList, true);
+			levelOptionGrid.SetIDs(courseList, true, this);
 		}
 
 		public void Refresh(bool userOnly) {
