@@ -114,10 +114,6 @@ public class ServerManager : MonoBehaviour {
 		});
 	}
 
-	public void GetUser(UnityAction<DBUser> onComplete) {
-		
-	}
-	
 	public void GetHole(string holeID, UnityAction<Level> onComplete) {
 		string uri = ugcUrl + "/holes/get?holeID=" + holeID;
 		StartCoroutine(GetRequest(uri, result => {
@@ -162,16 +158,6 @@ public class ServerManager : MonoBehaviour {
 			onComplete.Invoke(leaderboard);
 		}));
 	}
-	
-	public void GetUserCourses(UnityAction<DBCourseInfo[]> onComplete) {
-		GetAuthTicket(ticket => {
-			string uri = ugcUrl + "/courses/getall?ticket=" + ticket;
-			StartCoroutine(GetRequest(uri, value => {
-				DBCourseInfo[] dataItems = JsonConvert.DeserializeObject<DBCourseInfo[]>(value);
-				onComplete.Invoke(dataItems);
-			}));
-		});
-	}
 
 	public void GetNewestCourses(UnityAction<string[]> onComplete) {
 		string uri = rankingsUrl + "/newest?startpage=0&pages=12";
@@ -181,6 +167,22 @@ public class ServerManager : MonoBehaviour {
 		}));
 	}
 
+	public void GetMostPlayedCourses(int duration, UnityAction<string[]> onComplete) {
+		string uri = rankingsUrl + "/mostplayed?duration="+duration;
+		StartCoroutine(GetRequest(uri, value => {
+			string[] courseList = JsonConvert.DeserializeObject<string[]>(value);
+			onComplete.Invoke(courseList);
+		}));
+	}
+
+	public void GetMostLikedCourses(int duration, UnityAction<string[]> onComplete) {
+		string uri = rankingsUrl + "/mostliked?duration="+duration;
+		StartCoroutine(GetRequest(uri, value => {
+			string[] courseList = JsonConvert.DeserializeObject<string[]>(value);
+			onComplete.Invoke(courseList);
+		}));
+	}
+	
 	public void GetCourses(string[] courseids, UnityAction<DBCourseInfo[]> onComplete) {
 		string idstring = "";
 		for (int i = 0; i < courseids.Length; i++) {

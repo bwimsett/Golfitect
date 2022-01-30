@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_BuildOptionButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_BuildOptionButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,10 +145,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="64120">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="72524">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="64120" />
+      <option name="pid" value="72524" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -219,7 +219,8 @@
       <workItem from="1643280580358" duration="10858000" />
       <workItem from="1643367593985" duration="6525000" />
       <workItem from="1643454438858" duration="14193000" />
-      <workItem from="1643488268129" duration="2627000" />
+      <workItem from="1643488268129" duration="3327000" />
+      <workItem from="1643545092365" duration="4028000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -501,7 +502,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643485078574</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Navigation working nicely for all multi-page grids">
+      <created>1643491321175</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1643491321175</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +532,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Got mouse control working for the ball" />
     <MESSAGE value="Hole punch method for building flags works" />
     <MESSAGE value="Implemented course downloading" />
     <MESSAGE value="Main menu nice n smooth" />
@@ -549,7 +556,8 @@
     <MESSAGE value="Sort by new is working" />
     <MESSAGE value="Can now view public courses (sorted by new) in the play menu" />
     <MESSAGE value="Added navigation controls for course lists" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added navigation controls for course lists" />
+    <MESSAGE value="Navigation working nicely for all multi-page grids" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navigation working nicely for all multi-page grids" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -566,32 +574,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs</url>
-          <line>82</line>
-          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\GUI\MainMenu\LevelOptionGrid\LevelOptionGrid.cs" initialLine="82" containingFunctionPresentation="method 'LoadCurrentPageFromItemIDs'">
-            <startOffsets>
-              <option value="2711" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2767" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="46" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs</url>
-          <line>84</line>
-          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\GUI\MainMenu\LevelOptionGrid\LevelOptionGrid.cs" initialLine="84" containingFunctionPresentation="method 'LoadCurrentPageFromItemIDs'">
-            <startOffsets>
-              <option value="2772" />
-            </startOffsets>
-            <endOffsets>
-              <option value="2812" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="47" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

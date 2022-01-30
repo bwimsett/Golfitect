@@ -1,12 +1,8 @@
-using System;
 using Backend.Enums;
 using Backend.Level;
-using DG.Tweening;
 using Game_Assets.Scripts.GUI.GenericComponent;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using UnityEngine.WSA;
 
 namespace Game_Assets.Scripts.GUI.LevelBuilder {
 	public class BuildMode_BuildOptionButton : GUIScaleOnMouseover {
