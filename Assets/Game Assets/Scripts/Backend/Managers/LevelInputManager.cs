@@ -58,7 +58,7 @@ namespace Backend.Managers {
 			return success;
 		}
 
-		private bool CastRay(Ray ray, int layerMask, out RaycastHit hit) {
+		public bool CastRay(Ray ray, int layerMask, out RaycastHit hit) {
 			Physics.Raycast(ray, out hit, 500, layerMask);
 
 			if (hit.collider) {
@@ -68,7 +68,7 @@ namespace Backend.Managers {
 			return false;
 		}
 		
-		private bool CastRay(Ray ray, string tag, out RaycastHit hit) {
+		public bool CastRay(Ray ray, string tag, out RaycastHit hit) {
 			Physics.Raycast(ray, out hit, 500);
 
 			if (hit.collider) {

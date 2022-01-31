@@ -52,7 +52,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\navigation\PageNavigation.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\Navigation\PageNavigation.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\Spinner.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayModeHUD.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\Course.cs" />
@@ -67,7 +67,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelTimer.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\ServerSerializable.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator_HolesList.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\navigation\IPageNavigatable.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\Navigation\IPageNavigatable.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\LevelBuilderTool.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\ScoreCard_Score.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIHighlightOnMouseover.cs" />
@@ -126,7 +126,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectLayout.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\LocalizationRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\CustomisationOption\CustomisationOption_Height.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\navigation\PageNavigationDot.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\Navigation\PageNavigationDot.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Ball\BallHandle.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenuLeaf.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Hole.cs" />
@@ -974,9 +974,6 @@
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
- <Reference Include="com.rlabrecque.steamworks.net.editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.ProBuilder.Editor">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
  </Reference>
@@ -997,6 +994,9 @@
  </Reference>
  <Reference Include="com.rlabrecque.steamworks.net">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.dll</HintPath>
+ </Reference>
+ <Reference Include="com.rlabrecque.steamworks.net.editor">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
