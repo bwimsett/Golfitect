@@ -38,5 +38,11 @@ namespace GUI.MainMenu.CourseCreator {
 
 			return course;
 		}
+
+		public void Load() {
+			
+			
+			Open();
+		}
 	}
 }

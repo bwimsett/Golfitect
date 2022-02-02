@@ -127,11 +127,13 @@ public class LevelBuilderTool : Tool {
 		
 		Vector3 gridStartPos = LevelManager.levelGrid.WorldPositionToGridPosition(startPosition);
 		Vector3 gridEndPos = LevelManager.levelGrid.WorldPositionToGridPosition(endPosition);
-
+		
 		// Only scale tile object types
 		if (placing.levelObject.levelObjectClass == LevelObjectClass.Tile) {
 			origin = GetOrigin(gridStartPos, gridEndPos);
-			limit = GetLimit(gridStartPos, gridEndPos);
+			limit = GetLimit(gridStartPos, gridEndPos)+new Vector3(1,0,1); // Add one to x and z to account for scale
+			
+			Debug.Log("Start: "+gridStartPos.ToString()+"EndPosition: "+gridEndPos.ToString()+"Limit: "+limit.ToString()+", origin: "+origin.ToString());
 
 			Vector3 scale = limit - origin;
 			scale = new Vector3(Mathf.Max(1, scale.x),  LevelManager.levelGrid.GridHeightToWorldHeight(tileHeight), Mathf.Max(1, scale.z));

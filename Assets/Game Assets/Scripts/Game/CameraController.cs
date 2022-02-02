@@ -41,12 +41,12 @@ namespace Game {
 			
 			if (Input.GetMouseButtonDown(0)) {
 				mouseDragStart = Input.mousePosition;
-				mouseDragDown = true;
 			}
 			
 			Vector2 drag = Vector2.zero;
 			
 			if (Input.GetMouseButton(0)) {
+				mouseDragDown = true;
 				Vector2 mousePos = Input.mousePosition;
 				drag = mouseDragStart - mousePos;
 				drag *= dragSensitivity;
