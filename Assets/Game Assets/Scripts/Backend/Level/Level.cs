@@ -219,10 +219,5 @@ namespace Backend.Level {
 			
 			LevelManager.InitialiseGameMode();
 		}
-
-		[OnDeserialized]
-		public void OnDeserialized() {
-			RefreshLevelBoundaryY();
-		}
 	}
 }

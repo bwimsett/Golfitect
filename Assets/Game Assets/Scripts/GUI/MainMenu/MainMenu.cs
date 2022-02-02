@@ -46,6 +46,8 @@ namespace GUI.MainMenu {
 		/// Leaves govern the overall navigation structure of the menu. Allows forward and back movement between screens, even when screens are procedural.
 		/// </summary>
 		private void GenerateMainMenuTree() {
+			currentLeaf = null;
+			
 			rootLeaf = new MainMenuLeaf(optionList, GenerateMainMenuOptions);
 			buildMenuLeaf = new MainMenuLeaf(optionList, GenerateBuildMenuOptions);
 			playMenuLeaf = new MainMenuLeaf(optionList, GeneratePlayMenuOptions);

@@ -29,10 +29,12 @@ public class PlayMode_CourseSummary : Popup {
 
 	public void Like() {
 		GameSceneManager.serverManager.SubmitLike(GameManager.courseTracker.course.courseInfo, true, null);
+		LoadingScreenManager.LoadMainMenu();
 	}
 
 	public void Dislike() {
 		GameSceneManager.serverManager.SubmitLike(GameManager.courseTracker.course.courseInfo, false, null);
+		LoadingScreenManager.LoadMainMenu();
 	}
 
 }

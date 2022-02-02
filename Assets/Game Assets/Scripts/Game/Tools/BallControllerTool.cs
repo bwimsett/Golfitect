@@ -86,14 +86,19 @@ namespace Game.Tools {
 		}
 
 		private bool ProjectMouseToBallPlane(out Vector3 point) {
+			point = Vector3.zero;
+			
+			if (!ball) {
+				return false;
+			}
+			
 			LevelManager.levelInputManager.CastRayFromMouse(ball.mouseDragPlane.tag, out RaycastHit hit);
 
 			if (hit.collider) {
 				point = hit.point;
 				return true;
 			}
-
-			point = Vector3.zero;
+			
 			return false;
 		}
 	}

@@ -11,7 +11,7 @@ namespace GUI.OptionList {
 		public Transform buttonContainer;
 		private List<MainMenu_OptionList_Option> optionButtons;
 
-		private TextButtonCallback[] optionQueue;
+		private TextButtonCallback[] optionCallbacks;
 		
 
 		void Awake() {
@@ -19,7 +19,7 @@ namespace GUI.OptionList {
 		}
 		
 		public void SetOptions(TextButtonCallback[] options, bool refresh = false) {
-			optionQueue = options;
+			optionCallbacks = options;
 
 			if (refresh) {
 				Refresh();
@@ -28,13 +28,13 @@ namespace GUI.OptionList {
 
 		protected override void Refresh() {
 			base.Refresh();
-			if (optionQueue == null) {
+			if (optionCallbacks == null) {
 				optionButtons = new List<MainMenu_OptionList_Option>();
 			}
 
 			Clear();
 
-			foreach (TextButtonCallback option in optionQueue) {
+			foreach (TextButtonCallback option in optionCallbacks) {
 				MainMenu_OptionList_Option optionButton = Instantiate(optionTemplate, buttonContainer).GetComponent<MainMenu_OptionList_Option>();
 				optionButton.gameObject.SetActive(true);
 				optionButton.SetOption(option);

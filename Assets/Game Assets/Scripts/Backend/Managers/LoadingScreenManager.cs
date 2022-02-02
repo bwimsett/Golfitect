@@ -8,13 +8,20 @@ using UnityEngine.SceneManagement;
 public class LoadingScreenManager : MonoBehaviour {
 
 	private static DBObject loadTarget;
-
+	private static bool loadMainMenu;
+	
 	/// <summary>
 	/// Sets the load target, and opens the loading screen
 	/// </summary>
 	public static void Load(DBObject loadTarget, GameMode gameMode) {
+		loadMainMenu = false;
 		GameManager.gameMode = gameMode;
 		LoadingScreenManager.loadTarget = loadTarget;
+		SceneManager.LoadScene("Loading");
+	}
+
+	public static void LoadMainMenu() {
+		loadMainMenu = true;
 		SceneManager.LoadScene("Loading");
 	}
 	
@@ -23,6 +30,13 @@ public class LoadingScreenManager : MonoBehaviour {
 	}
 	
 	private void InitiateLoad() {
+		IEnumerator load = LoadScene("Main Menu");
+		
+		if (loadMainMenu) {
+			StartCoroutine(load);
+			return;
+		}
+		
 		if (loadTarget is DBCourseInfo courseInfo) {
 			LoadCourse(courseInfo);
 			return;
@@ -31,7 +45,7 @@ public class LoadingScreenManager : MonoBehaviour {
 			return;
 		}
 		
-		IEnumerator load = LoadScene("Game");
+		load = LoadScene("Game");
 		StartCoroutine(load);
 	}
 
