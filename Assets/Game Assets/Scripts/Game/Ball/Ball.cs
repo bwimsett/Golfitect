@@ -19,8 +19,20 @@ namespace Game {
 		private float swingStrength;
 		public float maxForce;
 
+		private Vector3 lastPosition;
+
+		void Update() {
+			ResetIfOutOfBounds();
+		}
+
+		public bool IsMoving() {
+			return !rigidbody.IsSleeping();
+		}
+
 		public void Swing(Vector3 mousePos) {
 			//SetSwingDirection(mousePos);
+
+			lastPosition = transform.position;
 
 			Vector3 swingDirection = Vector3.Normalize(transform.position - mouseSwingPos);
 			Vector3 swing = swingDirection * swingStrength * maxForce;
@@ -33,6 +45,15 @@ namespace Game {
 			mouseSwingPos = transform.position;
 		}
 
+		private void ResetIfOutOfBounds() {
+			if (transform.position.y > GameManager.currentLevel.levelBoundaryY) {
+				return;
+			}
+
+			transform.position = lastPosition;
+			rigidbody.velocity = Vector3.zero;
+		}
+		
 		public void MouseOver() {
 			float duration = circleAppearDuration;
 			

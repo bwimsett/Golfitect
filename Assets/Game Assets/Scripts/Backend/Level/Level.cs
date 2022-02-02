@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using Backend.Enums;
+using Backend.Managers;
 using Backend.Serialization;
 using Game;
 using Newtonsoft.Json;
@@ -19,12 +21,16 @@ namespace Backend.Level {
 		[HideInInspector, JsonIgnore] public Ball ball;
 
 		public Vector3Int levelDimensions { get; private set; }
+		[JsonProperty] private int levelBoundaryLayer;
+		[JsonIgnore] public float levelBoundaryY { get; private set; }
 		[JsonProperty] private List<string> objectTypesUsed; // Lists the IDs of all the tile types used. Indexed by LevelTile for the tileType field to keep save files small.
 		[JsonProperty] private Dictionary<int, LevelObjectSave> objectSaves;
 		private Dictionary<int, LevelObject> objects;
 
 		public Level(Vector3Int levelDimensions) {
 			this.levelDimensions = levelDimensions;
+			// set level boundary to lowest point in dimensions
+			levelBoundaryLayer = -levelDimensions.y/2;
 			objectTypesUsed = new List<string>();
 			objectSaves = new Dictionary<int, LevelObjectSave>();
 			objects = new Dictionary<int, LevelObject>();
@@ -90,6 +96,10 @@ namespace Backend.Level {
 			colliderMesh = WeldMeshVertices(colliderMesh, 0.01f);
 
 			LevelManager.levelCollider.sharedMesh = colliderMesh;
+		}
+		
+		private void RefreshLevelBoundaryY() {
+			levelBoundaryY = LevelManager.levelGrid.GridCoordinateToWorldPosition(new Vector3Int(0, levelBoundaryLayer, 0)).y;
 		}
 
 		private Mesh WeldMeshVertices(Mesh mesh, float weldThreshold) {
@@ -204,8 +214,15 @@ namespace Backend.Level {
 					Place(LevelManager.levelGrid.WorldPositionToGridCoordinate(levelObject.origin), levelObject);
 				}
 			}
+
+			RefreshLevelBoundaryY();
 			
 			LevelManager.InitialiseGameMode();
+		}
+
+		[OnDeserialized]
+		public void OnDeserialized() {
+			RefreshLevelBoundaryY();
 		}
 	}
 }

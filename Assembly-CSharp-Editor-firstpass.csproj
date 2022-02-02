@@ -741,6 +741,9 @@
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
+ <Reference Include="com.rlabrecque.steamworks.net.editor">
+ <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.ProBuilder.Editor">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
  </Reference>
@@ -761,9 +764,6 @@
  </Reference>
  <Reference Include="com.rlabrecque.steamworks.net">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.dll</HintPath>
- </Reference>
- <Reference Include="com.rlabrecque.steamworks.net.editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
  <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>

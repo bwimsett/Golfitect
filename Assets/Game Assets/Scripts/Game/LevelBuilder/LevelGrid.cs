@@ -98,9 +98,17 @@ public class LevelGrid : MonoBehaviour {
 	}
 
 	public void IncrementGridLayer(int amount) {
-		layer = Mathf.Min(GameManager.currentLevel.levelDimensions.y / 2, Mathf.Max(-GameManager.currentLevel.levelDimensions.y / 2, layer + amount));
+		layer = Mathf.Min(GetMaxGridY(), Mathf.Max(GetMinGridY(), layer + amount));
 		layer_y = layer * grid.cellSize.y;
 		transform.position = new Vector3(transform.position.x, layer_y, transform.position.z);
+	}
+
+	public int GetMaxGridY() {
+		return GameManager.currentLevel.levelDimensions.y / 2;
+	}
+
+	public int GetMinGridY() {
+		return -GameManager.currentLevel.levelDimensions.y / 2;
 	}
 
 }

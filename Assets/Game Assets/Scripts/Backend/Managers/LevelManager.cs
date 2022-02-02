@@ -64,7 +64,7 @@ public class LevelManager : MonoBehaviour {
 
 		cameraController.Initialise();
 		levelGrid.Initialise();
-
+		
 		GameManager.currentLevel.Load();
 	}
 

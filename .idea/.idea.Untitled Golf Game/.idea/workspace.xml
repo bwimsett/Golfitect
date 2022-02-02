@@ -5,24 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/statistic.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/statistic.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelInputManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelInputManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/navigation/IPageNavigatable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/Navigation/IPageNavigatable.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/navigation/IPageNavigatable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/Navigation/IPageNavigatable.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/navigation/PageNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/Navigation/PageNavigation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/navigation/PageNavigation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/Navigation/PageNavigation.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/navigation/PageNavigationDot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/Navigation/PageNavigationDot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/navigation/PageNavigationDot.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/Navigation/PageNavigationDot.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/LevelManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Ball/Ball.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Ball/Ball.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelBuilder/LevelGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelBuilder/LevelGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/BallControllerTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/BallControllerTool.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/LeTai.TranslucentImage.UniversalRP.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LeTai.TranslucentImage.UniversalRP.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,10 +149,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="22348">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="34872">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="22348" />
+      <option name="pid" value="34872" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -234,7 +226,8 @@
       <workItem from="1643488268129" duration="3327000" />
       <workItem from="1643545092365" duration="8209000" />
       <workItem from="1643633046288" duration="10178000" />
-      <workItem from="1643658100234" duration="1166000" />
+      <workItem from="1643658100234" duration="1934000" />
+      <workItem from="1643799738952" duration="3521000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -537,7 +530,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643562139759</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Added camera controls for zoom and rotate">
+      <created>1643659447733</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1643659447733</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -560,7 +560,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Main menu nice n smooth" />
     <MESSAGE value="Started work on play mode HUD" />
     <MESSAGE value="Started work on level summary screen" />
     <MESSAGE value="Level complete screen working" />
@@ -585,7 +584,8 @@
     <MESSAGE value="Navigation working nicely for all multi-page grids" />
     <MESSAGE value="Sorting by new, most liked and most played works!" />
     <MESSAGE value="Small fixes to course creator" />
-    <option name="LAST_COMMIT_MESSAGE" value="Small fixes to course creator" />
+    <MESSAGE value="Added camera controls for zoom and rotate" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added camera controls for zoom and rotate" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -602,6 +602,32 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs</url>
+          <line>102</line>
+          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\Backend\Level\Level.cs" initialLine="102" containingFunctionPresentation="method 'RefreshLevelBoundaryY'">
+            <startOffsets>
+              <option value="3141" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3142" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs</url>
+          <line>33</line>
+          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\Backend\Level\Level.cs" initialLine="33" containingFunctionPresentation="constructor 'Level'">
+            <startOffsets>
+              <option value="1162" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1199" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

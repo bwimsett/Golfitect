@@ -14,10 +14,16 @@ namespace Game.Tools {
 			bool mouseOverBall = LevelManager.levelInputManager.CastRayFromMouse(ballPrefab.ballHandle.tag, out RaycastHit hit);
 			if (mouseOverBall) {
 				Ball newBall = hit.collider.GetComponent<BallHandle>().ball;
-				if (ball != newBall) {
-					ball = newBall;
+
+				if (!newBall.IsMoving()) {
+					if (ball != newBall) {
+						ball = newBall;
+					}
+					ball.MouseOver();
 				}
-				ball.MouseOver();
+				else {
+					ball = null;
+				}
 			} else if (!swingInitiated) {
 				if (ball) {
 					ball.MouseExit();
