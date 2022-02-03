@@ -82,6 +82,7 @@ public class ServerManager : MonoBehaviour {
 	public void GetUserID(Action<string> onComplete) {
 		if (!string.IsNullOrEmpty(userid)) {
 			onComplete.Invoke(userid);
+			return;
 		}
 		
 		GetAuthTicket(ticket => {
@@ -94,8 +95,8 @@ public class ServerManager : MonoBehaviour {
 	}
 	
 	public void GetUserLevelIDs(UnityAction<string[]> onComplete) {
-		GetAuthTicket(ticket => {
-			string uri = ugcUrl + "/holes/getuserholes?ticket="+ticket;
+		GetUserID(userid => {
+			string uri = ugcUrl + "/holes/getuserholes?id="+userid;
 			StartCoroutine(GetRequest(uri, value => {
 				string[] levels = JsonConvert.DeserializeObject <string[]>(value);
 				onComplete.Invoke(levels);
@@ -103,9 +104,9 @@ public class ServerManager : MonoBehaviour {
 		});
 	}
 	
-	public void GetUserCourseInfo(UnityAction<string[]> onComplete) {
-		GetAuthTicket(ticket => {
-			string uri = ugcUrl + "/courses/getusercourses?ticket="+ticket;
+	public void GetUserCourseIDs(UnityAction<string[]> onComplete) {
+		GetUserID(userid => {
+			string uri = ugcUrl + "/courses/getusercourses?id="+userid;
 			StartCoroutine(GetRequest(uri, value => {
 				string[] levelIDs = JsonConvert.DeserializeObject <string[]>(value);
 				onComplete.Invoke(levelIDs);

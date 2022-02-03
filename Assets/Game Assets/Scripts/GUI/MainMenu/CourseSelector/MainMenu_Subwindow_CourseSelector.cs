@@ -37,7 +37,7 @@ namespace GUI.MainMenu.CourseSelector {
 		
 		private void PopulateCourseOptions() {
 			if (userOnly) {
-				GameSceneManager.serverManager.GetUserCourseInfo(OnCourseListRetrieved);
+				GameSceneManager.serverManager.GetUserCourseIDs(OnCourseListRetrieved);
 				return;
 			}
 
@@ -48,7 +48,6 @@ namespace GUI.MainMenu.CourseSelector {
 			}
 			
 		}
-		
 
 		private void OnCourseListRetrieved(string[] courseList) {
 			this.courseList = courseList;
@@ -75,6 +74,5 @@ namespace GUI.MainMenu.CourseSelector {
 			durationDropdown.gameObject.SetActive(sortingDropdown.value == 0 || sortingDropdown.value == 1);
 			PopulateCourseOptions();
 		}
-
 	}
 }
