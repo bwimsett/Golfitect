@@ -64,7 +64,7 @@ public class GUIReorderableList : MonoBehaviour {
 
 	public bool ContainsItem(object obj) {
 		foreach (GUIReorderableList_Item item in items) {
-			if (item.Equals(obj)) {
+			if (item.obj.Equals(obj)) {
 				return true;
 			}
 		}
@@ -102,6 +102,14 @@ public class GUIReorderableList : MonoBehaviour {
 		Destroy(blankItem.gameObject);
 		item.transform.SetSiblingIndex(blankIndex+startingItemsInList);
 		item.index = newIndex;
+	}
+
+	public void Clear() {
+		foreach (GUIReorderableList_Item item in items) {
+			Destroy(item.gameObject);
+		}
+
+		items = new List<GUIReorderableList_Item>();
 	}
 
 	public object[] GetItems() {

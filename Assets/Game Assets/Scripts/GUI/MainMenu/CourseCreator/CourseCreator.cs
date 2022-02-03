@@ -16,11 +16,9 @@ namespace GUI.MainMenu.CourseCreator {
 		[SerializeField] private TMP_InputField nameInputField, descriptionInputField;
 		[SerializeField] private LevelOptionGrid.LevelOptionGrid levelOptionGrid;
 		public CourseCreator_HolesList holesList;
-
-		void Start() {
-			RequestLevelsFromServer();
-		}
-
+		
+		public DBCourseInfo currentCourse;
+		
 		private void RequestLevelsFromServer() {
 			GameSceneManager.serverManager.GetUserLevelIDs(OnLevelIDsLoaded);
 		}
@@ -35,13 +33,45 @@ namespace GUI.MainMenu.CourseCreator {
 			DBHoleInfo[] holes = holesList.GetHoles();
 			
 			Course course = new Course(title, description, holes);
-
+			
+			// If updating an existing course, set the ID so the new data is sent as an update
+			if (currentCourse != null) {
+				course._id = currentCourse._id;
+			}
+			
 			return course;
 		}
 
-		public void Load() {
+		public void Load(DBCourseInfo courseInfo) {
+			currentCourse = courseInfo;
 			
+			nameInputField.text = courseInfo.name;
+			descriptionInputField.text = courseInfo.description;
 			
+			// Populate the holes list
+			holesList.Clear();
+			GameSceneManager.serverManager.GetHoles(courseInfo.holeIDs, result => {
+				for (int i = 0; i < courseInfo.holeIDs.Length; i++) {
+					for (int hole = 0; hole < result.Length; hole++) {
+						if (result[hole]._id.Equals(courseInfo.holeIDs[i])) {
+							holesList.AddHoleToList(result[hole]);
+							break;
+						}
+					}
+				}
+			});
+			
+			RequestLevelsFromServer();
+			
+			Open();
+		}
+
+		public void New() {
+			currentCourse = null;
+			nameInputField.text = "";
+			descriptionInputField.text = "";
+			holesList.Clear();
+			RequestLevelsFromServer();
 			Open();
 		}
 	}

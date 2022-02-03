@@ -1,3 +1,5 @@
+
+
 using System.Collections.Generic;
 using Backend.Enums;
 using Backend.Managers;
@@ -25,6 +27,8 @@ namespace Game_Assets.Scripts.GUI.MainMenu.CourseOverview {
 		public TextMeshProUGUI courseNameText, likesText, playCountText;
 		public TextLocalizer creatorNameText, holeCountText;
 		public PlayerProfileTrigger courseCreatorProfileTrigger;
+
+		public GameObject editButton;
 
 		public TextMeshProUGUI descriptionText;
 		public MPImage screenshotImage;
@@ -55,6 +59,12 @@ namespace Game_Assets.Scripts.GUI.MainMenu.CourseOverview {
 			descriptionText.text = courseInfo.description;
 			
 			scoreSummary.SetCourse(courseInfo, true);
+			
+			// Enable the edit button for courses created by the current player
+			GameSceneManager.serverManager.GetUserID(id => {
+				editButton.SetActive(id.Equals(this.courseInfo.user._id));
+			});
+			
 			LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
 		}
 
@@ -83,6 +93,11 @@ namespace Game_Assets.Scripts.GUI.MainMenu.CourseOverview {
 
 		public void Play() {
 			LoadingScreenManager.Load(courseInfo, GameMode.Play);
+		}
+
+		public void Edit() {
+			MainMenu.courseOverview.Close();
+			MainMenu.courseCreator.Load(courseInfo);
 		}
 
 	}

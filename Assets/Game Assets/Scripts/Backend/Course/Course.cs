@@ -31,10 +31,7 @@ namespace Backend.Course {
 			this.name = name;
 			this.description = description;
 			holeIDs = new string[holeData.Length];
-			for (int i = 0; i < holeIDs.Length; i++) {
-				par += holeData[i].par;
-				holeIDs[i] = holeData[i]._id;
-			}
+			RecalculatePar(holeData);
 		}
 
 		public void DownloadLevels(UnityAction onComplete) {
@@ -69,6 +66,13 @@ namespace Backend.Course {
 			}
 
 			return "" + score;
+		}
+
+		private void RecalculatePar(DBHoleInfo[] holeData) {
+			for (int i = 0; i < holeIDs.Length; i++) {
+				par += holeData[i].par;
+				holeIDs[i] = holeData[i]._id;
+			}
 		}
 	}
 }

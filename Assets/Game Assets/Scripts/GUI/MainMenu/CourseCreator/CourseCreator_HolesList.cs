@@ -48,6 +48,15 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 			LayoutRebuilder.ForceRebuildLayoutImmediate(numbersContainer);
 		}
 
+		public void Clear() {
+			holeList.Clear();
+			foreach (CourseCreator_HolesList_Number number in numbers) {
+				Destroy(number.gameObject);
+			}
+
+			numbers = new List<CourseCreator_HolesList_Number>();
+		}
+
 		public DBHoleInfo[] GetHoles() {
 			object[] levelInfos = holeList.GetItems();
 			DBHoleInfo[] output = new DBHoleInfo[levelInfos.Length];
@@ -57,6 +66,10 @@ namespace Game_Assets.Scripts.GUI.CourseCreator {
 			}
 
 			return output;
+		}
+
+		public bool HasHole(DBHoleInfo holeInfo) {
+			return holeList.ContainsItem(holeInfo);
 		}
 
 	}

@@ -2,8 +2,8 @@ using Newtonsoft.Json;
 
 namespace Backend.Serialization {
 	public class ServerSerializable {
-		
-		public string _id { get; private set; }
+
+		public string _id;
 
 		public virtual void Save() {
 			

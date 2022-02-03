@@ -1,14 +1,9 @@
-using Backend.Course;
-using Backend.Enums;
-using Backend.Level;
 using Game_Assets.Scripts.Backend.Server;
-using Game_Assets.Scripts.GUI;
 using GUI.MainMenu;
-using GUI.MainMenu.CourseCreator;
 using TMPro;
 using UnityEngine;
 
-namespace GUI.LevelOptionGrid {
+namespace Game_Assets.Scripts.GUI.MainMenu.LevelOptionGrid {
 	public class LevelOptionGrid_Option : MonoBehaviour {
 
 		private Vector2 normalPosition;
@@ -18,8 +13,8 @@ namespace GUI.LevelOptionGrid {
 		private DBObject _dbObject;
 		private MainMenu_Subwindow subwindow;
 
-		[Header("Options for displaying holesInfo")] [SerializeField]
-		private AutoResizeSwitchButton addHoleButton;
+		[Header("Options for displaying holesInfo")]
+		[SerializeField] private AutoResizeSwitchButton addHoleButton;
 		
 		public void SetNormalPosition(Vector2 position) {
 			normalPosition = position;
@@ -53,8 +48,9 @@ namespace GUI.LevelOptionGrid {
 		private void RefreshLevel(DBHoleInfo dbHoleInfo) {
 			nameText.text = dbHoleInfo.name;
 			addHoleButton.gameObject.SetActive(true);
+			addHoleButton.SetState(!MainMenu.courseCreator.holesList.HasHole(dbHoleInfo), false);
 			addHoleButton.OnClickAction = b => {
-				if (subwindow is CourseCreator courseCreator) {
+				if (subwindow is global::GUI.MainMenu.CourseCreator.CourseCreator courseCreator) {
 					if (b) {
 						courseCreator.holesList.RemoveHoleFromList(dbHoleInfo);
 					} else {
@@ -75,7 +71,7 @@ namespace GUI.LevelOptionGrid {
 			}
 			
 			if (_dbObject is DBCourseInfo course) {
-				MainMenu.MainMenu.courseOverview.Open(course);
+				Game_Assets.Scripts.GUI.MainMenu.MainMenu.courseOverview.Open(course);
 				return;
 			}
 		}

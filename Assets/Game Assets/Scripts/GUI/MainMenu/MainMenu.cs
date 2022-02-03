@@ -1,18 +1,15 @@
-using System.Data.SqlTypes;
 using Backend.Enums;
-using Game_Assets.Scripts.GUI;
-using Game_Assets.Scripts.GUI.CourseCreator;
 using Game_Assets.Scripts.GUI.GenericComponent;
 using Game_Assets.Scripts.GUI.MainMenu.CourseOverview;
-using Game_Assets.Scripts.GUI.OptionList;
+using GUI.MainMenu;
 using GUI.MainMenu.CourseSelector;
 using GUI.OptionList;
 using UnityEngine;
 
-namespace GUI.MainMenu {
+namespace Game_Assets.Scripts.GUI.MainMenu {
 	public class MainMenu : MonoBehaviour {
-		[SerializeField] private CourseCreator.CourseCreator _courseCreator;
-		public static CourseCreator.CourseCreator courseCreator;
+		[SerializeField] private global::GUI.MainMenu.CourseCreator.CourseCreator _courseCreator;
+		public static global::GUI.MainMenu.CourseCreator.CourseCreator courseCreator;
 		[SerializeField] private MainMenu_OptionList _optionList;
 		public static MainMenu_OptionList optionList;
 		[SerializeField] private MainMenu_Subwindow_CourseSelector _courseSelector;
@@ -52,7 +49,7 @@ namespace GUI.MainMenu {
 			buildMenuLeaf = new MainMenuLeaf(optionList, GenerateBuildMenuOptions);
 			playMenuLeaf = new MainMenuLeaf(optionList, GeneratePlayMenuOptions);
 
-			courseBuilderLeaf = new MainMenuLeaf(courseCreator, ()=>courseCreator.Open());
+			courseBuilderLeaf = new MainMenuLeaf(courseCreator, ()=>courseCreator.New());
 			courseSelectorLeaf = new MainMenuLeaf(courseSelector, () => courseSelector.Open());
 			
 			rootLeaf.AddChild(buildMenuLeaf);
@@ -86,7 +83,7 @@ namespace GUI.MainMenu {
 				new TextButtonCallback("build_menu_option_hole_builder", () => {
 					LoadingScreenManager.Load(null, GameMode.Build);
 				}),
-				new TextButtonCallback("mainmenu_title_course_creator", () => {courseCreator.Open();})
+				new TextButtonCallback("mainmenu_title_course_creator", () => {courseCreator.New();})
 			};
 			
 			optionList.SetHeading("mainmenu_title_build");

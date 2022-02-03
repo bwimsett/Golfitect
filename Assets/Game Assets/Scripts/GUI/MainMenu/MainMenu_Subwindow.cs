@@ -33,8 +33,8 @@ namespace GUI.MainMenu {
 				throw new Exception("No leaf set for subwindow. Cannot navigate without one: " + gameObject.name);
 			}
 			
-			MainMenu.currentLeaf?.Close();
-			MainMenu.currentLeaf = leaf;
+			Game_Assets.Scripts.GUI.MainMenu.MainMenu.currentLeaf?.Close();
+			Game_Assets.Scripts.GUI.MainMenu.MainMenu.currentLeaf = leaf;
 			_canvasGroup.DOFade(1, 0.25f).SetDelay(0.25f).OnPlay(Refresh).OnComplete(() => {
 				_canvasGroup.interactable = _canvasGroup.blocksRaycasts = true;
 			});

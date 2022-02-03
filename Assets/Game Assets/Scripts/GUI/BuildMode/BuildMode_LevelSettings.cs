@@ -17,7 +17,7 @@ public class BuildMode_LevelSettings : MonoBehaviour {
 
 	public void SaveLevel() {
 		SetLevelVariables();
-		LevelManager.serverManager.SubmitLevel(GameManager.currentLevel, result=>{Debug.Log(result);});
+		LevelManager.serverManager.SubmitLevel(GameManager.currentLevel, result=>{Debug.Log(result);}, false);
 	}
 
 	private void SetLevelVariables() {

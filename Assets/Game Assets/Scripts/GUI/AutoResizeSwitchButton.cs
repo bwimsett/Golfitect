@@ -35,10 +35,6 @@ namespace Game_Assets.Scripts.GUI {
 			if (rectTransform == null) {
 				rectTransform = GetComponent<RectTransform>();
 			}
-			
-			if (state == this.state) {
-				return;
-			}
 
 			this.state = state;
 

@@ -24,11 +24,10 @@ public class ServerManager : MonoBehaviour {
 	
 	// URL
 	private static string serverUrl = "https://golfitect.co.uk", scoreUrl = "/scores", ugcUrl = "/ugc", usersUrl = "/users", rankingsUrl = "/rankings";
-	public static string userid { get; private set; }
-	public static bool useridInitialised { get; private set; }
-	
+	private static string userid;
+
 	void Awake() {
-		RefreshUserID();
+		GetUserID(value => userid = value);
 	}
 
 	//* -------------------------- STEAM TICKET --------------------------  *//
@@ -80,16 +79,16 @@ public class ServerManager : MonoBehaviour {
 
 	//* ---------------------------- RETRIEVAL ----------------------------  *//
 
-	private void RefreshUserID() {
-		if (useridInitialised) {
-			return;
+	public void GetUserID(Action<string> onComplete) {
+		if (!string.IsNullOrEmpty(userid)) {
+			onComplete.Invoke(userid);
 		}
 		
 		GetAuthTicket(ticket => {
 			string url = usersUrl + "/userid?ticket=" + ticket;
 			StartCoroutine(GetRequest(url, result => {
-				useridInitialised = true;
 				userid = result.Replace("\"", "");
+				onComplete.Invoke(userid);
 			}));
 		});
 	}
@@ -257,7 +256,7 @@ public class ServerManager : MonoBehaviour {
 	
 	//* ---------------------------- SUBMISSION ----------------------------  *//
 	 
-	public void SubmitLevel(ServerSerializable level, UnityAction<string> onComplete) {
+	public void SubmitLevel(ServerSerializable level, UnityAction<string> onComplete, bool edit) {
 		GetAuthTicket(ticket => {
 			WWWForm form = new WWWForm();
 			form.AddField("ticket", ticket);
@@ -265,17 +264,25 @@ public class ServerManager : MonoBehaviour {
 
 			string uri = ugcUrl + "/holes/submit";
 
+			if (edit) {
+				uri = ugcUrl + "/holes/edit";
+			}
+			
 			StartCoroutine(PostRequest(uri, form, onComplete));
 		});
 	}
 
-	public void SubmitCourse(Course course, UnityAction<string> onComplete) {
+	public void SubmitCourse(Course course, UnityAction<string> onComplete, bool edit) {
 		GetAuthTicket(ticket => {
 			WWWForm form = new WWWForm();
 			form.AddField("ticket", ticket);
 			form.AddField("dat", course.GetJson());
 
 			string uri = ugcUrl + "/courses/submit";
+
+			if (edit) {
+				uri = ugcUrl + "/courses/edit";
+			}
 
 			StartCoroutine(PostRequest(uri, form, onComplete));
 		});

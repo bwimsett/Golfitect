@@ -4,16 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Like and dislike buttons now link back to main menu">
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Models/Tiles/Basic Ground.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Models/Tiles/Basic Ground.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Models/Tiles/Basic Ground.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Models/Tiles/Basic Ground.blend1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Models/Tiles/Basic Ground.fbx" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Models/Tiles/Basic Ground.fbx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/GUI/Prefabs/GUI Course _ Hole Preview.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/GUI/Prefabs/GUI Course _ Hole Preview.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameLevelCommands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameLevelCommands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameMainMenuCommands.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/GolfGameMainMenuCommands.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/SteamManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/SteamManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/DBObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/DBObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerSerializable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerSerializable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/AutoResizeSwitchButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/AutoResizeSwitchButton.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_LevelSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_LevelSettings.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/LevelBuilderTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/LevelBuilderTool.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator_HolesList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator_HolesList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseOverview/MainMenu_CourseOverview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseOverview/MainMenu_CourseOverview.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid_Option.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid_Option.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu_Subwindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu_Subwindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,18 +50,19 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/GUIHighlightOnMouseover.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Ball/BallHandle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_LevelSettings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Ball/LockRotation.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.rlabrecque.steamworks.net@4dafa26fbd/Runtime/CallbackDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.rlabrecque.steamworks.net@4dafa26fbd/Runtime/InteropHelp.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/DrawingManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/GUIHighlightOnMouseover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.rlabrecque.steamworks.net@4dafa26fbd/Runtime/autogen/isteamuser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/StripeButton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/WaitingDots.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/DrawingManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -149,10 +163,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="34872">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="316">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="34872" />
+      <option name="pid" value="316" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -227,7 +241,9 @@
       <workItem from="1643545092365" duration="8209000" />
       <workItem from="1643633046288" duration="10178000" />
       <workItem from="1643658100234" duration="1934000" />
-      <workItem from="1643799738952" duration="15476000" />
+      <workItem from="1643799738952" duration="16150000" />
+      <workItem from="1643834882638" duration="595000" />
+      <workItem from="1643886919995" duration="11499000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -551,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643811419596</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Fixed inaccurate click and drag ground tile placement">
+      <created>1643829552838</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1643829552838</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +597,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Level complete screen working" />
     <MESSAGE value="Uploading and downloading level / course info now works" />
     <MESSAGE value="EVERYTHING WORKS AGAIN! BUT NOW ON MY OWN SERVER!!!!!!!!!!!!!!!!" />
     <MESSAGE value="Level high scores working!" />
@@ -599,7 +621,8 @@
     <MESSAGE value="Added camera controls for zoom and rotate" />
     <MESSAGE value="Added level boundary ball resetting and locked ball control while moving" />
     <MESSAGE value="Like and dislike buttons now link back to main menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Like and dislike buttons now link back to main menu" />
+    <MESSAGE value="Fixed inaccurate click and drag ground tile placement" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed inaccurate click and drag ground tile placement" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
