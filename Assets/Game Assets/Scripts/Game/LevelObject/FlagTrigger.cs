@@ -12,7 +12,8 @@ public class FlagTrigger : MonoBehaviour {
 		if (!ball) {
 			return;
 		}
-		
+
+		GameManager.currentLevel.SetCompletable(true);
 		GameManager.courseTracker.FinishHole();
 	}
 }

@@ -14,6 +14,10 @@ namespace Game_Assets.Scripts.GUI.GenericComponent {
 		[SerializeField] private Vector2 mouseOverSize, mouseClickSize;
 		[SerializeField] private Color mouseOverColor, mouseExitColor, mouseClickColor;
 
+		[SerializeField] private bool isToggle;
+		[ShowIf("isToggle"), SerializeField] private bool lockScale, lockColor; 
+		protected bool isSelected;
+		
 		[SerializeField] private UnityEvent OnClick, OnSelected, OnDeselected;
 		
 		private Vector2 defaultSize;
@@ -21,13 +25,11 @@ namespace Game_Assets.Scripts.GUI.GenericComponent {
 		
 		private Tween scaleTween, colorTween;
 		
-		[SerializeField] private bool isToggle;
-		[ShowIf("isToggle"), SerializeField] private bool lockScale, lockColor; 
-		protected bool isSelected;
-
 		void Awake() {
 			defaultSize = scaleTarget.rect.size;
-			defaultColor = colorTarget.color;
+			if (colorTarget) {
+				defaultColor = colorTarget.color;
+			}
 		}
 		
 		public void OnMouseEnter() {

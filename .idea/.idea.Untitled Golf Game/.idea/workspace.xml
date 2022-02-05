@@ -4,11 +4,200 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Can now edit existing courses">
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildOptions.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildOptions/BuildMode_BuildOptions_Option.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildOptions/BuildMode_BuildOptions_Option.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildOptions/BuildMode_BuildOptions_Tag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildOptions/BuildMode_BuildOptions_Tag.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/LevelSettings_Checkbox_Played.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/LevelSettings_Checkbox_Played.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObjectTag.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObjectTag.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu_Subwindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/MainMenu_Subwindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Models/Materials/Grass 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Models/Materials/Grass 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Models/Materials/Stone 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Models/Materials/Stone 1.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Basic Ground.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Basic Ground.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildModeHUD.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildModeHUD.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/GUIScaleOnMouseover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/GUIScaleOnMouseover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/FlagTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/FlagTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Resources/Shapes Import State.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Resources/Shapes Import State.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cone Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Cuboid Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Disc Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 2D Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Line 3D Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polygon Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Polyline 2D Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Quad Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Rect Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Regular Polygon Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Sphere Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Texture Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Torus Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Additive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Additive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle ColorBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle ColorBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle ColorDodge.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle ColorDodge.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Darken.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Darken.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Lighten.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Lighten.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle LinearBurn.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle LinearBurn.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Multiplicative.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Multiplicative.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Opaque.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Opaque.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Screen.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Screen.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Subtractive.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Subtractive.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Transparent.shader" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shapes/Shaders/Generated Shaders/Resources/Triangle Transparent.shader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeTai.TranslucentImage.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LeTai.TranslucentImage.Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeTai.TranslucentImage.UniversalRP.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LeTai.TranslucentImage.UniversalRP.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeTai.TranslucentImage.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/LeTai.TranslucentImage.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MPUIKit.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MPUIKit.Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MPUIKit.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/MPUIKit.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShapesEditor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ShapesEditor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShapesRuntime.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ShapesRuntime.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ShapesSamples.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/ShapesSamples.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.CompatibilityLayer.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityMathematics.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Sirenix.OdinInspector.Modules.UnityMathematics.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled Golf Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled Golf Game.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +230,7 @@
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.rlabrecque.steamworks.net@4dafa26fbd/Runtime/InteropHelp.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/DrawingManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/GUIHighlightOnMouseover.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildOptions/BuildMode_BuildOptions.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/ReorderableList/GUIReorderableList.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.rlabrecque.steamworks.net@4dafa26fbd/Runtime/autogen/isteamuser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/StripeButton.cs" root0="FORCE_HIGHLIGHTING" />
@@ -145,10 +335,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="316">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="316" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -225,7 +415,9 @@
       <workItem from="1643658100234" duration="1934000" />
       <workItem from="1643799738952" duration="16150000" />
       <workItem from="1643834882638" duration="595000" />
-      <workItem from="1643886919995" duration="14096000" />
+      <workItem from="1643886919995" duration="14768000" />
+      <workItem from="1643979248060" duration="11082000" />
+      <workItem from="1644015465970" duration="2798000" />
     </task>
     <task id="LOCAL-00001" summary="Made test changes">
       <created>1637508494044</created>
@@ -563,7 +755,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643904626192</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Removed ticket checks for loading a user's own courses. Much faster.">
+      <created>1643907357459</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1643907357459</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -586,7 +785,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="EVERYTHING WORKS AGAIN! BUT NOW ON MY OWN SERVER!!!!!!!!!!!!!!!!" />
     <MESSAGE value="Level high scores working!" />
     <MESSAGE value="Course Summary scores / rankings work! Will pull preliminary data on course load, and up-to-date data on score submission." />
     <MESSAGE value="Leaderboards now work" />
@@ -611,7 +809,8 @@
     <MESSAGE value="Like and dislike buttons now link back to main menu" />
     <MESSAGE value="Fixed inaccurate click and drag ground tile placement" />
     <MESSAGE value="Can now edit existing courses" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can now edit existing courses" />
+    <MESSAGE value="Removed ticket checks for loading a user's own courses. Much faster." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed ticket checks for loading a user's own courses. Much faster." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

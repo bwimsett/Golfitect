@@ -82,6 +82,10 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 		}
 
 		public void DeselectBuildOptionFromDock(LevelObject prefab) {
+			if (!_currentSelectedBuildModeBuildOption) {
+				return;
+			}
+		
 			if (_currentSelectedBuildModeBuildOption.levelObject.objectTypeID.Equals(prefab.objectTypeID)) {
 				DeselectBuildOptionFromDock(_currentSelectedBuildModeBuildOption);
 			}

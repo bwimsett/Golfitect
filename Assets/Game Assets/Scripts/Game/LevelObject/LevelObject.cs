@@ -11,6 +11,7 @@ namespace Backend.Level {
 	public class LevelObject : MonoBehaviour {
 
 		public string objectTypeID;
+		public LevelObjectTag[] tags;
 		public LevelObjectClass levelObjectClass;
 		[ShowIf("levelObjectClass", LevelObjectClass.Scenery)]
 		public bool snapToGrid;
@@ -24,6 +25,7 @@ namespace Backend.Level {
 
 		public MeshFilter meshFilter;
 		[HideInInspector] public MeshCollider buildModeCollider;
+
 
 		public virtual void LevelBuilderHover(RaycastHit hit) {
 			

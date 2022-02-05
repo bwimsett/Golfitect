@@ -7,6 +7,7 @@ using Backend.Serialization;
 using Game;
 using Newtonsoft.Json;
 using UnityEngine;
+using UnityEngine.Events;
 using Object = UnityEngine.Object;
 
 namespace Backend.Level {
@@ -27,6 +28,9 @@ namespace Backend.Level {
 		[JsonProperty] private Dictionary<int, LevelObjectSave> objectSaves;
 		private Dictionary<int, LevelObject> objects;
 
+		[JsonIgnore] public bool completable { get; private set; }
+		[JsonIgnore] public UnityEvent<bool> OnCompletableChanged;
+		
 		public Level(Vector3Int levelDimensions) {
 			this.levelDimensions = levelDimensions;
 			// set level boundary to lowest point in dimensions
@@ -34,6 +38,7 @@ namespace Backend.Level {
 			objectTypesUsed = new List<string>();
 			objectSaves = new Dictionary<int, LevelObjectSave>();
 			objects = new Dictionary<int, LevelObject>();
+			OnCompletableChanged = new UnityEvent<bool>();
 		}
 
 		public void Play() {
@@ -63,6 +68,7 @@ namespace Backend.Level {
 		public void Place(Vector3 origin, LevelObject levelObject) {
 			levelObject.origin = origin;
 			levelObject.Construct();
+			SetCompletable(false);
 
 			// Add to list of objects in the level
 			objects.Add(levelObject.objectID, levelObject);
@@ -70,11 +76,17 @@ namespace Backend.Level {
 			levelObject.gameObject.SetActive(true);
 		}
 
+		public void SetCompletable(bool completable) {
+			this.completable = completable;
+			OnCompletableChanged.Invoke(completable);
+		}
+
 		public void DestroyLevelObject(LevelObject levelObject) {
 			if (!objects.ContainsValue(levelObject)) {
 				return;
 			}
 
+			SetCompletable(false);
 			objects.Remove(levelObject.objectID);
 			Object.Destroy(levelObject.gameObject);
 		}

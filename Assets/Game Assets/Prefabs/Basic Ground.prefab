@@ -96,13 +96,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectTypeID: tile_ground
+  tags:
+  - {fileID: 11400000, guid: 71ea66dfa8ed26c47a5a182f3fa94b39, type: 2}
   levelObjectClass: 0
+  snapToGrid: 0
   buildMenuIcon: {fileID: 21300000, guid: 7bb1bad3ba6f25c459b6689c310e9a20, type: 3}
   showInBuildMenuDock: 1
   ballCollisions: 1
+  rotatable: 0
   objectID: 0
   origin: {x: 0, y: 0, z: 0}
   scale: {x: 0, y: 0, z: 0}
+  rotation: {x: 0, y: 0, z: 0}
   tileTextures: 1
   horizontalTextures: 00000000
   verticalTextures: 

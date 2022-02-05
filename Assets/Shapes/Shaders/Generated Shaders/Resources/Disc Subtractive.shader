@@ -11,15 +11,12 @@ Shader "Shapes/Disc Subtractive" {
 	}
 	SubShader {
 		Tags {
-			"RenderPipeline" = "UniversalPipeline"
 			"IgnoreProjector" = "True"
 			"Queue" = "Transparent"
 			"RenderType" = "Transparent"
 			"DisableBatching" = "True"
 		}
 		Pass {
-			Name "Pass"
-			Tags { "LightMode" = "SRPDefaultUnlit" }
 			Stencil {
 				Comp [_StencilComp]
 				Pass [_StencilOpPass]
@@ -37,33 +34,6 @@ Shader "Shapes/Disc Subtractive" {
 				#pragma vertex vert
 				#pragma fragment frag
 				#pragma multi_compile_instancing
-				#pragma prefer_hlslcc gles
-				#pragma exclude_renderers d3d11_9x
-				#pragma target 2.0
-				#pragma multi_compile __ INNER_RADIUS
-				#pragma multi_compile __ SECTOR
-				#define SUBTRACTIVE
-				#include "../../Core/Disc Core.cginc"
-			ENDHLSL
-		}
-		Pass {
-			Name "DepthOnly"
-			Tags { "LightMode" = "DepthOnly" }
-			Stencil {
-				Comp [_StencilComp]
-				Pass [_StencilOpPass]
-				Ref [_StencilID]
-				ReadMask [_StencilReadMask]
-				WriteMask [_StencilWriteMask]
-			}
-			Cull Off
-			HLSLPROGRAM
-				#pragma vertex vert
-				#pragma fragment frag
-				#pragma multi_compile_instancing
-				#pragma prefer_hlslcc gles
-				#pragma exclude_renderers d3d11_9x
-				#pragma target 2.0
 				#pragma multi_compile __ INNER_RADIUS
 				#pragma multi_compile __ SECTOR
 				#define SUBTRACTIVE
@@ -85,9 +55,6 @@ Shader "Shapes/Disc Subtractive" {
 				#pragma vertex vert
 				#pragma fragment frag
 				#pragma multi_compile_instancing
-				#pragma prefer_hlslcc gles
-				#pragma exclude_renderers d3d11_9x
-				#pragma target 2.0
 				#pragma multi_compile __ INNER_RADIUS
 				#pragma multi_compile __ SECTOR
 				#define SUBTRACTIVE
@@ -111,9 +78,6 @@ Shader "Shapes/Disc Subtractive" {
 				#pragma vertex vert
 				#pragma fragment frag
 				#pragma multi_compile_instancing
-				#pragma prefer_hlslcc gles
-				#pragma exclude_renderers d3d11_9x
-				#pragma target 2.0
 				#pragma multi_compile __ INNER_RADIUS
 				#pragma multi_compile __ SECTOR
 				#define SUBTRACTIVE

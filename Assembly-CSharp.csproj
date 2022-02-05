@@ -27,7 +27,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_12;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;SHAPES_URP;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;DEVELOPMENT_BUILD</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_12;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;DEVELOPMENT_BUILD</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn></NoWarn>
@@ -52,6 +52,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\QuickOutline\Scripts\Outline.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\Navigation\PageNavigation.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\Spinner.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayModeHUD.cs" />
@@ -79,16 +80,19 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenuPersistantUI.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Tools\Tool.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LevelInputManager.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\LevelSettings_Checkbox_Played.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Ball\Ball.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\IndexRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\SteamManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator_HolesList_Number.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildOptions\BuildMode_BuildOptions_Option.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\PersistantUI\PersistantUI_BackButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\LevelTimerDisplay.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\TextTabs.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseOverview\MainMenu_CourseOverview.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\Locale.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildOptions\BuildMode_BuildOptions_Tag.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameSceneManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\LevelObjectClass.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocString.cs" />
@@ -135,6 +139,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\OptionList\MainMenu_OptionList_Option.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\SteamCourseData.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\DBCourseScore.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectTag.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LevelManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Serialization\Vector3Save.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\FlatGround.cs" />
@@ -143,12 +148,14 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\ServerManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GameHUD.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildMode_LevelSettings.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildOptions\BuildMode_BuildOptions.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Steam\BWSteamUtility.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_CourseSummary.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\LoadingScreenManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBUser.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_LevelSummary.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBObject.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\LevelSettings_Checkbox.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\PluralRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildModeHUD.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelObject\LevelObjectBank.cs" />
@@ -204,6 +211,7 @@
      <None Include="Assets\Shapes\Shaders\Shapes.cginc" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Disc Darken.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture Opaque.shader" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineMask.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D ColorBurn.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polyline 2D Screen.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Darken.shader" />
@@ -249,6 +257,7 @@
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cuboid Multiplicative.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Cone ColorBurn.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Sphere Subtractive.shader" />
+     <None Include="Assets\QuickOutline\Readme.txt" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Polygon Subtractive.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture Additive.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D Transparent.shader" />
@@ -316,6 +325,7 @@
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus Opaque.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus ColorDodge.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Line 3D ColorBurn.shader" />
+     <None Include="Assets\QuickOutline\Resources\Shaders\OutlineFill.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Texture LinearBurn.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Torus Additive.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle LinearBurn.shader" />
