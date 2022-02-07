@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using Backend;
 using Backend.Level;
 using Backend.Managers;
 using BWLocaliser;
+using DG.Tweening;
 using Game_Assets.Scripts.GUI.LevelBuilder.BuildOptions;
 using UnityEngine;
 
@@ -21,8 +23,15 @@ public class BuildMode_BuildOptions : MonoBehaviour {
 	private List<LevelObject> visibleObjects;
 	private List<LevelObjectTag> tags;
 
+	private RectTransform rectTransform;
+	[SerializeField] private float openDuration, closeDuration, xPadding;
+	[SerializeField] private Ease openEase, closeEase;
+	private Tween moveTween;
+	private bool open;
+
 	void Start() {
 		InitialiseTagsList();
+		rectTransform = GetComponent<RectTransform>();
 	}
 
 	private void InitialiseTagsList() {
@@ -129,4 +138,36 @@ public class BuildMode_BuildOptions : MonoBehaviour {
 		tagOptionsContainer.gameObject.SetActive(!tagOptionsContainer.gameObject.activeSelf);	
 	}
 
+	public void ToggleOpen() {
+		SetOpen(!open);
+	}
+
+	public void SetOpen(bool open) {
+		if (this.open == open) {
+			return;
+		}
+		
+		this.open = open;
+
+		float tweenProgress = 0;
+		float duration = 0;
+		
+		if (moveTween != null) {
+			tweenProgress = moveTween.ElapsedPercentage();
+			moveTween.Kill();
+		}
+		
+		Vector2 pos = rectTransform.transform.position;
+		
+		if (open) {
+			duration = openDuration * (1-tweenProgress);
+			rectTransform.SetPivot(new Vector2(1, 0.5f));
+			moveTween = rectTransform.DOAnchorPos(new Vector2(-xPadding, 0), duration).SetEase(openEase);
+		}
+		else {
+			duration = closeDuration * (1-tweenProgress);
+			rectTransform.SetPivot(new Vector2(0, 0.5f));
+			moveTween = rectTransform.DOAnchorPos(new Vector2(xPadding, 0), duration).SetEase(closeEase);
+		}
+	}
 }

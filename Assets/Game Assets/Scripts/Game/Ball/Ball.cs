@@ -19,7 +19,11 @@ namespace Game {
 		private float swingStrength;
 		public float maxForce;
 
+		public float dashSize, dashSpacing, dashOffset;
+
 		private Vector3 lastPosition;
+
+		private bool mouseOver;
 
 		void Update() {
 			ResetIfOutOfBounds();
@@ -56,6 +60,7 @@ namespace Game {
 		
 		public void MouseOver() {
 			float duration = circleAppearDuration;
+			mouseOver = true;
 			
 			if (circleRadiusTween != null) {
 				duration -= circleRadiusTween.Elapsed();
@@ -69,6 +74,7 @@ namespace Game {
 
 		public void MouseExit() {
 			float duration = circleAppearDuration;
+			mouseOver = false;
 			
 			if (circleRadiusTween != null) {
 				duration -= circleRadiusTween.Elapsed();
@@ -102,11 +108,20 @@ namespace Game {
 		public void DrawHandle() {
 			Draw.Thickness = circleThickness;
 			Draw.LineEndCaps = LineEndCap.Round;
-
-			Vector3 lineEnd = Vector3.MoveTowards(swingStart, this.lineEnd, (swingStrength*maxDirectionLineLength));
+			Draw.UseDashes = false;
 			
+			Vector3 lineEnd = Vector3.MoveTowards(swingStart, this.lineEnd, (swingStrength*maxDirectionLineLength));
 			Draw.Ring(transform.position, Vector3.up, circleRadius, circleThickness);
-			Draw.Line(swingStart, lineEnd);
+			
+			Draw.DashSize = dashSize;
+			Draw.UseDashes = true;
+			Draw.DashSpacing = dashSpacing;
+			Draw.DashOffset = dashOffset;
+
+			if (mouseOver) {
+				Draw.Line(swingStart, lineEnd);
+			}
+			
 		}
 
 	}

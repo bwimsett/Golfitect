@@ -9,18 +9,22 @@ using UnityEngine.UI;
 public class StripeButton : MonoBehaviour {
 
 	public Image background, stripes;
-	public string backgroundColorID, textColorID, textChangeColorID;
+	public string backgroundColorID, textColorID, textChangeColorID, disabledColorID;
 	[SerializeField] private RectTransform resizeTarget;
 	[SerializeField] private Vector2 backgroundStartX, backgroundEndX;
 	[SerializeField] private float backgroundAnimationSpeed, scaleSpeed, shrinkSpeed;
 	[SerializeField] private Ease enlargeEase;
 	[SerializeField] private Vector2 enlargeScale;
+	[SerializeField] private Button button;
 	public TextLocalizer buttonText;
 	public Image buttonImage;
 	private Vector2 normalSize;
 	private bool animateBackground;
 	private Tween currentBackgroundAnimation, currentBackgroundFade, currentEnlargeAnimation, currentShrinkAnimation, currentTextTween;
-
+	
+	
+	private bool interactable;
+	
 	void Start() {
 		normalSize = resizeTarget.rect.size;
 		if (!string.IsNullOrEmpty(backgroundColorID)) {
@@ -86,6 +90,10 @@ public class StripeButton : MonoBehaviour {
 	}
 
 	public void OnMouseEnter() {
+		if (!interactable) {
+			return;
+		}
+		
 		ShowStripes();
 		currentShrinkAnimation?.Kill();
 		Vector2 newSize = enlargeScale * normalSize;
@@ -97,9 +105,33 @@ public class StripeButton : MonoBehaviour {
 	}
 	
 	public void OnMouseExit() {
+		if (!interactable) {
+			return;
+		}
+		
 		HideStripes();
 		currentEnlargeAnimation?.Kill();
 		currentShrinkAnimation = resizeTarget.DOSizeDelta(normalSize, shrinkSpeed);
+	}
+
+	public void SetInteractable(bool interactable) {
+		if (interactable) {
+			Enable();
+		} else {
+			Disable();
+		};
+	}
+	
+	public void Disable() {
+		interactable = false;
+		button.interactable = false;
+		background.color = GameSceneManager.colorBank.GetColor(disabledColorID);
+	}
+
+	public void Enable() {
+		interactable = true;
+		button.interactable = true;
+		background.color = GameSceneManager.colorBank.GetColor(backgroundColorID);
 	}
 
 }

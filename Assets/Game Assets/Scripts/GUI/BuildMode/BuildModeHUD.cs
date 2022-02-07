@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Backend.Enums;
 using Backend.Level;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Game_Assets.Scripts.GUI.LevelBuilder {
@@ -15,6 +16,8 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 		[SerializeField] private BuildMode_BuildOptionButton buildModeBuildOptionButtonPrefab;
 		private BuildMode_BuildOptionButton _currentSelectedBuildModeBuildOption;
 		public BuildMode_LevelSettings levelSettings;
+
+		public BuildMode_BuildOptions buildOptions;
 
 		[SerializeField] private RectTransform customisationOptionContainer;
 		[SerializeField] private BuildMode_CustomisationOption[] customisationOptions;
@@ -34,6 +37,7 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 				}
 			}
 
+			AddButtonToDock(()=>buildOptions.SetOpen(true), () => buildOptions.SetOpen(false), null);
 			StartCoroutine(RebuildAtEndOfFrame());
 		}
 
@@ -61,6 +65,12 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 			button.gameObject.SetActive(true);
 			
 			button.SetLevelObject(levelObject, this);
+		}
+
+		private void AddButtonToDock(UnityAction onSelect, UnityAction onDeselect, Sprite sprite) {
+			BuildMode_BuildOptionButton button = Instantiate(buildModeBuildOptionButtonPrefab.gameObject, sceneryDock).GetComponent<BuildMode_BuildOptionButton>();
+			button.SetCallbacks(onSelect, onDeselect, sprite, this);
+			button.gameObject.SetActive(true);
 		}
 
 		public void SelectBuildOptionFromDock(BuildMode_BuildOptionButton modeBuildOption) {

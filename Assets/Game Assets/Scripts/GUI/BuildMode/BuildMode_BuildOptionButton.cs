@@ -2,6 +2,7 @@ using Backend.Enums;
 using Backend.Level;
 using Game_Assets.Scripts.GUI.GenericComponent;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 namespace Game_Assets.Scripts.GUI.LevelBuilder {
@@ -11,10 +12,19 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 		public Image icon;
 		private BuildModeHUD hud;
 
+		private UnityAction onSelect, onDeselect;
+
 		public void SetLevelObject(LevelObject levelObject, BuildModeHUD hud) {
 			this.hud = hud;
 			this.levelObject = levelObject;
 			Refresh();
+		}
+
+		public void SetCallbacks(UnityAction onSelect, UnityAction onDeselect, Sprite icon, BuildModeHUD hud) {
+			this.hud = hud;
+			this.icon.sprite = icon;
+			this.onSelect = onSelect;
+			this.onDeselect = onDeselect;
 		}
 
 		private void Refresh() {
@@ -26,8 +36,14 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 			if (Input.GetMouseButtonDown(1)) {
 				return;
 			}
-			
+
 			hud.SelectBuildOptionFromDock(this);
+			
+			if (onSelect != null) {
+				onSelect.Invoke();
+				return;
+			}
+			
 			LevelManager.levelInputManager.levelBuilderTool.SetActive(true);
 			LevelManager.levelInputManager.levelBuilderTool.SetLevelObject(levelObject);
 			ShowCustomisationOptions();
@@ -35,6 +51,12 @@ namespace Game_Assets.Scripts.GUI.LevelBuilder {
 
 		public void OnDeselect() {
 			hud.DeselectBuildOptionFromDock(this);
+
+			if (onDeselect != null) {
+				onDeselect.Invoke();
+				return;
+			}
+
 			LevelManager.levelInputManager.levelBuilderTool.SetActive(false);
 		}
 
