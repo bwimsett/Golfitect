@@ -13,12 +13,15 @@ namespace Backend.Managers {
 		public static GUIColorBank colorBank;
 		public PlayerProfileDisplay _profileDisplay;
 		public static PlayerProfileDisplay profileDisplay;
+		public PopupManager _popupManager;
+		public static PopupManager popupManager;
 		
 		void Awake() {
 			console = _console;
 			serverManager = _serverManager;
 			colorBank = _colorBank;
 			profileDisplay = _profileDisplay;
+			popupManager = _popupManager;
 		}
 	}
 }

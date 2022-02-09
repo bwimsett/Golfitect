@@ -19,6 +19,10 @@ namespace Backend.Level {
 		public bool showInBuildMenuDock, ballCollisions = true, rotatable;
 		[HideInInspector] public int objectID;
 		[HideInInspector] public Vector3 origin, scale, rotation;
+
+		[Header("Scale Locks")] 
+		public bool lockXScale;
+		public bool lockYScale, lockZScale;
 		
 		[SerializeField] private bool tileTextures;
 		[ShowIf("tileTextures"), SerializeField] private int[] horizontalTextures, verticalTextures;

@@ -21,9 +21,9 @@ public class StripeButton : MonoBehaviour {
 	private Vector2 normalSize;
 	private bool animateBackground;
 	private Tween currentBackgroundAnimation, currentBackgroundFade, currentEnlargeAnimation, currentShrinkAnimation, currentTextTween;
-	
-	
-	private bool interactable;
+
+
+	private bool interactable = true;
 	
 	void Start() {
 		normalSize = resizeTarget.rect.size;

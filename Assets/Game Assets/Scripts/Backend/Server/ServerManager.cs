@@ -357,4 +357,24 @@ public class ServerManager : MonoBehaviour {
 		}
 	}
 	
+	//* ---------------------------- DELETION ----------------------------  *//
+
+	public void DeleteHole(string holeID, UnityAction onComplete) {
+		GetAuthTicket(ticket => {
+			string uri = ugcUrl+"/holes/delete?ticket="+ticket+"&id="+holeID;
+			StartCoroutine(GetRequest(uri, result => {
+				onComplete?.Invoke();
+			}));
+		});
+	}
+	
+	public void DeleteCourse(string courseID, UnityAction onComplete) {
+		GetAuthTicket(ticket => {
+			string uri = ugcUrl+"/courses/delete?ticket="+ticket+"&id="+courseID;
+			StartCoroutine(GetRequest(uri, result => {
+				onComplete?.Invoke();
+			}));
+		});
+	}
+	
 }

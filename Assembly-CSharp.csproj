@@ -64,6 +64,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\CourseScoreSummary_Leaderboard.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Course\CourseTracker.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\StripeButton.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\ExtensionMethods.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildMode_PlayButton.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelTimer.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\ServerSerializable.cs" />
@@ -107,7 +108,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Game\LevelBuilder\LevelObjectScaleParent.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\ShiftXOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\LevelType.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\Popup.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\Popup\Popup.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\system\IntegerRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\MainMenu.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Game\Ball\LockRotation.cs" />
@@ -166,7 +167,9 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\DrawingManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\ExtensionMethods.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\Popup\PopupAlert.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\Popup\PopupAlertCallback.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\PopupManager.cs" />
      <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\lib.hlsl" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Darken.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Multiplicative.shader" />

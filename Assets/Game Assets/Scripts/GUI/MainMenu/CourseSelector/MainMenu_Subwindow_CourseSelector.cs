@@ -59,6 +59,10 @@ namespace GUI.MainMenu.CourseSelector {
 			OnDropdownModified();
 		}
 
+		public void Refresh() {
+			Refresh(userOnly);
+		}
+
 		private int GetDropdownDuration() {
 			switch (durationDropdown.value) {
 				case 0: return 7;

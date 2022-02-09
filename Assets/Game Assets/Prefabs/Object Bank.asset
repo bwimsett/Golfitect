@@ -13,7 +13,12 @@ MonoBehaviour:
   m_Name: Object Bank
   m_EditorClassIdentifier: 
   levelObjects:
+  - {fileID: 4385919866525431429, guid: 47b2db46df225f848850352740136080, type: 3}
   - {fileID: 9155768548822398100, guid: 6670a974517052b48b2743aa8b4a9b8e, type: 3}
   - {fileID: 2727123019617559287, guid: 197e96afc146e744f995f7244d5f1f4b, type: 3}
   - {fileID: 740862645784086172, guid: 36dffd1e80b13c145a798df476d575a1, type: 3}
   - {fileID: 5890431275050020976, guid: e99e1f83ddd0bbf4281219dea0ed6363, type: 3}
+  - {fileID: 7555426016514208851, guid: f015ee71936d6b647866caba30fbfe52, type: 3}
+  - {fileID: 4168396844173203592, guid: 19a98e1ed60a86242b759475a5179714, type: 3}
+  - {fileID: 7859764462301808504, guid: fdddd7a457ded2447ae29ca93742d405, type: 3}
+  - {fileID: 9005186850571023591, guid: 579b72833a9c41540aac332d239eb366, type: 3}

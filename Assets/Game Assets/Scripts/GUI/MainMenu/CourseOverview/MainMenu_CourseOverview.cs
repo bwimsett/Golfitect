@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using Backend.Enums;
 using Backend.Managers;
+using BWLocaliser;
 using DG.Tweening;
 using Game_Assets.Scripts.Backend.Server;
 using Game_Assets.Scripts.GUI.PlayerProfile;
@@ -28,7 +29,7 @@ namespace Game_Assets.Scripts.GUI.MainMenu.CourseOverview {
 		public TextLocalizer creatorNameText, holeCountText;
 		public PlayerProfileTrigger courseCreatorProfileTrigger;
 
-		public GameObject editButton;
+		public GameObject editButton, deleteButton;
 
 		public TextMeshProUGUI descriptionText;
 		public MPImage screenshotImage;
@@ -62,7 +63,9 @@ namespace Game_Assets.Scripts.GUI.MainMenu.CourseOverview {
 			
 			// Enable the edit button for courses created by the current player
 			GameSceneManager.serverManager.GetUserID(id => {
-				editButton.SetActive(id.Equals(this.courseInfo.user._id));
+				bool isUser = id.Equals(this.courseInfo.user._id);
+				editButton.SetActive(isUser);
+				deleteButton.SetActive(isUser);
 			});
 			
 			LayoutRebuilder.ForceRebuildLayoutImmediate(rectTransform);
@@ -100,5 +103,21 @@ namespace Game_Assets.Scripts.GUI.MainMenu.CourseOverview {
 			MainMenu.courseCreator.Load(courseInfo);
 		}
 
+		public void Delete() {
+			PopupAlert popup = GameSceneManager.popupManager.CreatePopup();
+
+			LocString popupText = new LocString("courseoverview_popup_delete_confirmation");
+			PopupAlertCallback popupOption1 = new PopupAlertCallback(() => {
+				GameSceneManager.serverManager.DeleteCourse(courseInfo._id, () => {
+					Close();
+					MainMenu.courseSelector.Refresh();
+				});
+			}, new LocString("generic_delete"));
+			
+			popup.SetValues(popupText, popupOption1);
+
+			
+		}
+		
 	}
 }

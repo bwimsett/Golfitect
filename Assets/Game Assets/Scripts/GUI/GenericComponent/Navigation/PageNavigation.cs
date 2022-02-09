@@ -19,7 +19,6 @@ namespace Game_Assets.Scripts.GUI.GenericComponent {
 			}
 			this.nav = nav;
 			RefreshPages();
-			RefreshButtons();
 		}
 
 		public void RefreshPages() {
@@ -41,6 +40,8 @@ namespace Game_Assets.Scripts.GUI.GenericComponent {
 				navDots.Add(dot);
 				dot.AssignPage(i, this);
 			}
+
+			SetPage(Mathf.Min(nav.page, nav.pages - 1));
 		}
 		
 		public void Next() {

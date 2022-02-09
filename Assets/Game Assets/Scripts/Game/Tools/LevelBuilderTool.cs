@@ -138,6 +138,10 @@ public class LevelBuilderTool : Tool {
 			Vector3 scale = limit - origin;
 			scale = new Vector3(Mathf.Max(1, scale.x),  LevelManager.levelGrid.GridHeightToWorldHeight(tileHeight), Mathf.Max(1, scale.z));
 
+			if (placing.levelObject.lockXScale) { scale.x = 1; }
+			if (placing.levelObject.lockYScale) { scale.y = 1; }
+			if (placing.levelObject.lockZScale) { scale.z = 1; }
+
 			placing.SetScalePositionAndRotation(scale, origin, new Vector3(0, rotation, 0));
 		} else {
 			Vector3 pos = Vector3.zero;
