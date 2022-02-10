@@ -18,6 +18,11 @@ namespace GUI.MainMenu.CourseCreator {
 		public CourseCreator_HolesList holesList;
 		
 		public DBCourseInfo currentCourse;
+
+		void Awake() {
+			nameInputField.characterLimit = Course.NAME_CHAR_LIMIT;
+			descriptionInputField.characterLimit = Course.DESCRIPTION_CHAR_LIMIT;
+		}
 		
 		private void RequestLevelsFromServer() {
 			GameSceneManager.serverManager.GetUserLevelIDs(OnLevelIDsLoaded);

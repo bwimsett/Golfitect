@@ -18,6 +18,7 @@ namespace Backend.Level {
 		
 		public int par = 3;
 		public string name ="New Level", description = "Description";
+		public const int NAME_CHAR_LIMIT = 30;
 
 		[HideInInspector, JsonIgnore] public Ball ball;
 

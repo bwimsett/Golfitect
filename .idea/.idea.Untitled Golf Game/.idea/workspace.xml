@@ -4,16 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Fixed some small bugs">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Models/Other/Tropical Scene.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Models/Other/Tropical Scene.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Models/Other/Tropical Scene.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Models/Other/Tropical Scene.blend1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseTracker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/PlayMode_LevelSummary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/PlayMode_LevelSummary.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_LevelSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_LevelSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,14 +234,7 @@
       <workItem from="1644233291298" duration="8315000" />
       <workItem from="1644407001844" duration="10882000" />
       <workItem from="1644503380923" duration="1864000" />
-      <workItem from="1644508616986" duration="500000" />
-    </task>
-    <task id="LOCAL-00004" summary="Got console working">
-      <created>1637629563946</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1637629563946</updated>
+      <workItem from="1644508616986" duration="2075000" />
     </task>
     <task id="LOCAL-00005" summary="Got steam uploading figured out, and began work on UI">
       <created>1637784345329</created>
@@ -583,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644437488630</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Fixed some small bugs">
+      <created>1644509344717</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1644509344717</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -606,7 +602,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Created prefabs from Course Summary screen" />
     <MESSAGE value="Course overview popup all working apart from &quot;likes and plays&quot; stats" />
     <MESSAGE value="Course overview finished. Now working on player profiles" />
     <MESSAGE value="Player profiles done" />
@@ -631,7 +626,8 @@
     <MESSAGE value="Began work on main build menu, added a check for whether a hole has been succesfully completed, and converted back from URP to SRP" />
     <MESSAGE value="Added open/close for build options and dashed line for ball control" />
     <MESSAGE value="Added popups, level deletion, flat barriers, and tropical trees / bushes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added popups, level deletion, flat barriers, and tropical trees / bushes" />
+    <MESSAGE value="Fixed some small bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some small bugs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -648,45 +644,6 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelUtility.cs</url>
-          <line>8</line>
-          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\Backend\Level\LevelUtility.cs" initialLine="8" containingFunctionPresentation="method 'GetScoreNameID'">
-            <startOffsets>
-              <option value="180" />
-            </startOffsets>
-            <endOffsets>
-              <option value="199" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelUtility.cs</url>
-          <line>17</line>
-          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\Backend\Level\LevelUtility.cs" initialLine="17" containingFunctionPresentation="method 'GetScoreNameID'">
-            <startOffsets>
-              <option value="353" />
-            </startOffsets>
-            <endOffsets>
-              <option value="397" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="35" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelUtility.cs</url>
-          <line>14</line>
-          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\Backend\Level\LevelUtility.cs" initialLine="14" containingFunctionPresentation="method 'GetScoreNameID'">
-            <startOffsets>
-              <option value="295" />
-            </startOffsets>
-            <endOffsets>
-              <option value="340" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -11,6 +11,10 @@ public class BuildMode_LevelSettings : MonoBehaviour {
 	public Spinner parSpinner;
 	public StripeButton saveButton;
 
+	void Awake() {
+		levelNameField.characterLimit = Level.NAME_CHAR_LIMIT;
+	}
+	
 	public void Refresh() {
 		levelNameField.text = GameManager.currentLevel.name;
 		parSpinner.SetMinMax(1, Level.maxPar);

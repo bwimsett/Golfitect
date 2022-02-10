@@ -15,9 +15,12 @@ namespace Backend.Course {
 		
 		public string[] holeIDs;
 		[JsonIgnore] public DBCourseInfo courseInfo;
-
 		[JsonIgnore] public Level.Level[] holes;
 		public string name, description;
+
+		public const int NAME_CHAR_LIMIT = 50;
+		public const int DESCRIPTION_CHAR_LIMIT = 350;
+		
 		public int par { get; private set; }
 
 		[JsonConstructor]
