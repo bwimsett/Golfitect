@@ -96,6 +96,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildOptions\BuildMode_BuildOptions_Tag.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\GameSceneManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Enums\LevelObjectClass.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\Popup\PopupAlert.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocString.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBUserScore.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBHoleInfo.cs" />
@@ -123,6 +124,7 @@
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseCreator\CourseCreator.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\MainMenu\CourseSelector\MainMenu_Subwindow_CourseSelector.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Level\Level.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\PopupManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\CustomisationOption\BuildMode_CustomisationOption.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\components\LocalisationInitializer.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\LocalisationManager.cs" />
@@ -156,6 +158,7 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBUser.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\PlayMode\PlayMode_LevelSummary.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Server\DBObject.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\GUI\Popup\PopupAlertCallback.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\LevelSettings_Checkbox.cs" />
      <Compile Include="Assets\Game Assets\Scripts\Backend\Language\BWLocaliser\system\rule\rules\PluralRule.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\BuildMode\BuildModeHUD.cs" />
@@ -167,9 +170,6 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\DrawingManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\Popup\PopupAlert.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\GUI\Popup\PopupAlertCallback.cs" />
-     <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\PopupManager.cs" />
      <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\lib.hlsl" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Darken.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Multiplicative.shader" />

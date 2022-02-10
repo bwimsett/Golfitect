@@ -5,33 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/PopupManager.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/PopupManager.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/Popup.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/Popup/PopupAlert.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/Popup/PopupAlert.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/Popup/PopupAlertCallback.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/Popup/PopupAlertCallback.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Models/Tiles/Basic Ground.fbx.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Models/Tiles/Basic Ground.fbx.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Ball.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Ball.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Object Bank.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Object Bank.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Models/Other/Tropical Scene.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Models/Other/Tropical Scene.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Models/Other/Tropical Scene.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Models/Other/Tropical Scene.blend1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/GameSceneManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/GameSceneManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseTracker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/CourseTracker.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Server/ServerManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/Navigation/PageNavigation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/Navigation/PageNavigation.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/StripeButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/StripeButton.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseOverview/MainMenu_CourseOverview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseOverview/MainMenu_CourseOverview.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseSelector/MainMenu_Subwindow_CourseSelector.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/Popup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/Popup/Popup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/Popup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/Popup/Popup.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/LevelObject/LevelObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/LevelBuilderTool.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Game/Tools/LevelBuilderTool.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/LevelOptionGrid/LevelOptionGrid.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/PlayMode_LevelSummary.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/PlayMode/PlayMode_LevelSummary.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,10 +151,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="36844">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="36844" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -254,14 +236,9 @@
       <workItem from="1644015465970" duration="2889000" />
       <workItem from="1644057805752" duration="2387000" />
       <workItem from="1644233291298" duration="8315000" />
-      <workItem from="1644407001844" duration="10249000" />
-    </task>
-    <task id="LOCAL-00003" summary="Click and drag building now works">
-      <created>1637607987297</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1637607987297</updated>
+      <workItem from="1644407001844" duration="10882000" />
+      <workItem from="1644503380923" duration="1864000" />
+      <workItem from="1644508616986" duration="500000" />
     </task>
     <task id="LOCAL-00004" summary="Got console working">
       <created>1637629563946</created>
@@ -599,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644247028317</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Added popups, level deletion, flat barriers, and tropical trees / bushes">
+      <created>1644437488630</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1644437488630</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -622,7 +606,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Leaderboards now work" />
     <MESSAGE value="Created prefabs from Course Summary screen" />
     <MESSAGE value="Course overview popup all working apart from &quot;likes and plays&quot; stats" />
     <MESSAGE value="Course overview finished. Now working on player profiles" />
@@ -647,7 +630,8 @@
     <MESSAGE value="Removed ticket checks for loading a user's own courses. Much faster." />
     <MESSAGE value="Began work on main build menu, added a check for whether a hole has been succesfully completed, and converted back from URP to SRP" />
     <MESSAGE value="Added open/close for build options and dashed line for ball control" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added open/close for build options and dashed line for ball control" />
+    <MESSAGE value="Added popups, level deletion, flat barriers, and tropical trees / bushes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added popups, level deletion, flat barriers, and tropical trees / bushes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -666,17 +650,43 @@
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/GenericComponent/StripeButton.cs</url>
-          <line>96</line>
-          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\GUI\GenericComponent\StripeButton.cs" initialLine="96" containingFunctionPresentation="method 'OnMouseEnter'">
+          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelUtility.cs</url>
+          <line>8</line>
+          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\Backend\Level\LevelUtility.cs" initialLine="8" containingFunctionPresentation="method 'GetScoreNameID'">
             <startOffsets>
-              <option value="3066" />
+              <option value="180" />
             </startOffsets>
             <endOffsets>
-              <option value="3080" />
+              <option value="199" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelUtility.cs</url>
+          <line>17</line>
+          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\Backend\Level\LevelUtility.cs" initialLine="17" containingFunctionPresentation="method 'GetScoreNameID'">
+            <startOffsets>
+              <option value="353" />
+            </startOffsets>
+            <endOffsets>
+              <option value="397" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/LevelUtility.cs</url>
+          <line>14</line>
+          <properties documentPath="C:\Users\Ben\Documents\Games\Untitled Golf Game\Assets\Game Assets\Scripts\Backend\Level\LevelUtility.cs" initialLine="14" containingFunctionPresentation="method 'GetScoreNameID'">
+            <startOffsets>
+              <option value="295" />
+            </startOffsets>
+            <endOffsets>
+              <option value="340" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

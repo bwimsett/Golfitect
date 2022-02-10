@@ -29,7 +29,7 @@ namespace GUI.LevelOptionGrid {
 			this.itemIDs = courseIDs;
 			this.subwindow = subwindow;
 			items = new DBObject[courseIDs.Length];
-			pages = Mathf.CeilToInt((float)courseIDs.Length / (layout.x * layout.y));
+			pages = Mathf.Max(1,Mathf.CeilToInt((float)courseIDs.Length / (layout.x * layout.y)));
 			page = 0;
 			_pageNavigation.SetNavigatable(this);
 			LoadCurrentPageFromItemIDs();

@@ -26,7 +26,7 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 			CourseTracker courseTracker = GameManager.courseTracker;
 
 			scoreTitle.SetString(new LocString(LevelUtility.GetScoreNameID(courseTracker.GetScoreForHole(courseTracker.currentHoleIndex-1),
-				GameManager.currentLevel.par)));
+				courseTracker.GetPreviousLevel().par)));
 
 			courseAndHole.SetFields(new Dictionary<string, object>() {
 				{ "holenumber", courseTracker.currentHoleIndex },

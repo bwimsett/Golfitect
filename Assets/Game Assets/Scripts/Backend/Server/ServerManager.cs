@@ -184,6 +184,11 @@ public class ServerManager : MonoBehaviour {
 	}
 	
 	public void GetCourses(string[] courseids, UnityAction<DBCourseInfo[]> onComplete) {
+		if (courseids.Length == 0) {
+			onComplete.Invoke(null);
+			return;
+		}
+		
 		string idstring = "";
 		for (int i = 0; i < courseids.Length; i++) {
 			if (i > 0) {

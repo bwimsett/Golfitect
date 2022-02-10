@@ -36,6 +36,10 @@ namespace Backend.Course {
 			return course.holes[currentHoleIndex];
 		}
 
+		public Level.Level GetPreviousLevel() {
+			return course.holes[currentHoleIndex - 1];
+		}
+
 		public void AddShot() {
 			holeScores[currentHoleIndex].score++;
 			OnShotTaken.Invoke();
