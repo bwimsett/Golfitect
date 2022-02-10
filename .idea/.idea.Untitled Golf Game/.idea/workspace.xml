@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="Fixed some small bugs">
+    <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Course/Course.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Level/Level.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_LevelSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_LevelSettings.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Tropical Plant 1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Prefabs/Tropical Plant 1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildOptions/BuildMode_BuildOptions_Option.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildOptions/BuildMode_BuildOptions_Option.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled Golf Game.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled Golf Game.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,10 +150,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="36844">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="34428">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="36844" />
+      <option name="pid" value="34428" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -234,14 +237,8 @@
       <workItem from="1644233291298" duration="8315000" />
       <workItem from="1644407001844" duration="10882000" />
       <workItem from="1644503380923" duration="1864000" />
-      <workItem from="1644508616986" duration="2075000" />
-    </task>
-    <task id="LOCAL-00005" summary="Got steam uploading figured out, and began work on UI">
-      <created>1637784345329</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1637784345329</updated>
+      <workItem from="1644508616986" duration="3434000" />
+      <workItem from="1644515352008" duration="1483000" />
     </task>
     <task id="LOCAL-00006" summary="Began work on course creator UI">
       <created>1637801189295</created>
@@ -579,7 +576,14 @@
       <option name="project" value="LOCAL" />
       <updated>1644509344717</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="Added character limits for names / descriptions">
+      <created>1644510857813</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1644510857813</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -602,7 +606,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Course overview popup all working apart from &quot;likes and plays&quot; stats" />
     <MESSAGE value="Course overview finished. Now working on player profiles" />
     <MESSAGE value="Player profiles done" />
     <MESSAGE value="Continued work on level builder" />
@@ -627,7 +630,8 @@
     <MESSAGE value="Added open/close for build options and dashed line for ball control" />
     <MESSAGE value="Added popups, level deletion, flat barriers, and tropical trees / bushes" />
     <MESSAGE value="Fixed some small bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed some small bugs" />
+    <MESSAGE value="Added character limits for names / descriptions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added character limits for names / descriptions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -858,6 +858,10 @@
       <Project>{41e027ee-dde4-a340-b95f-bc028c92715b}</Project>
       <Name>LeTai.TranslucentImage</Name>
     </ProjectReference>
+    <ProjectReference Include="RuntimePreviewGenerator.Runtime.csproj">
+      <Project>{eaf92007-0da2-e3a0-e32f-6b5fd0a93403}</Project>
+      <Name>RuntimePreviewGenerator.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="ShapesRuntime.csproj">
       <Project>{b959476b-bd63-35e0-6875-d21e11dcf22b}</Project>
       <Name>ShapesRuntime</Name>

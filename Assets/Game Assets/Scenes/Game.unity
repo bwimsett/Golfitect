@@ -1612,7 +1612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7671935670365182639, guid: c505a35f423b33247859cda254e50d7a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -7479186
+      value: -7616951
       objectReference: {fileID: 0}
     - target: {fileID: 7671935670555417699, guid: c505a35f423b33247859cda254e50d7a, type: 3}
       propertyPath: m_Name
@@ -2950,7 +2950,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 85, y: 85}
+  m_CellSize: {x: 90, y: 90}
   m_Spacing: {x: 5, y: 5}
   m_Constraint: 0
   m_ConstraintCount: 2
@@ -4184,6 +4184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 273fd6cc5e6a436faa027e062f3dd6d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  icon: {fileID: 1314353759}
 --- !u!114 &704030987
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4204,8 +4205,8 @@ MonoBehaviour:
   mouseOverEase: 1
   mouseExitEase: 1
   mouseClickEase: 1
-  mouseOverSize: {x: 85, y: 85}
-  mouseClickSize: {x: 75, y: 75}
+  mouseOverSize: {x: 90, y: 90}
+  mouseClickSize: {x: 85, y: 85}
   mouseOverColor: {r: 0.8588236, g: 0.8588236, b: 0.8588236, a: 1}
   mouseExitColor: {r: 0.8588236, g: 0.8588236, b: 0.8588236, a: 1}
   mouseClickColor: {r: 0.8588236, g: 0.8588236, b: 0.8588236, a: 1}
@@ -5407,7 +5408,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 75, y: 75}
+  m_SizeDelta: {x: 85, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072266500
 MonoBehaviour:
@@ -7539,7 +7540,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 60, y: 60}
+  m_SizeDelta: {x: 75, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1314353759
 MonoBehaviour:
@@ -9105,7 +9106,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1207, y: 0}
+  m_AnchoredPosition: {x: 1200, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1550216846
@@ -9375,6 +9376,7 @@ MonoBehaviour:
   _serverManager: {fileID: 1587768441}
   _colorBank: {fileID: 11400000, guid: 2d966d20d0673dd4e99eded06d5829ba, type: 2}
   _profileDisplay: {fileID: 1398498121}
+  _popupManager: {fileID: 0}
 --- !u!114 &1587768440
 MonoBehaviour:
   m_ObjectHideFlags: 0

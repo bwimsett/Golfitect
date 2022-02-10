@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirenix.OdinInspector.Compa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesSamples", "ShapesSamples.csproj", "{cc66816d-878f-d314-60ee-ab22492b884d}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RuntimePreviewGenerator.Runtime", "RuntimePreviewGenerator.Runtime.csproj", "{eaf92007-0da2-e3a0-e32f-6b5fd0a93403}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapesEditor", "ShapesEditor.csproj", "{83b1b6d5-aa72-df51-6b8e-6b6be8ff3ea2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sirenix.OdinInspector.CompatibilityLayer.Editor", "Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj", "{62370954-6062-6c73-e698-8a7a60ebffa2}"
@@ -67,6 +69,10 @@ Global
 		{cc66816d-878f-d314-60ee-ab22492b884d}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{cc66816d-878f-d314-60ee-ab22492b884d}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{cc66816d-878f-d314-60ee-ab22492b884d}.Release|Any CPU.Build.0 = Release|Any CPU
+		{eaf92007-0da2-e3a0-e32f-6b5fd0a93403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{eaf92007-0da2-e3a0-e32f-6b5fd0a93403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{eaf92007-0da2-e3a0-e32f-6b5fd0a93403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{eaf92007-0da2-e3a0-e32f-6b5fd0a93403}.Release|Any CPU.Build.0 = Release|Any CPU
 		{83b1b6d5-aa72-df51-6b8e-6b6be8ff3ea2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{83b1b6d5-aa72-df51-6b8e-6b6be8ff3ea2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83b1b6d5-aa72-df51-6b8e-6b6be8ff3ea2}.Release|Any CPU.ActiveCfg = Release|Any CPU

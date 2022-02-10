@@ -100,7 +100,7 @@ MonoBehaviour:
   snapToGrid: 0
   buildMenuIcon: {fileID: 0}
   showInBuildMenuDock: 0
-  ballCollisions: 1
+  ballCollisions: 0
   rotatable: 1
   objectID: 0
   origin: {x: 0, y: 0, z: 0}
