@@ -72,7 +72,7 @@ namespace Game.Tools {
 				return;
 			}
 			
-			Debug.Log("swing, length: "+(mouseEnd-mouseStart).magnitude);
+			//Debug.Log("swing, length: "+(mouseEnd-mouseStart).magnitude);
 			swingInitiated = false;
 			ball.Swing(mouseEnd);
 			LevelManager.cameraController.EnableDrag(this);

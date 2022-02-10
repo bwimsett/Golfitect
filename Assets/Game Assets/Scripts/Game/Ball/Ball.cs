@@ -40,13 +40,18 @@ namespace Game {
 
 			Vector3 swingDirection = Vector3.Normalize(transform.position - mouseSwingPos);
 			Vector3 swing = swingDirection * swingStrength * maxForce;
+
+			// Ignore swings with extremely low magnitude
+			if (swing.magnitude < 0.05f) {
+				return;
+			}
+			
+			mouseSwingPos = transform.position;
 			
 			rigidbody.AddForce(swing);
 			if (GameManager.courseTracker != null) {
 				GameManager.courseTracker.AddShot();
 			}
-
-			mouseSwingPos = transform.position;
 		}
 
 		private void ResetIfOutOfBounds() {

@@ -106,7 +106,7 @@ namespace Backend.Level {
 
 			colliderMesh.CombineMeshes(combineInstances.ToArray(), true, true);
 
-			colliderMesh = WeldMeshVertices(colliderMesh, 0.01f);
+			//colliderMesh = WeldMeshVertices(colliderMesh, 0.01f);
 
 			LevelManager.levelCollider.sharedMesh = colliderMesh;
 		}
