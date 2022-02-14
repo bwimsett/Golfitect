@@ -78,6 +78,16 @@ namespace Backend.Managers {
 			return false;
 		}
 
+		public bool CastRay(Ray ray, string tag, int layerMask, out RaycastHit hit) {
+			Physics.Raycast(ray, out hit, 500, layerMask);
+
+			if (hit.collider) {
+				return hit.collider.gameObject.tag.Equals(tag);
+			}
+
+			return false;
+		}
+
 		public bool CastRayFromMouse(int layerMask, out RaycastHit hit) {
 			Ray ray = LevelManager.cameraController.camera.ScreenPointToRay(Input.mousePosition);
 			bool success = CastRay(ray, layerMask, out hit);
@@ -87,6 +97,12 @@ namespace Backend.Managers {
 		public bool CastRayFromMouse(string tag, out RaycastHit hit) {
 			Ray ray = LevelManager.cameraController.camera.ScreenPointToRay(Input.mousePosition);
 			bool success = CastRay(ray, tag, out hit);
+			return success;
+		}
+
+		public bool CastRayFromMouse(int targetLayer, string tag, out RaycastHit hit) {
+			Ray ray = LevelManager.cameraController.camera.ScreenPointToRay(Input.mousePosition);
+			bool success = CastRay(ray, tag, 1 << targetLayer, out hit);
 			return success;
 		}
 		

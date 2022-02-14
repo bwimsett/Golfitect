@@ -7,7 +7,7 @@ namespace Game.Tools {
 		public Ball ballPrefab;
 		private Ball ball;
 		private bool swingInitiated;
-
+		
 		private Vector3 mouseStart, mouseEnd;
 		
 		protected override void ToolUpdate() {
@@ -92,7 +92,7 @@ namespace Game.Tools {
 				return false;
 			}
 			
-			LevelManager.levelInputManager.CastRayFromMouse(ball.mouseDragPlane.tag, out RaycastHit hit);
+			LevelManager.levelInputManager.CastRayFromMouse(ball.mouseDragPlane.layer, ball.mouseDragPlane.tag, out RaycastHit hit);
 
 			if (hit.collider) {
 				point = hit.point;

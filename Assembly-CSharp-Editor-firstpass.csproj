@@ -13,7 +13,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7648612d-4189-672f-f05b-efe913b5ba0d}</ProjectGuid>
+    <ProjectGuid>{b039ebb3-fdcc-a68a-deb0-33d98a156b91}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -27,7 +27,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\Bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_12;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER;DEVELOPMENT_BUILD</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_2020_3_12;UNITY_2020_3;UNITY_2020;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2019_1_OR_NEWER;UNITY_2019_2_OR_NEWER;UNITY_2019_3_OR_NEWER;UNITY_2019_4_OR_NEWER;UNITY_2020_1_OR_NEWER;UNITY_2020_2_OR_NEWER;UNITY_2020_3_OR_NEWER;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;USE_SEARCH_ENGINE_API;SCENE_TEMPLATE_MODULE;ENABLE_AR;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_EVENT_QUEUE;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_TEXTURE_STREAMING;ENABLE_VIRTUALTEXTURING;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_UNITYWEBREQUEST;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;ENABLE_MANAGED_AUDIO_JOBS;INCLUDE_DYNAMIC_GI;ENABLE_MONO_BDWGC;ENABLE_SCRIPTING_GC_WBARRIERS;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_VIDEO;PLATFORM_STANDALONE;PLATFORM_STANDALONE_WIN;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;PLATFORM_UPDATES_TIME_OUTSIDE_OF_PLAYER_LOOP;GFXDEVICE_WAITFOREVENT_MESSAGEPUMP;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_DIRECTOR;ENABLE_LOCALIZATION;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_TILEMAP;ENABLE_TIMELINE;ENABLE_LEGACY_INPUT_MANAGER;ODIN_INSPECTOR;ODIN_INSPECTOR_3;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn></NoWarn>
@@ -288,65 +288,62 @@
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.WebGL.Extensions">
- <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Utilities.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.Editor.dll</HintPath>
  </Reference>
  <Reference Include="DemiLib">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenProEditor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Demigiant/DOTweenPro/Editor/DOTweenProEditor.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Editor.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenEditor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll</HintPath>
  </Reference>
  <Reference Include="DemiEditor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Demigiant/DemiLib/Core/Editor/DemiEditor.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.OdinInspector.Attributes">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Serialization.Config">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.Config.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Utilities">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Sirenix/Assemblies/Sirenix.Utilities.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="ICSharpCode.NRefactory">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/PackageCache/com.unity.render-pipelines.core@10.5.0/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
  </Reference>
  <Reference Include="Newtonsoft.Json">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="Sirenix.Serialization">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Sirenix/Assemblies/Sirenix.Serialization.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenPro">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Assets/Plugins/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
  <Reference Include="unityplastic">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/PackageCache/com.unity.collab-proxy@1.5.7/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
  <Reference Include="nunit.framework">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/PackageCache/com.unity.ext.nunit@1.0.6/net35/unity-custom/nunit.framework.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -700,150 +697,150 @@
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/System.Web.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.TestRunner">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TestRunner">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Shaders">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Runtime">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Searcher.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.Searcher.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Runtime">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="com.rlabrecque.steamworks.net.editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="com.rlabrecque.steamworks.net">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/com.rlabrecque.steamworks.net.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ShaderGraph.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Universal.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.RenderPipelines.Universal.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Mathematics.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.RenderPipelines.Core.Editor">
- <HintPath>C:/Users/Ben/Documents/Games/Untitled Golf Game/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
+ <HintPath>C:/Users/bwims/Documents/Games/Golfitect/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{d1f9e1f7-095d-3289-d8fa-220a00617c24}</Project>
+      <Project>{2ec983fe-143a-a23b-87c4-752a921ff74f}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="MPUIKit.csproj">
-      <Project>{6d6ebff6-93e9-c2cd-c060-bb871849b2be}</Project>
+      <Project>{f1cb084d-2591-b63b-f638-54c3e2f33a72}</Project>
       <Name>MPUIKit</Name>
     </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.csproj">
-      <Project>{ca060b67-3b07-c6b5-2cc5-dffd91503644}</Project>
+      <Project>{e5d12e89-72f3-9ebd-73cd-c4ca42a01295}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer</Name>
     </ProjectReference>
     <ProjectReference Include="LeTai.TranslucentImage.UniversalRP.csproj">
-      <Project>{ddd25b2a-defb-43e8-33a2-aa15f73106cd}</Project>
+      <Project>{e9d6597e-5b8c-4ffc-757a-c66a3f73d39a}</Project>
       <Name>LeTai.TranslucentImage.UniversalRP</Name>
     </ProjectReference>
     <ProjectReference Include="MPUIKit.Editor.csproj">
-      <Project>{079bdb49-b61d-0cc6-44f1-648e18e35587}</Project>
+      <Project>{98a73b2c-4921-10fc-1302-787c92bfb18c}</Project>
       <Name>MPUIKit.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.Modules.UnityMathematics.csproj">
-      <Project>{0daee573-1afa-b1a7-4aa5-d8cae8a958f5}</Project>
+      <Project>{8d00e9ae-ba10-0e17-9064-2e63fd99a3df}</Project>
       <Name>Sirenix.OdinInspector.Modules.UnityMathematics</Name>
     </ProjectReference>
     <ProjectReference Include="Sirenix.OdinInspector.CompatibilityLayer.Editor.csproj">
-      <Project>{62370954-6062-6c73-e698-8a7a60ebffa2}</Project>
+      <Project>{fb4850e0-5b3f-84b9-3b3f-6954cd7a00fb}</Project>
       <Name>Sirenix.OdinInspector.CompatibilityLayer.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="LeTai.TranslucentImage.Editor.csproj">
-      <Project>{91356981-5371-b8ed-9061-7afa6754a920}</Project>
+      <Project>{2ccfe79d-d446-d897-9114-6f4d17916521}</Project>
       <Name>LeTai.TranslucentImage.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="ShapesSamples.csproj">
-      <Project>{cc66816d-878f-d314-60ee-ab22492b884d}</Project>
+      <Project>{f9540d69-7ebf-12fa-21c3-d0c1f34947f7}</Project>
       <Name>ShapesSamples</Name>
     </ProjectReference>
     <ProjectReference Include="LeTai.TranslucentImage.csproj">
-      <Project>{41e027ee-dde4-a340-b95f-bc028c92715b}</Project>
+      <Project>{221ad421-1bf9-4ee7-5f75-daeb93f093bb}</Project>
       <Name>LeTai.TranslucentImage</Name>
     </ProjectReference>
     <ProjectReference Include="RuntimePreviewGenerator.Runtime.csproj">
-      <Project>{eaf92007-0da2-e3a0-e32f-6b5fd0a93403}</Project>
+      <Project>{888ff6e6-62cb-f97d-8fe2-3eaa4828f9dd}</Project>
       <Name>RuntimePreviewGenerator.Runtime</Name>
     </ProjectReference>
     <ProjectReference Include="ShapesRuntime.csproj">
-      <Project>{b959476b-bd63-35e0-6875-d21e11dcf22b}</Project>
+      <Project>{302f32a2-302e-80e5-888d-11df215481ca}</Project>
       <Name>ShapesRuntime</Name>
     </ProjectReference>
     <ProjectReference Include="ShapesEditor.csproj">
-      <Project>{83b1b6d5-aa72-df51-6b8e-6b6be8ff3ea2}</Project>
+      <Project>{a64ce8d0-5d32-0b0d-1657-30286d76c934}</Project>
       <Name>ShapesEditor</Name>
     </ProjectReference>
   </ItemGroup>
