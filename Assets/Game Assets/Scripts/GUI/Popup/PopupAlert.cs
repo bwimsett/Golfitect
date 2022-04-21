@@ -10,10 +10,8 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 		[SerializeField] private TextLocalizer mainText, option1Text, option2Text, option3Text;
 
 		public void SetValues(LocString popupText, PopupAlertCallback option1, bool option2Cancel = true) {
-			this.option1.onClick.RemoveAllListeners();
-			this.option2.onClick.RemoveAllListeners();
-
-			mainText.SetString(popupText);
+			SetValues(popupText);
+			
 			option1Text.SetString(option1.locString);
 			this.option1.onClick.AddListener(WrapActionWithClose(option1.callback));
 
@@ -24,6 +22,18 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 			
 			option2.gameObject.SetActive(option2Cancel);
 			option3.gameObject.SetActive(false);
+		}
+
+		public void SetValues(LocString popupText) {
+			this.option1.onClick.RemoveAllListeners();
+			this.option2.onClick.RemoveAllListeners();
+			
+			option1Text.SetString(new LocString("generic_cancel"));
+			this.option1.onClick.AddListener(Cancel);
+			
+			mainText.SetString(popupText);
+			
+			this.option2.gameObject.SetActive(false);
 		}
 
 		public void Cancel() {

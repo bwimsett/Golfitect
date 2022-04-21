@@ -279,6 +279,10 @@ public class ServerManager : MonoBehaviour {
 	}
 
 	public void SubmitCourse(Course course, UnityAction<string> onComplete, bool edit) {
+		if (course == null) {
+			return;
+		}
+		
 		GetAuthTicket(ticket => {
 			WWWForm form = new WWWForm();
 			form.AddField("ticket", ticket);

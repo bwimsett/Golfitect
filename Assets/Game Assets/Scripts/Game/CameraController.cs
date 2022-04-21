@@ -68,6 +68,8 @@ namespace Game {
 		}
 
 		public void EnableDrag(object obj) {
+			dragDisablers ??= new List<object>();
+
 			dragDisablers.Remove(obj);
 
 			// Only reenable drag when nothing is left to prevent the drag

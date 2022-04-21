@@ -1,12 +1,16 @@
+using System;
 using System.Collections.ObjectModel;
 using Backend.Course;
 using Backend.Enums;
 using Backend.Level;
 using Backend.Managers;
+using BWLocaliser;
 using Game_Assets.Scripts.Backend.Language.ProfanityFilter;
 using Game_Assets.Scripts.Backend.Server;
 using Game_Assets.Scripts.GUI.CourseCreator;
+using Game_Assets.Scripts.GUI.PlayMode;
 using GUI.MainMenu;
+using Sirenix.Utilities;
 using Steamworks;
 using TMPro;
 using UnityEngine;
@@ -38,11 +42,33 @@ namespace GUI.MainMenu.CourseCreator {
 			string title = nameInputField.text;
 			string description = descriptionInputField.text;
 			DBHoleInfo[] holes = holesList.GetHoles();
+
+			if (title.IsNullOrWhitespace()) {
+				PopupAlert popup = GameSceneManager.popupManager.CreatePopup();
+				popup.SetValues(new LocString("coursecreator_popup_title_empty"));
+				return null;
+			}
 			
 			// Check the name
 			ProfanityFilter filter = new ProfanityFilter();
 			ReadOnlyCollection<string> profanities = filter.DetectAllProfanities(title);
 			Debug.Log(profanities.Count+" profanities detected in title");
+
+			if (profanities.Count > 0) {
+				PopupAlert popup = GameSceneManager.popupManager.CreatePopup();
+				popup.SetValues(new LocString("coursecreator_popup_title_profanity_detected"));
+				return null;
+			}
+			
+			// Check the description
+			profanities = filter.DetectAllProfanities(description);
+			
+			if (profanities.Count > 0) {
+				PopupAlert popup = GameSceneManager.popupManager.CreatePopup();
+				popup.SetValues(new LocString("coursecreator_popup_description_profanity_detected"));
+				return null;
+			}
+			
 			
 			Course course = new Course(title, description, holes);
 			
