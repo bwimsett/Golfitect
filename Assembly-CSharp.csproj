@@ -170,6 +170,12 @@
      <Compile Include="Assets\Game Assets\Scripts\Backend\Managers\DrawingManager.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\GenericComponent\GUIScaleOnMouseover.cs" />
      <Compile Include="Assets\Game Assets\Scripts\GUI\ReorderableList\GUIReorderableList_Item.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\ProfanityFilter\Interfaces\IProfanityFilter.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\ProfanityFilter\ProfanityFilter.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\ProfanityFilter\AllowList.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\ProfanityFilter\ProfanityBase.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\ProfanityFilter\ProfanityList.cs" />
+     <Compile Include="Assets\Game Assets\Scripts\Backend\Language\ProfanityFilter\Interfaces\IAllowList.cs" />
      <None Include="Assets\Le Tai&apos;s Asset\TranslucentImage\Resources\UniversalRP\lib.hlsl" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Triangle Darken.shader" />
      <None Include="Assets\Shapes\Shaders\Generated Shaders\Resources\Rect Multiplicative.shader" />

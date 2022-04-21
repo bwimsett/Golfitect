@@ -1,7 +1,9 @@
+using System.Collections.ObjectModel;
 using Backend.Course;
 using Backend.Enums;
 using Backend.Level;
 using Backend.Managers;
+using Game_Assets.Scripts.Backend.Language.ProfanityFilter;
 using Game_Assets.Scripts.Backend.Server;
 using Game_Assets.Scripts.GUI.CourseCreator;
 using GUI.MainMenu;
@@ -36,6 +38,11 @@ namespace GUI.MainMenu.CourseCreator {
 			string title = nameInputField.text;
 			string description = descriptionInputField.text;
 			DBHoleInfo[] holes = holesList.GetHoles();
+			
+			// Check the name
+			ProfanityFilter filter = new ProfanityFilter();
+			ReadOnlyCollection<string> profanities = filter.DetectAllProfanities(title);
+			Debug.Log(profanities.Count+" profanities detected in title");
 			
 			Course course = new Course(title, description, holes);
 			
