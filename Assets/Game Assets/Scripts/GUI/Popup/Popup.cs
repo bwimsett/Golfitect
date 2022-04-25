@@ -1,3 +1,4 @@
+using Backend.Managers;
 using DG.Tweening;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 		
 		public void Open() {
 			Refresh();
+			GameSceneManager.popupManager.DisableCanvases();
 			transform.localScale = startScale;
 			canvasGroup.alpha = 0;
 			transform.DOScale(Vector3.one, openDuration).SetEase(openEase);
@@ -28,6 +30,8 @@ namespace Game_Assets.Scripts.GUI.PlayMode {
 		public void Close(bool animate = true) {
 			canvasGroup.interactable = canvasGroup.blocksRaycasts = false;
 			
+			GameSceneManager.popupManager.EnableCanvases();
+
 			if (animate) {
 				canvasGroup.DOFade(0, closeDuration);
 			} else {
