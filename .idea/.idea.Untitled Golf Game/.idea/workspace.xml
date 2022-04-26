@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="911cb32a-fd29-4dfe-8ccb-1921be5ef64c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Untitled Golf Game/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Main Menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/PopupManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/Backend/Managers/PopupManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/Popup/Popup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/Popup/Popup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scenes/Game.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_LevelSettings.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/BuildMode/BuildMode_LevelSettings.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Scripts/GUI/MainMenu/CourseCreator/CourseCreator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Game Assets/Text/GameText.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -240,14 +241,8 @@
       <workItem from="1644611467475" duration="909000" />
       <workItem from="1645535582723" duration="1029000" />
       <workItem from="1650532735647" duration="6393000" />
-      <workItem from="1650889693114" duration="575000" />
-    </task>
-    <task id="LOCAL-00009" summary="Steam workshop levels can now be added to a course hole list">
-      <created>1637885565837</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1637885565837</updated>
+      <workItem from="1650889693114" duration="1345000" />
+      <workItem from="1650966980639" duration="3429000" />
     </task>
     <task id="LOCAL-00010" summary="Created a generic uploader for courses and levels">
       <created>1637958768034</created>
@@ -585,7 +580,14 @@
       <option name="project" value="LOCAL" />
       <updated>1650554321455</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Popups now block interaction with other canvases">
+      <created>1650890445316</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1650890445316</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -608,7 +610,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Fixed incorrect visual grid spacing" />
     <MESSAGE value="Added unversioned" />
     <MESSAGE value="Pre-havok commit" />
     <MESSAGE value="Fixed a range of bugs and improved ball collisions" />
@@ -633,7 +634,8 @@
     <MESSAGE value="Fixed a bug where clicking the ball would increase shots taken" />
     <MESSAGE value="Started work on an overview for holes" />
     <MESSAGE value="Continued work on profanity filtering" />
-    <option name="LAST_COMMIT_MESSAGE" value="Continued work on profanity filtering" />
+    <MESSAGE value="Popups now block interaction with other canvases" />
+    <option name="LAST_COMMIT_MESSAGE" value="Popups now block interaction with other canvases" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -37,39 +37,67 @@ namespace GUI.MainMenu.CourseCreator {
 		private void OnLevelIDsLoaded(string[] ids) {
 			levelOptionGrid.SetIDs(ids, false, this);
 		}
+		private enum ValidityStatus {
+			valid,
+			emptyTitle,
+			emptyHoles,
+			profaneTitle,
+			profaneDescription
+		};
+		
+		private bool CheckCourseInputValidity() {
+			string title = nameInputField.text;
+			string description = descriptionInputField.text;
+			DBHoleInfo[] holes = holesList.GetHoles();
 
+			ValidityStatus validityStatus = ValidityStatus.valid;
+
+			// Check whether holes have been selected
+			if (holes.Length == 0) { validityStatus = ValidityStatus.emptyHoles; }
+			
+			ProfanityFilter filter = new ProfanityFilter();
+			
+			// Check the description
+			ReadOnlyCollection<string> profanities = filter.DetectAllProfanities(description);
+			if (profanities.Count > 0) { validityStatus = ValidityStatus.profaneDescription; }
+			
+			// Check the title
+			profanities = filter.DetectAllProfanities(title);
+			if (profanities.Count > 0) { validityStatus = ValidityStatus.profaneTitle; }
+			
+			if (title.IsNullOrWhitespace()) { validityStatus = ValidityStatus.emptyTitle; }
+
+			switch (validityStatus) {
+				case ValidityStatus.valid: return true;
+				case ValidityStatus.emptyTitle: CreateInputInvalidPopup("coursecreator_popup_title_empty");
+					break;
+				case ValidityStatus.profaneTitle: CreateInputInvalidPopup("coursecreator_popup_title_profanity_detected");
+					break;
+				case ValidityStatus.profaneDescription: CreateInputInvalidPopup("coursecreator_popup_description_profanity_detected");
+					break;
+				case ValidityStatus.emptyHoles: CreateInputInvalidPopup("coursecreator_popup_holes_empty");
+					break;
+			}
+
+			return false;
+		}
+
+		private void CreateInputInvalidPopup(string text) {
+			PopupAlert popup = GameSceneManager.popupManager.CreatePopup();
+			popup.SetValues(new LocString(text));
+		}
+		
 		public Course GetCourseFromInput() {
 			string title = nameInputField.text;
 			string description = descriptionInputField.text;
 			DBHoleInfo[] holes = holesList.GetHoles();
 
-			if (title.IsNullOrWhitespace()) {
-				PopupAlert popup = GameSceneManager.popupManager.CreatePopup();
-				popup.SetValues(new LocString("coursecreator_popup_title_empty"));
-				return null;
-			}
-			
-			// Check the name
-			ProfanityFilter filter = new ProfanityFilter();
-			ReadOnlyCollection<string> profanities = filter.DetectAllProfanities(title);
-			Debug.Log(profanities.Count+" profanities detected in title");
+			bool validInput = CheckCourseInputValidity();
 
-			if (profanities.Count > 0) {
-				PopupAlert popup = GameSceneManager.popupManager.CreatePopup();
-				popup.SetValues(new LocString("coursecreator_popup_title_profanity_detected"));
+			if (!validInput) {
 				return null;
 			}
-			
-			// Check the description
-			profanities = filter.DetectAllProfanities(description);
-			
-			if (profanities.Count > 0) {
-				PopupAlert popup = GameSceneManager.popupManager.CreatePopup();
-				popup.SetValues(new LocString("coursecreator_popup_description_profanity_detected"));
-				return null;
-			}
-			
-			
+
 			Course course = new Course(title, description, holes);
 			
 			// If updating an existing course, set the ID so the new data is sent as an update
